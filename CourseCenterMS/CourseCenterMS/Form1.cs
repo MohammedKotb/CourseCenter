@@ -32,10 +32,14 @@ namespace CourseCenterMS
 
             frmAllStudents f = new frmAllStudents();
             ContainerPnl.Controls.Clear();
-
-            //Form2 f = new Form2();
-      
             ContainerPnl.Controls.Add(f.pnlAllStudents);
+        }
+
+        private void btnMenuAddStudent_Click(object sender, EventArgs e)
+        {
+            frmNewStudent f = new frmNewStudent();
+            ContainerPnl.Controls.Clear();
+            ContainerPnl.Controls.Add(f.pnlNewStudent);
         }
     }
 }
