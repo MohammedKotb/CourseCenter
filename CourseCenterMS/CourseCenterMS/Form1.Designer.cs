@@ -31,44 +31,44 @@ namespace CourseCenterMS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashbord));
             this.SidePnl = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlStudent = new System.Windows.Forms.Panel();
-            this.ImgPnl = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblAdmin = new System.Windows.Forms.Label();
-            this.TopPnl = new System.Windows.Forms.Panel();
-            this.ContainerPnl = new System.Windows.Forms.Panel();
-            this.pnlFooter = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnMinimize = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.pnlStudent = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.btnAllStudents = new System.Windows.Forms.Button();
             this.btnStudent = new System.Windows.Forms.Button();
             this.DashboardBtn = new System.Windows.Forms.Button();
+            this.ImgPnl = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblAdmin = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TopPnl = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.PictureBox();
+            this.ContainerPnl = new System.Windows.Forms.Panel();
+            this.pnlFooter = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SidePnl.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlStudent.SuspendLayout();
             this.ImgPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TopPnl.SuspendLayout();
-            this.pnlFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidePnl
@@ -91,179 +91,6 @@ namespace CourseCenterMS
             this.SidePnl.Name = "SidePnl";
             this.SidePnl.Size = new System.Drawing.Size(202, 851);
             this.SidePnl.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.panel2.Location = new System.Drawing.Point(0, 566);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(202, 98);
-            this.panel2.TabIndex = 12;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 413);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(202, 98);
-            this.panel1.TabIndex = 9;
-            // 
-            // pnlStudent
-            // 
-            this.pnlStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlStudent.Controls.Add(this.button7);
-            this.pnlStudent.Controls.Add(this.btnAllStudents);
-            this.pnlStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlStudent.Location = new System.Drawing.Point(0, 257);
-            this.pnlStudent.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlStudent.Name = "pnlStudent";
-            this.pnlStudent.Size = new System.Drawing.Size(202, 101);
-            this.pnlStudent.TabIndex = 7;
-            // 
-            // ImgPnl
-            // 
-            this.ImgPnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ImgPnl.Controls.Add(this.label1);
-            this.ImgPnl.Controls.Add(this.lblAdmin);
-            this.ImgPnl.Controls.Add(this.pictureBox1);
-            this.ImgPnl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ImgPnl.Location = new System.Drawing.Point(0, 0);
-            this.ImgPnl.Name = "ImgPnl";
-            this.ImgPnl.Size = new System.Drawing.Size(202, 147);
-            this.ImgPnl.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(118, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 26);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "مرحبا : ";
-            // 
-            // lblAdmin
-            // 
-            this.lblAdmin.AutoSize = true;
-            this.lblAdmin.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lblAdmin.Location = new System.Drawing.Point(68, 110);
-            this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(44, 26);
-            this.lblAdmin.TabIndex = 1;
-            this.lblAdmin.Text = "ادمن";
-            // 
-            // TopPnl
-            // 
-            this.TopPnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
-            this.TopPnl.Controls.Add(this.btnMinimize);
-            this.TopPnl.Controls.Add(this.btnExit);
-            this.TopPnl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopPnl.ForeColor = System.Drawing.Color.White;
-            this.TopPnl.Location = new System.Drawing.Point(202, 0);
-            this.TopPnl.Name = "TopPnl";
-            this.TopPnl.Size = new System.Drawing.Size(1031, 43);
-            this.TopPnl.TabIndex = 1;
-            // 
-            // ContainerPnl
-            // 
-            this.ContainerPnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContainerPnl.Location = new System.Drawing.Point(202, 43);
-            this.ContainerPnl.Name = "ContainerPnl";
-            this.ContainerPnl.Size = new System.Drawing.Size(1031, 808);
-            this.ContainerPnl.TabIndex = 2;
-            // 
-            // pnlFooter
-            // 
-            this.pnlFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(175)))), ((int)(((byte)(192)))));
-            this.pnlFooter.Controls.Add(this.label3);
-            this.pnlFooter.Controls.Add(this.label4);
-            this.pnlFooter.Controls.Add(this.label5);
-            this.pnlFooter.Controls.Add(this.label2);
-            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(202, 819);
-            this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1031, 32);
-            this.pnlFooter.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(39, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "©";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(241, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(250, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "TechnoGate For Software Devlopment";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(52, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 32);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "CopyRight Reserved For \r\n\r\n";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(223, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(12, 16);
-            this.label5.TabIndex = 0;
-            this.label5.Text = ":";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Image = global::CourseCenterMS.Properties.Resources.icons8_minus_16;
-            this.btnMinimize.Location = new System.Drawing.Point(39, 11);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(24, 22);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Image = global::CourseCenterMS.Properties.Resources.icons8_delete_16;
-            this.btnExit.Location = new System.Drawing.Point(11, 11);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(24, 22);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExit.TabIndex = 2;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // button10
             // 
@@ -308,6 +135,19 @@ namespace CourseCenterMS
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.button9);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.panel2.Location = new System.Drawing.Point(0, 566);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(202, 98);
+            this.panel2.TabIndex = 12;
             // 
             // button6
             // 
@@ -375,6 +215,18 @@ namespace CourseCenterMS
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 413);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(202, 98);
+            this.panel1.TabIndex = 9;
+            // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -440,6 +292,18 @@ namespace CourseCenterMS
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pnlStudent
+            // 
+            this.pnlStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.pnlStudent.Controls.Add(this.button7);
+            this.pnlStudent.Controls.Add(this.btnAllStudents);
+            this.pnlStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlStudent.Location = new System.Drawing.Point(0, 257);
+            this.pnlStudent.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlStudent.Name = "pnlStudent";
+            this.pnlStudent.Size = new System.Drawing.Size(202, 101);
+            this.pnlStudent.TabIndex = 7;
             // 
             // button7
             // 
@@ -529,6 +393,38 @@ namespace CourseCenterMS
             this.DashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DashboardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             // 
+            // ImgPnl
+            // 
+            this.ImgPnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ImgPnl.Controls.Add(this.label1);
+            this.ImgPnl.Controls.Add(this.lblAdmin);
+            this.ImgPnl.Controls.Add(this.pictureBox1);
+            this.ImgPnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ImgPnl.Location = new System.Drawing.Point(0, 0);
+            this.ImgPnl.Name = "ImgPnl";
+            this.ImgPnl.Size = new System.Drawing.Size(202, 147);
+            this.ImgPnl.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(118, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 26);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "مرحبا : ";
+            // 
+            // lblAdmin
+            // 
+            this.lblAdmin.AutoSize = true;
+            this.lblAdmin.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.lblAdmin.Location = new System.Drawing.Point(68, 110);
+            this.lblAdmin.Name = "lblAdmin";
+            this.lblAdmin.Size = new System.Drawing.Size(44, 26);
+            this.lblAdmin.TabIndex = 1;
+            this.lblAdmin.Text = "ادمن";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CourseCenterMS.Properties.Resources.profile;
@@ -540,11 +436,115 @@ namespace CourseCenterMS
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // TopPnl
+            // 
+            this.TopPnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
+            this.TopPnl.Controls.Add(this.btnMinimize);
+            this.TopPnl.Controls.Add(this.btnExit);
+            this.TopPnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopPnl.ForeColor = System.Drawing.Color.White;
+            this.TopPnl.Location = new System.Drawing.Point(202, 0);
+            this.TopPnl.Name = "TopPnl";
+            this.TopPnl.Size = new System.Drawing.Size(1098, 43);
+            this.TopPnl.TabIndex = 1;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Image = global::CourseCenterMS.Properties.Resources.icons8_minus_16;
+            this.btnMinimize.Location = new System.Drawing.Point(39, 11);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(24, 22);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Image = global::CourseCenterMS.Properties.Resources.icons8_delete_16;
+            this.btnExit.Location = new System.Drawing.Point(11, 11);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(24, 22);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExit.TabIndex = 2;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // ContainerPnl
+            // 
+            this.ContainerPnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContainerPnl.Location = new System.Drawing.Point(202, 43);
+            this.ContainerPnl.Name = "ContainerPnl";
+            this.ContainerPnl.Size = new System.Drawing.Size(1098, 808);
+            this.ContainerPnl.TabIndex = 2;
+            // 
+            // pnlFooter
+            // 
+            this.pnlFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(175)))), ((int)(((byte)(192)))));
+            this.pnlFooter.Controls.Add(this.label3);
+            this.pnlFooter.Controls.Add(this.label4);
+            this.pnlFooter.Controls.Add(this.label5);
+            this.pnlFooter.Controls.Add(this.label2);
+            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlFooter.Location = new System.Drawing.Point(202, 819);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Size = new System.Drawing.Size(1098, 32);
+            this.pnlFooter.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label3.Location = new System.Drawing.Point(241, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(250, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "TechnoGate For Software Devlopment";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(52, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 32);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "CopyRight Reserved For \r\n\r\n";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(223, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(12, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = ":";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(39, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "©";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Dashbord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1233, 851);
+            this.ClientSize = new System.Drawing.Size(1300, 851);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.ContainerPnl);
             this.Controls.Add(this.TopPnl);
@@ -562,12 +562,12 @@ namespace CourseCenterMS
             this.pnlStudent.ResumeLayout(false);
             this.ImgPnl.ResumeLayout(false);
             this.ImgPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TopPnl.ResumeLayout(false);
-            this.pnlFooter.ResumeLayout(false);
-            this.pnlFooter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlFooter.ResumeLayout(false);
+            this.pnlFooter.PerformLayout();
             this.ResumeLayout(false);
 
         }

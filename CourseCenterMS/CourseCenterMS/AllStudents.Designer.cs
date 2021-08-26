@@ -30,72 +30,58 @@ namespace CourseCenterMS
         private void InitializeComponent()
         {
             this.pnlAllStudents = new System.Windows.Forms.Panel();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
+            this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlAllStudents.SuspendLayout();
-            this.bunifuCards1.SuspendLayout();
-            this.bunifuCards2.SuspendLayout();
+            this.crdSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlAllStudents
             // 
-            this.pnlAllStudents.AutoScroll = true;
             this.pnlAllStudents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlAllStudents.Controls.Add(this.bunifuCards2);
-            this.pnlAllStudents.Controls.Add(this.bunifuCards1);
+            this.pnlAllStudents.Controls.Add(this.crdSearchResult);
+            this.pnlAllStudents.Controls.Add(this.crdSearch);
             this.pnlAllStudents.Location = new System.Drawing.Point(0, 0);
             this.pnlAllStudents.Name = "pnlAllStudents";
-            this.pnlAllStudents.Size = new System.Drawing.Size(1160, 808);
+            this.pnlAllStudents.Size = new System.Drawing.Size(1165, 808);
             this.pnlAllStudents.TabIndex = 0;
             // 
-            // bunifuCards1
+            // crdSearchResult
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.White;
-            this.bunifuCards1.BorderRadius = 5;
-            this.bunifuCards1.BottomSahddow = true;
-            this.bunifuCards1.color = System.Drawing.Color.Green;
-            this.bunifuCards1.Controls.Add(this.button1);
-            this.bunifuCards1.Controls.Add(this.button2);
-            this.bunifuCards1.Controls.Add(this.textBox1);
-            this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.RightSahddow = true;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(1160, 70);
-            this.bunifuCards1.TabIndex = 0;
+            this.crdSearchResult.AutoScroll = true;
+            this.crdSearchResult.BackColor = System.Drawing.Color.White;
+            this.crdSearchResult.BorderRadius = 15;
+            this.crdSearchResult.BottomSahddow = true;
+            this.crdSearchResult.color = System.Drawing.Color.Cyan;
+            this.crdSearchResult.LeftSahddow = false;
+            this.crdSearchResult.Location = new System.Drawing.Point(23, 123);
+            this.crdSearchResult.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
+            this.crdSearchResult.Name = "crdSearchResult";
+            this.crdSearchResult.RightSahddow = true;
+            this.crdSearchResult.ShadowDepth = 20;
+            this.crdSearchResult.Size = new System.Drawing.Size(1117, 808);
+            this.crdSearchResult.TabIndex = 1;
             // 
-            // bunifuCards2
+            // crdSearch
             // 
-            this.bunifuCards2.BackColor = System.Drawing.Color.White;
-            this.bunifuCards2.BorderRadius = 15;
-            this.bunifuCards2.BottomSahddow = true;
-            this.bunifuCards2.color = System.Drawing.Color.Cyan;
-            this.bunifuCards2.Controls.Add(this.bunifuDropdown1);
-            this.bunifuCards2.LeftSahddow = false;
-            this.bunifuCards2.Location = new System.Drawing.Point(0, 70);
-            this.bunifuCards2.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
-            this.bunifuCards2.Name = "bunifuCards2";
-            this.bunifuCards2.RightSahddow = true;
-            this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(1160, 2000);
-            this.bunifuCards2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(25, 25);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.MinimumSize = new System.Drawing.Size(290, 33);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(324, 33);
-            this.textBox1.TabIndex = 24;
+            this.crdSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.crdSearch.BackColor = System.Drawing.Color.White;
+            this.crdSearch.BorderRadius = 5;
+            this.crdSearch.BottomSahddow = true;
+            this.crdSearch.color = System.Drawing.Color.Green;
+            this.crdSearch.Controls.Add(this.button1);
+            this.crdSearch.Controls.Add(this.button2);
+            this.crdSearch.Controls.Add(this.textBox1);
+            this.crdSearch.LeftSahddow = false;
+            this.crdSearch.Location = new System.Drawing.Point(23, 24);
+            this.crdSearch.Name = "crdSearch";
+            this.crdSearch.RightSahddow = true;
+            this.crdSearch.ShadowDepth = 20;
+            this.crdSearch.Size = new System.Drawing.Size(1117, 70);
+            this.crdSearch.TabIndex = 0;
             // 
             // button1
             // 
@@ -108,7 +94,7 @@ namespace CourseCenterMS
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::CourseCenterMS.Properties.Resources.icons8_slider_321;
-            this.button1.Location = new System.Drawing.Point(423, 25);
+            this.button1.Location = new System.Drawing.Point(672, 21);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 32);
@@ -126,50 +112,45 @@ namespace CourseCenterMS
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::CourseCenterMS.Properties.Resources.icons8_search32_32;
-            this.button2.Location = new System.Drawing.Point(371, 25);
+            this.button2.Location = new System.Drawing.Point(730, 21);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 32);
             this.button2.TabIndex = 25;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // bunifuDropdown1
+            // textBox1
             // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(938, 6);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(217, 35);
-            this.bunifuDropdown1.TabIndex = 1;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(781, 21);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.MinimumSize = new System.Drawing.Size(290, 33);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(324, 33);
+            this.textBox1.TabIndex = 24;
             // 
             // frmAllStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 769);
+            this.ClientSize = new System.Drawing.Size(1222, 961);
             this.Controls.Add(this.pnlAllStudents);
             this.Name = "frmAllStudents";
             this.Text = "AllStudents";
             this.pnlAllStudents.ResumeLayout(false);
-            this.bunifuCards1.ResumeLayout(false);
-            this.bunifuCards1.PerformLayout();
-            this.bunifuCards2.ResumeLayout(false);
+            this.crdSearch.ResumeLayout(false);
+            this.crdSearch.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards2;
+        private Bunifu.Framework.UI.BunifuCards crdSearch;
+        private Bunifu.Framework.UI.BunifuCards crdSearchResult;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Panel pnlAllStudents;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
     }
 }
