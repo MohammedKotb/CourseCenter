@@ -55,7 +55,7 @@ namespace CourseCenterMS
             this.crdSearchResult.BackColor = System.Drawing.Color.White;
             this.crdSearchResult.BorderRadius = 15;
             this.crdSearchResult.BottomSahddow = true;
-            this.crdSearchResult.color = System.Drawing.Color.Cyan;
+            this.crdSearchResult.color = System.Drawing.Color.DarkGray;
             this.crdSearchResult.LeftSahddow = false;
             this.crdSearchResult.Location = new System.Drawing.Point(23, 123);
             this.crdSearchResult.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
@@ -76,7 +76,7 @@ namespace CourseCenterMS
             this.crdSearch.Controls.Add(this.button2);
             this.crdSearch.Controls.Add(this.textBox1);
             this.crdSearch.LeftSahddow = false;
-            this.crdSearch.Location = new System.Drawing.Point(23, 24);
+            this.crdSearch.Location = new System.Drawing.Point(23, 26);
             this.crdSearch.Name = "crdSearch";
             this.crdSearch.RightSahddow = true;
             this.crdSearch.ShadowDepth = 20;
