@@ -34,8 +34,11 @@ namespace CourseCenterMS
             this.pnlGridContainer = new System.Windows.Forms.Panel();
             this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
+            this.txtName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.lblID = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlNewStudent.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
+            this.pnlGridContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlNewStudent
@@ -68,6 +71,9 @@ namespace CourseCenterMS
             // 
             // pnlGridContainer
             // 
+            this.pnlGridContainer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlGridContainer.Controls.Add(this.txtName);
+            this.pnlGridContainer.Controls.Add(this.lblID);
             this.pnlGridContainer.Location = new System.Drawing.Point(3, 69);
             this.pnlGridContainer.Name = "pnlGridContainer";
             this.pnlGridContainer.Size = new System.Drawing.Size(1111, 455);
@@ -99,6 +105,37 @@ namespace CourseCenterMS
             this.crdSearch.Size = new System.Drawing.Size(1117, 70);
             this.crdSearch.TabIndex = 0;
             // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.Color.Gray;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtName.HintForeColor = System.Drawing.Color.Empty;
+            this.txtName.HintText = "";
+            this.txtName.isPassword = false;
+            this.txtName.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtName.LineIdleColor = System.Drawing.SystemColors.HighlightText;
+            this.txtName.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
+            this.txtName.LineThickness = 3;
+            this.txtName.Location = new System.Drawing.Point(676, 23);
+            this.txtName.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(286, 31);
+            this.txtName.TabIndex = 26;
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Microsoft Uighur", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblID.Location = new System.Drawing.Point(997, 20);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(52, 34);
+            this.lblID.TabIndex = 25;
+            this.lblID.Text = "الكود";
+            // 
             // frmNewStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,6 +147,8 @@ namespace CourseCenterMS
             this.pnlNewStudent.ResumeLayout(false);
             this.crdSearchResult.ResumeLayout(false);
             this.crdSearchResult.PerformLayout();
+            this.pnlGridContainer.ResumeLayout(false);
+            this.pnlGridContainer.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -120,5 +159,7 @@ namespace CourseCenterMS
         public System.Windows.Forms.Panel pnlNewStudent;
         private Bunifu.Framework.UI.BunifuCustomLabel lblGridHeader;
         private System.Windows.Forms.Panel pnlGridContainer;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtName;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblID;
     }
 }
