@@ -1,0 +1,13 @@
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\bin\Debug\CourseCenterMS.exe.config
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\bin\Debug\CourseCenterMS.exe
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\bin\Debug\CourseCenterMS.pdb
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csprojAssemblyReference.cache
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.Dashbord.resources
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.Properties.Resources.resources
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csproj.GenerateResource.cache
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csproj.CoreCompileInputs.cache
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.exe
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.pdb
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\bin\Debug\Bunifu_UI_v1.52.dll
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csproj.CopyComplete
+D:\Work\DeskTop\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmAllStudents.resources
