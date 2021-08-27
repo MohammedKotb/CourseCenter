@@ -36,6 +36,7 @@ namespace CourseCenterMS
             this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
             this.txtName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblID = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.pnlNewStudent.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
@@ -58,6 +59,7 @@ namespace CourseCenterMS
             this.crdSearchResult.BorderRadius = 5;
             this.crdSearchResult.BottomSahddow = true;
             this.crdSearchResult.color = System.Drawing.Color.Green;
+            this.crdSearchResult.Controls.Add(this.bunifuSeparator1);
             this.crdSearchResult.Controls.Add(this.pnlGridContainer);
             this.crdSearchResult.Controls.Add(this.lblGridHeader);
             this.crdSearchResult.LeftSahddow = false;
@@ -71,7 +73,6 @@ namespace CourseCenterMS
             // 
             // pnlGridContainer
             // 
-            this.pnlGridContainer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlGridContainer.Controls.Add(this.txtName);
             this.pnlGridContainer.Controls.Add(this.lblID);
             this.pnlGridContainer.Location = new System.Drawing.Point(3, 69);
@@ -107,21 +108,21 @@ namespace CourseCenterMS
             // 
             // txtName
             // 
-            this.txtName.BackColor = System.Drawing.Color.Gray;
+            this.txtName.BackColor = System.Drawing.Color.Silver;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtName.HintForeColor = System.Drawing.Color.Empty;
+            this.txtName.HintForeColor = System.Drawing.Color.Black;
             this.txtName.HintText = "";
             this.txtName.isPassword = false;
             this.txtName.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.txtName.LineIdleColor = System.Drawing.SystemColors.HighlightText;
             this.txtName.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
-            this.txtName.LineThickness = 3;
-            this.txtName.Location = new System.Drawing.Point(676, 23);
-            this.txtName.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtName.LineThickness = 4;
+            this.txtName.Location = new System.Drawing.Point(614, 20);
+            this.txtName.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(286, 31);
+            this.txtName.Size = new System.Drawing.Size(360, 37);
             this.txtName.TabIndex = 26;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -129,12 +130,24 @@ namespace CourseCenterMS
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Uighur", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblID.Location = new System.Drawing.Point(997, 20);
+            this.lblID.ForeColor = System.Drawing.Color.Black;
+            this.lblID.Location = new System.Drawing.Point(997, 23);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(52, 34);
             this.lblID.TabIndex = 25;
             this.lblID.Text = "الكود";
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.DimGray;
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 53);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(1114, 10);
+            this.bunifuSeparator1.TabIndex = 21;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
             // 
             // frmNewStudent
             // 
@@ -161,5 +174,6 @@ namespace CourseCenterMS
         private System.Windows.Forms.Panel pnlGridContainer;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtName;
         private Bunifu.Framework.UI.BunifuCustomLabel lblID;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
     }
 }
