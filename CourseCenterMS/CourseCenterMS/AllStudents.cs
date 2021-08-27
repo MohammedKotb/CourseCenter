@@ -27,8 +27,10 @@ namespace CourseCenterMS
         {
             if (grdAllStudents.Columns[e.ColumnIndex].HeaderText=="تفاصيل")
             {
-                int stdID = Convert.ToInt32(grdAllStudents.Rows[e.RowIndex].Cells["ID"].Value);
-                MessageBox.Show(stdID.ToString());
+                if (e.RowIndex>=0) {
+                    int stdID = Convert.ToInt32(grdAllStudents.Rows[e.RowIndex].Cells["ID"].Value);
+                    MessageBox.Show(stdID.ToString());
+                }
             }
         }
     }
