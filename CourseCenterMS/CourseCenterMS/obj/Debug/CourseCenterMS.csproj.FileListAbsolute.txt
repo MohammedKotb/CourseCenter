@@ -27,3 +27,19 @@ D:\Work\CourseCenter Cloud\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterM
 D:\Work\CourseCenter Cloud\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csprojAssemblyReference.cache
 D:\Work\CourseCenter Cloud\CourseCenterMS\CourseCenterMS\bin\Debug\EntityFramework.dll
 D:\Work\CourseCenter Cloud\CourseCenterMS\CourseCenterMS\bin\Debug\EntityFramework.xml
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\CourseCenterMS.exe.config
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\CourseCenterMS.exe
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\CourseCenterMS.pdb
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\EntityFramework.dll
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\EntityFramework.xml
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csproj.AssemblyReference.cache
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmNewGroup.resources
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmNewStudent.resources
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmAllStudents.resources
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.Dashbord.resources
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.Properties.Resources.resources
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csproj.GenerateResource.cache
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csproj.CoreCompileInputs.cache
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csproj.CopyComplete
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.exe
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.pdb
