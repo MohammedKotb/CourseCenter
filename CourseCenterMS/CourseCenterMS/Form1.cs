@@ -49,21 +49,21 @@ namespace CourseCenterMS
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
-            timer1.Start();
+            //timer1.Start();
            // Helper.ShowSubMenu(pnlStudent);
  
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Show(pnlGroups);
+          //  Show(pnlGroups);
             //Helper.ShowSubMenu(pnlGroups);
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Helper.ShowSubMenu(pnlPresence);
+           // Helper.ShowSubMenu(pnlPresence);
 
         }
         public void Show(Panel subMenu)
@@ -73,7 +73,7 @@ namespace CourseCenterMS
                 subMenu.Height = subMenu.Height + 5;
                 if (subMenu.Height >= ph)
                 {
-                    timer1.Stop();
+                   // timer1.Stop();
                     hided = false;
                   
                 }
@@ -83,7 +83,7 @@ namespace CourseCenterMS
                 subMenu.Height = subMenu.Height - 5;
                 if (subMenu.Height <= 0)
                 {
-                    timer1.Stop();
+                    //timer1.Stop();
                     hided = true;
             
                 }
@@ -97,8 +97,8 @@ namespace CourseCenterMS
         private void Dashbord_Load(object sender, EventArgs e)
         {
             pnlStudent.Height = 0;
-            pnlGroups.Height = 0;
-            pnlPresence.Height = 0;
+           // pnlGroups.Height = 0;
+           // pnlPresence.Height = 0;
         }
     }
 }
