@@ -25,3 +25,5 @@ D:\Work\CourseCenter Cloud\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterM
 D:\Work\CourseCenter Cloud\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.pdb
 D:\Work\CourseCenter Cloud\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmNewStudent.resources
 D:\Work\CourseCenter Cloud\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csprojAssemblyReference.cache
+D:\Work\CourseCenter Cloud\CourseCenterMS\CourseCenterMS\bin\Debug\EntityFramework.dll
+D:\Work\CourseCenter Cloud\CourseCenterMS\CourseCenterMS\bin\Debug\EntityFramework.xml

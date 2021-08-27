@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using CourseCenterMS.Models;
 namespace CourseCenterMS
 {
     public partial class frmAllStudents : Form
@@ -15,6 +15,12 @@ namespace CourseCenterMS
         public frmAllStudents()
         {
             InitializeComponent();
+        }
+
+        private void frmAllStudents_Load(object sender, EventArgs e)
+        {
+           
+            
         }
     }
 }
