@@ -33,11 +33,11 @@ namespace CourseCenterMS
 
         private void btnAllStudents_Click(object sender, EventArgs e)
         {
-            //CourseCenterEntities context = new CourseCenterEntities();
-            //frmAllStudents f = new frmAllStudents();
-            //ContainerPnl.Controls.Clear();
-            //f.grdAllStudents.DataSource = context.Students.Select(x => new { x.Name, x.GroupID, x.Classroom, x.Phone,x.ID }).ToList(); ;
-            //ContainerPnl.Controls.Add(f.pnlAllStudents);
+            CourseCenterEntities context = new CourseCenterEntities();
+            frmAllStudents f = new frmAllStudents();
+            ContainerPnl.Controls.Clear();
+            f.grdAllStudents.DataSource = context.Students.Select(x => new { x.Name, x.GroupID, x.Classroom, x.Phone, x.ID }).ToList(); ;
+            ContainerPnl.Controls.Add(f.pnlAllStudents);
         }
 
         private void btnMenuAddStudent_Click(object sender, EventArgs e)

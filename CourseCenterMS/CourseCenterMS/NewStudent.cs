@@ -39,7 +39,7 @@ namespace CourseCenterMS
 
         }
 
-        private void bunifuDropdown1_onItemSelected(object sender, EventArgs e)
+        private void pnlGridContainer_Paint(object sender, PaintEventArgs e)
         {
 
         }

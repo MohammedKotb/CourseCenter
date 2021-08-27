@@ -246,6 +246,11 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8_cancel_32.png" />
+    <None Include="Resources\icons8_cancel_16.png" />
+    <None Include="Resources\icons8_delete_161.png" />
+    <None Include="Resources\icons8_delete_32.png" />
+    <None Include="Resources\icons8_save_32.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

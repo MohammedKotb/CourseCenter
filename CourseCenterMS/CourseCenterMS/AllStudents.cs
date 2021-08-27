@@ -33,5 +33,10 @@ namespace CourseCenterMS
                 }
             }
         }
+
+        private void pnlAllStudents_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
