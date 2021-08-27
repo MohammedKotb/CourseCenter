@@ -22,5 +22,14 @@ namespace CourseCenterMS
            
             
         }
+
+        private void grdAllStudents_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (grdAllStudents.Columns[e.ColumnIndex].HeaderText=="تفاصيل")
+            {
+                int stdID = Convert.ToInt32(grdAllStudents.Rows[e.RowIndex].Cells["ID"].Value);
+                MessageBox.Show(stdID.ToString());
+            }
+        }
     }
 }

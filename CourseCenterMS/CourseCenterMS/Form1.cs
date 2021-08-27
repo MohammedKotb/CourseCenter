@@ -31,18 +31,10 @@ namespace CourseCenterMS
         private void btnAllStudents_Click(object sender, EventArgs e)
         {
             CourseCenterEntities context = new CourseCenterEntities();
-            List<Student> students = context.Students.ToList();
             frmAllStudents f = new frmAllStudents();
             ContainerPnl.Controls.Clear();
+            f.grdAllStudents.DataSource = context.Students.Select(x => new { x.Name, x.GroupID, x.Classroom, x.Phone,x.ID }).ToList(); ;
             ContainerPnl.Controls.Add(f.pnlAllStudents);
-            DataTable table = new DataTable();
-            foreach (var student in students)
-            {
-                string[] s = { student.Name, student.GroupID.ToString(), student.Classroom, student.Phone, "Details" };
-                f.grdAllStudents.Rows.Add(s);
-            }
-            //f.grdAllStudents.DataSource = table;
-
         }
 
         private void btnMenuAddStudent_Click(object sender, EventArgs e)
