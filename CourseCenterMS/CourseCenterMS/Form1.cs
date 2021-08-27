@@ -43,8 +43,13 @@ namespace CourseCenterMS
         private void btnMenuAddStudent_Click(object sender, EventArgs e)
         {
             frmNewStudent f = new frmNewStudent();
+            
             ContainerPnl.Controls.Clear();
+            f.pnlNewStudent.Width = ContainerPnl.Width ;
+            f.pnlNewStudent.Height = ContainerPnl.Height;
+
             ContainerPnl.Controls.Add(f.pnlNewStudent);
+                    
         }
 
         private void btnStudent_Click(object sender, EventArgs e)
