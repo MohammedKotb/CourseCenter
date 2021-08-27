@@ -16,5 +16,27 @@ namespace CourseCenterMS
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            btnAddPicture.Visible = true;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            btnAddPicture.Visible = false;
+
+        }
+
+        private void btnAddPicture_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("h");
+        }
+
+        private void frmNewStudent_Load(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }
