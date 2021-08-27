@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CourseCenterMS.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,10 +30,19 @@ namespace CourseCenterMS
 
         private void btnAllStudents_Click(object sender, EventArgs e)
         {
-
+            CourseCenterEntities context = new CourseCenterEntities();
+            List<Student> students = context.Students.ToList();
             frmAllStudents f = new frmAllStudents();
             ContainerPnl.Controls.Clear();
             ContainerPnl.Controls.Add(f.pnlAllStudents);
+            DataTable table = new DataTable();
+            foreach (var student in students)
+            {
+                string[] s = { student.Name, student.GroupID.ToString(), student.Classroom, student.Phone, "Details" };
+                f.grdAllStudents.Rows.Add(s);
+            }
+            //f.grdAllStudents.DataSource = table;
+
         }
 
         private void btnMenuAddStudent_Click(object sender, EventArgs e)

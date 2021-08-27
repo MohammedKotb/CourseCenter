@@ -29,8 +29,8 @@ namespace CourseCenterMS
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlAllStudents = new System.Windows.Forms.Panel();
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
             this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
@@ -39,7 +39,7 @@ namespace CourseCenterMS
             this.pnlGridContainer = new System.Windows.Forms.Panel();
             this.btnFiter = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.GridData = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.grdAllStudents = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.stdudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentGrad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +49,7 @@ namespace CourseCenterMS
             this.crdSearchResult.SuspendLayout();
             this.crdSearch.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdAllStudents)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAllStudents
@@ -122,7 +122,7 @@ namespace CourseCenterMS
             // 
             // pnlGridContainer
             // 
-            this.pnlGridContainer.Controls.Add(this.GridData);
+            this.pnlGridContainer.Controls.Add(this.grdAllStudents);
             this.pnlGridContainer.Location = new System.Drawing.Point(3, 69);
             this.pnlGridContainer.Name = "pnlGridContainer";
             this.pnlGridContainer.Size = new System.Drawing.Size(1111, 455);
@@ -164,48 +164,48 @@ namespace CourseCenterMS
             this.btnSearch.TabIndex = 25;
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // GridData
+            // grdAllStudents
             // 
-            this.GridData.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Sakkal Majalla", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GridData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.GridData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grdAllStudents.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sakkal Majalla", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdAllStudents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdAllStudents.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GridData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GridData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.GridData.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.GridData.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GridData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.GridData.ColumnHeadersHeight = 25;
-            this.GridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.GridData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grdAllStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdAllStudents.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.grdAllStudents.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.grdAllStudents.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdAllStudents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdAllStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grdAllStudents.ColumnHeadersHeight = 25;
+            this.grdAllStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.grdAllStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stdudentName,
             this.studentGroup,
             this.studentGrad,
             this.studentPhone,
             this.studentDetails});
-            this.GridData.DoubleBuffered = true;
-            this.GridData.EnableHeadersVisualStyles = false;
-            this.GridData.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.GridData.HeaderBgColor = System.Drawing.Color.LightBlue;
-            this.GridData.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.GridData.Location = new System.Drawing.Point(24, 3);
-            this.GridData.Name = "GridData";
-            this.GridData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.GridData.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.GridData.RowHeadersWidth = 50;
-            this.GridData.Size = new System.Drawing.Size(1056, 428);
-            this.GridData.TabIndex = 21;
+            this.grdAllStudents.DoubleBuffered = true;
+            this.grdAllStudents.EnableHeadersVisualStyles = false;
+            this.grdAllStudents.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.grdAllStudents.HeaderBgColor = System.Drawing.Color.LightBlue;
+            this.grdAllStudents.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.grdAllStudents.Location = new System.Drawing.Point(24, 3);
+            this.grdAllStudents.Name = "grdAllStudents";
+            this.grdAllStudents.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.grdAllStudents.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.grdAllStudents.RowHeadersWidth = 50;
+            this.grdAllStudents.Size = new System.Drawing.Size(1056, 428);
+            this.grdAllStudents.TabIndex = 21;
             // 
             // stdudentName
             // 
@@ -247,13 +247,14 @@ namespace CourseCenterMS
             this.Controls.Add(this.pnlAllStudents);
             this.Name = "frmAllStudents";
             this.Text = "AllStudents";
+            this.Load += new System.EventHandler(this.frmAllStudents_Load);
             this.pnlAllStudents.ResumeLayout(false);
             this.crdSearchResult.ResumeLayout(false);
             this.crdSearchResult.PerformLayout();
             this.crdSearch.ResumeLayout(false);
             this.crdSearch.PerformLayout();
             this.pnlGridContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GridData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdAllStudents)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -267,11 +268,11 @@ namespace CourseCenterMS
         public System.Windows.Forms.Panel pnlAllStudents;
         private Bunifu.Framework.UI.BunifuCustomLabel lblGridHeader;
         private System.Windows.Forms.Panel pnlGridContainer;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid GridData;
         private System.Windows.Forms.DataGridViewTextBoxColumn stdudentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentGroup;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentGrad;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentPhone;
         private System.Windows.Forms.DataGridViewLinkColumn studentDetails;
+        public Bunifu.Framework.UI.BunifuCustomDataGrid grdAllStudents;
     }
 }
