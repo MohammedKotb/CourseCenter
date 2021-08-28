@@ -30,8 +30,8 @@ namespace CourseCenterMS.Models
         public DbSet<SysNotification> SysNotifications { get; set; }
         public DbSet<SystemUser> SystemUsers { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
-        public DbSet<Department> Departments { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<GroupDay> GroupDays { get; set; }
+        public DbSet<Department> Departments { get; set; }
     }
 }

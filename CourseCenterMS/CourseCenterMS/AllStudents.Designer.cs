@@ -37,17 +37,17 @@ namespace CourseCenterMS
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
             this.pnlGridContainer = new System.Windows.Forms.Panel();
             this.grdAllStudents = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
+            this.btnFiter = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.textSearch = new System.Windows.Forms.TextBox();
             this.stdudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentGrad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentDetails = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
-            this.btnFiter = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.textSearch = new System.Windows.Forms.TextBox();
             this.pnlAllStudents.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
@@ -153,61 +153,10 @@ namespace CourseCenterMS
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdAllStudents.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdAllStudents.RowHeadersWidth = 50;
+            this.grdAllStudents.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.grdAllStudents.Size = new System.Drawing.Size(1056, 428);
             this.grdAllStudents.TabIndex = 21;
             this.grdAllStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdAllStudents_CellClick);
-            // 
-            // stdudentName
-            // 
-            this.stdudentName.DataPropertyName = "Name";
-            this.stdudentName.FillWeight = 116.4129F;
-            this.stdudentName.HeaderText = "اسم الطالب";
-            this.stdudentName.Name = "stdudentName";
-            this.stdudentName.ReadOnly = true;
-            this.stdudentName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // studentGroup
-            // 
-            this.studentGroup.DataPropertyName = "GroupID";
-            this.studentGroup.FillWeight = 116.4129F;
-            this.studentGroup.HeaderText = "المجموعه";
-            this.studentGroup.Name = "studentGroup";
-            this.studentGroup.ReadOnly = true;
-            // 
-            // studentGrad
-            // 
-            this.studentGrad.DataPropertyName = "Classroom";
-            this.studentGrad.FillWeight = 116.4129F;
-            this.studentGrad.HeaderText = "الصــــف ";
-            this.studentGrad.Name = "studentGrad";
-            this.studentGrad.ReadOnly = true;
-            // 
-            // studentPhone
-            // 
-            this.studentPhone.DataPropertyName = "Phone";
-            this.studentPhone.HeaderText = "رقم التليفون";
-            this.studentPhone.Name = "studentPhone";
-            this.studentPhone.ReadOnly = true;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // studentDetails
-            // 
-            this.studentDetails.DataPropertyName = "Details";
-            this.studentDetails.FillWeight = 50.76142F;
-            this.studentDetails.HeaderText = "تفاصيل";
-            this.studentDetails.Name = "studentDetails";
-            this.studentDetails.ReadOnly = true;
-            this.studentDetails.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.studentDetails.Text = "التفاصيل";
-            this.studentDetails.ToolTipText = "اضغط لمزيد من المعلومات";
-            this.studentDetails.UseColumnTextForLinkValue = true;
             // 
             // lblGridHeader
             // 
@@ -284,6 +233,58 @@ namespace CourseCenterMS
             this.textSearch.Name = "textSearch";
             this.textSearch.Size = new System.Drawing.Size(324, 33);
             this.textSearch.TabIndex = 24;
+            // 
+            // stdudentName
+            // 
+            this.stdudentName.DataPropertyName = "Name";
+            this.stdudentName.FillWeight = 116.4129F;
+            this.stdudentName.HeaderText = "اسم الطالب";
+            this.stdudentName.Name = "stdudentName";
+            this.stdudentName.ReadOnly = true;
+            this.stdudentName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // studentGroup
+            // 
+            this.studentGroup.DataPropertyName = "GroupName";
+            this.studentGroup.FillWeight = 116.4129F;
+            this.studentGroup.HeaderText = "المجموعه";
+            this.studentGroup.Name = "studentGroup";
+            this.studentGroup.ReadOnly = true;
+            // 
+            // studentGrad
+            // 
+            this.studentGrad.DataPropertyName = "Classroom";
+            this.studentGrad.FillWeight = 116.4129F;
+            this.studentGrad.HeaderText = "الصــــف ";
+            this.studentGrad.Name = "studentGrad";
+            this.studentGrad.ReadOnly = true;
+            // 
+            // studentPhone
+            // 
+            this.studentPhone.DataPropertyName = "Phone";
+            this.studentPhone.HeaderText = "رقم التليفون";
+            this.studentPhone.Name = "studentPhone";
+            this.studentPhone.ReadOnly = true;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // studentDetails
+            // 
+            this.studentDetails.DataPropertyName = "Details";
+            this.studentDetails.FillWeight = 50.76142F;
+            this.studentDetails.HeaderText = "تفاصيل";
+            this.studentDetails.Name = "studentDetails";
+            this.studentDetails.ReadOnly = true;
+            this.studentDetails.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentDetails.Text = "التفاصيل";
+            this.studentDetails.ToolTipText = "اضغط لمزيد من المعلومات";
+            this.studentDetails.UseColumnTextForLinkValue = true;
             // 
             // frmAllStudents
             // 

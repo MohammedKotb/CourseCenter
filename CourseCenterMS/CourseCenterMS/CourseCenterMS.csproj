@@ -72,11 +72,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAllGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAllGroup.Designer.cs">
+      <DependentUpon>frmAllGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNewGroup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmNewGroup.Designer.cs">
       <DependentUpon>frmNewGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowStudentData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowStudentData.Designer.cs">
+      <DependentUpon>frmShowStudentData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Attendance.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -138,8 +156,17 @@
     <Compile Include="Models\Transaction.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAllGroup.resx">
+      <DependentUpon>frmAllGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNewGroup.resx">
       <DependentUpon>frmNewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowStudentData.resx">
+      <DependentUpon>frmShowStudentData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewStudent.resx">
       <DependentUpon>NewStudent.cs</DependentUpon>

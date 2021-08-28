@@ -80,15 +80,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Departments">
-      <EntityTypeMapping TypeName="CourseCenterModel.Department">
-        <MappingFragment StoreEntitySet="Departments">
-          <ScalarProperty Name="Note" ColumnName="Note" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Groups">
       <EntityTypeMapping TypeName="CourseCenterModel.Group">
         <MappingFragment StoreEntitySet="Group">
@@ -111,6 +102,15 @@
           <ScalarProperty Name="TimeTo" ColumnName="TimeTo" />
           <ScalarProperty Name="TimeFrom" ColumnName="TimeFrom" />
           <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="CourseCenterModel.Department">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

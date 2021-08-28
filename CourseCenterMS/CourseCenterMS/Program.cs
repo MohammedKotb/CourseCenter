@@ -8,15 +8,19 @@ namespace CourseCenterMS
 {
     static class Program
     {
+        public static Dashbord DashbordRunningForm;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashbord());
+            DashbordRunningForm = new Dashbord();
+            Application.Run(DashbordRunningForm);
         }
     }
 }

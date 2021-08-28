@@ -25,10 +25,11 @@ namespace CourseCenterMS
 
         private void grdAllStudents_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (grdAllStudents.Columns[e.ColumnIndex].HeaderText=="تفاصيل")
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            { 
+                if (grdAllGroups.Columns[e.ColumnIndex].HeaderText=="تفاصيل")
             {
-                if (e.RowIndex>=0) {
-                    int stdID = Convert.ToInt32(grdAllStudents.Rows[e.RowIndex].Cells["ID"].Value);
+                    int stdID = Convert.ToInt32(grdAllGroups.Rows[e.RowIndex].Cells["ID"].Value);
                     MessageBox.Show(stdID.ToString());
                 }
             }

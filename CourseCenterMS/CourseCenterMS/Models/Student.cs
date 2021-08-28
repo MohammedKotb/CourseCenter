@@ -45,7 +45,7 @@ namespace CourseCenterMS.Models
     
         public virtual ICollection<Attendance> Attendances { get; set; }
         public virtual ICollection<Transaction> Transactions { get; set; }
-        public virtual Department Department1 { get; set; }
         public virtual Group Group { get; set; }
+        public virtual Department Department { get; set; }
     }
 }

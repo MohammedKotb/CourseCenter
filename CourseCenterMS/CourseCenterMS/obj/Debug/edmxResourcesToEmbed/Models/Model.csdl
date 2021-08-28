@@ -45,8 +45,8 @@
     <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="DepartmentID" Type="Int64" />
     <Property Name="GroupName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Department1" Relationship="CourseCenterModel.FK_Student_Student" FromRole="Student" ToRole="Department" />
     <NavigationProperty Name="Group" Relationship="CourseCenterModel.FK_Student_Group" FromRole="Student" ToRole="Group" />
+    <NavigationProperty Name="Department" Relationship="CourseCenterModel.FK_Student_Departments" FromRole="Student" ToRole="Department" />
   </EntityType>
   <EntityType Name="SysNotification">
     <Key>
@@ -140,43 +140,22 @@
       <End Role="SystemUser" EntitySet="SystemUsers" />
       <End Role="SystemUser1" EntitySet="SystemUsers" />
     </AssociationSet>
-    <EntitySet Name="Departments" EntityType="CourseCenterModel.Department" />
-    <AssociationSet Name="FK_Student_Student" Association="CourseCenterModel.FK_Student_Student">
-      <End Role="Department" EntitySet="Departments" />
+    <EntitySet Name="Groups" EntityType="CourseCenterModel.Group" />
+    <AssociationSet Name="FK_Student_Group" Association="CourseCenterModel.FK_Student_Group">
+      <End Role="Group" EntitySet="Groups" />
       <End Role="Student" EntitySet="Students" />
     </AssociationSet>
-    <EntitySet Name="Groups" EntityType="CourseCenterModel.Group" />
     <EntitySet Name="GroupDays" EntityType="CourseCenterModel.GroupDay" />
     <AssociationSet Name="FK_GroupDay_Group" Association="CourseCenterModel.FK_GroupDay_Group">
       <End Role="Group" EntitySet="Groups" />
       <End Role="GroupDay" EntitySet="GroupDays" />
     </AssociationSet>
-    <AssociationSet Name="FK_Student_Group" Association="CourseCenterModel.FK_Student_Group">
-      <End Role="Group" EntitySet="Groups" />
+    <EntitySet Name="Departments" EntityType="CourseCenterModel.Department" />
+    <AssociationSet Name="FK_Student_Departments" Association="CourseCenterModel.FK_Student_Departments">
+      <End Role="Department" EntitySet="Departments" />
       <End Role="Student" EntitySet="Students" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="Department">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Students" Relationship="CourseCenterModel.FK_Student_Student" FromRole="Department" ToRole="Student" />
-  </EntityType>
-  <Association Name="FK_Student_Student">
-    <End Type="CourseCenterModel.Department" Role="Department" Multiplicity="0..1" />
-    <End Type="CourseCenterModel.Student" Role="Student" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Department">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="Student">
-        <PropertyRef Name="DepartmentID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityType Name="Group">
     <Key>
       <PropertyRef Name="ID" />
@@ -189,17 +168,31 @@
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
     <Property Name="StartDate" Type="DateTime" Precision="3" />
     <Property Name="EndDate" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="GroupDays" Relationship="CourseCenterModel.FK_GroupDay_Group" FromRole="Group" ToRole="GroupDay" />
     <NavigationProperty Name="Students" Relationship="CourseCenterModel.FK_Student_Group" FromRole="Group" ToRole="Student" />
+    <NavigationProperty Name="GroupDays" Relationship="CourseCenterModel.FK_GroupDay_Group" FromRole="Group" ToRole="GroupDay" />
   </EntityType>
+  <Association Name="FK_Student_Group">
+    <End Type="CourseCenterModel.Group" Role="Group" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="CourseCenterModel.Student" Role="Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityType Name="GroupDay">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="GroupID" Type="Int64" Nullable="false" />
-    <Property Name="TimeFrom" Type="DateTime" Precision="3" />
-    <Property Name="TimeTo" Type="DateTime" Precision="3" />
+    <Property Name="TimeFrom" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeTo" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Day" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="Group" Relationship="CourseCenterModel.FK_GroupDay_Group" FromRole="GroupDay" ToRole="Group" />
@@ -218,17 +211,24 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Student_Group">
-    <End Type="CourseCenterModel.Group" Role="Group" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Students" Relationship="CourseCenterModel.FK_Student_Departments" FromRole="Department" ToRole="Student" />
+  </EntityType>
+  <Association Name="FK_Student_Departments">
+    <End Type="CourseCenterModel.Department" Role="Department" Multiplicity="0..1" />
     <End Type="CourseCenterModel.Student" Role="Student" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Group">
+      <Principal Role="Department">
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="Student">
-        <PropertyRef Name="GroupID" />
+        <PropertyRef Name="DepartmentID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

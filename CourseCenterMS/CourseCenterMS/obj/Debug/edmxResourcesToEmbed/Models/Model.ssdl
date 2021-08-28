@@ -43,8 +43,8 @@
     </Key>
     <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="GroupID" Type="bigint" Nullable="false" />
-    <Property Name="TimeFrom" Type="datetime" />
-    <Property Name="TimeTo" Type="datetime" />
+    <Property Name="TimeFrom" Type="datetime" Nullable="false" />
+    <Property Name="TimeTo" Type="datetime" Nullable="false" />
     <Property Name="Day" Type="nvarchar(max)" />
     <Property Name="IsActive" Type="bit" Nullable="false" />
   </EntityType>
@@ -134,6 +134,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Student_Departments">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Student_Group">
     <End Role="Group" Type="Self.Group" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
@@ -145,18 +157,6 @@
       </Principal>
       <Dependent Role="Student">
         <PropertyRef Name="GroupID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Student_Student">
-    <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
-    <End Role="Student" Type="Self.Student" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Departments">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="Student">
-        <PropertyRef Name="DepartmentID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -203,12 +203,12 @@
       <End Role="Group" EntitySet="Group" />
       <End Role="GroupDay" EntitySet="GroupDay" />
     </AssociationSet>
-    <AssociationSet Name="FK_Student_Group" Association="Self.FK_Student_Group">
-      <End Role="Group" EntitySet="Group" />
+    <AssociationSet Name="FK_Student_Departments" Association="Self.FK_Student_Departments">
+      <End Role="Departments" EntitySet="Departments" />
       <End Role="Student" EntitySet="Student" />
     </AssociationSet>
-    <AssociationSet Name="FK_Student_Student" Association="Self.FK_Student_Student">
-      <End Role="Departments" EntitySet="Departments" />
+    <AssociationSet Name="FK_Student_Group" Association="Self.FK_Student_Group">
+      <End Role="Group" EntitySet="Group" />
       <End Role="Student" EntitySet="Student" />
     </AssociationSet>
     <AssociationSet Name="FK_SystemUser_SystemUser" Association="Self.FK_SystemUser_SystemUser">

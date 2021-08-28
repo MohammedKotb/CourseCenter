@@ -16,8 +16,8 @@ namespace CourseCenterMS.Models
     {
         public Group()
         {
-            this.GroupDays = new HashSet<GroupDay>();
             this.Students = new HashSet<Student>();
+            this.GroupDays = new HashSet<GroupDay>();
         }
     
         public long ID { get; set; }
@@ -29,7 +29,7 @@ namespace CourseCenterMS.Models
         public Nullable<System.DateTime> StartDate { get; set; }
         public Nullable<System.DateTime> EndDate { get; set; }
     
-        public virtual ICollection<GroupDay> GroupDays { get; set; }
         public virtual ICollection<Student> Students { get; set; }
+        public virtual ICollection<GroupDay> GroupDays { get; set; }
     }
 }

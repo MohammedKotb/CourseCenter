@@ -13,13 +13,13 @@
         <AssociationConnector Association="CourseCenterModel.FK_Attendance_Student" ManuallyRouted="false" />
         <AssociationConnector Association="CourseCenterModel.FK_Transaction_Student" ManuallyRouted="false" />
         <AssociationConnector Association="CourseCenterModel.FK_SystemUser_SystemUser" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="CourseCenterModel.Department" Width="1.5" PointX="7.375" PointY="7.875" />
-        <AssociationConnector Association="CourseCenterModel.FK_Student_Student" />
         <EntityTypeShape EntityType="CourseCenterModel.Group" Width="1.5" PointX="0.75" PointY="6" />
-        <EntityTypeShape EntityType="CourseCenterModel.GroupDay" Width="1.5" PointX="3" PointY="11.375" />
-        <AssociationConnector Association="CourseCenterModel.FK_GroupDay_Group" />
         <AssociationConnector Association="CourseCenterModel.FK_Student_Group" />
-      </Diagram>
+        <EntityTypeShape EntityType="CourseCenterModel.GroupDay" Width="1.5" PointX="3" PointY="11.25" />
+        <AssociationConnector Association="CourseCenterModel.FK_GroupDay_Group" />
+        <EntityTypeShape EntityType="CourseCenterModel.Department" Width="1.5" PointX="0.75" PointY="0.875" />
+        <AssociationConnector Association="CourseCenterModel.FK_Student_Departments" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

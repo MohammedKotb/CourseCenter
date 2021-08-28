@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,11 @@ namespace CourseCenterMS
 {
     public partial class frmAllStudents : Form
     {
+       CourseCenterEntities context;
         public frmAllStudents()
         {
             InitializeComponent();
+            context = new CourseCenterEntities();
         }
 
         private void frmAllStudents_Load(object sender, EventArgs e)
@@ -25,11 +28,59 @@ namespace CourseCenterMS
 
         private void grdAllStudents_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (grdAllStudents.Columns[e.ColumnIndex].HeaderText=="تفاصيل")
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                if (e.RowIndex>=0) {
-                    int stdID = Convert.ToInt32(grdAllStudents.Rows[e.RowIndex].Cells["ID"].Value);
-                    MessageBox.Show(stdID.ToString());
+                if (grdAllStudents.Columns[e.ColumnIndex].HeaderText=="تفاصيل")
+            {
+                   
+                    
+
+                    long stdID = Convert.ToInt64(grdAllStudents.Rows[e.RowIndex].Cells["ID"].Value);
+                    Student student = context.Students.Where(x => x.ID == stdID).Include(x=>x.Group).Include(x=>x.Department).FirstOrDefault();
+                    frmShowStudentData fStdData = new frmShowStudentData();
+                   
+                    fStdData.txtName.Text = student.Name;
+                    fStdData.txtAddress.Text = student.Address;
+                    fStdData.txtPhone.Text = student.Phone;
+                    fStdData.txtSchool.Text = student.School;
+                    fStdData.txtQR.Text = student.QR;
+                    fStdData.txtFatherJob.Text = student.FatherJob;
+                    fStdData.txtFatherPhone.Text = student.FatherPhone;
+                    fStdData.txtMotherPhone.Text = student.MotherPhone;
+                    fStdData.txtClassroom.Text = student.Classroom;
+                    fStdData.txtDibt.Text = student.Debit.ToString();
+                    fStdData.txtCredits.Text = student.Credit.ToString();
+                    fStdData.cmboDepartment.Items =new[] { student.Department.Name };
+                    fStdData.cmboDepartment.selectedIndex = 0;
+                    fStdData.cmboGroup.Items = new[] { student.Group.Name };
+                    fStdData.cmboGroup.selectedIndex = 0;
+                    //fStdData.pctureImage.Image = student.ImgURL;
+                    if (student.Gender=="ذكر")
+                    {
+                        fStdData.radMale.Checked = true;
+                    }
+                   else if(student.Gender == "انثى")
+                    {
+                        fStdData.radFemail.Checked = true;
+                    }
+                    if (student.IsFatherPrimary)
+                    {
+                        fStdData.radCallFather.Checked = true;
+                        fStdData.radCallMother.Checked = false;
+                    }
+                    else
+                    {
+                        fStdData.radCallMother.Checked = true;
+
+                        fStdData.radCallFather.Checked = false;
+                        
+
+                    }
+                    fStdData.lblStdID.Text = stdID.ToString();
+
+
+                    Program.DashbordRunningForm.ContainerPnl.Controls.Clear();
+                    Program.DashbordRunningForm.ContainerPnl.Controls.Add(fStdData.pnlStudentData);
                 }
             }
         }

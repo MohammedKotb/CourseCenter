@@ -39,7 +39,7 @@ namespace CourseCenterMS
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMenuAddGroup = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAllGroups = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pnlStudent = new System.Windows.Forms.Panel();
             this.btnMenuAddStudent = new System.Windows.Forms.Button();
@@ -219,7 +219,7 @@ namespace CourseCenterMS
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.panel1.Controls.Add(this.btnMenuAddGroup);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnAllGroups);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 413);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -250,27 +250,28 @@ namespace CourseCenterMS
             this.btnMenuAddGroup.UseVisualStyleBackColor = true;
             this.btnMenuAddGroup.Click += new System.EventHandler(this.btnMenuAddGroup_Click);
             // 
-            // button3
+            // btnAllGroups
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.Silver;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.button3.Size = new System.Drawing.Size(202, 44);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "كل المجموعات";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAllGroups.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAllGroups.FlatAppearance.BorderSize = 0;
+            this.btnAllGroups.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnAllGroups.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnAllGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAllGroups.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAllGroups.ForeColor = System.Drawing.Color.Silver;
+            this.btnAllGroups.Image = ((System.Drawing.Image)(resources.GetObject("btnAllGroups.Image")));
+            this.btnAllGroups.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAllGroups.Location = new System.Drawing.Point(0, 0);
+            this.btnAllGroups.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAllGroups.Name = "btnAllGroups";
+            this.btnAllGroups.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnAllGroups.Size = new System.Drawing.Size(202, 44);
+            this.btnAllGroups.TabIndex = 0;
+            this.btnAllGroups.Text = "كل المجموعات";
+            this.btnAllGroups.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAllGroups.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAllGroups.UseVisualStyleBackColor = true;
+            this.btnAllGroups.Click += new System.EventHandler(this.btnAllGroups_Click);
             // 
             // button1
             // 
@@ -591,7 +592,7 @@ namespace CourseCenterMS
         private System.Windows.Forms.Button btnAllStudents;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnMenuAddGroup;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAllGroups;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel2;
@@ -599,7 +600,6 @@ namespace CourseCenterMS
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel ContainerPnl;
         private System.Windows.Forms.PictureBox btnMinimize;
         private System.Windows.Forms.PictureBox btnExit;
         private System.Windows.Forms.Panel pnlFooter;
@@ -607,6 +607,7 @@ namespace CourseCenterMS
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Panel ContainerPnl;
     }
 }
 
