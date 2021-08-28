@@ -43,3 +43,5 @@ D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterM
 D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csproj.CopyComplete
 D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.exe
 D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.pdb
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmAllGroup.resources
+D:\Repository\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmShowStudentData.resources
