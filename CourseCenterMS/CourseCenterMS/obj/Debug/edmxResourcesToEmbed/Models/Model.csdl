@@ -26,21 +26,11 @@
     <Property Name="CreationDate" Type="DateTime" Precision="3" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="GroupDays" Relationship="Self.FK_GroupDay_Group" FromRole="Group" ToRole="GroupDay" />
     <NavigationProperty Name="Students" Relationship="Self.FK_Student_Group" FromRole="Group" ToRole="Student" />
     <Property Name="Classroom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="StartDate" Type="DateTime" Precision="3" />
     <Property Name="EndDate" Type="DateTime" Precision="3" />
-  </EntityType>
-  <EntityType Name="GroupDay">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="GroupID" Type="Int64" Nullable="false" />
-    <Property Name="DateFrom" Type="DateTime" Precision="3" />
-    <Property Name="DateTo" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="Group" Relationship="Self.FK_GroupDay_Group" FromRole="GroupDay" ToRole="Group" />
+    <NavigationProperty Name="GroupDays" Relationship="CourseCenterModel.FK_GroupDay_Group" FromRole="Group" ToRole="GroupDay" />
   </EntityType>
   <EntityType Name="Student">
     <Key>
@@ -121,20 +111,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_GroupDay_Group">
-    <End Role="Group" Type="Self.Group" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="GroupDay" Type="Self.GroupDay" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Group">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="GroupDay">
-        <PropertyRef Name="GroupID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Student_Group">
     <End Role="Group" Type="Self.Group" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
@@ -178,7 +154,6 @@
   <EntityContainer Name="CourseCenterEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Attendances" EntityType="Self.Attendance" />
     <EntitySet Name="Groups" EntityType="Self.Group" />
-    <EntitySet Name="GroupDays" EntityType="Self.GroupDay" />
     <EntitySet Name="Students" EntityType="Self.Student" />
     <EntitySet Name="SysNotifications" EntityType="Self.SysNotification" />
     <EntitySet Name="SystemUsers" EntityType="Self.SystemUser" />
@@ -186,10 +161,6 @@
     <AssociationSet Name="FK_Attendance_Student" Association="Self.FK_Attendance_Student">
       <End Role="Student" EntitySet="Students" />
       <End Role="Attendance" EntitySet="Attendances" />
-    </AssociationSet>
-    <AssociationSet Name="FK_GroupDay_Group" Association="Self.FK_GroupDay_Group">
-      <End Role="Group" EntitySet="Groups" />
-      <End Role="GroupDay" EntitySet="GroupDays" />
     </AssociationSet>
     <AssociationSet Name="FK_Student_Group" Association="Self.FK_Student_Group">
       <End Role="Group" EntitySet="Groups" />
@@ -207,6 +178,11 @@
     <AssociationSet Name="FK_Student_Student" Association="CourseCenterModel.FK_Student_Student">
       <End Role="Department" EntitySet="Departments" />
       <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <EntitySet Name="GroupDays" EntityType="CourseCenterModel.GroupDay" />
+    <AssociationSet Name="FK_GroupDay_Group" Association="CourseCenterModel.FK_GroupDay_Group">
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="GroupDay" EntitySet="GroupDays" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Department">
@@ -227,6 +203,32 @@
       </Principal>
       <Dependent Role="Student">
         <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="GroupDay">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="Int64" Nullable="false" />
+    <Property Name="TimeFrom" Type="DateTime" Precision="3" />
+    <Property Name="TimeTo" Type="DateTime" Precision="3" />
+    <Property Name="Day" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Group" Relationship="CourseCenterModel.FK_GroupDay_Group" FromRole="GroupDay" ToRole="Group" />
+  </EntityType>
+  <Association Name="FK_GroupDay_Group">
+    <End Type="CourseCenterModel.Group" Role="Group" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="CourseCenterModel.GroupDay" Role="GroupDay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupDay">
+        <PropertyRef Name="GroupID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

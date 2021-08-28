@@ -32,16 +32,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="GroupDays">
-      <EntityTypeMapping TypeName="CourseCenterModel.GroupDay">
-        <MappingFragment StoreEntitySet="GroupDay">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
-          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
-          <ScalarProperty Name="DateTo" ColumnName="DateTo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Students">
       <EntityTypeMapping TypeName="CourseCenterModel.Student">
         <MappingFragment StoreEntitySet="Student">
@@ -109,6 +99,18 @@
         <MappingFragment StoreEntitySet="Departments">
           <ScalarProperty Name="Note" ColumnName="Note" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupDays">
+      <EntityTypeMapping TypeName="CourseCenterModel.GroupDay">
+        <MappingFragment StoreEntitySet="GroupDay">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="TimeTo" ColumnName="TimeTo" />
+          <ScalarProperty Name="TimeFrom" ColumnName="TimeFrom" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
