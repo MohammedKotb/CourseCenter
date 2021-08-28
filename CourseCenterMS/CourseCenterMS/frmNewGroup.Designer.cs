@@ -33,6 +33,11 @@ namespace CourseCenterMS
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.pnlGridContainer = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chkIsActive = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.txtClassroom = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtGroupName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.RadPmFrom = new System.Windows.Forms.RadioButton();
             this.RadAmFrom = new System.Windows.Forms.RadioButton();
@@ -58,6 +63,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.chkMonday = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dtPkrEndDate = new Bunifu.Framework.UI.BunifuDatepicker();
             this.dtpkrStartYear = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -70,12 +76,6 @@ namespace CourseCenterMS
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtGroupName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtClassroom = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCheckbox4 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.dtPkrEndDate = new Bunifu.Framework.UI.BunifuDatepicker();
             this.pnlNewGroup.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
@@ -127,7 +127,7 @@ namespace CourseCenterMS
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 61);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(1114, 10);
             this.bunifuSeparator1.TabIndex = 21;
@@ -137,7 +137,7 @@ namespace CourseCenterMS
             // pnlGridContainer
             // 
             this.pnlGridContainer.Controls.Add(this.bunifuCustomLabel12);
-            this.pnlGridContainer.Controls.Add(this.bunifuCheckbox4);
+            this.pnlGridContainer.Controls.Add(this.chkIsActive);
             this.pnlGridContainer.Controls.Add(this.txtClassroom);
             this.pnlGridContainer.Controls.Add(this.txtGroupName);
             this.pnlGridContainer.Controls.Add(this.bunifuCustomLabel7);
@@ -179,14 +179,96 @@ namespace CourseCenterMS
             this.pnlGridContainer.TabIndex = 20;
             this.pnlGridContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGridContainer_Paint);
             // 
+            // bunifuCustomLabel12
+            // 
+            this.bunifuCustomLabel12.AutoSize = true;
+            this.bunifuCustomLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel12.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel12.Location = new System.Drawing.Point(62, 303);
+            this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
+            this.bunifuCustomLabel12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bunifuCustomLabel12.Size = new System.Drawing.Size(106, 25);
+            this.bunifuCustomLabel12.TabIndex = 179;
+            this.bunifuCustomLabel12.Text = "مجموعـــه نشطــــه";
+            // 
+            // chkIsActive
+            // 
+            this.chkIsActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.chkIsActive.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chkIsActive.Checked = true;
+            this.chkIsActive.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.chkIsActive.ForeColor = System.Drawing.Color.White;
+            this.chkIsActive.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.chkIsActive.Location = new System.Drawing.Point(187, 308);
+            this.chkIsActive.Margin = new System.Windows.Forms.Padding(4);
+            this.chkIsActive.Name = "chkIsActive";
+            this.chkIsActive.Size = new System.Drawing.Size(20, 20);
+            this.chkIsActive.TabIndex = 180;
+            // 
+            // txtClassroom
+            // 
+            this.txtClassroom.BackColor = System.Drawing.Color.LightGray;
+            this.txtClassroom.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClassroom.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtClassroom.ForeColor = System.Drawing.Color.Navy;
+            this.txtClassroom.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtClassroom.HintText = "";
+            this.txtClassroom.isPassword = false;
+            this.txtClassroom.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtClassroom.LineIdleColor = System.Drawing.Color.LightGray;
+            this.txtClassroom.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
+            this.txtClassroom.LineThickness = 5;
+            this.txtClassroom.Location = new System.Drawing.Point(39, 42);
+            this.txtClassroom.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
+            this.txtClassroom.Name = "txtClassroom";
+            this.txtClassroom.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.txtClassroom.Size = new System.Drawing.Size(341, 32);
+            this.txtClassroom.TabIndex = 178;
+            this.txtClassroom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtGroupName
+            // 
+            this.txtGroupName.BackColor = System.Drawing.Color.LightGray;
+            this.txtGroupName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGroupName.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtGroupName.ForeColor = System.Drawing.Color.Navy;
+            this.txtGroupName.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtGroupName.HintText = "";
+            this.txtGroupName.isPassword = false;
+            this.txtGroupName.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtGroupName.LineIdleColor = System.Drawing.Color.LightGray;
+            this.txtGroupName.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
+            this.txtGroupName.LineThickness = 5;
+            this.txtGroupName.Location = new System.Drawing.Point(558, 42);
+            this.txtGroupName.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
+            this.txtGroupName.Name = "txtGroupName";
+            this.txtGroupName.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.txtGroupName.Size = new System.Drawing.Size(341, 32);
+            this.txtGroupName.TabIndex = 177;
+            this.txtGroupName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // bunifuCustomLabel7
+            // 
+            this.bunifuCustomLabel7.AutoSize = true;
+            this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(402, 49);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(57, 25);
+            this.bunifuCustomLabel7.TabIndex = 175;
+            this.bunifuCustomLabel7.Text = "الصف :";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.RadPmFrom);
             this.groupBox2.Controls.Add(this.RadAmFrom);
             this.groupBox2.Location = new System.Drawing.Point(62, 179);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(145, 43);
             this.groupBox2.TabIndex = 174;
             this.groupBox2.TabStop = false;
@@ -196,7 +278,7 @@ namespace CourseCenterMS
             this.RadPmFrom.AutoSize = true;
             this.RadPmFrom.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.RadPmFrom.Location = new System.Drawing.Point(8, 9);
-            this.RadPmFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RadPmFrom.Margin = new System.Windows.Forms.Padding(2);
             this.RadPmFrom.Name = "RadPmFrom";
             this.RadPmFrom.Size = new System.Drawing.Size(64, 29);
             this.RadPmFrom.TabIndex = 0;
@@ -210,7 +292,7 @@ namespace CourseCenterMS
             this.RadAmFrom.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.RadAmFrom.ForeColor = System.Drawing.Color.Black;
             this.RadAmFrom.Location = new System.Drawing.Point(76, 9);
-            this.RadAmFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RadAmFrom.Margin = new System.Windows.Forms.Padding(2);
             this.RadAmFrom.Name = "RadAmFrom";
             this.RadAmFrom.Size = new System.Drawing.Size(69, 29);
             this.RadAmFrom.TabIndex = 0;
@@ -223,9 +305,9 @@ namespace CourseCenterMS
             this.groupBox1.Controls.Add(this.RadPmTo);
             this.groupBox1.Controls.Add(this.RadAmTo);
             this.groupBox1.Location = new System.Drawing.Point(62, 238);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(145, 43);
             this.groupBox1.TabIndex = 174;
             this.groupBox1.TabStop = false;
@@ -235,7 +317,7 @@ namespace CourseCenterMS
             this.RadPmTo.AutoSize = true;
             this.RadPmTo.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.RadPmTo.Location = new System.Drawing.Point(8, 9);
-            this.RadPmTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RadPmTo.Margin = new System.Windows.Forms.Padding(2);
             this.RadPmTo.Name = "RadPmTo";
             this.RadPmTo.Size = new System.Drawing.Size(64, 29);
             this.RadPmTo.TabIndex = 0;
@@ -249,7 +331,7 @@ namespace CourseCenterMS
             this.RadAmTo.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.RadAmTo.ForeColor = System.Drawing.Color.Black;
             this.RadAmTo.Location = new System.Drawing.Point(76, 9);
-            this.RadAmTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RadAmTo.Margin = new System.Windows.Forms.Padding(2);
             this.RadAmTo.Name = "RadAmTo";
             this.RadAmTo.Size = new System.Drawing.Size(69, 29);
             this.RadAmTo.TabIndex = 0;
@@ -277,7 +359,7 @@ namespace CourseCenterMS
             "11",
             "12"});
             this.cmboTimeFrom.Location = new System.Drawing.Point(293, 188);
-            this.cmboTimeFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmboTimeFrom.Margin = new System.Windows.Forms.Padding(2);
             this.cmboTimeFrom.Name = "cmboTimeFrom";
             this.cmboTimeFrom.Size = new System.Drawing.Size(87, 30);
             this.cmboTimeFrom.TabIndex = 173;
@@ -302,7 +384,7 @@ namespace CourseCenterMS
             "11",
             "12"});
             this.cmboTimeTo.Location = new System.Drawing.Point(293, 247);
-            this.cmboTimeTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmboTimeTo.Margin = new System.Windows.Forms.Padding(2);
             this.cmboTimeTo.Name = "cmboTimeTo";
             this.cmboTimeTo.Size = new System.Drawing.Size(87, 30);
             this.cmboTimeTo.TabIndex = 173;
@@ -348,14 +430,14 @@ namespace CourseCenterMS
             // 
             // chkWednesday
             // 
-            this.chkWednesday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.chkWednesday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.chkWednesday.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.chkWednesday.Checked = false;
             this.chkWednesday.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.chkWednesday.ForeColor = System.Drawing.Color.White;
             this.chkWednesday.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.chkWednesday.Location = new System.Drawing.Point(879, 293);
-            this.chkWednesday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkWednesday.Margin = new System.Windows.Forms.Padding(4);
             this.chkWednesday.Name = "chkWednesday";
             this.chkWednesday.Size = new System.Drawing.Size(20, 20);
             this.chkWednesday.TabIndex = 171;
@@ -369,7 +451,7 @@ namespace CourseCenterMS
             this.chkThursday.ForeColor = System.Drawing.Color.White;
             this.chkThursday.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.chkThursday.Location = new System.Drawing.Point(770, 293);
-            this.chkThursday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkThursday.Margin = new System.Windows.Forms.Padding(4);
             this.chkThursday.Name = "chkThursday";
             this.chkThursday.Size = new System.Drawing.Size(20, 20);
             this.chkThursday.TabIndex = 171;
@@ -383,7 +465,7 @@ namespace CourseCenterMS
             this.chkSunday.ForeColor = System.Drawing.Color.White;
             this.chkSunday.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.chkSunday.Location = new System.Drawing.Point(770, 191);
-            this.chkSunday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkSunday.Margin = new System.Windows.Forms.Padding(4);
             this.chkSunday.Name = "chkSunday";
             this.chkSunday.Size = new System.Drawing.Size(20, 20);
             this.chkSunday.TabIndex = 169;
@@ -423,7 +505,7 @@ namespace CourseCenterMS
             this.chkTuesday.ForeColor = System.Drawing.Color.White;
             this.chkTuesday.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.chkTuesday.Location = new System.Drawing.Point(770, 242);
-            this.chkTuesday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkTuesday.Margin = new System.Windows.Forms.Padding(4);
             this.chkTuesday.Name = "chkTuesday";
             this.chkTuesday.Size = new System.Drawing.Size(20, 20);
             this.chkTuesday.TabIndex = 166;
@@ -437,7 +519,7 @@ namespace CourseCenterMS
             this.bunifuCheckbox5.ForeColor = System.Drawing.Color.White;
             this.bunifuCheckbox5.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.bunifuCheckbox5.Location = new System.Drawing.Point(738, 293);
-            this.bunifuCheckbox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuCheckbox5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCheckbox5.Name = "bunifuCheckbox5";
             this.bunifuCheckbox5.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox5.TabIndex = 172;
@@ -477,7 +559,7 @@ namespace CourseCenterMS
             this.chkSaturay.ForeColor = System.Drawing.Color.White;
             this.chkSaturay.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.chkSaturay.Location = new System.Drawing.Point(879, 191);
-            this.chkSaturay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkSaturay.Margin = new System.Windows.Forms.Padding(4);
             this.chkSaturay.Name = "chkSaturay";
             this.chkSaturay.Size = new System.Drawing.Size(20, 20);
             this.chkSaturay.TabIndex = 167;
@@ -517,7 +599,7 @@ namespace CourseCenterMS
             this.chkMonday.ForeColor = System.Drawing.Color.White;
             this.chkMonday.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.chkMonday.Location = new System.Drawing.Point(879, 242);
-            this.chkMonday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkMonday.Margin = new System.Windows.Forms.Padding(4);
             this.chkMonday.Name = "chkMonday";
             this.chkMonday.Size = new System.Drawing.Size(20, 20);
             this.chkMonday.TabIndex = 170;
@@ -535,6 +617,22 @@ namespace CourseCenterMS
             this.bunifuCustomLabel2.TabIndex = 153;
             this.bunifuCustomLabel2.Text = "الايـــــــــام :";
             // 
+            // dtPkrEndDate
+            // 
+            this.dtPkrEndDate.BackColor = System.Drawing.Color.LightGray;
+            this.dtPkrEndDate.BorderRadius = 0;
+            this.dtPkrEndDate.Font = new System.Drawing.Font("Sakkal Majalla", 14F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline) 
+                | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.World, ((byte)(1)), true);
+            this.dtPkrEndDate.ForeColor = System.Drawing.Color.Navy;
+            this.dtPkrEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtPkrEndDate.FormatCustom = "";
+            this.dtPkrEndDate.Location = new System.Drawing.Point(37, 110);
+            this.dtPkrEndDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtPkrEndDate.Name = "dtPkrEndDate";
+            this.dtPkrEndDate.Size = new System.Drawing.Size(343, 37);
+            this.dtPkrEndDate.TabIndex = 162;
+            this.dtPkrEndDate.Value = new System.DateTime(2021, 8, 27, 22, 33, 49, 203);
+            // 
             // dtpkrStartYear
             // 
             this.dtpkrStartYear.BackColor = System.Drawing.Color.LightGray;
@@ -545,6 +643,7 @@ namespace CourseCenterMS
             this.dtpkrStartYear.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpkrStartYear.FormatCustom = "";
             this.dtpkrStartYear.Location = new System.Drawing.Point(556, 110);
+            this.dtpkrStartYear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpkrStartYear.Name = "dtpkrStartYear";
             this.dtpkrStartYear.Size = new System.Drawing.Size(343, 37);
             this.dtpkrStartYear.TabIndex = 162;
@@ -585,7 +684,7 @@ namespace CourseCenterMS
             this.chkFriday.ForeColor = System.Drawing.Color.White;
             this.chkFriday.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.chkFriday.Location = new System.Drawing.Point(879, 343);
-            this.chkFriday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkFriday.Margin = new System.Windows.Forms.Padding(4);
             this.chkFriday.Name = "chkFriday";
             this.chkFriday.Size = new System.Drawing.Size(20, 20);
             this.chkFriday.TabIndex = 168;
@@ -620,6 +719,7 @@ namespace CourseCenterMS
             this.btnSaveAndContainue.Text = "حفـــــظ واستمرار";
             this.btnSaveAndContainue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSaveAndContainue.UseVisualStyleBackColor = false;
+            this.btnSaveAndContainue.Click += new System.EventHandler(this.btnSaveAndContainue_Click);
             // 
             // btnCancel
             // 
@@ -694,110 +794,13 @@ namespace CourseCenterMS
             this.lblGridHeader.TabIndex = 18;
             this.lblGridHeader.Text = "اضافـــة مجموعة جديده";
             // 
-            // bunifuCustomLabel7
-            // 
-            this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(402, 49);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(57, 25);
-            this.bunifuCustomLabel7.TabIndex = 175;
-            this.bunifuCustomLabel7.Text = "الصف :";
-            // 
-            // txtGroupName
-            // 
-            this.txtGroupName.BackColor = System.Drawing.Color.LightGray;
-            this.txtGroupName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGroupName.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtGroupName.ForeColor = System.Drawing.Color.Navy;
-            this.txtGroupName.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtGroupName.HintText = "";
-            this.txtGroupName.isPassword = false;
-            this.txtGroupName.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtGroupName.LineIdleColor = System.Drawing.Color.LightGray;
-            this.txtGroupName.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
-            this.txtGroupName.LineThickness = 5;
-            this.txtGroupName.Location = new System.Drawing.Point(558, 42);
-            this.txtGroupName.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtGroupName.Name = "txtGroupName";
-            this.txtGroupName.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.txtGroupName.Size = new System.Drawing.Size(341, 32);
-            this.txtGroupName.TabIndex = 177;
-            this.txtGroupName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtClassroom
-            // 
-            this.txtClassroom.BackColor = System.Drawing.Color.LightGray;
-            this.txtClassroom.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtClassroom.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtClassroom.ForeColor = System.Drawing.Color.Navy;
-            this.txtClassroom.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtClassroom.HintText = "";
-            this.txtClassroom.isPassword = false;
-            this.txtClassroom.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtClassroom.LineIdleColor = System.Drawing.Color.LightGray;
-            this.txtClassroom.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
-            this.txtClassroom.LineThickness = 5;
-            this.txtClassroom.Location = new System.Drawing.Point(39, 42);
-            this.txtClassroom.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtClassroom.Name = "txtClassroom";
-            this.txtClassroom.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.txtClassroom.Size = new System.Drawing.Size(341, 32);
-            this.txtClassroom.TabIndex = 178;
-            this.txtClassroom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // bunifuCustomLabel12
-            // 
-            this.bunifuCustomLabel12.AutoSize = true;
-            this.bunifuCustomLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel12.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel12.Location = new System.Drawing.Point(62, 303);
-            this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
-            this.bunifuCustomLabel12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel12.Size = new System.Drawing.Size(106, 25);
-            this.bunifuCustomLabel12.TabIndex = 179;
-            this.bunifuCustomLabel12.Text = "مجموعـــه نشطــــه";
-            // 
-            // bunifuCheckbox4
-            // 
-            this.bunifuCheckbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox4.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox4.Checked = true;
-            this.bunifuCheckbox4.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox4.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox4.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.bunifuCheckbox4.Location = new System.Drawing.Point(187, 308);
-            this.bunifuCheckbox4.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuCheckbox4.Name = "bunifuCheckbox4";
-            this.bunifuCheckbox4.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox4.TabIndex = 180;
-            // 
-            // dtPkrEndDate
-            // 
-            this.dtPkrEndDate.BackColor = System.Drawing.Color.LightGray;
-            this.dtPkrEndDate.BorderRadius = 0;
-            this.dtPkrEndDate.Font = new System.Drawing.Font("Sakkal Majalla", 14F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline) 
-                | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.World, ((byte)(1)), true);
-            this.dtPkrEndDate.ForeColor = System.Drawing.Color.Navy;
-            this.dtPkrEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtPkrEndDate.FormatCustom = "";
-            this.dtPkrEndDate.Location = new System.Drawing.Point(37, 110);
-            this.dtPkrEndDate.Name = "dtPkrEndDate";
-            this.dtPkrEndDate.Size = new System.Drawing.Size(343, 37);
-            this.dtPkrEndDate.TabIndex = 162;
-            this.dtPkrEndDate.Value = new System.DateTime(2021, 8, 27, 22, 33, 49, 203);
-            // 
             // frmNewGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 749);
             this.Controls.Add(this.pnlNewGroup);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmNewGroup";
             this.Text = "frmNewGroup1";
             this.pnlNewGroup.ResumeLayout(false);
@@ -862,7 +865,7 @@ namespace CourseCenterMS
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtClassroom;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtGroupName;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox4;
+        private Bunifu.Framework.UI.BunifuCheckbox chkIsActive;
         private Bunifu.Framework.UI.BunifuDatepicker dtPkrEndDate;
     }
 }

@@ -38,6 +38,15 @@ namespace CourseCenterMS
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            SaveNewGroupe();
+        }
+        private void btnSaveAndContainue_Click(object sender, EventArgs e)
+        {
+            SaveNewGroupe();
+        }
+
+        public void SaveNewGroupe()
+        {
             Group group = new Group();
             try
             {
@@ -49,7 +58,7 @@ namespace CourseCenterMS
                 group.CreationDate = DateTime.Now;
                 context.Groups.Add(group);
                 context.SaveChanges();
-                if (chkThursday.Checked)
+                if (chkIsActive.Checked)
                 {
                     group.IsActive = true;
                 }
@@ -98,7 +107,7 @@ namespace CourseCenterMS
                     count++;
 
                 }
-                if (count>0)
+                if (count > 0)
                 {
                     MessageBox.Show("تم اضافة المجموعه بنجاح");
 
@@ -119,8 +128,6 @@ namespace CourseCenterMS
 
             }
         }
-
-
 
         public void SaveGroupDayAndTime(long groupID, string day)
         {
@@ -145,6 +152,8 @@ namespace CourseCenterMS
             context.GroupDays.Add(groupDay);
             context.SaveChanges();
         }
+
+       
     }
 }
 

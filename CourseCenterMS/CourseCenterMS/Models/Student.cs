@@ -29,7 +29,6 @@ namespace CourseCenterMS.Models
         public string FatherJob { get; set; }
         public string School { get; set; }
         public string Classroom { get; set; }
-        public string Department { get; set; }
         public string ImgURL { get; set; }
         public string Address { get; set; }
         public string Chronicdisease { get; set; }
@@ -40,9 +39,13 @@ namespace CourseCenterMS.Models
         public Nullable<decimal> Discount { get; set; }
         public bool IsDeleted { get; set; }
         public bool IsActive { get; set; }
+        public string Gender { get; set; }
+        public Nullable<long> DepartmentID { get; set; }
+        public string GroupName { get; set; }
     
         public virtual ICollection<Attendance> Attendances { get; set; }
-        public virtual Group Group { get; set; }
         public virtual ICollection<Transaction> Transactions { get; set; }
+        public virtual Department Department1 { get; set; }
+        public virtual Group Group { get; set; }
     }
 }

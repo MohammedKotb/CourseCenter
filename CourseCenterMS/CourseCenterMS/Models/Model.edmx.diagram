@@ -6,17 +6,19 @@
     <edmx:Diagrams>
       <Diagram DiagramId="28111cd851cf4cc48858bf52e741f30f" Name="Diagram1">
         <EntityTypeShape EntityType="CourseCenterModel.Attendance" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="CourseCenterModel.Group" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="CourseCenterModel.GroupDay" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="CourseCenterModel.Student" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="CourseCenterModel.SysNotification" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CourseCenterModel.SystemUser" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CourseCenterModel.Transaction" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
         <AssociationConnector Association="CourseCenterModel.FK_Attendance_Student" ManuallyRouted="false" />
-        <AssociationConnector Association="CourseCenterModel.FK_GroupDay_Group" ManuallyRouted="false" />
-        <AssociationConnector Association="CourseCenterModel.FK_Student_Group" ManuallyRouted="false" />
         <AssociationConnector Association="CourseCenterModel.FK_Transaction_Student" ManuallyRouted="false" />
         <AssociationConnector Association="CourseCenterModel.FK_SystemUser_SystemUser" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CourseCenterModel.Department" Width="1.5" PointX="7.375" PointY="7.875" />
+        <AssociationConnector Association="CourseCenterModel.FK_Student_Student" />
+        <EntityTypeShape EntityType="CourseCenterModel.Group" Width="1.5" PointX="0.75" PointY="6" />
+        <EntityTypeShape EntityType="CourseCenterModel.GroupDay" Width="1.5" PointX="3" PointY="11.375" />
+        <AssociationConnector Association="CourseCenterModel.FK_GroupDay_Group" />
+        <AssociationConnector Association="CourseCenterModel.FK_Student_Group" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

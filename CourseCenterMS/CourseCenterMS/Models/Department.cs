@@ -12,24 +12,17 @@ namespace CourseCenterMS.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Group
+    public partial class Department
     {
-        public Group()
+        public Department()
         {
-            this.GroupDays = new HashSet<GroupDay>();
             this.Students = new HashSet<Student>();
         }
     
         public long ID { get; set; }
         public string Name { get; set; }
-        public string Classroom { get; set; }
-        public Nullable<System.DateTime> CreationDate { get; set; }
-        public bool IsActive { get; set; }
-        public bool IsDeleted { get; set; }
-        public Nullable<System.DateTime> StartDate { get; set; }
-        public Nullable<System.DateTime> EndDate { get; set; }
+        public string Note { get; set; }
     
-        public virtual ICollection<GroupDay> GroupDays { get; set; }
         public virtual ICollection<Student> Students { get; set; }
     }
 }

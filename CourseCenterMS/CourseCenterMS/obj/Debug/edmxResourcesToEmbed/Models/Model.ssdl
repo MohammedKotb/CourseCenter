@@ -16,16 +16,26 @@
     <Property Name="SheetNotes" Type="nvarchar(max)" />
     <Property Name="Note" Type="nvarchar(max)" />
   </EntityType>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
   <EntityType Name="Group">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Grade" Type="nvarchar(max)" />
+    <Property Name="Classroom" Type="nvarchar(max)" />
     <Property Name="CreationDate" Type="datetime" />
     <Property Name="IsActive" Type="bit" Nullable="false" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
   </EntityType>
   <EntityType Name="GroupDay">
     <Key>
@@ -45,18 +55,20 @@
     <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Gender" Type="nvarchar(max)" />
     <Property Name="FatherPhone" Type="nvarchar(max)" />
     <Property Name="MotherPhone" Type="nvarchar(max)" />
     <Property Name="IsFatherPrimary" Type="bit" Nullable="false" />
     <Property Name="FatherJob" Type="nvarchar(max)" />
     <Property Name="School" Type="nvarchar(max)" />
     <Property Name="Classroom" Type="nvarchar(max)" />
-    <Property Name="Department" Type="nvarchar(max)" />
+    <Property Name="DepartmentID" Type="bigint" />
     <Property Name="ImgURL" Type="nvarchar(max)" />
     <Property Name="Address" Type="nvarchar(max)" />
     <Property Name="Chronicdisease" Type="nvarchar(max)" />
     <Property Name="QR" Type="nvarchar(max)" />
     <Property Name="GroupID" Type="bigint" />
+    <Property Name="GroupName" Type="nvarchar(max)" />
     <Property Name="Debit" Type="decimal" Precision="18" Scale="0" />
     <Property Name="Credit" Type="decimal" Precision="18" Scale="0" />
     <Property Name="Discount" Type="decimal" Precision="18" Scale="0" />
@@ -136,6 +148,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Student_Student">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_SystemUser_SystemUser">
     <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="0..1" />
     <End Role="SystemUser1" Type="Self.SystemUser" Multiplicity="*" />
@@ -164,6 +188,7 @@
   </Association>
   <EntityContainer Name="CourseCenterModelStoreContainer">
     <EntitySet Name="Attendance" EntityType="Self.Attendance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Group" EntityType="Self.Group" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GroupDay" EntityType="Self.GroupDay" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
@@ -180,6 +205,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_Student_Group" Association="Self.FK_Student_Group">
       <End Role="Group" EntitySet="Group" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Student" Association="Self.FK_Student_Student">
+      <End Role="Departments" EntitySet="Departments" />
       <End Role="Student" EntitySet="Student" />
     </AssociationSet>
     <AssociationSet Name="FK_SystemUser_SystemUser" Association="Self.FK_SystemUser_SystemUser">
