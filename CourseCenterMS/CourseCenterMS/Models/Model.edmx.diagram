@@ -17,6 +17,8 @@
         <AssociationConnector Association="CourseCenterModel.FK_Student_Group" ManuallyRouted="false" />
         <AssociationConnector Association="CourseCenterModel.FK_Transaction_Student" ManuallyRouted="false" />
         <AssociationConnector Association="CourseCenterModel.FK_SystemUser_SystemUser" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CourseCenterModel.Department" Width="1.5" PointX="7.375" PointY="7.875" />
+        <AssociationConnector Association="CourseCenterModel.FK_Student_Student" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

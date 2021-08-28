@@ -99,6 +99,7 @@ namespace CourseCenterMS
                 student.MotherPhone = txtMatherPhone.Text;
                 student.FatherPhone = txtFatherJob.Text;
                 student.GroupID = cmboGroup.SelectedIndex >= 0 ? int.Parse(cmboGroup.SelectedValue.ToString()) : 0;
+                student.GroupName = cmboGroup.SelectedIndex >=0?cmboGroup.GetItemText( cmboGroup.SelectedItem) : null;
                 student.Classroom = txtClassroom.Text;
                 student.Phone = txtPhone.Text;
                 student.IsActive = true;
@@ -145,8 +146,10 @@ namespace CourseCenterMS
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            resetForm();
+            
         }
+
+        
         // Function to rest All values for form Controls
 
 

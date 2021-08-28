@@ -21,9 +21,11 @@
     <EntitySetMapping Name="Groups">
       <EntityTypeMapping TypeName="CourseCenterModel.Group">
         <MappingFragment StoreEntitySet="Group">
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Classroom" ColumnName="Classroom" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Grade" ColumnName="Grade" />
           <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
           <ScalarProperty Name="IsActive" ColumnName="IsActive" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
@@ -43,6 +45,9 @@
     <EntitySetMapping Name="Students">
       <EntityTypeMapping TypeName="CourseCenterModel.Student">
         <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
@@ -52,7 +57,6 @@
           <ScalarProperty Name="FatherJob" ColumnName="FatherJob" />
           <ScalarProperty Name="School" ColumnName="School" />
           <ScalarProperty Name="Classroom" ColumnName="Classroom" />
-          <ScalarProperty Name="Department" ColumnName="Department" />
           <ScalarProperty Name="ImgURL" ColumnName="ImgURL" />
           <ScalarProperty Name="Address" ColumnName="Address" />
           <ScalarProperty Name="Chronicdisease" ColumnName="Chronicdisease" />
@@ -97,6 +101,15 @@
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Value" ColumnName="Value" />
           <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="CourseCenterModel.Department">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

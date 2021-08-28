@@ -81,6 +81,9 @@
     <Compile Include="Models\Attendance.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Department.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Group.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
