@@ -105,5 +105,12 @@ namespace CourseCenterMS
            // pnlGroups.Height = 0;
            // pnlPresence.Height = 0;
         }
+
+        private void btnMenuAddGroup_Click(object sender, EventArgs e)
+        {
+            frmNewGroup f = new frmNewGroup();
+            ContainerPnl.Controls.Clear();
+            ContainerPnl.Controls.Add(f.pnlNewGroup);
+        }
     }
 }

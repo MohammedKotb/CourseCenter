@@ -33,8 +33,10 @@
     </Key>
     <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="GroupID" Type="bigint" Nullable="false" />
-    <Property Name="DateFrom" Type="datetime" />
-    <Property Name="DateTo" Type="datetime" />
+    <Property Name="TimeFrom" Type="datetime" />
+    <Property Name="TimeTo" Type="datetime" />
+    <Property Name="Day" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Student">
     <Key>

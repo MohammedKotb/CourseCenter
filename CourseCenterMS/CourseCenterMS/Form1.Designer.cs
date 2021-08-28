@@ -38,7 +38,7 @@ namespace CourseCenterMS
             this.button9 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnMenuAddGroup = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pnlStudent = new System.Windows.Forms.Panel();
@@ -218,7 +218,7 @@ namespace CourseCenterMS
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnMenuAddGroup);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 413);
@@ -227,27 +227,28 @@ namespace CourseCenterMS
             this.panel1.Size = new System.Drawing.Size(202, 98);
             this.panel1.TabIndex = 9;
             // 
-            // button2
+            // btnMenuAddGroup
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.Silver;
-            this.button2.Image = global::CourseCenterMS.Properties.Resources.icons8_add_new_32;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 44);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.button2.Size = new System.Drawing.Size(202, 41);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "اضافة مجموعة";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMenuAddGroup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuAddGroup.FlatAppearance.BorderSize = 0;
+            this.btnMenuAddGroup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAddGroup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAddGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuAddGroup.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnMenuAddGroup.ForeColor = System.Drawing.Color.Silver;
+            this.btnMenuAddGroup.Image = global::CourseCenterMS.Properties.Resources.icons8_add_new_32;
+            this.btnMenuAddGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAddGroup.Location = new System.Drawing.Point(0, 44);
+            this.btnMenuAddGroup.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMenuAddGroup.Name = "btnMenuAddGroup";
+            this.btnMenuAddGroup.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnMenuAddGroup.Size = new System.Drawing.Size(202, 41);
+            this.btnMenuAddGroup.TabIndex = 1;
+            this.btnMenuAddGroup.Text = "اضافة مجموعة";
+            this.btnMenuAddGroup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAddGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuAddGroup.UseVisualStyleBackColor = true;
+            this.btnMenuAddGroup.Click += new System.EventHandler(this.btnMenuAddGroup_Click);
             // 
             // button3
             // 
@@ -589,7 +590,7 @@ namespace CourseCenterMS
         private System.Windows.Forms.Button btnMenuAddStudent;
         private System.Windows.Forms.Button btnAllStudents;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMenuAddGroup;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;

@@ -16,8 +16,10 @@ namespace CourseCenterMS.Models
     {
         public long ID { get; set; }
         public long GroupID { get; set; }
-        public Nullable<System.DateTime> DateFrom { get; set; }
-        public Nullable<System.DateTime> DateTo { get; set; }
+        public Nullable<System.DateTime> TimeFrom { get; set; }
+        public Nullable<System.DateTime> TimeTo { get; set; }
+        public string Day { get; set; }
+        public bool IsActive { get; set; }
     
         public virtual Group Group { get; set; }
     }
