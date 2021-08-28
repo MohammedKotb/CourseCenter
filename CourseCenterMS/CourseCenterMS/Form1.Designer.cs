@@ -33,11 +33,11 @@ namespace CourseCenterMS
             this.SidePnl = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlAttendance = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlGroup = new System.Windows.Forms.Panel();
             this.btnMenuAddGroup = new System.Windows.Forms.Button();
             this.btnAllGroups = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -60,8 +60,8 @@ namespace CourseCenterMS
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SidePnl.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlAttendance.SuspendLayout();
+            this.pnlGroup.SuspendLayout();
             this.pnlStudent.SuspendLayout();
             this.ImgPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,9 +76,9 @@ namespace CourseCenterMS
             this.SidePnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
             this.SidePnl.Controls.Add(this.button10);
             this.SidePnl.Controls.Add(this.button5);
-            this.SidePnl.Controls.Add(this.panel2);
+            this.SidePnl.Controls.Add(this.pnlAttendance);
             this.SidePnl.Controls.Add(this.button4);
-            this.SidePnl.Controls.Add(this.panel1);
+            this.SidePnl.Controls.Add(this.pnlGroup);
             this.SidePnl.Controls.Add(this.button1);
             this.SidePnl.Controls.Add(this.pnlStudent);
             this.SidePnl.Controls.Add(this.btnStudent);
@@ -136,18 +136,19 @@ namespace CourseCenterMS
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // pnlAttendance
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.panel2.Location = new System.Drawing.Point(0, 566);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(202, 98);
-            this.panel2.TabIndex = 12;
+            this.pnlAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.pnlAttendance.Controls.Add(this.button6);
+            this.pnlAttendance.Controls.Add(this.button9);
+            this.pnlAttendance.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlAttendance.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.pnlAttendance.Location = new System.Drawing.Point(0, 566);
+            this.pnlAttendance.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlAttendance.Name = "pnlAttendance";
+            this.pnlAttendance.Size = new System.Drawing.Size(202, 98);
+            this.pnlAttendance.TabIndex = 12;
+            this.pnlAttendance.Visible = false;
             // 
             // button6
             // 
@@ -214,18 +215,20 @@ namespace CourseCenterMS
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
-            // panel1
+            // pnlGroup
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panel1.Controls.Add(this.btnMenuAddGroup);
-            this.panel1.Controls.Add(this.btnAllGroups);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 413);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(202, 98);
-            this.panel1.TabIndex = 9;
+            this.pnlGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.pnlGroup.Controls.Add(this.btnMenuAddGroup);
+            this.pnlGroup.Controls.Add(this.btnAllGroups);
+            this.pnlGroup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlGroup.Location = new System.Drawing.Point(0, 413);
+            this.pnlGroup.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlGroup.Name = "pnlGroup";
+            this.pnlGroup.Size = new System.Drawing.Size(202, 98);
+            this.pnlGroup.TabIndex = 9;
+            this.pnlGroup.Visible = false;
             // 
             // btnMenuAddGroup
             // 
@@ -294,6 +297,7 @@ namespace CourseCenterMS
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pnlStudent
             // 
@@ -306,6 +310,7 @@ namespace CourseCenterMS
             this.pnlStudent.Name = "pnlStudent";
             this.pnlStudent.Size = new System.Drawing.Size(202, 101);
             this.pnlStudent.TabIndex = 7;
+            this.pnlStudent.Visible = false;
             // 
             // btnMenuAddStudent
             // 
@@ -374,6 +379,7 @@ namespace CourseCenterMS
             this.btnStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStudent.UseVisualStyleBackColor = true;
+            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click_1);
             // 
             // DashboardBtn
             // 
@@ -561,8 +567,8 @@ namespace CourseCenterMS
             this.Text = "Dashbord";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.SidePnl.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.pnlAttendance.ResumeLayout(false);
+            this.pnlGroup.ResumeLayout(false);
             this.pnlStudent.ResumeLayout(false);
             this.ImgPnl.ResumeLayout(false);
             this.ImgPnl.PerformLayout();
@@ -590,12 +596,12 @@ namespace CourseCenterMS
         private System.Windows.Forms.Panel pnlStudent;
         private System.Windows.Forms.Button btnMenuAddStudent;
         private System.Windows.Forms.Button btnAllStudents;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlGroup;
         private System.Windows.Forms.Button btnMenuAddGroup;
         private System.Windows.Forms.Button btnAllGroups;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlAttendance;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;

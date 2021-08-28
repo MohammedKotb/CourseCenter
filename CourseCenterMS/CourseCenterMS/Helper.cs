@@ -29,13 +29,12 @@ namespace CourseCenterMS
         }
         public static void hideSubMenu()
         {
-
         }
         public static void ShowSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
             {
-                hideSubMenu();
+               // hideSubMenu();
                 subMenu.Visible = true;
             }
             else

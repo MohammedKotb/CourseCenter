@@ -72,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAllAtendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAllAtendance.Designer.cs">
+      <DependentUpon>frmAllAtendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAllGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     <Compile Include="Models\Transaction.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAllAtendance.resx">
+      <DependentUpon>frmAllAtendance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAllGroup.resx">
       <DependentUpon>frmAllGroup.cs</DependentUpon>
     </EmbeddedResource>

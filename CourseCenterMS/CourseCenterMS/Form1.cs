@@ -146,9 +146,30 @@ namespace CourseCenterMS
             ContainerPnl.Controls.Add(f.pnlAllGroups);
 
         }
+
+        private void btnStudent_Click_1(object sender, EventArgs e)
+        {
+            pnlGroup.Visible = false;
+            pnlAttendance.Visible = false;
+            Helper.ShowSubMenu(pnlStudent);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            pnlStudent.Visible = false;
+            pnlAttendance.Visible = false;
+            Helper.ShowSubMenu(pnlGroup);
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            pnlGroup.Visible = false;
+            pnlStudent.Visible = false;
+            Helper.ShowSubMenu(pnlAttendance);
+        }
     }
 
-public class GroupToGrid
+    public class GroupToGrid
 {
     public long ID { get; set; }
     public string Name { get; set; }

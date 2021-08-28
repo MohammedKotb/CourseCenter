@@ -5,12 +5,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="28111cd851cf4cc48858bf52e741f30f" Name="Diagram1">
-        <EntityTypeShape EntityType="CourseCenterModel.Attendance" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="CourseCenterModel.Student" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="CourseCenterModel.SysNotification" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CourseCenterModel.SystemUser" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CourseCenterModel.Transaction" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
-        <AssociationConnector Association="CourseCenterModel.FK_Attendance_Student" ManuallyRouted="false" />
         <AssociationConnector Association="CourseCenterModel.FK_Transaction_Student" ManuallyRouted="false" />
         <AssociationConnector Association="CourseCenterModel.FK_SystemUser_SystemUser" ManuallyRouted="false" />
         <EntityTypeShape EntityType="CourseCenterModel.Group" Width="1.5" PointX="0.75" PointY="6" />
@@ -19,6 +17,11 @@
         <AssociationConnector Association="CourseCenterModel.FK_GroupDay_Group" />
         <EntityTypeShape EntityType="CourseCenterModel.Department" Width="1.5" PointX="0.75" PointY="0.875" />
         <AssociationConnector Association="CourseCenterModel.FK_Student_Departments" />
+        <EntityTypeShape EntityType="CourseCenterModel.Attendence" Width="1.5" PointX="7.375" PointY="8.5" />
+        <EntityTypeShape EntityType="CourseCenterModel.StudentAttendance" Width="1.5" PointX="10.625" PointY="6" />
+        <AssociationConnector Association="CourseCenterModel.FK_Attendence_Attendence" />
+        <AssociationConnector Association="CourseCenterModel.FK_StudentAttendance_Attendence" />
+        <AssociationConnector Association="CourseCenterModel.FK_Attendance_Student" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
