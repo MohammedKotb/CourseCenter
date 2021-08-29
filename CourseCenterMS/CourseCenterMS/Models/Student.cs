@@ -16,8 +16,8 @@ namespace CourseCenterMS.Models
     {
         public Student()
         {
-            this.Attendances = new HashSet<Attendance>();
             this.Transactions = new HashSet<Transaction>();
+            this.StudentAttendances = new HashSet<StudentAttendance>();
         }
     
         public long ID { get; set; }
@@ -43,9 +43,9 @@ namespace CourseCenterMS.Models
         public Nullable<long> DepartmentID { get; set; }
         public string GroupName { get; set; }
     
-        public virtual ICollection<Attendance> Attendances { get; set; }
         public virtual ICollection<Transaction> Transactions { get; set; }
         public virtual Group Group { get; set; }
         public virtual Department Department { get; set; }
+        public virtual ICollection<StudentAttendance> StudentAttendances { get; set; }
     }
 }

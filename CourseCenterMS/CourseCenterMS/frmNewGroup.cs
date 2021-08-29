@@ -53,8 +53,8 @@ namespace CourseCenterMS
                 int count = 0;
                 group.Name = txtGroupName.Text != "" ? txtGroupName.Text : throw new Exception("يجب ادخال اسم المجموعه لاتمام التسجيل");
                 group.Classroom = txtClassroom.Text != "" ? txtClassroom.Text : throw new Exception("يجب ادخال الصف الدراسى لاتمام التسجيل");
-                group.StartDate = dtpkrStartYear.Value != null ? dtpkrStartYear.Value : throw new Exception("يجب ادخال تاريخ بدء المجموعه لاتمام التسجيل");
-                group.EndDate = dtPkrEndDate.Value != null ? dtPkrEndDate.Value : throw new Exception("يجب ادخال تاريخ انتهاء المجموعه لاتمام التسجيل");
+                group.StartDate = dtpkrStartYear.Value != null ? dtpkrStartYear.Value.Date : throw new Exception("يجب ادخال تاريخ بدء المجموعه لاتمام التسجيل");
+                group.EndDate = dtPkrEndDate.Value != null ? dtPkrEndDate.Value.Date : throw new Exception("يجب ادخال تاريخ انتهاء المجموعه لاتمام التسجيل");
                 group.CreationDate = DateTime.Now;
                 context.Groups.Add(group);
                 context.SaveChanges();

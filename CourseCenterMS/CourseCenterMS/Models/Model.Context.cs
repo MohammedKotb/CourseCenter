@@ -25,7 +25,6 @@ namespace CourseCenterMS.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Attendance> Attendances { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<SysNotification> SysNotifications { get; set; }
         public DbSet<SystemUser> SystemUsers { get; set; }
@@ -33,5 +32,7 @@ namespace CourseCenterMS.Models
         public DbSet<Group> Groups { get; set; }
         public DbSet<GroupDay> GroupDays { get; set; }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Attendence> Attendences { get; set; }
+        public DbSet<StudentAttendance> StudentAttendances { get; set; }
     }
 }

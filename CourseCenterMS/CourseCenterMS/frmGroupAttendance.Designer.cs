@@ -29,42 +29,42 @@ namespace CourseCenterMS
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pnlAllGroups = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.pnlGroupAttendance = new System.Windows.Forms.Panel();
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
             this.pnlGridContainer = new System.Windows.Forms.Panel();
-            this.grdAllGroups = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.grdGroupAttendance = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
+            this.textSearch = new System.Windows.Forms.TextBox();
+            this.lblGroupName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnFiter = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textSearch = new System.Windows.Forms.TextBox();
-            this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentsNumber = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.StudentsNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupDetails = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.pnlAllGroups.SuspendLayout();
+            this.pnlGroupAttendance.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdAllGroups)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdGroupAttendance)).BeginInit();
             this.crdSearch.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlAllGroups
+            // pnlGroupAttendance
             // 
-            this.pnlAllGroups.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlAllGroups.Controls.Add(this.crdSearchResult);
-            this.pnlAllGroups.Controls.Add(this.crdSearch);
-            this.pnlAllGroups.Location = new System.Drawing.Point(0, 0);
-            this.pnlAllGroups.Name = "pnlAllGroups";
-            this.pnlAllGroups.Size = new System.Drawing.Size(1165, 808);
-            this.pnlAllGroups.TabIndex = 0;
-            this.pnlAllGroups.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAllStudents_Paint);
+            this.pnlGroupAttendance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlGroupAttendance.Controls.Add(this.crdSearchResult);
+            this.pnlGroupAttendance.Controls.Add(this.crdSearch);
+            this.pnlGroupAttendance.Location = new System.Drawing.Point(0, 0);
+            this.pnlGroupAttendance.Name = "pnlGroupAttendance";
+            this.pnlGroupAttendance.Size = new System.Drawing.Size(1165, 808);
+            this.pnlGroupAttendance.TabIndex = 0;
             // 
             // crdSearchResult
             // 
@@ -74,6 +74,7 @@ namespace CourseCenterMS
             this.crdSearchResult.BottomSahddow = true;
             this.crdSearchResult.color = System.Drawing.Color.RoyalBlue;
             this.crdSearchResult.Controls.Add(this.pnlGridContainer);
+            this.crdSearchResult.Controls.Add(this.lblGroupName);
             this.crdSearchResult.Controls.Add(this.lblGridHeader);
             this.crdSearchResult.LeftSahddow = false;
             this.crdSearchResult.Location = new System.Drawing.Point(23, 123);
@@ -86,89 +87,89 @@ namespace CourseCenterMS
             // 
             // pnlGridContainer
             // 
-            this.pnlGridContainer.Controls.Add(this.grdAllGroups);
+            this.pnlGridContainer.Controls.Add(this.grdGroupAttendance);
             this.pnlGridContainer.Location = new System.Drawing.Point(3, 69);
             this.pnlGridContainer.Name = "pnlGridContainer";
             this.pnlGridContainer.Size = new System.Drawing.Size(1111, 455);
             this.pnlGridContainer.TabIndex = 20;
             // 
-            // grdAllGroups
+            // grdGroupAttendance
             // 
-            this.grdAllGroups.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
-            this.grdAllGroups.AllowUserToAddRows = false;
-            this.grdAllGroups.AllowUserToDeleteRows = false;
-            this.grdAllGroups.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.grdAllGroups.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grdAllGroups.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grdGroupAttendance.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
+            this.grdGroupAttendance.AllowUserToAddRows = false;
+            this.grdGroupAttendance.AllowUserToDeleteRows = false;
+            this.grdGroupAttendance.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
+            this.grdGroupAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.grdGroupAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grdAllGroups.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdAllGroups.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.grdAllGroups.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.grdAllGroups.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grdAllGroups.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdAllGroups.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.grdAllGroups.ColumnHeadersHeight = 25;
-            this.grdAllGroups.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.grdAllGroups.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.GroupName,
+            this.grdGroupAttendance.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdGroupAttendance.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.grdGroupAttendance.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.grdGroupAttendance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdGroupAttendance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdGroupAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.grdGroupAttendance.ColumnHeadersHeight = 25;
+            this.grdGroupAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.grdGroupAttendance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GroupTime,
+            this.GroupName,
             this.GroupEndTime,
             this.StudentsNumber,
             this.ID,
             this.GroupDetails});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdAllGroups.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdAllGroups.DoubleBuffered = true;
-            this.grdAllGroups.EnableHeadersVisualStyles = false;
-            this.grdAllGroups.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.grdAllGroups.HeaderBgColor = System.Drawing.Color.LightBlue;
-            this.grdAllGroups.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.grdAllGroups.Location = new System.Drawing.Point(30, 3);
-            this.grdAllGroups.Name = "grdAllGroups";
-            this.grdAllGroups.ReadOnly = true;
-            this.grdAllGroups.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.grdAllGroups.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sakkal Majalla", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdAllGroups.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.grdAllGroups.RowHeadersWidth = 50;
-            this.grdAllGroups.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.grdAllGroups.Size = new System.Drawing.Size(1056, 428);
-            this.grdAllGroups.TabIndex = 21;
-            this.grdAllGroups.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdAllStudents_CellClick);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdGroupAttendance.DefaultCellStyle = dataGridViewCellStyle7;
+            this.grdGroupAttendance.DoubleBuffered = true;
+            this.grdGroupAttendance.EnableHeadersVisualStyles = false;
+            this.grdGroupAttendance.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.grdGroupAttendance.HeaderBgColor = System.Drawing.Color.LightBlue;
+            this.grdGroupAttendance.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.grdGroupAttendance.Location = new System.Drawing.Point(30, 3);
+            this.grdGroupAttendance.Name = "grdGroupAttendance";
+            this.grdGroupAttendance.ReadOnly = true;
+            this.grdGroupAttendance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.grdGroupAttendance.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Sakkal Majalla", 12F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdGroupAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.grdGroupAttendance.RowHeadersWidth = 50;
+            this.grdGroupAttendance.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grdGroupAttendance.Size = new System.Drawing.Size(1056, 428);
+            this.grdGroupAttendance.TabIndex = 21;
+            this.grdGroupAttendance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdAllStudents_CellClick);
             // 
             // lblGridHeader
             // 
             this.lblGridHeader.AutoSize = true;
             this.lblGridHeader.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGridHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblGridHeader.Location = new System.Drawing.Point(956, 24);
+            this.lblGridHeader.Location = new System.Drawing.Point(881, 20);
             this.lblGridHeader.Name = "lblGridHeader";
             this.lblGridHeader.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblGridHeader.Size = new System.Drawing.Size(160, 35);
+            this.lblGridHeader.Size = new System.Drawing.Size(214, 35);
             this.lblGridHeader.TabIndex = 18;
-            this.lblGridHeader.Text = "بيــــانات المجموعات";
+            this.lblGridHeader.Text = "بيــــانات حضور المجموعة : ";
             // 
             // crdSearch
             // 
@@ -187,6 +188,29 @@ namespace CourseCenterMS
             this.crdSearch.ShadowDepth = 20;
             this.crdSearch.Size = new System.Drawing.Size(1117, 70);
             this.crdSearch.TabIndex = 0;
+            // 
+            // textSearch
+            // 
+            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textSearch.Location = new System.Drawing.Point(781, 21);
+            this.textSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.textSearch.MinimumSize = new System.Drawing.Size(290, 33);
+            this.textSearch.Multiline = true;
+            this.textSearch.Name = "textSearch";
+            this.textSearch.Size = new System.Drawing.Size(324, 33);
+            this.textSearch.TabIndex = 24;
+            // 
+            // lblGroupName
+            // 
+            this.lblGroupName.AutoSize = true;
+            this.lblGroupName.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGroupName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblGroupName.Location = new System.Drawing.Point(845, 20);
+            this.lblGroupName.Name = "lblGroupName";
+            this.lblGroupName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGroupName.Size = new System.Drawing.Size(30, 35);
+            this.lblGroupName.TabIndex = 18;
+            this.lblGroupName.Text = "...";
             // 
             // btnFiter
             // 
@@ -224,50 +248,38 @@ namespace CourseCenterMS
             this.btnSearch.TabIndex = 25;
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // textSearch
+            // GroupTime
             // 
-            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSearch.Location = new System.Drawing.Point(781, 21);
-            this.textSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.textSearch.MinimumSize = new System.Drawing.Size(290, 33);
-            this.textSearch.Multiline = true;
-            this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(324, 33);
-            this.textSearch.TabIndex = 24;
+            this.GroupTime.DataPropertyName = "ClassName";
+            this.GroupTime.HeaderText = "عنوان الحصة";
+            this.GroupTime.MinimumWidth = 6;
+            this.GroupTime.Name = "GroupTime";
+            this.GroupTime.ReadOnly = true;
             // 
             // GroupName
             // 
-            this.GroupName.DataPropertyName = "Name";
+            this.GroupName.DataPropertyName = "ClassDate";
             this.GroupName.FillWeight = 116.4129F;
-            this.GroupName.HeaderText = "اسم المجموعة";
+            this.GroupName.HeaderText = "تاريخ الحصة";
             this.GroupName.MinimumWidth = 6;
             this.GroupName.Name = "GroupName";
             this.GroupName.ReadOnly = true;
             this.GroupName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // GroupTime
-            // 
-            this.GroupTime.DataPropertyName = "StartDate";
-            this.GroupTime.HeaderText = "تاريخ بدء المجموعة";
-            this.GroupTime.MinimumWidth = 6;
-            this.GroupTime.Name = "GroupTime";
-            this.GroupTime.ReadOnly = true;
-            // 
             // GroupEndTime
             // 
-            this.GroupEndTime.DataPropertyName = "EndDate";
-            this.GroupEndTime.HeaderText = "تاريخ انتهاء المجموعة";
+            this.GroupEndTime.DataPropertyName = "AttendanceNumber";
+            this.GroupEndTime.HeaderText = "عدد الحضور";
             this.GroupEndTime.Name = "GroupEndTime";
             this.GroupEndTime.ReadOnly = true;
             // 
             // StudentsNumber
             // 
-            this.StudentsNumber.DataPropertyName = "StudentsCount";
-            this.StudentsNumber.HeaderText = "نشط";
+            this.StudentsNumber.DataPropertyName = "AbsenceNumber";
+            this.StudentsNumber.HeaderText = "عدد الغياب";
             this.StudentsNumber.Name = "StudentsNumber";
             this.StudentsNumber.ReadOnly = true;
             this.StudentsNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.StudentsNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // ID
             // 
@@ -291,22 +303,22 @@ namespace CourseCenterMS
             this.GroupDetails.ToolTipText = "اضغط لمزيد من المعلومات";
             this.GroupDetails.UseColumnTextForLinkValue = true;
             // 
-            // frmAllAtendance
+            // frmGroupAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 817);
-            this.Controls.Add(this.pnlAllGroups);
-            this.Name = "frmAllAtendance";
+            this.Controls.Add(this.pnlGroupAttendance);
+            this.Name = "frmGroupAttendance";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RightToLeftLayout = true;
             this.Text = "AllGroups";
             this.Load += new System.EventHandler(this.frmAllStudents_Load);
-            this.pnlAllGroups.ResumeLayout(false);
+            this.pnlGroupAttendance.ResumeLayout(false);
             this.crdSearchResult.ResumeLayout(false);
             this.crdSearchResult.PerformLayout();
             this.pnlGridContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grdAllGroups)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdGroupAttendance)).EndInit();
             this.crdSearch.ResumeLayout(false);
             this.crdSearch.PerformLayout();
             this.ResumeLayout(false);
@@ -319,14 +331,15 @@ namespace CourseCenterMS
         private System.Windows.Forms.Button btnFiter;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textSearch;
-        public System.Windows.Forms.Panel pnlAllGroups;
+        public System.Windows.Forms.Panel pnlGroupAttendance;
         private Bunifu.Framework.UI.BunifuCustomLabel lblGridHeader;
         private System.Windows.Forms.Panel pnlGridContainer;
-        public Bunifu.Framework.UI.BunifuCustomDataGrid grdAllGroups;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GroupName;
+        public Bunifu.Framework.UI.BunifuCustomDataGrid grdGroupAttendance;
+        private Bunifu.Framework.UI.BunifuCustomLabel lblGroupName;
         private System.Windows.Forms.DataGridViewTextBoxColumn GroupTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GroupName;
         private System.Windows.Forms.DataGridViewTextBoxColumn GroupEndTime;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn StudentsNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentsNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewLinkColumn GroupDetails;
     }

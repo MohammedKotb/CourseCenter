@@ -32,6 +32,7 @@ namespace CourseCenterMS
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShowStudentData));
             this.pnlStudentData = new System.Windows.Forms.Panel();
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
+            this.lblStdID = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.pnlGridContainer = new System.Windows.Forms.Panel();
             this.radCallMother = new Bunifu.Framework.UI.BunifuCheckbox();
@@ -76,7 +77,6 @@ namespace CourseCenterMS
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblID = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblStdID = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlStudentData.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
@@ -85,10 +85,14 @@ namespace CourseCenterMS
             // 
             // pnlStudentData
             // 
+            this.pnlStudentData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlStudentData.AutoScroll = true;
+            this.pnlStudentData.AutoSize = true;
             this.pnlStudentData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlStudentData.Controls.Add(this.crdSearchResult);
-            this.pnlStudentData.Location = new System.Drawing.Point(33, 11);
+            this.pnlStudentData.Location = new System.Drawing.Point(0, 0);
             this.pnlStudentData.Name = "pnlStudentData";
             this.pnlStudentData.Size = new System.Drawing.Size(1165, 800);
             this.pnlStudentData.TabIndex = 1;
@@ -108,7 +112,7 @@ namespace CourseCenterMS
             this.crdSearchResult.Controls.Add(this.pnlGridContainer);
             this.crdSearchResult.Controls.Add(this.lblGridHeader);
             this.crdSearchResult.LeftSahddow = false;
-            this.crdSearchResult.Location = new System.Drawing.Point(24, 24);
+            this.crdSearchResult.Location = new System.Drawing.Point(12, 24);
             this.crdSearchResult.Margin = new System.Windows.Forms.Padding(3, 3, 8, 3);
             this.crdSearchResult.Name = "crdSearchResult";
             this.crdSearchResult.RightSahddow = true;
@@ -116,13 +120,26 @@ namespace CourseCenterMS
             this.crdSearchResult.Size = new System.Drawing.Size(1143, 615);
             this.crdSearchResult.TabIndex = 1;
             // 
+            // lblStdID
+            // 
+            this.lblStdID.AutoSize = true;
+            this.lblStdID.BackColor = System.Drawing.Color.Transparent;
+            this.lblStdID.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStdID.ForeColor = System.Drawing.Color.Black;
+            this.lblStdID.Location = new System.Drawing.Point(839, 28);
+            this.lblStdID.Name = "lblStdID";
+            this.lblStdID.Size = new System.Drawing.Size(74, 25);
+            this.lblStdID.TabIndex = 93;
+            this.lblStdID.Text = "StudentID";
+            this.lblStdID.Visible = false;
+            // 
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 61);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(1114, 10);
             this.bunifuSeparator1.TabIndex = 21;
@@ -185,7 +202,7 @@ namespace CourseCenterMS
             this.radCallMother.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.radCallMother.ForeColor = System.Drawing.Color.White;
             this.radCallMother.Location = new System.Drawing.Point(182, 300);
-            this.radCallMother.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radCallMother.Margin = new System.Windows.Forms.Padding(4);
             this.radCallMother.Name = "radCallMother";
             this.radCallMother.Size = new System.Drawing.Size(20, 20);
             this.radCallMother.TabIndex = 92;
@@ -198,7 +215,7 @@ namespace CourseCenterMS
             this.radCallFather.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.radCallFather.ForeColor = System.Drawing.Color.White;
             this.radCallFather.Location = new System.Drawing.Point(180, 248);
-            this.radCallFather.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radCallFather.Margin = new System.Windows.Forms.Padding(4);
             this.radCallFather.Name = "radCallFather";
             this.radCallFather.Size = new System.Drawing.Size(20, 20);
             this.radCallFather.TabIndex = 92;
@@ -824,26 +841,13 @@ namespace CourseCenterMS
             this.lblGridHeader.TabIndex = 18;
             this.lblGridHeader.Text = "بيــــــــانات الطالــــــــب";
             // 
-            // lblStdID
-            // 
-            this.lblStdID.AutoSize = true;
-            this.lblStdID.BackColor = System.Drawing.Color.Transparent;
-            this.lblStdID.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStdID.ForeColor = System.Drawing.Color.Black;
-            this.lblStdID.Location = new System.Drawing.Point(839, 28);
-            this.lblStdID.Name = "lblStdID";
-            this.lblStdID.Size = new System.Drawing.Size(74, 25);
-            this.lblStdID.TabIndex = 93;
-            this.lblStdID.Text = "StudentID";
-            this.lblStdID.Visible = false;
-            // 
             // frmShowStudentData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 749);
             this.Controls.Add(this.pnlStudentData);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmShowStudentData";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -856,6 +860,7 @@ namespace CourseCenterMS
             this.pnlGridContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctureImage)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

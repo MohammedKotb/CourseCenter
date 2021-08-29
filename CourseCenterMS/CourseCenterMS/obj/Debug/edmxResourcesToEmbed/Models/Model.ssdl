@@ -1,20 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CourseCenterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Attendance">
+  <EntityType Name="Attendence">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="StudentID" Type="bigint" Nullable="false" />
-    <Property Name="GroupID" Type="bigint" Nullable="false" />
-    <Property Name="Attend" Type="bit" />
-    <Property Name="AttendanceTime" Type="datetime" />
-    <Property Name="HomeWork" Type="bit" Nullable="false" />
-    <Property Name="Sheet" Type="bit" Nullable="false" />
-    <Property Name="AdditionalHomeWork" Type="bit" Nullable="false" />
-    <Property Name="SheetMarks" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="SheetNotes" Type="nvarchar(max)" />
-    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="GroupID" Type="bigint" />
+    <Property Name="ClassName" Type="nvarchar(max)" />
+    <Property Name="ClassDate" Type="datetime" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Departments">
     <Key>
@@ -75,6 +69,22 @@
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
     <Property Name="IsActive" Type="bit" Nullable="false" />
   </EntityType>
+  <EntityType Name="StudentAttendance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentID" Type="bigint" Nullable="false" />
+    <Property Name="AttendanceID" Type="bigint" Nullable="false" />
+    <Property Name="Attend" Type="bit" />
+    <Property Name="AttendanceTime" Type="datetime" />
+    <Property Name="HomeWork" Type="bit" Nullable="false" />
+    <Property Name="Sheet" Type="bit" Nullable="false" />
+    <Property Name="AdditionalHomeWork" Type="bit" Nullable="false" />
+    <Property Name="SheetMarks" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="SheetNotes" Type="nvarchar(max)" />
+    <Property Name="Note" Type="nvarchar(max)" />
+  </EntityType>
   <EntityType Name="SysNotification">
     <Key>
       <PropertyRef Name="ID" />
@@ -110,13 +120,25 @@
     <End Role="Student" Type="Self.Student" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
+    <End Role="StudentAttendance" Type="Self.StudentAttendance" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Student">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="Attendance">
+      <Dependent Role="StudentAttendance">
         <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Attendence_Attendence">
+    <End Role="Attendence" Type="Self.Attendence" Multiplicity="1" />
+    <End Role="Attendence1" Type="Self.Attendence" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Attendence">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Attendence1">
+        <PropertyRef Name="ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -160,6 +182,20 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_StudentAttendance_Attendence">
+    <End Role="Attendence" Type="Self.Attendence" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="StudentAttendance" Type="Self.StudentAttendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Attendence">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StudentAttendance">
+        <PropertyRef Name="AttendanceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_SystemUser_SystemUser">
     <End Role="SystemUser" Type="Self.SystemUser" Multiplicity="0..1" />
     <End Role="SystemUser1" Type="Self.SystemUser" Multiplicity="*" />
@@ -187,17 +223,22 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="CourseCenterModelStoreContainer">
-    <EntitySet Name="Attendance" EntityType="Self.Attendance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Attendence" EntityType="Self.Attendence" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Group" EntityType="Self.Group" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GroupDay" EntityType="Self.GroupDay" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentAttendance" EntityType="Self.StudentAttendance" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SysNotification" EntityType="Self.SysNotification" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SystemUser" EntityType="Self.SystemUser" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Attendance_Student" Association="Self.FK_Attendance_Student">
       <End Role="Student" EntitySet="Student" />
-      <End Role="Attendance" EntitySet="Attendance" />
+      <End Role="StudentAttendance" EntitySet="StudentAttendance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Attendence_Attendence" Association="Self.FK_Attendence_Attendence">
+      <End Role="Attendence" EntitySet="Attendence" />
+      <End Role="Attendence1" EntitySet="Attendence" />
     </AssociationSet>
     <AssociationSet Name="FK_GroupDay_Group" Association="Self.FK_GroupDay_Group">
       <End Role="Group" EntitySet="Group" />
@@ -210,6 +251,10 @@
     <AssociationSet Name="FK_Student_Group" Association="Self.FK_Student_Group">
       <End Role="Group" EntitySet="Group" />
       <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentAttendance_Attendence" Association="Self.FK_StudentAttendance_Attendence">
+      <End Role="Attendence" EntitySet="Attendence" />
+      <End Role="StudentAttendance" EntitySet="StudentAttendance" />
     </AssociationSet>
     <AssociationSet Name="FK_SystemUser_SystemUser" Association="Self.FK_SystemUser_SystemUser">
       <End Role="SystemUser" EntitySet="SystemUser" />

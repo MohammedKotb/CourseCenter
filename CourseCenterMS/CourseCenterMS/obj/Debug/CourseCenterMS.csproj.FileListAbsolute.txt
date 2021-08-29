@@ -65,4 +65,6 @@ D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csproj.CopyComplete
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.exe
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.pdb
-D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmAllAtendance.resources
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmStudentAttendance.resources
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmGroupAttendance.resources
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.AttenaceToGrd.resources

@@ -72,9 +72,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAllAtendance.cs">
+    <Compile Include="frmStudentAttendance.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmStudentAttendance.Designer.cs">
+      <DependentUpon>frmStudentAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGroupAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGroupAttendance.Designer.cs">
+      <DependentUpon>frmGroupAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAllAtendance.cs" />
     <Compile Include="frmAllAtendance.Designer.cs">
       <DependentUpon>frmAllAtendance.cs</DependentUpon>
     </Compile>
@@ -102,7 +112,7 @@
     <Compile Include="frmTest.Designer.cs">
       <DependentUpon>frmTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Attendance.cs">
+    <Compile Include="Models\Attendence.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Department.cs">
@@ -128,6 +138,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StudentAttendance.cs">
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="NewStudent.cs">
       <SubType>Form</SubType>
@@ -162,6 +175,12 @@
     <Compile Include="Models\Transaction.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmStudentAttendance.resx">
+      <DependentUpon>frmStudentAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGroupAttendance.resx">
+      <DependentUpon>frmGroupAttendance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAllAtendance.resx">
       <DependentUpon>frmAllAtendance.cs</DependentUpon>
     </EmbeddedResource>

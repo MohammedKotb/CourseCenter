@@ -12,11 +12,11 @@ namespace CourseCenterMS.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Attendance
+    public partial class StudentAttendance
     {
         public long ID { get; set; }
         public long StudentID { get; set; }
-        public long GroupID { get; set; }
+        public long AttendanceID { get; set; }
         public Nullable<bool> Attend { get; set; }
         public Nullable<System.DateTime> AttendanceTime { get; set; }
         public bool HomeWork { get; set; }
@@ -26,6 +26,7 @@ namespace CourseCenterMS.Models
         public string SheetNotes { get; set; }
         public string Note { get; set; }
     
+        public virtual Attendence Attendence { get; set; }
         public virtual Student Student { get; set; }
     }
 }

@@ -1,23 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="CourseCenterModelStoreContainer" CdmEntityContainer="CourseCenterEntities">
-    <EntitySetMapping Name="Attendances">
-      <EntityTypeMapping TypeName="CourseCenterModel.Attendance">
-        <MappingFragment StoreEntitySet="Attendance">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
-          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
-          <ScalarProperty Name="Attend" ColumnName="Attend" />
-          <ScalarProperty Name="AttendanceTime" ColumnName="AttendanceTime" />
-          <ScalarProperty Name="HomeWork" ColumnName="HomeWork" />
-          <ScalarProperty Name="Sheet" ColumnName="Sheet" />
-          <ScalarProperty Name="AdditionalHomeWork" ColumnName="AdditionalHomeWork" />
-          <ScalarProperty Name="SheetMarks" ColumnName="SheetMarks" />
-          <ScalarProperty Name="SheetNotes" ColumnName="SheetNotes" />
-          <ScalarProperty Name="Note" ColumnName="Note" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Students">
       <EntityTypeMapping TypeName="CourseCenterModel.Student">
         <MappingFragment StoreEntitySet="Student">
@@ -111,6 +94,34 @@
         <MappingFragment StoreEntitySet="Departments">
           <ScalarProperty Name="Note" ColumnName="Note" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attendences">
+      <EntityTypeMapping TypeName="CourseCenterModel.Attendence">
+        <MappingFragment StoreEntitySet="Attendence">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ClassDate" ColumnName="ClassDate" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentAttendances">
+      <EntityTypeMapping TypeName="CourseCenterModel.StudentAttendance">
+        <MappingFragment StoreEntitySet="StudentAttendance">
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="SheetNotes" ColumnName="SheetNotes" />
+          <ScalarProperty Name="SheetMarks" ColumnName="SheetMarks" />
+          <ScalarProperty Name="AdditionalHomeWork" ColumnName="AdditionalHomeWork" />
+          <ScalarProperty Name="Sheet" ColumnName="Sheet" />
+          <ScalarProperty Name="HomeWork" ColumnName="HomeWork" />
+          <ScalarProperty Name="AttendanceTime" ColumnName="AttendanceTime" />
+          <ScalarProperty Name="Attend" ColumnName="Attend" />
+          <ScalarProperty Name="AttendanceID" ColumnName="AttendanceID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

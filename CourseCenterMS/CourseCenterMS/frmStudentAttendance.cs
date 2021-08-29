@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using CourseCenterMS.Models;
 namespace CourseCenterMS
 {
-    public partial class frmGroupAttendance : Form
+    public partial class frmStudentAttendance : Form
     {
-        public frmGroupAttendance()
+        public frmStudentAttendance()
         {
             InitializeComponent();
         }

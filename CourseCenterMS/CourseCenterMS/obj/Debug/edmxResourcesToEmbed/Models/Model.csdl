@@ -1,22 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="CourseCenterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Attendance">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="StudentID" Type="Int64" Nullable="false" />
-    <Property Name="GroupID" Type="Int64" Nullable="false" />
-    <Property Name="Attend" Type="Boolean" />
-    <Property Name="AttendanceTime" Type="DateTime" Precision="3" />
-    <Property Name="HomeWork" Type="Boolean" Nullable="false" />
-    <Property Name="Sheet" Type="Boolean" Nullable="false" />
-    <Property Name="AdditionalHomeWork" Type="Boolean" Nullable="false" />
-    <Property Name="SheetMarks" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-    <Property Name="SheetNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Student" Relationship="Self.FK_Attendance_Student" FromRole="Attendance" ToRole="Student" />
-  </EntityType>
   <EntityType Name="Student">
     <Key>
       <PropertyRef Name="ID" />
@@ -40,13 +23,13 @@
     <Property Name="Discount" Type="Decimal" Precision="18" Scale="0" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Attendances" Relationship="Self.FK_Attendance_Student" FromRole="Student" ToRole="Attendance" />
     <NavigationProperty Name="Transactions" Relationship="Self.FK_Transaction_Student" FromRole="Student" ToRole="Transaction" />
     <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="DepartmentID" Type="Int64" />
     <Property Name="GroupName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Group" Relationship="CourseCenterModel.FK_Student_Group" FromRole="Student" ToRole="Group" />
     <NavigationProperty Name="Department" Relationship="CourseCenterModel.FK_Student_Departments" FromRole="Student" ToRole="Department" />
+    <NavigationProperty Name="StudentAttendances" Relationship="CourseCenterModel.FK_Attendance_Student" FromRole="Student" ToRole="StudentAttendance" />
   </EntityType>
   <EntityType Name="SysNotification">
     <Key>
@@ -82,20 +65,6 @@
     <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="Student" Relationship="Self.FK_Transaction_Student" FromRole="Transaction" ToRole="Student" />
   </EntityType>
-  <Association Name="FK_Attendance_Student">
-    <End Role="Student" Type="Self.Student" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Attendance" Type="Self.Attendance" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Student">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="Attendance">
-        <PropertyRef Name="StudentID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Transaction_Student">
     <End Role="Student" Type="Self.Student" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -123,15 +92,10 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="CourseCenterEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Attendances" EntityType="Self.Attendance" />
     <EntitySet Name="Students" EntityType="Self.Student" />
     <EntitySet Name="SysNotifications" EntityType="Self.SysNotification" />
     <EntitySet Name="SystemUsers" EntityType="Self.SystemUser" />
     <EntitySet Name="Transactions" EntityType="Self.Transaction" />
-    <AssociationSet Name="FK_Attendance_Student" Association="Self.FK_Attendance_Student">
-      <End Role="Student" EntitySet="Students" />
-      <End Role="Attendance" EntitySet="Attendances" />
-    </AssociationSet>
     <AssociationSet Name="FK_Transaction_Student" Association="Self.FK_Transaction_Student">
       <End Role="Student" EntitySet="Students" />
       <End Role="Transaction" EntitySet="Transactions" />
@@ -154,6 +118,20 @@
     <AssociationSet Name="FK_Student_Departments" Association="CourseCenterModel.FK_Student_Departments">
       <End Role="Department" EntitySet="Departments" />
       <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <EntitySet Name="Attendences" EntityType="CourseCenterModel.Attendence" />
+    <EntitySet Name="StudentAttendances" EntityType="CourseCenterModel.StudentAttendance" />
+    <AssociationSet Name="FK_Attendence_Attendence" Association="CourseCenterModel.FK_Attendence_Attendence">
+      <End Role="Attendence" EntitySet="Attendences" />
+      <End Role="Attendence1" EntitySet="Attendences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentAttendance_Attendence" Association="CourseCenterModel.FK_StudentAttendance_Attendence">
+      <End Role="Attendence" EntitySet="Attendences" />
+      <End Role="StudentAttendance" EntitySet="StudentAttendances" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Attendance_Student" Association="CourseCenterModel.FK_Attendance_Student">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="StudentAttendance" EntitySet="StudentAttendances" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Group">
@@ -229,6 +207,77 @@
       </Principal>
       <Dependent Role="Student">
         <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Attendence">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="Int64" />
+    <Property Name="ClassName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClassDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Attendence1" Relationship="CourseCenterModel.FK_Attendence_Attendence" FromRole="Attendence" ToRole="Attendence1" />
+    <NavigationProperty Name="Attendence2" Relationship="CourseCenterModel.FK_Attendence_Attendence" FromRole="Attendence1" ToRole="Attendence" />
+    <NavigationProperty Name="StudentAttendances" Relationship="CourseCenterModel.FK_StudentAttendance_Attendence" FromRole="Attendence" ToRole="StudentAttendance" />
+  </EntityType>
+  <EntityType Name="StudentAttendance">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentID" Type="Int64" Nullable="false" />
+    <Property Name="AttendanceID" Type="Int64" Nullable="false" />
+    <Property Name="Attend" Type="Boolean" />
+    <Property Name="AttendanceTime" Type="DateTime" Precision="3" />
+    <Property Name="HomeWork" Type="Boolean" Nullable="false" />
+    <Property Name="Sheet" Type="Boolean" Nullable="false" />
+    <Property Name="AdditionalHomeWork" Type="Boolean" Nullable="false" />
+    <Property Name="SheetMarks" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="SheetNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Attendence" Relationship="CourseCenterModel.FK_StudentAttendance_Attendence" FromRole="StudentAttendance" ToRole="Attendence" />
+    <NavigationProperty Name="Student" Relationship="CourseCenterModel.FK_Attendance_Student" FromRole="StudentAttendance" ToRole="Student" />
+  </EntityType>
+  <Association Name="FK_Attendence_Attendence">
+    <End Type="CourseCenterModel.Attendence" Role="Attendence" Multiplicity="1" />
+    <End Type="CourseCenterModel.Attendence" Role="Attendence1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Attendence">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Attendence1">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentAttendance_Attendence">
+    <End Type="CourseCenterModel.Attendence" Role="Attendence" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="CourseCenterModel.StudentAttendance" Role="StudentAttendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Attendence">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StudentAttendance">
+        <PropertyRef Name="AttendanceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Attendance_Student">
+    <End Type="CourseCenterModel.Student" Role="Student" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="CourseCenterModel.StudentAttendance" Role="StudentAttendance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="StudentAttendance">
+        <PropertyRef Name="StudentID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

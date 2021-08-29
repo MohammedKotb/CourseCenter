@@ -167,6 +167,15 @@ namespace CourseCenterMS
             pnlStudent.Visible = false;
             Helper.ShowSubMenu(pnlAttendance);
         }
+
+        private void btnMenuAttendanceTable_Click(object sender, EventArgs e)
+        {
+            frmAllAtendance f = new frmAllAtendance(); 
+            f.grdAllAttendanceGroup.DataSource =context.Groups.Where(x => x.IsDeleted == false && x.IsActive == true)
+                .Select(x=>new {x.Name,x.Classroom,x.StartDate,x.EndDate,x.IsActive,x.ID }).ToList();
+            ContainerPnl.Controls.Clear();
+            ContainerPnl.Controls.Add(f.pnlAllAttendance);
+        }
     }
 
     public class GroupToGrid

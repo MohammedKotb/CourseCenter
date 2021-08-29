@@ -35,7 +35,7 @@ namespace CourseCenterMS
             this.button5 = new System.Windows.Forms.Button();
             this.pnlAttendance = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnMenuAttendanceTable = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pnlGroup = new System.Windows.Forms.Panel();
             this.btnMenuAddGroup = new System.Windows.Forms.Button();
@@ -140,7 +140,7 @@ namespace CourseCenterMS
             // 
             this.pnlAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.pnlAttendance.Controls.Add(this.button6);
-            this.pnlAttendance.Controls.Add(this.button9);
+            this.pnlAttendance.Controls.Add(this.btnMenuAttendanceTable);
             this.pnlAttendance.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAttendance.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
             this.pnlAttendance.Location = new System.Drawing.Point(0, 566);
@@ -172,27 +172,28 @@ namespace CourseCenterMS
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnMenuAttendanceTable
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button9.ForeColor = System.Drawing.Color.Silver;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(0, 0);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.button9.Size = new System.Drawing.Size(202, 44);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "جدول الحضور";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnMenuAttendanceTable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuAttendanceTable.FlatAppearance.BorderSize = 0;
+            this.btnMenuAttendanceTable.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAttendanceTable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAttendanceTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuAttendanceTable.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnMenuAttendanceTable.ForeColor = System.Drawing.Color.Silver;
+            this.btnMenuAttendanceTable.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuAttendanceTable.Image")));
+            this.btnMenuAttendanceTable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAttendanceTable.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuAttendanceTable.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMenuAttendanceTable.Name = "btnMenuAttendanceTable";
+            this.btnMenuAttendanceTable.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnMenuAttendanceTable.Size = new System.Drawing.Size(202, 44);
+            this.btnMenuAttendanceTable.TabIndex = 0;
+            this.btnMenuAttendanceTable.Text = "جدول الحضور";
+            this.btnMenuAttendanceTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAttendanceTable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuAttendanceTable.UseVisualStyleBackColor = true;
+            this.btnMenuAttendanceTable.Click += new System.EventHandler(this.btnMenuAttendanceTable_Click);
             // 
             // button4
             // 
@@ -603,7 +604,7 @@ namespace CourseCenterMS
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel pnlAttendance;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnMenuAttendanceTable;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox btnMinimize;
