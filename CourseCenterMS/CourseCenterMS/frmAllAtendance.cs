@@ -10,14 +10,7 @@ using System.Windows.Forms;
 using CourseCenterMS.Models;
 namespace CourseCenterMS
 {
-    public class AttenaceToGrd
-    {
-        public long ID { get; set; }
-        public string ClassName { get; set; }
-        public DateTime ClassDate { get; set; }
-        public int AttendanceNumber { get; set; }
-        public int AbsenceNumber { get; set; }
-    }
+ 
     public partial class frmAllAtendance : Form
     {
         CourseCenterEntities context;
@@ -60,6 +53,14 @@ namespace CourseCenterMS
             }
         }
        
+    }
+       public class AttenaceToGrd
+    {
+        public long ID { get; set; }
+        public string ClassName { get; set; }
+        public DateTime ClassDate { get; set; }
+        public int AttendanceNumber { get; set; }
+        public int AbsenceNumber { get; set; }
     }
    
 }

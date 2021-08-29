@@ -39,5 +39,10 @@ namespace CourseCenterMS
         {
 
         }
+
+        private void grdStudentsAttendance_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

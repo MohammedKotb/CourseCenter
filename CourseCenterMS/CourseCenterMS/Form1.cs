@@ -15,14 +15,19 @@ namespace CourseCenterMS
     public partial class Dashbord : Form
     {
         int ph; bool hided;
+        List<Department> departments;
+        List<Group> groups;
         CourseCenterEntities context;
         public Dashbord()
         {
             InitializeComponent();
             ph = pnlStudent.Height;
             hided = false;
+            groups = new List<Group>();
+            departments = new List<Department>();
             context = new CourseCenterEntities();
         }
+
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -45,8 +50,15 @@ namespace CourseCenterMS
 
         private void btnMenuAddStudent_Click(object sender, EventArgs e)
         {
+            groups = context.Groups.Where(x => x.IsActive == true && x.IsDeleted == false).ToList();
+            departments = context.Departments.ToList();
             frmNewStudent f = new frmNewStudent();
-
+            f.cmboDepartment.DataSource = departments;
+            f.cmboDepartment.ValueMember = "ID";
+            f.cmboDepartment.DisplayMember = "Name";
+            f.cmboGroup.DataSource = groups;
+            f.cmboGroup.ValueMember = "ID";
+            f.cmboGroup.DisplayMember = "Name";
             ContainerPnl.Controls.Clear();
             f.pnlNewStudent.Width = ContainerPnl.Width;
             f.pnlNewStudent.Height = ContainerPnl.Height;

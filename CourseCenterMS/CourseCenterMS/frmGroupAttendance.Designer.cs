@@ -29,26 +29,26 @@ namespace CourseCenterMS
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlGroupAttendance = new System.Windows.Forms.Panel();
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
             this.pnlGridContainer = new System.Windows.Forms.Panel();
             this.grdGroupAttendance = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
-            this.textSearch = new System.Windows.Forms.TextBox();
-            this.lblGroupName = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnFiter = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.GroupTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentsNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupDetails = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.lblGroupName = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
+            this.btnFiter = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.textSearch = new System.Windows.Forms.TextBox();
             this.pnlGroupAttendance.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
@@ -99,9 +99,9 @@ namespace CourseCenterMS
             this.grdGroupAttendance.AllowUserToAddRows = false;
             this.grdGroupAttendance.AllowUserToDeleteRows = false;
             this.grdGroupAttendance.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.grdGroupAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
+            this.grdGroupAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdGroupAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -110,14 +110,14 @@ namespace CourseCenterMS
             this.grdGroupAttendance.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.grdGroupAttendance.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdGroupAttendance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdGroupAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdGroupAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdGroupAttendance.ColumnHeadersHeight = 25;
             this.grdGroupAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grdGroupAttendance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -127,14 +127,14 @@ namespace CourseCenterMS
             this.StudentsNumber,
             this.ID,
             this.GroupDetails});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdGroupAttendance.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdGroupAttendance.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdGroupAttendance.DoubleBuffered = true;
             this.grdGroupAttendance.EnableHeadersVisualStyles = false;
             this.grdGroupAttendance.GridColor = System.Drawing.SystemColors.ButtonFace;
@@ -145,108 +145,19 @@ namespace CourseCenterMS
             this.grdGroupAttendance.ReadOnly = true;
             this.grdGroupAttendance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.grdGroupAttendance.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Sakkal Majalla", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdGroupAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sakkal Majalla", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdGroupAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdGroupAttendance.RowHeadersWidth = 50;
             this.grdGroupAttendance.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.grdGroupAttendance.Size = new System.Drawing.Size(1056, 428);
             this.grdGroupAttendance.TabIndex = 21;
-            this.grdGroupAttendance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdAllStudents_CellClick);
-            // 
-            // lblGridHeader
-            // 
-            this.lblGridHeader.AutoSize = true;
-            this.lblGridHeader.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGridHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblGridHeader.Location = new System.Drawing.Point(881, 20);
-            this.lblGridHeader.Name = "lblGridHeader";
-            this.lblGridHeader.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblGridHeader.Size = new System.Drawing.Size(214, 35);
-            this.lblGridHeader.TabIndex = 18;
-            this.lblGridHeader.Text = "بيــــانات حضور المجموعة : ";
-            // 
-            // crdSearch
-            // 
-            this.crdSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.crdSearch.BackColor = System.Drawing.Color.White;
-            this.crdSearch.BorderRadius = 5;
-            this.crdSearch.BottomSahddow = true;
-            this.crdSearch.color = System.Drawing.Color.Green;
-            this.crdSearch.Controls.Add(this.btnFiter);
-            this.crdSearch.Controls.Add(this.btnSearch);
-            this.crdSearch.Controls.Add(this.textSearch);
-            this.crdSearch.LeftSahddow = false;
-            this.crdSearch.Location = new System.Drawing.Point(23, 33);
-            this.crdSearch.Name = "crdSearch";
-            this.crdSearch.RightSahddow = true;
-            this.crdSearch.ShadowDepth = 20;
-            this.crdSearch.Size = new System.Drawing.Size(1117, 70);
-            this.crdSearch.TabIndex = 0;
-            // 
-            // textSearch
-            // 
-            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSearch.Location = new System.Drawing.Point(781, 21);
-            this.textSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.textSearch.MinimumSize = new System.Drawing.Size(290, 33);
-            this.textSearch.Multiline = true;
-            this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(324, 33);
-            this.textSearch.TabIndex = 24;
-            // 
-            // lblGroupName
-            // 
-            this.lblGroupName.AutoSize = true;
-            this.lblGroupName.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGroupName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblGroupName.Location = new System.Drawing.Point(845, 20);
-            this.lblGroupName.Name = "lblGroupName";
-            this.lblGroupName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblGroupName.Size = new System.Drawing.Size(30, 35);
-            this.lblGroupName.TabIndex = 18;
-            this.lblGroupName.Text = "...";
-            // 
-            // btnFiter
-            // 
-            this.btnFiter.BackColor = System.Drawing.Color.Transparent;
-            this.btnFiter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFiter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFiter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(176)))), ((int)(((byte)(190)))));
-            this.btnFiter.FlatAppearance.BorderSize = 0;
-            this.btnFiter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnFiter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
-            this.btnFiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiter.Image = global::CourseCenterMS.Properties.Resources.icons8_slider_321;
-            this.btnFiter.Location = new System.Drawing.Point(672, 21);
-            this.btnFiter.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFiter.Name = "btnFiter";
-            this.btnFiter.Size = new System.Drawing.Size(30, 32);
-            this.btnFiter.TabIndex = 26;
-            this.btnFiter.UseVisualStyleBackColor = false;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(176)))), ((int)(((byte)(190)))));
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(150)))), ((int)(((byte)(170)))));
-            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = global::CourseCenterMS.Properties.Resources.icons8_search32_32;
-            this.btnSearch.Location = new System.Drawing.Point(730, 21);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(30, 32);
-            this.btnSearch.TabIndex = 25;
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.grdGroupAttendance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdGroupAttendance_CellClick);
             // 
             // GroupTime
             // 
@@ -302,6 +213,95 @@ namespace CourseCenterMS
             this.GroupDetails.Text = "التفاصيل";
             this.GroupDetails.ToolTipText = "اضغط لمزيد من المعلومات";
             this.GroupDetails.UseColumnTextForLinkValue = true;
+            // 
+            // lblGroupName
+            // 
+            this.lblGroupName.AutoSize = true;
+            this.lblGroupName.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGroupName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblGroupName.Location = new System.Drawing.Point(845, 20);
+            this.lblGroupName.Name = "lblGroupName";
+            this.lblGroupName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGroupName.Size = new System.Drawing.Size(30, 35);
+            this.lblGroupName.TabIndex = 18;
+            this.lblGroupName.Text = "...";
+            // 
+            // lblGridHeader
+            // 
+            this.lblGridHeader.AutoSize = true;
+            this.lblGridHeader.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGridHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblGridHeader.Location = new System.Drawing.Point(881, 20);
+            this.lblGridHeader.Name = "lblGridHeader";
+            this.lblGridHeader.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGridHeader.Size = new System.Drawing.Size(214, 35);
+            this.lblGridHeader.TabIndex = 18;
+            this.lblGridHeader.Text = "بيــــانات حضور المجموعة : ";
+            // 
+            // crdSearch
+            // 
+            this.crdSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.crdSearch.BackColor = System.Drawing.Color.White;
+            this.crdSearch.BorderRadius = 5;
+            this.crdSearch.BottomSahddow = true;
+            this.crdSearch.color = System.Drawing.Color.Green;
+            this.crdSearch.Controls.Add(this.btnFiter);
+            this.crdSearch.Controls.Add(this.btnSearch);
+            this.crdSearch.Controls.Add(this.textSearch);
+            this.crdSearch.LeftSahddow = false;
+            this.crdSearch.Location = new System.Drawing.Point(23, 33);
+            this.crdSearch.Name = "crdSearch";
+            this.crdSearch.RightSahddow = true;
+            this.crdSearch.ShadowDepth = 20;
+            this.crdSearch.Size = new System.Drawing.Size(1117, 70);
+            this.crdSearch.TabIndex = 0;
+            // 
+            // btnFiter
+            // 
+            this.btnFiter.BackColor = System.Drawing.Color.Transparent;
+            this.btnFiter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFiter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFiter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(176)))), ((int)(((byte)(190)))));
+            this.btnFiter.FlatAppearance.BorderSize = 0;
+            this.btnFiter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFiter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
+            this.btnFiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiter.Image = global::CourseCenterMS.Properties.Resources.icons8_slider_321;
+            this.btnFiter.Location = new System.Drawing.Point(672, 21);
+            this.btnFiter.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFiter.Name = "btnFiter";
+            this.btnFiter.Size = new System.Drawing.Size(30, 32);
+            this.btnFiter.TabIndex = 26;
+            this.btnFiter.UseVisualStyleBackColor = false;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(176)))), ((int)(((byte)(190)))));
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(150)))), ((int)(((byte)(170)))));
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Image = global::CourseCenterMS.Properties.Resources.icons8_search32_32;
+            this.btnSearch.Location = new System.Drawing.Point(730, 21);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(30, 32);
+            this.btnSearch.TabIndex = 25;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // textSearch
+            // 
+            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textSearch.Location = new System.Drawing.Point(781, 21);
+            this.textSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.textSearch.MinimumSize = new System.Drawing.Size(290, 33);
+            this.textSearch.Multiline = true;
+            this.textSearch.Name = "textSearch";
+            this.textSearch.Size = new System.Drawing.Size(324, 33);
+            this.textSearch.TabIndex = 24;
             // 
             // frmGroupAttendance
             // 

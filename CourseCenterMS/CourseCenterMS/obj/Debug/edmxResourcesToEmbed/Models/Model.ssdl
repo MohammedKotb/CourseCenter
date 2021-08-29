@@ -77,7 +77,7 @@
     <Property Name="StudentID" Type="bigint" Nullable="false" />
     <Property Name="AttendanceID" Type="bigint" Nullable="false" />
     <Property Name="Attend" Type="bit" />
-    <Property Name="AttendanceTime" Type="datetime" />
+    <Property Name="AttendanceTime" Type="datetime" Nullable="false" />
     <Property Name="HomeWork" Type="bit" Nullable="false" />
     <Property Name="Sheet" Type="bit" Nullable="false" />
     <Property Name="AdditionalHomeWork" Type="bit" Nullable="false" />

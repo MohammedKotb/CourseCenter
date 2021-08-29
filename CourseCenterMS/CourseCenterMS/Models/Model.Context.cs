@@ -32,7 +32,7 @@ namespace CourseCenterMS.Models
         public DbSet<Group> Groups { get; set; }
         public DbSet<GroupDay> GroupDays { get; set; }
         public DbSet<Department> Departments { get; set; }
-        public DbSet<Attendence> Attendences { get; set; }
         public DbSet<StudentAttendance> StudentAttendances { get; set; }
+        public DbSet<Attendence> Attendences { get; set; }
     }
 }

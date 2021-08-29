@@ -18,7 +18,7 @@ namespace CourseCenterMS.Models
         public long StudentID { get; set; }
         public long AttendanceID { get; set; }
         public Nullable<bool> Attend { get; set; }
-        public Nullable<System.DateTime> AttendanceTime { get; set; }
+        public System.DateTime AttendanceTime { get; set; }
         public bool HomeWork { get; set; }
         public bool Sheet { get; set; }
         public bool AdditionalHomeWork { get; set; }
@@ -26,7 +26,7 @@ namespace CourseCenterMS.Models
         public string SheetNotes { get; set; }
         public string Note { get; set; }
     
-        public virtual Attendence Attendence { get; set; }
         public virtual Student Student { get; set; }
+        public virtual Attendence Attendence { get; set; }
     }
 }

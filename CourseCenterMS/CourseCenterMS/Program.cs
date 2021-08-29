@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoginScreen;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,7 +21,8 @@ namespace CourseCenterMS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             DashbordRunningForm = new Dashbord();
-            Application.Run(DashbordRunningForm);
+            // Application.Run(new frmLogin());
+             Application.Run(DashbordRunningForm);
         }
     }
 }

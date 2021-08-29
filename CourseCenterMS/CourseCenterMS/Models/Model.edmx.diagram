@@ -17,11 +17,11 @@
         <AssociationConnector Association="CourseCenterModel.FK_GroupDay_Group" />
         <EntityTypeShape EntityType="CourseCenterModel.Department" Width="1.5" PointX="0.75" PointY="0.875" />
         <AssociationConnector Association="CourseCenterModel.FK_Student_Departments" />
-        <EntityTypeShape EntityType="CourseCenterModel.Attendence" Width="1.5" PointX="7.375" PointY="8.5" />
         <EntityTypeShape EntityType="CourseCenterModel.StudentAttendance" Width="1.5" PointX="10.625" PointY="6" />
+        <AssociationConnector Association="CourseCenterModel.FK_Attendance_Student" />
+        <EntityTypeShape EntityType="CourseCenterModel.Attendence" Width="1.5" PointX="3.375" PointY="1" />
         <AssociationConnector Association="CourseCenterModel.FK_Attendence_Attendence" />
         <AssociationConnector Association="CourseCenterModel.FK_StudentAttendance_Attendence" />
-        <AssociationConnector Association="CourseCenterModel.FK_Attendance_Student" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿ using System;
+﻿using CourseCenterMS.Models;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace CourseCenterMS
 {
     public partial class frmNewStudent : Form
     {
+        CourseCenterEntities context;
         public frmNewStudent()
         {
             InitializeComponent();
+            context = new CourseCenterEntities();
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
@@ -35,7 +38,8 @@ namespace CourseCenterMS
 
         private void frmNewStudent_Load(object sender, EventArgs e)
         {
-            
+
+
 
         }
 
@@ -43,5 +47,110 @@ namespace CourseCenterMS
         {
 
         }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            bool result = SaveStudent();
+            if (result)
+                MessageBox.Show("تم حفظ بيانات الطالب بنجاح");
+            else
+                MessageBox.Show("حدث خطا اثناء تسجيل بيانات الطالب ");
+
+        }
+
+        private void chkCallFather_OnChange(object sender, EventArgs e)
+        {
+            if (chkCallFather.Checked)
+            {
+                chkCallMother.Checked = false;
+            }
+            else
+            {
+                chkCallMother.Checked = true;
+
+            }
+        }
+
+        private void chkCallMother_OnChange(object sender, EventArgs e)
+        {
+            if (chkCallMother.Checked)
+            {
+                chkCallFather.Checked = false;
+            }
+            else
+            {
+                chkCallFather.Checked = true;
+
+            }
+        }
+        private bool SaveStudent()
+        {
+            try
+            {
+                Student student = new Student();
+                student.Name = txtName.Text;
+                student.Address = txtAddress.Text;
+                student.School = txtSchool.Text;
+                student.DepartmentID = cmboDepartment.SelectedIndex >= 0 ? int.Parse(cmboDepartment.SelectedValue.ToString()) : 0;
+                student.QR = txtQR.Text;
+                student.FatherJob = txtFatherJob.Text;
+                student.Credit = txtCredit.Text != "" ? Convert.ToDecimal(txtCredit.Text) : 0.0m;
+                student.Debit = txtDibt.Text != "" ? Convert.ToDecimal(txtDibt.Text) : 0.0m;
+                student.MotherPhone = txtMatherPhone.Text;
+                student.FatherPhone = txtFatherJob.Text;
+                student.GroupID = cmboGroup.SelectedIndex >= 0 ? int.Parse(cmboGroup.SelectedValue.ToString()) : 0;
+                student.GroupName = cmboGroup.SelectedIndex >=0?cmboGroup.GetItemText( cmboGroup.SelectedItem) : null;
+                student.Classroom = txtClassroom.Text;
+                student.Phone = txtPhone.Text;
+                student.IsActive = true;
+                if (radMale.Checked)
+                {
+                    student.Gender = "ذكر";
+                }
+                else
+                {
+                    student.Gender = "انثى";
+
+                }
+                if (chkCallFather.Checked)
+                {
+                    student.IsFatherPrimary = true;
+                }
+                else
+                {
+                    student.IsFatherPrimary = true;
+                }
+                context.Students.Add(student);
+                context.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+        private void btnSaveAndContainue_Click(object sender, EventArgs e)
+        {
+            bool result = SaveStudent();
+            if (result)
+            {
+                MessageBox.Show("تم حفظ بيانات الطالب بنجاح");
+                pnlNewStudent.Controls.Clear();
+            }
+
+            else
+                MessageBox.Show("حدث خطا اثناء تسجيل بيانات الطالب ");
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        
+        // Function to rest All values for form Controls
+
+
     }
 }

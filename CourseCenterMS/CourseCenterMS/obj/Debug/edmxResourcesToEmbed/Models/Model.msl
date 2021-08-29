@@ -98,17 +98,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Attendences">
-      <EntityTypeMapping TypeName="CourseCenterModel.Attendence">
-        <MappingFragment StoreEntitySet="Attendence">
-          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
-          <ScalarProperty Name="ClassDate" ColumnName="ClassDate" />
-          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
-          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="StudentAttendances">
       <EntityTypeMapping TypeName="CourseCenterModel.StudentAttendance">
         <MappingFragment StoreEntitySet="StudentAttendance">
@@ -122,6 +111,17 @@
           <ScalarProperty Name="Attend" ColumnName="Attend" />
           <ScalarProperty Name="AttendanceID" ColumnName="AttendanceID" />
           <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attendences">
+      <EntityTypeMapping TypeName="CourseCenterModel.Attendence">
+        <MappingFragment StoreEntitySet="Attendence">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ClassDate" ColumnName="ClassDate" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
