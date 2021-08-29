@@ -10,6 +10,7 @@ namespace CourseCenterMS
     static class Program
     {
         public static Dashbord DashbordRunningForm;
+        public static frmTest Message;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -21,7 +22,8 @@ namespace CourseCenterMS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             DashbordRunningForm = new Dashbord();
-            // Application.Run(new frmLogin());
+            Message = new frmTest();
+             //Application.Run(new frmLogin());
              Application.Run(DashbordRunningForm);
         }
     }

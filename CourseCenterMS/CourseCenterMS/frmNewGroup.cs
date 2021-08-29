@@ -124,7 +124,11 @@ namespace CourseCenterMS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+              
+              
+
+                Program.Message.lblMessage.Text = ex.Message;
+                Program.Message.Show();
 
             }
         }
