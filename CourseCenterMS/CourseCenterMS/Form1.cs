@@ -131,7 +131,7 @@ namespace CourseCenterMS
         private void btnAllGroups_Click(object sender, EventArgs e)
         {
             frmAllGroup f = new frmAllGroup();
-         
+
             List<Group> groups = context.Groups.Where(x => x.IsDeleted == false).Include(x => x.GroupDays).ToList();
 
             List<GroupToGrid> groupsToGrid = new List<GroupToGrid>();
@@ -142,12 +142,12 @@ namespace CourseCenterMS
                 groupGrid.Name = item.Name;
                 groupGrid.StartTime = item.GroupDays.FirstOrDefault().TimeFrom.ToShortTimeString();
                 groupGrid.EndTime = item.GroupDays.FirstOrDefault().TimeTo.ToShortTimeString();
-                string Days=item.GroupDays.FirstOrDefault().Day;
+                string Days = item.GroupDays.FirstOrDefault().Day;
 
                 foreach (var day in item.GroupDays)
                 {
-                    if(day!= item.GroupDays.FirstOrDefault())
-                    Days+= "  -   " + day.Day;
+                    if (day != item.GroupDays.FirstOrDefault())
+                        Days += "  -   " + day.Day;
                 }
                 groupGrid.GroupDays = Days;
                 groupGrid.StudentsCount = context.Students.Where(x => x.IsActive == true && x.IsDeleted == false && x.GroupID == item.ID).Count();
@@ -182,22 +182,71 @@ namespace CourseCenterMS
 
         private void btnMenuAttendanceTable_Click(object sender, EventArgs e)
         {
-            frmAllAtendance f = new frmAllAtendance(); 
-            f.grdAllAttendanceGroup.DataSource =context.Groups.Where(x => x.IsDeleted == false && x.IsActive == true)
-                .Select(x=>new {x.Name,x.Classroom,x.StartDate,x.EndDate,x.IsActive,x.ID }).ToList();
+            frmAllAtendance f = new frmAllAtendance();
+            f.grdAllAttendanceGroup.DataSource = context.Groups.Where(x => x.IsDeleted == false && x.IsActive == true)
+                .Select(x => new { x.Name, x.Classroom, x.StartDate, x.EndDate, x.IsActive, x.ID }).ToList();
             ContainerPnl.Controls.Clear();
             ContainerPnl.Controls.Add(f.pnlAllAttendance);
+        }
+
+        private void btnMenuAttendanceRecord_Click(object sender, EventArgs e)
+        {
+            List<GroupDay> groupDays = new List<GroupDay>();
+            List<Group> TodayGroups = new List<Group>();
+            DayOfWeek today = DateTime.Now.DayOfWeek;
+
+
+            if (today == DayOfWeek.Saturday)
+            {
+                TodayGroups = context.GroupDays.Include(x => x.Group).Where(x => x.Day == "السبت").Select(x => x.Group).ToList();
+
+            }
+            else if (today == DayOfWeek.Sunday)
+            {
+                TodayGroups = context.GroupDays.Include(x => x.Group).Where(x => x.Day == "الاحد").Select(x => x.Group).ToList();
+
+            }
+            else if (today == DayOfWeek.Monday)
+            {
+                TodayGroups = context.GroupDays.Include(x => x.Group).Where(x => x.Day == "الاثنين").Select(x => x.Group).ToList();
+
+            }
+            else if (today == DayOfWeek.Tuesday)
+            {
+                TodayGroups = context.GroupDays.Include(x => x.Group).Where(x => x.Day == "الثلاثاء").Select(x => x.Group).ToList();
+
+            }
+            else if (today == DayOfWeek.Wednesday)
+            {
+                TodayGroups = context.GroupDays.Include(x => x.Group).Where(x => x.Day == "الاربعاء").Select(x => x.Group).ToList();
+
+            }
+            else if (today == DayOfWeek.Thursday)
+            {
+                TodayGroups = context.GroupDays.Include(x => x.Group).Where(x => x.Day == "الخميس").Select(x => x.Group).ToList();
+
+            }
+            else if (today == DayOfWeek.Friday)
+            {
+                TodayGroups = context.GroupDays.Include(x => x.Group).Where(x => x.Day == "الجمعه").Select(x => x.Group).ToList();
+
+            }
+            frmTodayAtendanceGroups f = new frmTodayAtendanceGroups();
+            f.grdTodayAttendanceGroup.DataSource = TodayGroups.Where(x => x.IsDeleted == false && x.IsActive == true)
+                .Select(x => new { x.Name, x.Classroom,x.GroupDays.FirstOrDefault().TimeFrom, x.GroupDays.FirstOrDefault().TimeTo, x.IsActive, x.ID }).ToList();
+            ContainerPnl.Controls.Clear();
+            ContainerPnl.Controls.Add(f.pnlTodayAttendance);
         }
     }
 
     public class GroupToGrid
-{
-    public long ID { get; set; }
-    public string Name { get; set; }
-    public string GroupDays { get; set; }
-    public string StartTime { get; set; }
-    public string EndTime { get; set; }
-    public int StudentsCount { get; set; }
+    {
+        public long ID { get; set; }
+        public string Name { get; set; }
+        public string GroupDays { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
+        public int StudentsCount { get; set; }
 
     }
 }

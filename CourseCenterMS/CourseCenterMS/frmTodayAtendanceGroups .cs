@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using CourseCenterMS.Models;
+namespace CourseCenterMS
+{
+ 
+    public partial class frmTodayAtendanceGroups : Form
+    {
+        CourseCenterEntities context;
+        public frmTodayAtendanceGroups()
+        {
+            InitializeComponent();
+            context = new CourseCenterEntities();
+        }
+
+        private void frmAllStudents_Load(object sender, EventArgs e)
+        {
+           
+            
+        }
+        private void grdAllAttendanceGroup_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                if (grdTodayAttendanceGroup.Columns[e.ColumnIndex].HeaderText == "تفاصيل")
+                {
+                    long groupID = Convert.ToInt64(grdTodayAttendanceGroup.Rows[e.RowIndex].Cells["ID"].Value);
+                    frmGroupAttendance frmGroupAttendance = new frmGroupAttendance();
+                    List<Attendence> attendencelst = context.Attendences.Where(x => x.GroupID == groupID && x.IsDeleted == false).ToList();
+                    List<AttenaceToGrd> AttenacesToGrd = new List<AttenaceToGrd>();
+                    foreach (var item in attendencelst)
+                    {
+                        AttenaceToGrd attenToGrd = new AttenaceToGrd();
+                       
+                        attenToGrd.ClassName = item.ClassName;
+                        attenToGrd.ClassDate = item.ClassDate;
+                        attenToGrd.AttendanceNumber = context.StudentAttendances.Where(x=>x.AttendanceID==item.ID&&x.Attend==true).Count();
+                        attenToGrd.AbsenceNumber = context.StudentAttendances.Where(x=>x.AttendanceID==item.ID && x.Attend == false).Count();
+                        attenToGrd.ID = item.ID;
+                        AttenacesToGrd.Add(attenToGrd);
+                    }
+                    frmGroupAttendance.grdGroupAttendance.DataSource = AttenacesToGrd;
+                    Program.DashbordRunningForm.ContainerPnl.Controls.Clear();
+                    Program.DashbordRunningForm.ContainerPnl.Controls.Add(frmGroupAttendance.pnlGroupAttendance);
+                }
+            }
+        }
+       
+    }
+    //   public class AttenaceToGrd
+    //{
+    //    public long ID { get; set; }
+    //    public string ClassName { get; set; }
+    //    public DateTime ClassDate { get; set; }
+    //    public int AttendanceNumber { get; set; }
+    //    public int AbsenceNumber { get; set; }
+    //}
+   
+}

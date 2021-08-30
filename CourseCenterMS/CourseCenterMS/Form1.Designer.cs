@@ -34,7 +34,7 @@ namespace CourseCenterMS
             this.button10 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pnlAttendance = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnMenuAttendanceRecord = new System.Windows.Forms.Button();
             this.btnMenuAttendanceTable = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pnlGroup = new System.Windows.Forms.Panel();
@@ -139,7 +139,7 @@ namespace CourseCenterMS
             // pnlAttendance
             // 
             this.pnlAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.pnlAttendance.Controls.Add(this.button6);
+            this.pnlAttendance.Controls.Add(this.btnMenuAttendanceRecord);
             this.pnlAttendance.Controls.Add(this.btnMenuAttendanceTable);
             this.pnlAttendance.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlAttendance.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
@@ -150,27 +150,28 @@ namespace CourseCenterMS
             this.pnlAttendance.TabIndex = 12;
             this.pnlAttendance.Visible = false;
             // 
-            // button6
+            // btnMenuAttendanceRecord
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button6.ForeColor = System.Drawing.Color.Silver;
-            this.button6.Image = global::CourseCenterMS.Properties.Resources.icons8_add_new_32;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 44);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.button6.Size = new System.Drawing.Size(202, 41);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "تسجيل حضور";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnMenuAttendanceRecord.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuAttendanceRecord.FlatAppearance.BorderSize = 0;
+            this.btnMenuAttendanceRecord.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAttendanceRecord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAttendanceRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuAttendanceRecord.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnMenuAttendanceRecord.ForeColor = System.Drawing.Color.Silver;
+            this.btnMenuAttendanceRecord.Image = global::CourseCenterMS.Properties.Resources.icons8_add_new_32;
+            this.btnMenuAttendanceRecord.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAttendanceRecord.Location = new System.Drawing.Point(0, 44);
+            this.btnMenuAttendanceRecord.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMenuAttendanceRecord.Name = "btnMenuAttendanceRecord";
+            this.btnMenuAttendanceRecord.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnMenuAttendanceRecord.Size = new System.Drawing.Size(202, 41);
+            this.btnMenuAttendanceRecord.TabIndex = 1;
+            this.btnMenuAttendanceRecord.Text = "تسجيل حضور";
+            this.btnMenuAttendanceRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAttendanceRecord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuAttendanceRecord.UseVisualStyleBackColor = true;
+            this.btnMenuAttendanceRecord.Click += new System.EventHandler(this.btnMenuAttendanceRecord_Click);
             // 
             // btnMenuAttendanceTable
             // 
@@ -511,7 +512,7 @@ namespace CourseCenterMS
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label3.Location = new System.Drawing.Point(241, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(250, 16);
+            this.label3.Size = new System.Drawing.Size(251, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "TechnoGate For Software Devlopment";
             // 
@@ -522,7 +523,7 @@ namespace CourseCenterMS
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(52, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 32);
+            this.label4.Size = new System.Drawing.Size(168, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "CopyRight Reserved For \r\n\r\n";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -603,7 +604,7 @@ namespace CourseCenterMS
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel pnlAttendance;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnMenuAttendanceRecord;
         private System.Windows.Forms.Button btnMenuAttendanceTable;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label1;

@@ -46,7 +46,7 @@ namespace CourseCenterMS
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CourseCenterMS.Properties.Resources.icons8_cancel_32;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 40);
+            this.pictureBox1.Location = new System.Drawing.Point(27, 39);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 28);
             this.pictureBox1.TabIndex = 2;
@@ -54,15 +54,19 @@ namespace CourseCenterMS
             // 
             // lblMessage
             // 
+            this.lblMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblMessage.Location = new System.Drawing.Point(81, 40);
+            this.lblMessage.Location = new System.Drawing.Point(81, 39);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblMessage.Size = new System.Drawing.Size(67, 25);
             this.lblMessage.TabIndex = 19;
             this.lblMessage.Text = "Message";
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -83,9 +87,11 @@ namespace CourseCenterMS
             this.ClientSize = new System.Drawing.Size(379, 150);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "frmTest";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTest";
             this.TopMost = true;

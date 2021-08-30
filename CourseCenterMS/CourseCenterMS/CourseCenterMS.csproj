@@ -72,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmTodayAtendanceGroups .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTodayAtendanceGroups .Designer.cs">
+      <DependentUpon>frmTodayAtendanceGroups .cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     <Compile Include="Models\Transaction.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmTodayAtendanceGroups .resx">
+      <DependentUpon>frmTodayAtendanceGroups .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
