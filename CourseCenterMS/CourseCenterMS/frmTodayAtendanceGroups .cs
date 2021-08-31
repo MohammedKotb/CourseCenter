@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,36 +32,52 @@ namespace CourseCenterMS
             {
                 if (grdTodayAttendanceGroup.Columns[e.ColumnIndex].HeaderText == "تفاصيل")
                 {
-                    long groupID = Convert.ToInt64(grdTodayAttendanceGroup.Rows[e.RowIndex].Cells["ID"].Value);
-                    frmGroupAttendance frmGroupAttendance = new frmGroupAttendance();
-                    List<Attendence> attendencelst = context.Attendences.Where(x => x.GroupID == groupID && x.IsDeleted == false).ToList();
-                    List<AttenaceToGrd> AttenacesToGrd = new List<AttenaceToGrd>();
-                    foreach (var item in attendencelst)
+                    long GroupID = Convert.ToInt32(grdTodayAttendanceGroup.Rows[e.RowIndex].Cells["ID"].Value);
+                    frmTodayStudentAttendance f = new frmTodayStudentAttendance();
+                    //  = context.StudentAttendances.Where(x => x.AttendanceID == AttendanceID).ToList();
+                    List<StdAttendanceToGrd> attenacesToGrd = new List<StdAttendanceToGrd>();
+
+                    List<Student> students = context.Students.Where(x => x.GroupID==GroupID&&x.IsActive==true&&x.IsDeleted==false).ToList();
+                    //foreach (var item in studentAttendancelst)
+                    //{
+                    //    StdAttendanceToGrd attenaceToGrd = new StdAttendanceToGrd();
+                    //    attenaceToGrd.StudentName = item.Student.Name;
+                    //    attenaceToGrd.Attend = item.Attend ?? true;
+                    //    attenaceToGrd.AttendanceTime = item.AttendanceTime.ToShortTimeString();
+                    //    attenaceToGrd.HomeWork = item.HomeWork;
+                    //    attenaceToGrd.Sheet = item.Sheet;
+                    //    attenaceToGrd.ID = item.ID;
+                    //    attenaceToGrd.StudentName = item.Student.Name;
+                    //    attenacesToGrd.Add(attenaceToGrd);
+                    //}
+                    List<STdNameAndID> Names = new List<STdNameAndID>();
+                    foreach (var item in students)
                     {
-                        AttenaceToGrd attenToGrd = new AttenaceToGrd();
-                       
-                        attenToGrd.ClassName = item.ClassName;
-                        attenToGrd.ClassDate = item.ClassDate;
-                        attenToGrd.AttendanceNumber = context.StudentAttendances.Where(x=>x.AttendanceID==item.ID&&x.Attend==true).Count();
-                        attenToGrd.AbsenceNumber = context.StudentAttendances.Where(x=>x.AttendanceID==item.ID && x.Attend == false).Count();
-                        attenToGrd.ID = item.ID;
-                        AttenacesToGrd.Add(attenToGrd);
+                        STdNameAndID newObj = new STdNameAndID();
+                        newObj.ID = item.ID;
+                        newObj.Name = item.Name;
+                        Names.Add(newObj);
                     }
-                    frmGroupAttendance.grdGroupAttendance.DataSource = AttenacesToGrd;
+
                     Program.DashbordRunningForm.ContainerPnl.Controls.Clear();
-                    Program.DashbordRunningForm.ContainerPnl.Controls.Add(frmGroupAttendance.pnlGroupAttendance);
+                    f.lblGroupID.Text = GroupID.ToString();
+                    f.grdTodayStudentsAttendance.DataSource = Names;
+                   // f.txtClassName.Text = context.Attendences.Where(x => x.ID == AttendanceID).Select(x => x.ClassName).FirstOrDefault();
+                    DateTime d =DateTime.Now;
+                  //  d = context.Attendences.Where(x => x.ID == AttendanceID).Select(x => x.ClassDate).FirstOrDefault();
+                    f.txtClassDate.Text = d.ToString("yyyy/MM/dd");
+                    f.lblGroupName.Text = context.Groups.Where(x => x.ID == GroupID).Select(x => x.Name).FirstOrDefault();
+                    Program.DashbordRunningForm.ContainerPnl.Controls.Add(f.pnlTodayStudentAttendance);
                 }
             }
         }
        
     }
-    //   public class AttenaceToGrd
-    //{
-    //    public long ID { get; set; }
-    //    public string ClassName { get; set; }
-    //    public DateTime ClassDate { get; set; }
-    //    public int AttendanceNumber { get; set; }
-    //    public int AbsenceNumber { get; set; }
-    //}
-   
+    public class STdNameAndID
+    {
+        public long ID { get; set; }
+        public string Name { get; set; }
+
+    }
+
 }

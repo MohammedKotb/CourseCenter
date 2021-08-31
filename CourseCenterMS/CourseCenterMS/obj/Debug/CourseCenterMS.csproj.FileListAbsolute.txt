@@ -70,3 +70,5 @@ D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmGroupAttendance.resources
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmAllAtendance.resources
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmTodayAtendanceGroups.resources
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmTodayStudentAttendance.resources
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmsheet.resources

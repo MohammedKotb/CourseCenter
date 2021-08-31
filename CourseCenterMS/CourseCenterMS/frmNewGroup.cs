@@ -128,7 +128,7 @@ namespace CourseCenterMS
               
 
                 Program.Message.lblMessage.Text = ex.Message;
-                Program.Message.Show();
+                Program.Message.ShowDialog();
 
             }
         }
