@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -47,6 +47,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_classroom.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4518AF22A8084C9E355F9D47E08A081959645540</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CourseCenterMS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\MY WEBSITES\Bunifu_UI_v1.52.dll</HintPath>
@@ -61,6 +73,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,11 +85,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmsheet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmsheet.Designer.cs">
       <DependentUpon>frmsheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuccessMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuccessMsg.Designer.cs">
+      <DependentUpon>frmSuccessMsg.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTodayStudentAttendance.cs">
       <SubType>Form</SubType>
@@ -204,6 +228,9 @@
     <EmbeddedResource Include="frmsheet.resx">
       <DependentUpon>frmsheet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSuccessMsg.resx">
+      <DependentUpon>frmSuccessMsg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTodayStudentAttendance.resx">
       <DependentUpon>frmTodayStudentAttendance.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +284,19 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="bin\Release\SqlLocalDB.msi" />
+    <None Include="CourseCenterMS_TemporaryKey.pfx" />
+    <None Include="DatabaseDataSet.xsc">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseDataSet.xss">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Models\Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
     </None>
@@ -270,6 +310,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Sakkal Majalla.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -341,6 +382,22 @@
     <None Include="Resources\icons8_search32_32.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Data\CourseCenter.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="bin\Release\NDP47-KB3186497-x86-x64-AllOS-ENU.exe" />
+    <Content Include="Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <Content Include="Data\CourseCenter_log.ldf">
+      <DependentUpon>CourseCenter.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons8_classroom.ico" />
     <Content Include="Models\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model.Context.cs</LastGenOutput>
@@ -353,6 +410,10 @@
     </Content>
     <None Include="Resources\icons8_close_window_32.png" />
     <None Include="Resources\icons8_save_16.png" />
+    <None Include="Resources\icons8_remove_16.png" />
+    <None Include="Resources\icons8_remove_32.png" />
+    <None Include="Resources\icons8_ok_32.png" />
+    <None Include="Resources\icons8_ok_321.png" />
     <Content Include="Resources\lock2.png" />
     <None Include="Resources\Sed-18-512.png" />
     <None Include="Resources\Sed-18-5121.png" />
@@ -380,5 +441,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

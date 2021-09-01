@@ -33,6 +33,7 @@ namespace CourseCenterMS
                 {
                     long groupID = Convert.ToInt64(grdAllAttendanceGroup.Rows[e.RowIndex].Cells["ID"].Value);
                     frmGroupAttendance frmGroupAttendance = new frmGroupAttendance();
+                    frmGroupAttendance.lblGroupID.Text = groupID.ToString();
                     List<Attendence> attendencelst = context.Attendences.Where(x => x.GroupID == groupID && x.IsDeleted == false).ToList();
                     List<AttenaceToGrd> AttenacesToGrd = new List<AttenaceToGrd>();
                     foreach (var item in attendencelst)

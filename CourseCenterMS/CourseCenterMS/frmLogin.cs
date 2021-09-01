@@ -25,7 +25,7 @@ namespace LoginScreen
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text=="1" && txtpassword.Text=="1")
+            if (txtUserName.Text=="admin" && txtpassword.Text=="admin")
             {
                 Program.DashbordRunningForm.Show();
                 this.Hide();

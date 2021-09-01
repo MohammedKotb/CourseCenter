@@ -38,13 +38,6 @@ namespace CourseCenterMS
             this.txtSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.pnlGridContainer = new System.Windows.Forms.Panel();
             this.grdStudentsAttendance = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
-            this.txtClassName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtClassDate = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupTime = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.GroupEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +45,13 @@ namespace CourseCenterMS
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
+            this.txtClassDate = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtClassName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlStudentAttendance.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
@@ -188,127 +188,6 @@ namespace CourseCenterMS
             this.grdStudentsAttendance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdAllStudents_CellClick);
             this.grdStudentsAttendance.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdStudentsAttendance_CellContentClick);
             // 
-            // lblGridHeader
-            // 
-            this.lblGridHeader.AutoSize = true;
-            this.lblGridHeader.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGridHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblGridHeader.Location = new System.Drawing.Point(965, 23);
-            this.lblGridHeader.Name = "lblGridHeader";
-            this.lblGridHeader.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblGridHeader.Size = new System.Drawing.Size(130, 35);
-            this.lblGridHeader.TabIndex = 18;
-            this.lblGridHeader.Text = "حضور الطلاب ";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(176)))), ((int)(((byte)(190)))));
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(150)))), ((int)(((byte)(170)))));
-            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = global::CourseCenterMS.Properties.Resources.icons8_search32_32;
-            this.btnSearch.Location = new System.Drawing.Point(36, 24);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(30, 32);
-            this.btnSearch.TabIndex = 25;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // crdSearch
-            // 
-            this.crdSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.crdSearch.BackColor = System.Drawing.Color.White;
-            this.crdSearch.BorderRadius = 5;
-            this.crdSearch.BottomSahddow = true;
-            this.crdSearch.color = System.Drawing.Color.Green;
-            this.crdSearch.Controls.Add(this.txtClassDate);
-            this.crdSearch.Controls.Add(this.bunifuCustomLabel1);
-            this.crdSearch.Controls.Add(this.txtClassName);
-            this.crdSearch.Controls.Add(this.bunifuCustomLabel7);
-            this.crdSearch.LeftSahddow = false;
-            this.crdSearch.Location = new System.Drawing.Point(23, 33);
-            this.crdSearch.Name = "crdSearch";
-            this.crdSearch.RightSahddow = true;
-            this.crdSearch.ShadowDepth = 20;
-            this.crdSearch.Size = new System.Drawing.Size(1117, 70);
-            this.crdSearch.TabIndex = 0;
-            // 
-            // txtClassName
-            // 
-            this.txtClassName.BackColor = System.Drawing.Color.LightGray;
-            this.txtClassName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtClassName.Enabled = false;
-            this.txtClassName.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtClassName.ForeColor = System.Drawing.Color.Navy;
-            this.txtClassName.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtClassName.HintText = "";
-            this.txtClassName.isPassword = false;
-            this.txtClassName.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtClassName.LineIdleColor = System.Drawing.Color.LightGray;
-            this.txtClassName.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
-            this.txtClassName.LineThickness = 5;
-            this.txtClassName.Location = new System.Drawing.Point(616, 19);
-            this.txtClassName.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.txtClassName.Size = new System.Drawing.Size(279, 32);
-            this.txtClassName.TabIndex = 180;
-            this.txtClassName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // bunifuCustomLabel7
-            // 
-            this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(908, 22);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(100, 27);
-            this.bunifuCustomLabel7.TabIndex = 179;
-            this.bunifuCustomLabel7.Text = "عنوان الحصة :";
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(396, 22);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(91, 27);
-            this.bunifuCustomLabel1.TabIndex = 179;
-            this.bunifuCustomLabel1.Text = "تاريخ الحصة :";
-            // 
-            // txtClassDate
-            // 
-            this.txtClassDate.BackColor = System.Drawing.Color.LightGray;
-            this.txtClassDate.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtClassDate.Enabled = false;
-            this.txtClassDate.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtClassDate.ForeColor = System.Drawing.Color.Navy;
-            this.txtClassDate.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtClassDate.HintText = "";
-            this.txtClassDate.isPassword = false;
-            this.txtClassDate.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtClassDate.LineIdleColor = System.Drawing.Color.LightGray;
-            this.txtClassDate.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
-            this.txtClassDate.LineThickness = 5;
-            this.txtClassDate.Location = new System.Drawing.Point(104, 19);
-            this.txtClassDate.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtClassDate.Name = "txtClassDate";
-            this.txtClassDate.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.txtClassDate.Size = new System.Drawing.Size(279, 32);
-            this.txtClassDate.TabIndex = 180;
-            this.txtClassDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // GroupName
             // 
             this.GroupName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -375,6 +254,127 @@ namespace CourseCenterMS
             this.Details.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Details.Text = "التفاصيل";
             this.Details.UseColumnTextForLinkValue = true;
+            // 
+            // lblGridHeader
+            // 
+            this.lblGridHeader.AutoSize = true;
+            this.lblGridHeader.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGridHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblGridHeader.Location = new System.Drawing.Point(965, 23);
+            this.lblGridHeader.Name = "lblGridHeader";
+            this.lblGridHeader.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGridHeader.Size = new System.Drawing.Size(130, 35);
+            this.lblGridHeader.TabIndex = 18;
+            this.lblGridHeader.Text = "حضور الطلاب ";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(176)))), ((int)(((byte)(190)))));
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(150)))), ((int)(((byte)(170)))));
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Image = global::CourseCenterMS.Properties.Resources.icons8_search32_32;
+            this.btnSearch.Location = new System.Drawing.Point(36, 24);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(30, 32);
+            this.btnSearch.TabIndex = 25;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // crdSearch
+            // 
+            this.crdSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.crdSearch.BackColor = System.Drawing.Color.White;
+            this.crdSearch.BorderRadius = 5;
+            this.crdSearch.BottomSahddow = true;
+            this.crdSearch.color = System.Drawing.Color.Green;
+            this.crdSearch.Controls.Add(this.txtClassDate);
+            this.crdSearch.Controls.Add(this.bunifuCustomLabel1);
+            this.crdSearch.Controls.Add(this.txtClassName);
+            this.crdSearch.Controls.Add(this.bunifuCustomLabel7);
+            this.crdSearch.LeftSahddow = false;
+            this.crdSearch.Location = new System.Drawing.Point(23, 33);
+            this.crdSearch.Name = "crdSearch";
+            this.crdSearch.RightSahddow = true;
+            this.crdSearch.ShadowDepth = 20;
+            this.crdSearch.Size = new System.Drawing.Size(1117, 70);
+            this.crdSearch.TabIndex = 0;
+            // 
+            // txtClassDate
+            // 
+            this.txtClassDate.BackColor = System.Drawing.Color.LightGray;
+            this.txtClassDate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClassDate.Enabled = false;
+            this.txtClassDate.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtClassDate.ForeColor = System.Drawing.Color.Navy;
+            this.txtClassDate.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtClassDate.HintText = "";
+            this.txtClassDate.isPassword = false;
+            this.txtClassDate.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtClassDate.LineIdleColor = System.Drawing.Color.LightGray;
+            this.txtClassDate.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
+            this.txtClassDate.LineThickness = 5;
+            this.txtClassDate.Location = new System.Drawing.Point(104, 19);
+            this.txtClassDate.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
+            this.txtClassDate.Name = "txtClassDate";
+            this.txtClassDate.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.txtClassDate.Size = new System.Drawing.Size(279, 32);
+            this.txtClassDate.TabIndex = 180;
+            this.txtClassDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(396, 22);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(91, 27);
+            this.bunifuCustomLabel1.TabIndex = 179;
+            this.bunifuCustomLabel1.Text = "تاريخ الحصة :";
+            // 
+            // txtClassName
+            // 
+            this.txtClassName.BackColor = System.Drawing.Color.LightGray;
+            this.txtClassName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtClassName.Enabled = false;
+            this.txtClassName.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtClassName.ForeColor = System.Drawing.Color.Navy;
+            this.txtClassName.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtClassName.HintText = "";
+            this.txtClassName.isPassword = false;
+            this.txtClassName.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtClassName.LineIdleColor = System.Drawing.Color.LightGray;
+            this.txtClassName.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
+            this.txtClassName.LineThickness = 5;
+            this.txtClassName.Location = new System.Drawing.Point(616, 19);
+            this.txtClassName.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
+            this.txtClassName.Name = "txtClassName";
+            this.txtClassName.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.txtClassName.Size = new System.Drawing.Size(279, 32);
+            this.txtClassName.TabIndex = 180;
+            this.txtClassName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // bunifuCustomLabel7
+            // 
+            this.bunifuCustomLabel7.AutoSize = true;
+            this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(908, 22);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(100, 27);
+            this.bunifuCustomLabel7.TabIndex = 179;
+            this.bunifuCustomLabel7.Text = "عنوان الحصة :";
             // 
             // frmStudentAttendance
             // 

@@ -56,8 +56,7 @@ namespace CourseCenterMS
                 group.StartDate = dtpkrStartYear.Value != null ? dtpkrStartYear.Value.Date : throw new Exception("يجب ادخال تاريخ بدء المجموعه لاتمام التسجيل");
                 group.EndDate = dtPkrEndDate.Value != null ? dtPkrEndDate.Value.Date : throw new Exception("يجب ادخال تاريخ انتهاء المجموعه لاتمام التسجيل");
                 group.CreationDate = DateTime.Now;
-                context.Groups.Add(group);
-                context.SaveChanges();
+                
                 if (chkIsActive.Checked)
                 {
                     group.IsActive = true;
@@ -66,6 +65,8 @@ namespace CourseCenterMS
                     group.IsActive = false;
 
                 context.Groups.Add(group);
+                context.SaveChanges();
+
                 if (chkSaturay.Checked)
                 {
                     SaveGroupDayAndTime(group.ID, "السبت");
@@ -127,8 +128,14 @@ namespace CourseCenterMS
               
               
 
-                Program.Message.lblMessage.Text = ex.Message;
+                Program.Message.lblMessage.Text = "حدث خطأ اثناء تسجيل المجموعه تأكد من وجود جميع البيانات ";
                 Program.Message.ShowDialog();
+                if (context.Groups.Find(group.ID) != null)
+                {
+                    context.Groups.Remove(group);
+                    context.SaveChanges();
+
+                }
 
             }
         }

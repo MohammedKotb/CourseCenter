@@ -51,7 +51,6 @@ D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\CourseCenterMS.pdb
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\EntityFramework.dll
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\EntityFramework.xml
-D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csprojAssemblyReference.cache
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmAllGroup.resources
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmNewGroup.resources
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmShowStudentData.resources
@@ -72,3 +71,9 @@ D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmTodayAtendanceGroups.resources
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmTodayStudentAttendance.resources
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmsheet.resources
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmSuccessMsg.resources
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\Data\CourseCenter_log.ldf
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\Data\CourseCenter.mdf
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csprojAssemblyReference.cache
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\Database.mdf
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\Database_log.ldf

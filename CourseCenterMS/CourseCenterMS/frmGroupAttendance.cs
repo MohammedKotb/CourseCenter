@@ -34,11 +34,13 @@ namespace CourseCenterMS
             {
                 if (grdGroupAttendance.Columns[e.ColumnIndex].HeaderText == "تفاصيل")
                 {
+                    long groupID = Convert.ToInt64(lblGroupID.Text);
                     int AttendanceID = Convert.ToInt32(grdGroupAttendance.Rows[e.RowIndex].Cells["ID"].Value);
                     frmStudentAttendance f = new frmStudentAttendance();
+                
                     //  = context.StudentAttendances.Where(x => x.AttendanceID == AttendanceID).ToList();
                     List<StdAttendanceToGrd> attenacesToGrd = new List<StdAttendanceToGrd>();
-                    List<StudentAttendance> studentAttendancelst = context.StudentAttendances.Where(x => x.AttendanceID == AttendanceID).Include(x => x.Student).ToList();
+                    List<StudentAttendance> studentAttendancelst = context.StudentAttendances.Include(x => x.Student).Include(x => x.Attendence).Where(x => x.Attendence.GroupID == groupID).ToList();
                     foreach (var item in studentAttendancelst)
                     {
                         StdAttendanceToGrd attenaceToGrd = new StdAttendanceToGrd();

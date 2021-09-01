@@ -11,6 +11,7 @@ namespace CourseCenterMS
     {
         public static Dashbord DashbordRunningForm;
         public static frmTest Message;
+        public static frmSuccessMsg SuccessMessage;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -23,8 +24,9 @@ namespace CourseCenterMS
             Application.SetCompatibleTextRenderingDefault(false);
             DashbordRunningForm = new Dashbord();
             Message = new frmTest();
-             //Application.Run(new frmLogin());
-             Application.Run(DashbordRunningForm);
+            SuccessMessage = new frmSuccessMsg();
+             Application.Run(new frmLogin());
+            // Application.Run(DashbordRunningForm);
         }
     }
 }

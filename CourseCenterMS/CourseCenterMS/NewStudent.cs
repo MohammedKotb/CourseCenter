@@ -22,12 +22,12 @@ namespace CourseCenterMS
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            btnAddPicture.Visible = true;
+          //  btnAddPicture.Visible = true;
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            btnAddPicture.Visible = false;
+           // btnAddPicture.Visible = false;
 
         }
 
@@ -92,11 +92,11 @@ namespace CourseCenterMS
                 student.School = txtSchool.Text;
                 student.DepartmentID = cmboDepartment.SelectedIndex >= 0 ? int.Parse(cmboDepartment.SelectedValue.ToString()) : 0;
                 student.QR = txtQR.Text;
-                student.FatherJob = txtFatherJob.Text;
+                student.FatherJob = txtFatherPhone.Text;
                 student.Credit = txtCredit.Text != "" ? Convert.ToDecimal(txtCredit.Text) : 0.0m;
                 student.Debit = txtDibt.Text != "" ? Convert.ToDecimal(txtDibt.Text) : 0.0m;
                 student.MotherPhone = txtMatherPhone.Text;
-                student.FatherPhone = txtFatherJob.Text;
+                student.FatherPhone = txtFatherPhone.Text;
                 student.GroupID = cmboGroup.SelectedIndex >= 0 ? int.Parse(cmboGroup.SelectedValue.ToString()) : 0;
                 student.GroupName = cmboGroup.SelectedIndex >=0?cmboGroup.GetItemText( cmboGroup.SelectedItem) : null;
                 student.Classroom = txtClassroom.Text;
@@ -145,7 +145,11 @@ namespace CourseCenterMS
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            
+            txtAddress.Text = txtClassroom.Text = txtCredit.Text = txtDibt.Text = txtFatherPhone.Text
+           = txtMatherPhone.Text = txtName.Text = txtPhone.Text = txtQR.Text = txtSchool.Text = txtAddress.Text=txtFatherJob.Text = "";
+            cmboDepartment.SelectedIndex=cmboGroup.SelectedIndex = 0;
+     
+
         }
 
         

@@ -50,10 +50,18 @@ namespace CourseCenterMS
                     fStdData.txtClassroom.Text = student.Classroom;
                     fStdData.txtDibt.Text = student.Debit.ToString();
                     fStdData.txtCredits.Text = student.Credit.ToString();
-                    fStdData.cmboDepartment.Items =new[] { student.Department.Name };
-                    fStdData.cmboDepartment.selectedIndex = 0;
-                    fStdData.cmboGroup.Items = new[] { student.Group.Name };
-                    fStdData.cmboGroup.selectedIndex = 0;
+                    fStdData.cmboDepartment.DataSource = context.Departments.ToList();
+                    fStdData.cmboGroup.DataSource = context.Groups.ToList();
+
+                    fStdData.cmboDepartment.ValueMember = "ID";
+                    fStdData.cmboDepartment.DisplayMember = "Name";
+                    fStdData.cmboGroup.ValueMember = "ID";
+                    fStdData.cmboGroup.DisplayMember = "Name";
+                    //new[] { student.Department.Name };
+                    fStdData.cmboDepartment.SelectedValue =student.DepartmentID;
+                    fStdData.cmboGroup.SelectedValue = student.GroupID;
+                   
+                    //fStdData.cmboGroup.selectedIndex = 0;
                     //fStdData.pctureImage.Image = student.ImgURL;
                     if (student.Gender=="ذكر")
                     {

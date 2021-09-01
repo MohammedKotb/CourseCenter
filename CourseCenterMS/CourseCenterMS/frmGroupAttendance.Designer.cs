@@ -49,6 +49,7 @@ namespace CourseCenterMS
             this.btnFiter = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textSearch = new System.Windows.Forms.TextBox();
+            this.lblGroupID = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlGroupAttendance.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
@@ -73,6 +74,7 @@ namespace CourseCenterMS
             this.crdSearchResult.BorderRadius = 5;
             this.crdSearchResult.BottomSahddow = true;
             this.crdSearchResult.color = System.Drawing.Color.RoyalBlue;
+            this.crdSearchResult.Controls.Add(this.lblGroupID);
             this.crdSearchResult.Controls.Add(this.pnlGridContainer);
             this.crdSearchResult.Controls.Add(this.lblGroupName);
             this.crdSearchResult.Controls.Add(this.lblGridHeader);
@@ -303,6 +305,19 @@ namespace CourseCenterMS
             this.textSearch.Size = new System.Drawing.Size(324, 33);
             this.textSearch.TabIndex = 24;
             // 
+            // lblGroupID
+            // 
+            this.lblGroupID.AutoSize = true;
+            this.lblGroupID.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGroupID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblGroupID.Location = new System.Drawing.Point(781, 20);
+            this.lblGroupID.Name = "lblGroupID";
+            this.lblGroupID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGroupID.Size = new System.Drawing.Size(30, 35);
+            this.lblGroupID.TabIndex = 22;
+            this.lblGroupID.Text = "...";
+            this.lblGroupID.Visible = false;
+            // 
             // frmGroupAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,5 +357,6 @@ namespace CourseCenterMS
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentsNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewLinkColumn GroupDetails;
+        public Bunifu.Framework.UI.BunifuCustomLabel lblGroupID;
     }
 }

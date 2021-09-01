@@ -35,19 +35,11 @@ namespace CourseCenterMS
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTodayStudentAttendance = new System.Windows.Forms.Panel();
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.btnSave = new System.Windows.Forms.Button();
             this.txtSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.pnlGridContainer = new System.Windows.Forms.Panel();
             this.grdTodayStudentsAttendance = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
-            this.txtClassDate = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtClassName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblGroupName = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Attendance = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.AttendTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +48,14 @@ namespace CourseCenterMS
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new System.Windows.Forms.DataGridViewLinkColumn();
             this.lblGroupID = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblGroupName = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
+            this.txtClassDate = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtClassName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlTodayStudentAttendance.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
@@ -98,6 +98,39 @@ namespace CourseCenterMS
             this.crdSearchResult.ShadowDepth = 20;
             this.crdSearchResult.Size = new System.Drawing.Size(1117, 609);
             this.crdSearchResult.TabIndex = 1;
+            // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bunifuSeparator2.LineThickness = 2;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(4, 504);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Size = new System.Drawing.Size(1109, 20);
+            this.bunifuSeparator2.TabIndex = 182;
+            this.bunifuSeparator2.Transparency = 255;
+            this.bunifuSeparator2.Vertical = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(191)))), ((int)(((byte)(107)))));
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.Navy;
+            this.btnSave.Image = global::CourseCenterMS.Properties.Resources.icons8_save_32;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.Location = new System.Drawing.Point(994, 526);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(95, 36);
+            this.btnSave.TabIndex = 181;
+            this.btnSave.Text = "حفـــــظ";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtSearch
             // 
@@ -195,6 +228,91 @@ namespace CourseCenterMS
             this.grdTodayStudentsAttendance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdTodayStudentsAttendance_CellClick);
             this.grdTodayStudentsAttendance.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grdTodayStudentsAttendance_CellMouseClick);
             // 
+            // StudentName
+            // 
+            this.StudentName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.StudentName.DataPropertyName = "Name";
+            this.StudentName.FillWeight = 116.4129F;
+            this.StudentName.Frozen = true;
+            this.StudentName.HeaderText = "اسم الطالب";
+            this.StudentName.MinimumWidth = 6;
+            this.StudentName.Name = "StudentName";
+            this.StudentName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.StudentName.Width = 251;
+            // 
+            // Attendance
+            // 
+            this.Attendance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Attendance.DataPropertyName = "Attend";
+            this.Attendance.HeaderText = "الحضور";
+            this.Attendance.MinimumWidth = 6;
+            this.Attendance.Name = "Attendance";
+            this.Attendance.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Attendance.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Attendance.Width = 216;
+            // 
+            // AttendTime
+            // 
+            this.AttendTime.DataPropertyName = "AttendanceTime";
+            this.AttendTime.HeaderText = "وقت الحضور";
+            this.AttendTime.Name = "AttendTime";
+            // 
+            // Homework
+            // 
+            this.Homework.DataPropertyName = "HomeWork";
+            this.Homework.HeaderText = "الواجب";
+            this.Homework.Name = "Homework";
+            this.Homework.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Homework.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // sheet
+            // 
+            this.sheet.DataPropertyName = "Sheet";
+            this.sheet.HeaderText = "الشيت";
+            this.sheet.Name = "sheet";
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "StudentID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Details
+            // 
+            this.Details.HeaderText = "تفاصيل";
+            this.Details.Name = "Details";
+            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Details.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Details.Text = "التفاصيل";
+            this.Details.UseColumnTextForLinkValue = true;
+            // 
+            // lblGroupID
+            // 
+            this.lblGroupID.AutoSize = true;
+            this.lblGroupID.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGroupID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblGroupID.Location = new System.Drawing.Point(707, 21);
+            this.lblGroupID.Name = "lblGroupID";
+            this.lblGroupID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGroupID.Size = new System.Drawing.Size(30, 35);
+            this.lblGroupID.TabIndex = 18;
+            this.lblGroupID.Text = "...";
+            this.lblGroupID.Visible = false;
+            // 
+            // lblGroupName
+            // 
+            this.lblGroupName.AutoSize = true;
+            this.lblGroupName.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGroupName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblGroupName.Location = new System.Drawing.Point(802, 21);
+            this.lblGroupName.Name = "lblGroupName";
+            this.lblGroupName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGroupName.Size = new System.Drawing.Size(89, 35);
+            this.lblGroupName.TabIndex = 18;
+            this.lblGroupName.Text = "المجموعه";
+            // 
             // lblGridHeader
             // 
             this.lblGridHeader.AutoSize = true;
@@ -206,6 +324,24 @@ namespace CourseCenterMS
             this.lblGridHeader.Size = new System.Drawing.Size(208, 35);
             this.lblGridHeader.TabIndex = 18;
             this.lblGridHeader.Text = "حضور طلاب المجموعه :  ";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(176)))), ((int)(((byte)(190)))));
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(150)))), ((int)(((byte)(170)))));
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Image = global::CourseCenterMS.Properties.Resources.icons8_search32_32;
+            this.btnSearch.Location = new System.Drawing.Point(36, 24);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(30, 32);
+            this.btnSearch.TabIndex = 25;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // crdSearch
             // 
@@ -295,142 +431,6 @@ namespace CourseCenterMS
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(100, 27);
             this.bunifuCustomLabel7.TabIndex = 179;
             this.bunifuCustomLabel7.Text = "عنوان الحصة :";
-            // 
-            // lblGroupName
-            // 
-            this.lblGroupName.AutoSize = true;
-            this.lblGroupName.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGroupName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblGroupName.Location = new System.Drawing.Point(802, 21);
-            this.lblGroupName.Name = "lblGroupName";
-            this.lblGroupName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblGroupName.Size = new System.Drawing.Size(89, 35);
-            this.lblGroupName.TabIndex = 18;
-            this.lblGroupName.Text = "المجموعه";
-            // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bunifuSeparator2.LineThickness = 2;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(4, 526);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(1109, 20);
-            this.bunifuSeparator2.TabIndex = 182;
-            this.bunifuSeparator2.Transparency = 255;
-            this.bunifuSeparator2.Vertical = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(191)))), ((int)(((byte)(107)))));
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.Navy;
-            this.btnSave.Image = global::CourseCenterMS.Properties.Resources.icons8_save_32;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(994, 552);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(95, 36);
-            this.btnSave.TabIndex = 181;
-            this.btnSave.Text = "حفـــــظ";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(176)))), ((int)(((byte)(190)))));
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(150)))), ((int)(((byte)(170)))));
-            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = global::CourseCenterMS.Properties.Resources.icons8_search32_32;
-            this.btnSearch.Location = new System.Drawing.Point(36, 24);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(30, 32);
-            this.btnSearch.TabIndex = 25;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // StudentName
-            // 
-            this.StudentName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.StudentName.DataPropertyName = "Name";
-            this.StudentName.FillWeight = 116.4129F;
-            this.StudentName.Frozen = true;
-            this.StudentName.HeaderText = "اسم الطالب";
-            this.StudentName.MinimumWidth = 6;
-            this.StudentName.Name = "StudentName";
-            this.StudentName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.StudentName.Width = 251;
-            // 
-            // Attendance
-            // 
-            this.Attendance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Attendance.DataPropertyName = "Attend";
-            this.Attendance.HeaderText = "الحضور";
-            this.Attendance.MinimumWidth = 6;
-            this.Attendance.Name = "Attendance";
-            this.Attendance.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Attendance.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Attendance.Width = 216;
-            // 
-            // AttendTime
-            // 
-            this.AttendTime.DataPropertyName = "AttendanceTime";
-            this.AttendTime.HeaderText = "وقت الحضور";
-            this.AttendTime.Name = "AttendTime";
-            // 
-            // Homework
-            // 
-            this.Homework.DataPropertyName = "HomeWork";
-            this.Homework.HeaderText = "الواجب";
-            this.Homework.Name = "Homework";
-            this.Homework.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Homework.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // sheet
-            // 
-            this.sheet.DataPropertyName = "Sheet";
-            this.sheet.HeaderText = "الشيت";
-            this.sheet.Name = "sheet";
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "StudentID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // Details
-            // 
-            this.Details.HeaderText = "تفاصيل";
-            this.Details.Name = "Details";
-            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Details.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Details.Text = "التفاصيل";
-            this.Details.UseColumnTextForLinkValue = true;
-            // 
-            // lblGroupID
-            // 
-            this.lblGroupID.AutoSize = true;
-            this.lblGroupID.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGroupID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblGroupID.Location = new System.Drawing.Point(707, 21);
-            this.lblGroupID.Name = "lblGroupID";
-            this.lblGroupID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblGroupID.Size = new System.Drawing.Size(30, 35);
-            this.lblGroupID.TabIndex = 18;
-            this.lblGroupID.Text = "...";
-            this.lblGroupID.Visible = false;
             // 
             // frmTodayStudentAttendance
             // 

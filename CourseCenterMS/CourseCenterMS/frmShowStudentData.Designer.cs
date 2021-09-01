@@ -37,18 +37,13 @@ namespace CourseCenterMS
             this.pnlGridContainer = new System.Windows.Forms.Panel();
             this.radCallMother = new Bunifu.Framework.UI.BunifuCheckbox();
             this.radCallFather = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.btnSaveAndContainue = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.cmboDepartment = new Bunifu.Framework.UI.BunifuDropdown();
             this.txtCredits = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtFatherJob = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtQR = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtSchool = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtAddress = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.cmboGroup = new Bunifu.Framework.UI.BunifuDropdown();
             this.txtPhone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtDibt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtMotherPhone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -65,8 +60,6 @@ namespace CourseCenterMS
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnAddPicture = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.pctureImage = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -77,6 +70,13 @@ namespace CourseCenterMS
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblID = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cmboDepartment = new System.Windows.Forms.ComboBox();
+            this.cmboGroup = new System.Windows.Forms.ComboBox();
+            this.btnSaveAndContainue = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnAddPicture = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pctureImage = new System.Windows.Forms.PictureBox();
             this.pnlStudentData.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
@@ -148,20 +148,20 @@ namespace CourseCenterMS
             // 
             // pnlGridContainer
             // 
+            this.pnlGridContainer.Controls.Add(this.cmboGroup);
+            this.pnlGridContainer.Controls.Add(this.cmboDepartment);
             this.pnlGridContainer.Controls.Add(this.radCallMother);
             this.pnlGridContainer.Controls.Add(this.radCallFather);
             this.pnlGridContainer.Controls.Add(this.btnSaveAndContainue);
             this.pnlGridContainer.Controls.Add(this.btnCancel);
-            this.pnlGridContainer.Controls.Add(this.btnSave);
+            this.pnlGridContainer.Controls.Add(this.btnRemove);
             this.pnlGridContainer.Controls.Add(this.bunifuSeparator2);
-            this.pnlGridContainer.Controls.Add(this.cmboDepartment);
             this.pnlGridContainer.Controls.Add(this.txtCredits);
             this.pnlGridContainer.Controls.Add(this.txtFatherJob);
             this.pnlGridContainer.Controls.Add(this.txtQR);
             this.pnlGridContainer.Controls.Add(this.txtSchool);
             this.pnlGridContainer.Controls.Add(this.txtAddress);
             this.pnlGridContainer.Controls.Add(this.txtName);
-            this.pnlGridContainer.Controls.Add(this.cmboGroup);
             this.pnlGridContainer.Controls.Add(this.txtPhone);
             this.pnlGridContainer.Controls.Add(this.txtDibt);
             this.pnlGridContainer.Controls.Add(this.txtMotherPhone);
@@ -206,6 +206,7 @@ namespace CourseCenterMS
             this.radCallMother.Name = "radCallMother";
             this.radCallMother.Size = new System.Drawing.Size(20, 20);
             this.radCallMother.TabIndex = 92;
+            this.radCallMother.OnChange += new System.EventHandler(this.radCallMother_OnChange);
             // 
             // radCallFather
             // 
@@ -219,60 +220,7 @@ namespace CourseCenterMS
             this.radCallFather.Name = "radCallFather";
             this.radCallFather.Size = new System.Drawing.Size(20, 20);
             this.radCallFather.TabIndex = 92;
-            // 
-            // btnSaveAndContainue
-            // 
-            this.btnSaveAndContainue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(191)))), ((int)(((byte)(107)))));
-            this.btnSaveAndContainue.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSaveAndContainue.FlatAppearance.BorderSize = 0;
-            this.btnSaveAndContainue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveAndContainue.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
-            this.btnSaveAndContainue.ForeColor = System.Drawing.Color.Navy;
-            this.btnSaveAndContainue.Image = global::CourseCenterMS.Properties.Resources.icons8_save_32;
-            this.btnSaveAndContainue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveAndContainue.Location = new System.Drawing.Point(809, 474);
-            this.btnSaveAndContainue.Name = "btnSaveAndContainue";
-            this.btnSaveAndContainue.Size = new System.Drawing.Size(154, 36);
-            this.btnSaveAndContainue.TabIndex = 91;
-            this.btnSaveAndContainue.Text = "حفـــــظ واستمرار";
-            this.btnSaveAndContainue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveAndContainue.UseVisualStyleBackColor = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Silver;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancel.Image = global::CourseCenterMS.Properties.Resources.icons8_cancel_32;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.Location = new System.Drawing.Point(76, 474);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(95, 36);
-            this.btnCancel.TabIndex = 91;
-            this.btnCancel.Text = "الغــــــاء";
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(191)))), ((int)(((byte)(107)))));
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.Navy;
-            this.btnSave.Image = global::CourseCenterMS.Properties.Resources.icons8_save_32;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(983, 474);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(95, 36);
-            this.btnSave.TabIndex = 91;
-            this.btnSave.Text = "حفـــــظ";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.UseVisualStyleBackColor = false;
+            this.radCallFather.OnChange += new System.EventHandler(this.radCallFather_OnChange);
             // 
             // bunifuSeparator2
             // 
@@ -287,25 +235,6 @@ namespace CourseCenterMS
             this.bunifuSeparator2.TabIndex = 90;
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
-            // 
-            // cmboDepartment
-            // 
-            this.cmboDepartment.BackColor = System.Drawing.Color.Transparent;
-            this.cmboDepartment.BorderRadius = 3;
-            this.cmboDepartment.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmboDepartment.ForeColor = System.Drawing.Color.Navy;
-            this.cmboDepartment.Items = new string[] {
-        "علمى علوم ",
-        "علمى رياضة",
-        "أدبى"};
-            this.cmboDepartment.Location = new System.Drawing.Point(685, 186);
-            this.cmboDepartment.Margin = new System.Windows.Forms.Padding(8, 15, 8, 15);
-            this.cmboDepartment.Name = "cmboDepartment";
-            this.cmboDepartment.NomalColor = System.Drawing.Color.LightGray;
-            this.cmboDepartment.onHoverColor = System.Drawing.Color.Silver;
-            this.cmboDepartment.selectedIndex = -1;
-            this.cmboDepartment.Size = new System.Drawing.Size(292, 32);
-            this.cmboDepartment.TabIndex = 6;
             // 
             // txtCredits
             // 
@@ -432,22 +361,6 @@ namespace CourseCenterMS
             this.txtName.Size = new System.Drawing.Size(292, 39);
             this.txtName.TabIndex = 1;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // cmboGroup
-            // 
-            this.cmboGroup.BackColor = System.Drawing.Color.Transparent;
-            this.cmboGroup.BorderRadius = 3;
-            this.cmboGroup.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmboGroup.ForeColor = System.Drawing.Color.Navy;
-            this.cmboGroup.Items = new string[0];
-            this.cmboGroup.Location = new System.Drawing.Point(225, 186);
-            this.cmboGroup.Margin = new System.Windows.Forms.Padding(8, 15, 8, 15);
-            this.cmboGroup.Name = "cmboGroup";
-            this.cmboGroup.NomalColor = System.Drawing.Color.LightGray;
-            this.cmboGroup.onHoverColor = System.Drawing.Color.Silver;
-            this.cmboGroup.selectedIndex = -1;
-            this.cmboGroup.Size = new System.Drawing.Size(292, 32);
-            this.cmboGroup.TabIndex = 7;
             // 
             // txtPhone
             // 
@@ -686,43 +599,6 @@ namespace CourseCenterMS
             this.bunifuCustomLabel10.TabIndex = 65;
             this.bunifuCustomLabel10.Text = "الصف :";
             // 
-            // btnAddPicture
-            // 
-            this.btnAddPicture.ActiveBorderThickness = 1;
-            this.btnAddPicture.ActiveCornerRadius = 20;
-            this.btnAddPicture.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnAddPicture.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAddPicture.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnAddPicture.BackColor = System.Drawing.Color.White;
-            this.btnAddPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddPicture.BackgroundImage")));
-            this.btnAddPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddPicture.ButtonText = "إضافة صورة";
-            this.btnAddPicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddPicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPicture.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnAddPicture.IdleBorderThickness = 1;
-            this.btnAddPicture.IdleCornerRadius = 20;
-            this.btnAddPicture.IdleFillColor = System.Drawing.Color.White;
-            this.btnAddPicture.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnAddPicture.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnAddPicture.Location = new System.Drawing.Point(54, 120);
-            this.btnAddPicture.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAddPicture.Name = "btnAddPicture";
-            this.btnAddPicture.Size = new System.Drawing.Size(98, 43);
-            this.btnAddPicture.TabIndex = 59;
-            this.btnAddPicture.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddPicture.Visible = false;
-            // 
-            // pctureImage
-            // 
-            this.pctureImage.BackColor = System.Drawing.Color.White;
-            this.pctureImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pctureImage.Location = new System.Drawing.Point(30, 79);
-            this.pctureImage.Name = "pctureImage";
-            this.pctureImage.Size = new System.Drawing.Size(143, 125);
-            this.pctureImage.TabIndex = 54;
-            this.pctureImage.TabStop = false;
-            // 
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.AutoSize = true;
@@ -841,6 +717,121 @@ namespace CourseCenterMS
             this.lblGridHeader.TabIndex = 18;
             this.lblGridHeader.Text = "بيــــــــانات الطالــــــــب";
             // 
+            // cmboDepartment
+            // 
+            this.cmboDepartment.BackColor = System.Drawing.Color.LightGray;
+            this.cmboDepartment.Font = new System.Drawing.Font("Sakkal Majalla", 14F, System.Drawing.FontStyle.Bold);
+            this.cmboDepartment.ForeColor = System.Drawing.Color.Navy;
+            this.cmboDepartment.FormattingEnabled = true;
+            this.cmboDepartment.Location = new System.Drawing.Point(685, 186);
+            this.cmboDepartment.Name = "cmboDepartment";
+            this.cmboDepartment.Size = new System.Drawing.Size(292, 33);
+            this.cmboDepartment.TabIndex = 94;
+            // 
+            // cmboGroup
+            // 
+            this.cmboGroup.BackColor = System.Drawing.Color.LightGray;
+            this.cmboGroup.Font = new System.Drawing.Font("Sakkal Majalla", 14F, System.Drawing.FontStyle.Bold);
+            this.cmboGroup.ForeColor = System.Drawing.Color.Navy;
+            this.cmboGroup.FormattingEnabled = true;
+            this.cmboGroup.Location = new System.Drawing.Point(225, 190);
+            this.cmboGroup.Name = "cmboGroup";
+            this.cmboGroup.Size = new System.Drawing.Size(292, 33);
+            this.cmboGroup.TabIndex = 95;
+            // 
+            // btnSaveAndContainue
+            // 
+            this.btnSaveAndContainue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(191)))), ((int)(((byte)(107)))));
+            this.btnSaveAndContainue.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSaveAndContainue.FlatAppearance.BorderSize = 0;
+            this.btnSaveAndContainue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveAndContainue.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
+            this.btnSaveAndContainue.ForeColor = System.Drawing.Color.Navy;
+            this.btnSaveAndContainue.Image = global::CourseCenterMS.Properties.Resources.icons8_save_32;
+            this.btnSaveAndContainue.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaveAndContainue.Location = new System.Drawing.Point(983, 474);
+            this.btnSaveAndContainue.Name = "btnSaveAndContainue";
+            this.btnSaveAndContainue.Size = new System.Drawing.Size(89, 36);
+            this.btnSaveAndContainue.TabIndex = 91;
+            this.btnSaveAndContainue.Text = "حفظ  ";
+            this.btnSaveAndContainue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveAndContainue.UseVisualStyleBackColor = false;
+            this.btnSaveAndContainue.Click += new System.EventHandler(this.btnSaveAndContainue_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Silver;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.Image = global::CourseCenterMS.Properties.Resources.icons8_cancel_32;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.Location = new System.Drawing.Point(76, 474);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(95, 36);
+            this.btnCancel.TabIndex = 91;
+            this.btnCancel.Text = "إلغــــــــــاء";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.Red;
+            this.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
+            this.btnRemove.ForeColor = System.Drawing.Color.Yellow;
+            this.btnRemove.Image = global::CourseCenterMS.Properties.Resources.icons8_remove_32;
+            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemove.Location = new System.Drawing.Point(859, 474);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(95, 36);
+            this.btnRemove.TabIndex = 91;
+            this.btnRemove.Text = "حـــــــــذف";
+            this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // btnAddPicture
+            // 
+            this.btnAddPicture.ActiveBorderThickness = 1;
+            this.btnAddPicture.ActiveCornerRadius = 20;
+            this.btnAddPicture.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnAddPicture.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAddPicture.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnAddPicture.BackColor = System.Drawing.Color.White;
+            this.btnAddPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddPicture.BackgroundImage")));
+            this.btnAddPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddPicture.ButtonText = "إضافة صورة";
+            this.btnAddPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPicture.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnAddPicture.IdleBorderThickness = 1;
+            this.btnAddPicture.IdleCornerRadius = 20;
+            this.btnAddPicture.IdleFillColor = System.Drawing.Color.White;
+            this.btnAddPicture.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnAddPicture.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnAddPicture.Location = new System.Drawing.Point(54, 120);
+            this.btnAddPicture.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddPicture.Name = "btnAddPicture";
+            this.btnAddPicture.Size = new System.Drawing.Size(98, 43);
+            this.btnAddPicture.TabIndex = 59;
+            this.btnAddPicture.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddPicture.Visible = false;
+            // 
+            // pctureImage
+            // 
+            this.pctureImage.BackColor = System.Drawing.Color.White;
+            this.pctureImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pctureImage.Location = new System.Drawing.Point(30, 79);
+            this.pctureImage.Name = "pctureImage";
+            this.pctureImage.Size = new System.Drawing.Size(143, 125);
+            this.pctureImage.TabIndex = 54;
+            this.pctureImage.TabStop = false;
+            // 
             // frmShowStudentData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -894,15 +885,13 @@ namespace CourseCenterMS
         public Bunifu.Framework.UI.BunifuCheckbox radCallFather;
         public System.Windows.Forms.Button btnSaveAndContainue;
         public System.Windows.Forms.Button btnCancel;
-        public System.Windows.Forms.Button btnSave;
-        public Bunifu.Framework.UI.BunifuDropdown cmboDepartment;
+        public System.Windows.Forms.Button btnRemove;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtCredits;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtFatherJob;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtQR;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtSchool;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtAddress;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtName;
-        public Bunifu.Framework.UI.BunifuDropdown cmboGroup;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtPhone;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtDibt;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtMotherPhone;
@@ -913,5 +902,7 @@ namespace CourseCenterMS
         public Bunifu.Framework.UI.BunifuThinButton2 btnAddPicture;
         public System.Windows.Forms.PictureBox pctureImage;
         public Bunifu.Framework.UI.BunifuCustomLabel lblStdID;
+        public System.Windows.Forms.ComboBox cmboDepartment;
+        public System.Windows.Forms.ComboBox cmboGroup;
     }
 }

@@ -29,7 +29,6 @@ namespace CourseCenterMS
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewStudent));
             this.pnlNewStudent = new System.Windows.Forms.Panel();
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -43,7 +42,7 @@ namespace CourseCenterMS
             this.btnSave = new System.Windows.Forms.Button();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.txtCredit = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox8 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtFatherJob = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtQR = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtSchool = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtAddress = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -51,7 +50,7 @@ namespace CourseCenterMS
             this.txtPhone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtDibt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtMatherPhone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtFatherJob = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtFatherPhone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtClassroom = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel17 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -64,7 +63,6 @@ namespace CourseCenterMS
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnAddPicture = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -137,7 +135,7 @@ namespace CourseCenterMS
             this.pnlGridContainer.Controls.Add(this.btnSave);
             this.pnlGridContainer.Controls.Add(this.bunifuSeparator2);
             this.pnlGridContainer.Controls.Add(this.txtCredit);
-            this.pnlGridContainer.Controls.Add(this.bunifuMaterialTextbox8);
+            this.pnlGridContainer.Controls.Add(this.txtFatherJob);
             this.pnlGridContainer.Controls.Add(this.txtQR);
             this.pnlGridContainer.Controls.Add(this.txtSchool);
             this.pnlGridContainer.Controls.Add(this.txtAddress);
@@ -145,7 +143,7 @@ namespace CourseCenterMS
             this.pnlGridContainer.Controls.Add(this.txtPhone);
             this.pnlGridContainer.Controls.Add(this.txtDibt);
             this.pnlGridContainer.Controls.Add(this.txtMatherPhone);
-            this.pnlGridContainer.Controls.Add(this.txtFatherJob);
+            this.pnlGridContainer.Controls.Add(this.txtFatherPhone);
             this.pnlGridContainer.Controls.Add(this.txtClassroom);
             this.pnlGridContainer.Controls.Add(this.bunifuCustomLabel7);
             this.pnlGridContainer.Controls.Add(this.bunifuCustomLabel17);
@@ -158,7 +156,6 @@ namespace CourseCenterMS
             this.pnlGridContainer.Controls.Add(this.bunifuCustomLabel15);
             this.pnlGridContainer.Controls.Add(this.bunifuCustomLabel12);
             this.pnlGridContainer.Controls.Add(this.bunifuCustomLabel10);
-            this.pnlGridContainer.Controls.Add(this.btnAddPicture);
             this.pnlGridContainer.Controls.Add(this.pictureBox1);
             this.pnlGridContainer.Controls.Add(this.bunifuCustomLabel4);
             this.pnlGridContainer.Controls.Add(this.bunifuCustomLabel11);
@@ -278,7 +275,7 @@ namespace CourseCenterMS
             this.btnSave.Text = "حفـــــظ";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.UseVisualStyleBackColor = false;
-           this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // bunifuSeparator2
             // 
@@ -315,26 +312,26 @@ namespace CourseCenterMS
             this.txtCredit.TabIndex = 10;
             this.txtCredit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // bunifuMaterialTextbox8
+            // txtFatherJob
             // 
-            this.bunifuMaterialTextbox8.BackColor = System.Drawing.Color.LightGray;
-            this.bunifuMaterialTextbox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox8.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuMaterialTextbox8.ForeColor = System.Drawing.Color.Navy;
-            this.bunifuMaterialTextbox8.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.bunifuMaterialTextbox8.HintText = "";
-            this.bunifuMaterialTextbox8.isPassword = false;
-            this.bunifuMaterialTextbox8.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox8.LineIdleColor = System.Drawing.Color.LightGray;
-            this.bunifuMaterialTextbox8.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
-            this.bunifuMaterialTextbox8.LineThickness = 5;
-            this.bunifuMaterialTextbox8.Location = new System.Drawing.Point(685, 296);
-            this.bunifuMaterialTextbox8.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.bunifuMaterialTextbox8.Name = "bunifuMaterialTextbox8";
-            this.bunifuMaterialTextbox8.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.bunifuMaterialTextbox8.Size = new System.Drawing.Size(292, 32);
-            this.bunifuMaterialTextbox8.TabIndex = 8;
-            this.bunifuMaterialTextbox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFatherJob.BackColor = System.Drawing.Color.LightGray;
+            this.txtFatherJob.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFatherJob.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtFatherJob.ForeColor = System.Drawing.Color.Navy;
+            this.txtFatherJob.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtFatherJob.HintText = "";
+            this.txtFatherJob.isPassword = false;
+            this.txtFatherJob.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtFatherJob.LineIdleColor = System.Drawing.Color.LightGray;
+            this.txtFatherJob.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
+            this.txtFatherJob.LineThickness = 5;
+            this.txtFatherJob.Location = new System.Drawing.Point(685, 296);
+            this.txtFatherJob.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
+            this.txtFatherJob.Name = "txtFatherJob";
+            this.txtFatherJob.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.txtFatherJob.Size = new System.Drawing.Size(292, 32);
+            this.txtFatherJob.TabIndex = 8;
+            this.txtFatherJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtQR
             // 
@@ -483,26 +480,26 @@ namespace CourseCenterMS
             this.txtMatherPhone.TabIndex = 9;
             this.txtMatherPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtFatherJob
+            // txtFatherPhone
             // 
-            this.txtFatherJob.BackColor = System.Drawing.Color.LightGray;
-            this.txtFatherJob.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFatherJob.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtFatherJob.ForeColor = System.Drawing.Color.Navy;
-            this.txtFatherJob.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtFatherJob.HintText = "";
-            this.txtFatherJob.isPassword = false;
-            this.txtFatherJob.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.txtFatherJob.LineIdleColor = System.Drawing.Color.LightGray;
-            this.txtFatherJob.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
-            this.txtFatherJob.LineThickness = 5;
-            this.txtFatherJob.Location = new System.Drawing.Point(225, 241);
-            this.txtFatherJob.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
-            this.txtFatherJob.Name = "txtFatherJob";
-            this.txtFatherJob.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.txtFatherJob.Size = new System.Drawing.Size(292, 32);
-            this.txtFatherJob.TabIndex = 7;
-            this.txtFatherJob.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFatherPhone.BackColor = System.Drawing.Color.LightGray;
+            this.txtFatherPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFatherPhone.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtFatherPhone.ForeColor = System.Drawing.Color.Navy;
+            this.txtFatherPhone.HintForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtFatherPhone.HintText = "";
+            this.txtFatherPhone.isPassword = false;
+            this.txtFatherPhone.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtFatherPhone.LineIdleColor = System.Drawing.Color.LightGray;
+            this.txtFatherPhone.LineMouseHoverColor = System.Drawing.Color.SteelBlue;
+            this.txtFatherPhone.LineThickness = 5;
+            this.txtFatherPhone.Location = new System.Drawing.Point(225, 241);
+            this.txtFatherPhone.Margin = new System.Windows.Forms.Padding(10, 8, 10, 8);
+            this.txtFatherPhone.Name = "txtFatherPhone";
+            this.txtFatherPhone.Padding = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.txtFatherPhone.Size = new System.Drawing.Size(292, 32);
+            this.txtFatherPhone.TabIndex = 7;
+            this.txtFatherPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtClassroom
             // 
@@ -605,13 +602,13 @@ namespace CourseCenterMS
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(65, 36);
             this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "انثــــى";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radMale
             // 
             this.radMale.AutoSize = true;
+            this.radMale.Checked = true;
             this.radMale.Font = new System.Drawing.Font("Sakkal Majalla", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radMale.Location = new System.Drawing.Point(451, 74);
             this.radMale.Name = "radMale";
@@ -657,40 +654,15 @@ namespace CourseCenterMS
             this.bunifuCustomLabel10.TabIndex = 65;
             this.bunifuCustomLabel10.Text = "الصف :";
             // 
-            // btnAddPicture
-            // 
-            this.btnAddPicture.ActiveBorderThickness = 1;
-            this.btnAddPicture.ActiveCornerRadius = 20;
-            this.btnAddPicture.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnAddPicture.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAddPicture.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnAddPicture.BackColor = System.Drawing.Color.White;
-            this.btnAddPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddPicture.BackgroundImage")));
-            this.btnAddPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddPicture.ButtonText = "إضافة صورة";
-            this.btnAddPicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddPicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPicture.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnAddPicture.IdleBorderThickness = 1;
-            this.btnAddPicture.IdleCornerRadius = 20;
-            this.btnAddPicture.IdleFillColor = System.Drawing.Color.White;
-            this.btnAddPicture.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnAddPicture.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnAddPicture.Location = new System.Drawing.Point(54, 120);
-            this.btnAddPicture.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAddPicture.Name = "btnAddPicture";
-            this.btnAddPicture.Size = new System.Drawing.Size(98, 43);
-            this.btnAddPicture.TabIndex = 59;
-            this.btnAddPicture.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddPicture.Visible = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::CourseCenterMS.Properties.Resources.Sed_18_5121;
             this.pictureBox1.Location = new System.Drawing.Point(30, 79);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(143, 125);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 54;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
@@ -847,7 +819,7 @@ namespace CourseCenterMS
         private System.Windows.Forms.Button btnSave;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCredit;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox8;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtFatherJob;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtQR;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtSchool;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtAddress;
@@ -855,7 +827,7 @@ namespace CourseCenterMS
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPhone;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtDibt;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtMatherPhone;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtFatherJob;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtFatherPhone;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtClassroom;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel17;
@@ -868,7 +840,6 @@ namespace CourseCenterMS
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel15;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnAddPicture;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;

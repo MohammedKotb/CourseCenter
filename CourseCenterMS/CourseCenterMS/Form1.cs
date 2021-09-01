@@ -44,7 +44,7 @@ namespace CourseCenterMS
 
             frmAllStudents f = new frmAllStudents();
             ContainerPnl.Controls.Clear();
-            f.grdAllStudents.DataSource = context.Students.Select(x => new { x.Name, x.GroupName, x.Classroom, x.Phone, x.ID }).ToList(); ;
+            f.grdAllStudents.DataSource = context.Students.Where(x=>x.IsDeleted==false).Select(x => new { x.Name, x.GroupName, x.Classroom, x.Phone, x.ID }).ToList(); ;
             ContainerPnl.Controls.Add(f.pnlAllStudents);
         }
 
@@ -69,8 +69,8 @@ namespace CourseCenterMS
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
-            //timer1.Start();
-            // Helper.ShowSubMenu(pnlStudent);
+             timer1.Start();
+             //Helper.ShowSubMenu(pnlStudent);
 
         }
 
@@ -93,7 +93,7 @@ namespace CourseCenterMS
                 subMenu.Height = subMenu.Height + 5;
                 if (subMenu.Height >= ph)
                 {
-                    // timer1.Stop();
+                     timer1.Stop();
                     hided = false;
 
                 }
@@ -103,16 +103,13 @@ namespace CourseCenterMS
                 subMenu.Height = subMenu.Height - 5;
                 if (subMenu.Height <= 0)
                 {
-                    //timer1.Stop();
+                    timer1.Stop();
                     hided = true;
 
                 }
             }
         }
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            Show(pnlStudent);
-        }
+      
 
         private void Dashbord_Load(object sender, EventArgs e)
         {
@@ -236,6 +233,28 @@ namespace CourseCenterMS
                 .Select(x => new { x.Name, x.Classroom,x.GroupDays.FirstOrDefault().TimeFrom, x.GroupDays.FirstOrDefault().TimeTo, x.IsActive, x.ID }).ToList();
             ContainerPnl.Controls.Clear();
             ContainerPnl.Controls.Add(f.pnlTodayAttendance);
+        }
+
+        private void ContainerPnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            Show(pnlStudent);
+        }
+
+        private void DashboardBtn_Click(object sender, EventArgs e)
+        {
+            ContainerPnl.Controls.Clear();
+            ContainerPnl.Controls.Add(this.pnlhome);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Show(pnlStudent);
+
         }
     }
 

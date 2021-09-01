@@ -41,7 +41,7 @@ namespace CourseCenterMS
                 if (grdTodayStudentsAttendance.Columns[e.ColumnIndex].HeaderText == "الحضور")
                 {
 
-                    grdTodayStudentsAttendance.Rows[e.RowIndex].Cells["AttendTime"].Value = DateTime.Now.ToString("mm - hh tt");
+                    grdTodayStudentsAttendance.Rows[e.RowIndex].Cells["AttendTime"].Value = DateTime.Now.ToShortTimeString();
                     grdTodayStudentsAttendance.Rows[e.RowIndex].Cells[e.ColumnIndex].Value =true;
                     //DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)grdTodayStudentsAttendance.Rows[e.RowIndex].Cells["Att"];
                     //if (chk.Value == chk.TrueValue)
@@ -86,11 +86,12 @@ namespace CourseCenterMS
             {
                 StudentAttendance newattende = new StudentAttendance();
                 //AttendTime Homework sheet id Attendance
+                newattende.ID = 0;
                 newattende.HomeWork =Convert.ToBoolean( item.Cells["Homework"].Value);
                 newattende.Sheet =Convert.ToBoolean( item.Cells["sheet"].Value);
                 newattende.Attend =Convert.ToBoolean( item.Cells["Attendance"].Value);
                 newattende.StudentID =Convert.ToInt64( item.Cells["ID"].Value);
-                //  newattende.AttendanceTime.TimeOfDay = Convert.ToDateTime(item.Cells["AttendTime"].Value).TimeOfDay;
+                 newattende.AttendanceTime = Convert.ToDateTime(item.Cells["AttendTime"].Value);
                 newattende.AttendanceTime = DateTime.Now;
                 newattende.AttendanceID = att.ID;
                 newattende.AdditionalHomeWork = false;

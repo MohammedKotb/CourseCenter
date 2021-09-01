@@ -29,7 +29,12 @@ namespace CourseCenterMS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashbord));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.SidePnl = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -54,11 +59,35 @@ namespace CourseCenterMS
             this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.ContainerPnl = new System.Windows.Forms.Panel();
+            this.pnlhome = new System.Windows.Forms.Panel();
+            this.bunifuGradientPanel5 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.grdTodayStudentsAttendance = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Attendance = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label11 = new System.Windows.Forms.Label();
+            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnlFooter = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.SidePnl.SuspendLayout();
             this.pnlAttendance.SuspendLayout();
             this.pnlGroup.SuspendLayout();
@@ -68,6 +97,14 @@ namespace CourseCenterMS
             this.TopPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            this.ContainerPnl.SuspendLayout();
+            this.pnlhome.SuspendLayout();
+            this.bunifuGradientPanel5.SuspendLayout();
+            this.bunifuGradientPanel4.SuspendLayout();
+            this.bunifuGradientPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTodayStudentsAttendance)).BeginInit();
+            this.bunifuGradientPanel2.SuspendLayout();
+            this.bunifuGradientPanel1.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -403,6 +440,7 @@ namespace CourseCenterMS
             this.DashboardBtn.Text = "الرئيسية";
             this.DashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DashboardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DashboardBtn.Click += new System.EventHandler(this.DashboardBtn_Click);
             // 
             // ImgPnl
             // 
@@ -486,11 +524,285 @@ namespace CourseCenterMS
             // ContainerPnl
             // 
             this.ContainerPnl.AutoSize = true;
+            this.ContainerPnl.Controls.Add(this.pnlhome);
             this.ContainerPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContainerPnl.Location = new System.Drawing.Point(202, 43);
             this.ContainerPnl.Name = "ContainerPnl";
             this.ContainerPnl.Size = new System.Drawing.Size(1098, 808);
             this.ContainerPnl.TabIndex = 2;
+            this.ContainerPnl.Paint += new System.Windows.Forms.PaintEventHandler(this.ContainerPnl_Paint);
+            // 
+            // pnlhome
+            // 
+            this.pnlhome.Controls.Add(this.bunifuGradientPanel5);
+            this.pnlhome.Controls.Add(this.bunifuGradientPanel4);
+            this.pnlhome.Controls.Add(this.bunifuGradientPanel3);
+            this.pnlhome.Controls.Add(this.bunifuGradientPanel2);
+            this.pnlhome.Controls.Add(this.bunifuGradientPanel1);
+            this.pnlhome.Location = new System.Drawing.Point(12, 16);
+            this.pnlhome.Name = "pnlhome";
+            this.pnlhome.Size = new System.Drawing.Size(1069, 715);
+            this.pnlhome.TabIndex = 0;
+            // 
+            // bunifuGradientPanel5
+            // 
+            this.bunifuGradientPanel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel5.BackgroundImage")));
+            this.bunifuGradientPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel5.Controls.Add(this.label14);
+            this.bunifuGradientPanel5.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.bunifuGradientPanel5.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(139)))), ((int)(((byte)(227)))));
+            this.bunifuGradientPanel5.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(139)))), ((int)(((byte)(227)))));
+            this.bunifuGradientPanel5.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(139)))), ((int)(((byte)(227)))));
+            this.bunifuGradientPanel5.Location = new System.Drawing.Point(36, 31);
+            this.bunifuGradientPanel5.Name = "bunifuGradientPanel5";
+            this.bunifuGradientPanel5.Quality = 10;
+            this.bunifuGradientPanel5.Size = new System.Drawing.Size(303, 158);
+            this.bunifuGradientPanel5.TabIndex = 5;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Sakkal Majalla", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(71, 35);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(160, 55);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "تقرير اليوم";
+            // 
+            // bunifuGradientPanel4
+            // 
+            this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
+            this.bunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel4.Controls.Add(this.label13);
+            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(117)))), ((int)(((byte)(107)))));
+            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(92)))), ((int)(((byte)(80)))));
+            this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(92)))), ((int)(((byte)(80)))));
+            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(117)))), ((int)(((byte)(107)))));
+            this.bunifuGradientPanel4.Location = new System.Drawing.Point(729, 263);
+            this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
+            this.bunifuGradientPanel4.Quality = 10;
+            this.bunifuGradientPanel4.Size = new System.Drawing.Size(303, 158);
+            this.bunifuGradientPanel4.TabIndex = 7;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Sakkal Majalla", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(72, 48);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(155, 55);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "المحذوفات";
+            // 
+            // bunifuGradientPanel3
+            // 
+            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
+            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel3.Controls.Add(this.grdTodayStudentsAttendance);
+            this.bunifuGradientPanel3.Controls.Add(this.label11);
+            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(16, 263);
+            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
+            this.bunifuGradientPanel3.Quality = 10;
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(507, 390);
+            this.bunifuGradientPanel3.TabIndex = 8;
+            // 
+            // grdTodayStudentsAttendance
+            // 
+            this.grdTodayStudentsAttendance.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
+            this.grdTodayStudentsAttendance.AllowUserToAddRows = false;
+            this.grdTodayStudentsAttendance.AllowUserToDeleteRows = false;
+            this.grdTodayStudentsAttendance.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
+            this.grdTodayStudentsAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            this.grdTodayStudentsAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdTodayStudentsAttendance.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdTodayStudentsAttendance.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.grdTodayStudentsAttendance.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.grdTodayStudentsAttendance.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdTodayStudentsAttendance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdTodayStudentsAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.grdTodayStudentsAttendance.ColumnHeadersHeight = 25;
+            this.grdTodayStudentsAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.grdTodayStudentsAttendance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StudentName,
+            this.Attendance,
+            this.Column1,
+            this.ID});
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdTodayStudentsAttendance.DefaultCellStyle = dataGridViewCellStyle19;
+            this.grdTodayStudentsAttendance.DoubleBuffered = false;
+            this.grdTodayStudentsAttendance.EnableHeadersVisualStyles = false;
+            this.grdTodayStudentsAttendance.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.grdTodayStudentsAttendance.HeaderBgColor = System.Drawing.Color.LightBlue;
+            this.grdTodayStudentsAttendance.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.grdTodayStudentsAttendance.Location = new System.Drawing.Point(26, 65);
+            this.grdTodayStudentsAttendance.Name = "grdTodayStudentsAttendance";
+            this.grdTodayStudentsAttendance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.grdTodayStudentsAttendance.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Sakkal Majalla", 12F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdTodayStudentsAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.grdTodayStudentsAttendance.RowHeadersWidth = 20;
+            this.grdTodayStudentsAttendance.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.grdTodayStudentsAttendance.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.grdTodayStudentsAttendance.Size = new System.Drawing.Size(456, 299);
+            this.grdTodayStudentsAttendance.TabIndex = 22;
+            // 
+            // StudentName
+            // 
+            this.StudentName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.StudentName.DataPropertyName = "Name";
+            this.StudentName.FillWeight = 116.4129F;
+            this.StudentName.Frozen = true;
+            this.StudentName.HeaderText = "إسم المجموعة";
+            this.StudentName.MinimumWidth = 6;
+            this.StudentName.Name = "StudentName";
+            this.StudentName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.StudentName.Width = 150;
+            // 
+            // Attendance
+            // 
+            this.Attendance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Attendance.DataPropertyName = "Attend";
+            this.Attendance.HeaderText = "وقت الحضور";
+            this.Attendance.MinimumWidth = 6;
+            this.Attendance.Name = "Attendance";
+            this.Attendance.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Attendance.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "وقت الإنتهاء";
+            this.Column1.Name = "Column1";
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Sakkal Majalla", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(155, 4);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(194, 47);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "مجموعات اليوم";
+            // 
+            // bunifuGradientPanel2
+            // 
+            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
+            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.label8);
+            this.bunifuGradientPanel2.Controls.Add(this.label9);
+            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(193)))), ((int)(((byte)(85)))));
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(193)))), ((int)(((byte)(85)))));
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(213)))), ((int)(((byte)(141)))));
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(193)))), ((int)(((byte)(85)))));
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(729, 31);
+            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
+            this.bunifuGradientPanel2.Quality = 10;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(303, 158);
+            this.bunifuGradientPanel2.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Sakkal Majalla", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(114, 91);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 47);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "11";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Sakkal Majalla", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(35, 17);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(223, 55);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "عدد المجموعات";
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.label7);
+            this.bunifuGradientPanel1.Controls.Add(this.label6);
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(24)))), ((int)(((byte)(195)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(24)))), ((int)(((byte)(195)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(55)))), ((int)(((byte)(203)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(55)))), ((int)(((byte)(203)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(386, 31);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(303, 158);
+            this.bunifuGradientPanel1.TabIndex = 4;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Sakkal Majalla", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(123, 91);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 47);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "120";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Sakkal Majalla", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(62, 17);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(177, 55);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "عدد الطلاب";
             // 
             // pnlFooter
             // 
@@ -512,7 +824,7 @@ namespace CourseCenterMS
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label3.Location = new System.Drawing.Point(241, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(251, 16);
+            this.label3.Size = new System.Drawing.Size(250, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "TechnoGate For Software Devlopment";
             // 
@@ -523,7 +835,7 @@ namespace CourseCenterMS
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(52, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 32);
+            this.label4.Size = new System.Drawing.Size(165, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "CopyRight Reserved For \r\n\r\n";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -552,6 +864,36 @@ namespace CourseCenterMS
             this.label2.Text = "©";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 30;
+            this.bunifuElipse1.TargetControl = this.bunifuGradientPanel1;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 30;
+            this.bunifuElipse2.TargetControl = this.bunifuGradientPanel2;
+            // 
+            // bunifuElipse4
+            // 
+            this.bunifuElipse4.ElipseRadius = 30;
+            this.bunifuElipse4.TargetControl = this.bunifuGradientPanel4;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 30;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // bunifuElipse5
+            // 
+            this.bunifuElipse5.ElipseRadius = 30;
+            this.bunifuElipse5.TargetControl = this.bunifuGradientPanel5;
+            // 
+            // bunifuElipse3
+            // 
+            this.bunifuElipse3.ElipseRadius = 25;
+            this.bunifuElipse3.TargetControl = this.bunifuGradientPanel3;
+            // 
             // Dashbord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,6 +920,19 @@ namespace CourseCenterMS
             this.TopPnl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            this.ContainerPnl.ResumeLayout(false);
+            this.pnlhome.ResumeLayout(false);
+            this.bunifuGradientPanel5.ResumeLayout(false);
+            this.bunifuGradientPanel5.PerformLayout();
+            this.bunifuGradientPanel4.ResumeLayout(false);
+            this.bunifuGradientPanel4.PerformLayout();
+            this.bunifuGradientPanel3.ResumeLayout(false);
+            this.bunifuGradientPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTodayStudentsAttendance)).EndInit();
+            this.bunifuGradientPanel2.ResumeLayout(false);
+            this.bunifuGradientPanel2.PerformLayout();
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
             this.pnlFooter.ResumeLayout(false);
             this.pnlFooter.PerformLayout();
             this.ResumeLayout(false);
@@ -597,7 +952,6 @@ namespace CourseCenterMS
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pnlStudent;
         private System.Windows.Forms.Button btnMenuAddStudent;
-        private System.Windows.Forms.Button btnAllStudents;
         private System.Windows.Forms.Panel pnlGroup;
         private System.Windows.Forms.Button btnMenuAddGroup;
         private System.Windows.Forms.Button btnAllGroups;
@@ -616,6 +970,31 @@ namespace CourseCenterMS
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Panel ContainerPnl;
+        public System.Windows.Forms.Button btnAllStudents;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel pnlhome;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel5;
+        private System.Windows.Forms.Label label14;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
+        private System.Windows.Forms.Label label13;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
+        public Bunifu.Framework.UI.BunifuCustomDataGrid grdTodayStudentsAttendance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Attendance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.Label label11;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
     }
 }
 
