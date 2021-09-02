@@ -99,10 +99,10 @@ namespace CourseCenterMS
         {
 
         }
-
+        Attendence att = new Attendence();
         private void btnSave_Click(object sender, EventArgs e)
         {
-           Attendence att = new Attendence();
+           
             att.ClassDate = Convert.ToDateTime(txtClassDate.Text);
             att.ClassName = txtClassName.Text;
             att.GroupID = Convert.ToInt64(lblGroupID.Text);
@@ -118,7 +118,7 @@ namespace CourseCenterMS
                 newattende.Sheet =Convert.ToBoolean( item.Cells["sheet"].Value);
                 newattende.Attend =Convert.ToBoolean( item.Cells["Attendance"].Value);
                 newattende.StudentID =Convert.ToInt64( item.Cells["ID"].Value);
-                 newattende.AttendanceTime = Convert.ToDateTime(item.Cells["AttendTime"].Value);
+                newattende.AttendanceTime = Convert.ToDateTime(item.Cells["AttendTime"].Value);
                 newattende.AttendanceTime = DateTime.Now;
                 newattende.AttendanceID = att.ID;
                 newattende.AdditionalHomeWork = false;
@@ -139,7 +139,7 @@ namespace CourseCenterMS
                 
                 att.ClassDate = Convert.ToDateTime(txtClassDate.Text);
                 att.ClassName = txtClassName.Text;
-                att.GroupID = 42;
+                att.GroupID =long.Parse( lblGroupID.Text);
                 context.Attendences.Add(att);
                 context.SaveChanges();
                 btnSave.Visible = false;
@@ -157,7 +157,7 @@ namespace CourseCenterMS
             //  = context.StudentAttendances.Where(x => x.AttendanceID == AttendanceID).ToList();
             List<StdAttendanceToGrd> attenacesToGrd = new List<StdAttendanceToGrd>();
 
-            List<StudentAttendance> studentsAtted = context.StudentAttendances.Where(x => x.AttendanceID == att.ID ).Include(x=>x.Student).ToList();
+            List<StudentAttendance> studentsAtted = context.StudentAttendances.Where(x => x.AttendanceID == 42).Include(x=>x.Student).ToList();
          
          
             foreach (var item in studentsAtted)
@@ -189,7 +189,7 @@ namespace CourseCenterMS
 
                 BarcodeReader barcodeReader = new BarcodeReader();
                 Result result = barcodeReader.Decode((Bitmap)pictureBox1.Image);
-                long GropID = 42;
+                long GropID = long.Parse(lblGroupID.Text);
                
 
 
@@ -206,12 +206,56 @@ namespace CourseCenterMS
 
                     if (student!=null)
                     {
-                        DataGridViewRow row = new DataGridViewRow();
-                        row.Cells["Student"].Value = student.Name;
-                        row.Cells["ID"].Value = student.ID;
-                        grdTodayStudentsAttendance.Rows.Add(row);
-                        Program.DashbordRunningForm.ContainerPnl.Controls.Clear();
-                        Program.DashbordRunningForm.ContainerPnl.Controls.Add(pnlTodayStudentAttendance);
+                        frmTodayStudentAttendance f = new frmTodayStudentAttendance();
+                        //  = context.StudentAttendances.Where(x => x.AttendanceID == AttendanceID).ToList();
+                        List<StdAttendanceToGrd> attenacesToGrd = new List<StdAttendanceToGrd>();
+
+                        List<StudentAttendance> studentsAtted = context.StudentAttendances.Include(x => x.Student).ToList();
+
+                       
+                            //studentsAtted.Add(new StudentAttendance { AttendanceID = 42, StudentID = 878 });
+                        
+                        foreach (var item in studentsAtted)
+                        {
+                            StdAttendanceToGrd newObj = new StdAttendanceToGrd();
+                            newObj.ID = item.ID;
+                            newObj.StudentName = item.Student.Name;
+                            newObj.Sheet = item.Sheet;
+                            newObj.HomeWork = item.HomeWork;
+                            newObj.Attend = item.Attend ?? true;
+                            newObj.AttendanceTime = item.AttendanceTime.ToShortTimeString();
+
+                            attenacesToGrd.Add(newObj);
+                        }
+                        if (r == "12345")
+                        {
+                            attenacesToGrd.Add(new StdAttendanceToGrd { StudentName = "newwwwwwwwww",Attend=true,AttendanceTime="09:55" });
+                            attenacesToGrd.Add(new StdAttendanceToGrd { StudentName = "newwwwwwwwww", Attend = true, AttendanceTime = "09:55" });
+
+                            // Program.DashbordRunningForm.ContainerPnl.Controls.Clear();
+                            // f.lblGroupID.Text = GroupID.ToString();
+                        }
+                        f.grdTodayStudentsAttendance.DataSource = attenacesToGrd;
+                        string classdate = f.txtClassDate.Text;
+                        string className = f.txtClassName.Text;
+                        string gropID = f.lblGroupID.Text;
+                        string gropName = f.lblGroupName.Text;
+                        Program.DashbordRunningForm.ContainerPnl.Controls.Remove(f.grdTodayStudentsAttendance);
+                        Program.DashbordRunningForm.ContainerPnl.Controls.Remove(f.txtClassName);
+                        Program.DashbordRunningForm.ContainerPnl.Controls.Remove(f.txtClassDate);
+                        Program.DashbordRunningForm.ContainerPnl.Controls.Remove(f.lblGroupName);
+                        Program.DashbordRunningForm.ContainerPnl.Controls.Remove(f.lblGroupID);
+                        f.txtClassDate.Text = classdate;
+                        f.txtClassName.Text = className;
+                        f.lblGroupID.Text = gropID;
+                        f.lblGroupName.Text = gropName;
+                      
+                        Program.DashbordRunningForm.ContainerPnl.Controls.Add(f.grdTodayStudentsAttendance);
+                        Program.DashbordRunningForm.ContainerPnl.Controls.Add(f.txtClassName);
+                        Program.DashbordRunningForm.ContainerPnl.Controls.Add(f.txtClassDate);
+                        Program.DashbordRunningForm.ContainerPnl.Controls.Add(f.lblGroupName);
+                        Program.DashbordRunningForm.ContainerPnl.Controls.Add(f.lblGroupID);
+                       
                     }
 
                 }

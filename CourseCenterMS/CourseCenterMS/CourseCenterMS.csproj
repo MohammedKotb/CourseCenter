@@ -105,6 +105,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmEditGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditGroup.Designer.cs">
+      <DependentUpon>frmEditGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmsheet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,6 +246,9 @@
     <Compile Include="Models\Transaction.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmEditGroup.resx">
+      <DependentUpon>frmEditGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmsheet.resx">
       <DependentUpon>frmsheet.cs</DependentUpon>
     </EmbeddedResource>

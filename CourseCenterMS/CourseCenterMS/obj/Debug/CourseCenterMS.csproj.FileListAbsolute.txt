@@ -87,3 +87,4 @@ D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\AForge.Video.DirectShow.xml
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\zxing.xml
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\zxing.presentation.xml
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmEditGroup.resources

@@ -30,10 +30,10 @@ namespace CourseCenterMS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTodayStudentAttendance = new System.Windows.Forms.Panel();
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,6 +44,13 @@ namespace CourseCenterMS
             this.txtSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.pnlGridContainer = new System.Windows.Forms.Panel();
             this.grdTodayStudentsAttendance = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Student = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Attendance = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.AttendTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Homework = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.sheet = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Details = new System.Windows.Forms.DataGridViewLinkColumn();
             this.lblGroupID = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGroupName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -59,13 +66,6 @@ namespace CourseCenterMS
             this.txtClassName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Student = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Attendance = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.AttendTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Homework = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.sheet = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Details = new System.Windows.Forms.DataGridViewLinkColumn();
             this.pnlTodayStudentAttendance.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -213,9 +213,9 @@ namespace CourseCenterMS
             this.grdTodayStudentsAttendance.AllowUserToAddRows = false;
             this.grdTodayStudentsAttendance.AllowUserToDeleteRows = false;
             this.grdTodayStudentsAttendance.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.grdTodayStudentsAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
+            this.grdTodayStudentsAttendance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdTodayStudentsAttendance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -224,14 +224,14 @@ namespace CourseCenterMS
             this.grdTodayStudentsAttendance.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.grdTodayStudentsAttendance.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdTodayStudentsAttendance.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdTodayStudentsAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdTodayStudentsAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdTodayStudentsAttendance.ColumnHeadersHeight = 25;
             this.grdTodayStudentsAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grdTodayStudentsAttendance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -242,14 +242,14 @@ namespace CourseCenterMS
             this.sheet,
             this.ID,
             this.Details});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdTodayStudentsAttendance.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdTodayStudentsAttendance.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdTodayStudentsAttendance.DoubleBuffered = false;
             this.grdTodayStudentsAttendance.EnableHeadersVisualStyles = false;
             this.grdTodayStudentsAttendance.GridColor = System.Drawing.SystemColors.ButtonFace;
@@ -259,20 +259,80 @@ namespace CourseCenterMS
             this.grdTodayStudentsAttendance.Name = "grdTodayStudentsAttendance";
             this.grdTodayStudentsAttendance.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.grdTodayStudentsAttendance.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Sakkal Majalla", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdTodayStudentsAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sakkal Majalla", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdTodayStudentsAttendance.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdTodayStudentsAttendance.RowHeadersWidth = 50;
             this.grdTodayStudentsAttendance.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.grdTodayStudentsAttendance.Size = new System.Drawing.Size(1056, 428);
             this.grdTodayStudentsAttendance.TabIndex = 21;
             this.grdTodayStudentsAttendance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdTodayStudentsAttendance_CellClick);
             this.grdTodayStudentsAttendance.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grdTodayStudentsAttendance_CellMouseClick);
+            // 
+            // Student
+            // 
+            this.Student.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Student.DataPropertyName = "StudentName";
+            this.Student.FillWeight = 116.4129F;
+            this.Student.Frozen = true;
+            this.Student.HeaderText = "اسم الطالب";
+            this.Student.MinimumWidth = 6;
+            this.Student.Name = "Student";
+            this.Student.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Student.Width = 251;
+            // 
+            // Attendance
+            // 
+            this.Attendance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Attendance.DataPropertyName = "Attend";
+            this.Attendance.HeaderText = "الحضور";
+            this.Attendance.MinimumWidth = 6;
+            this.Attendance.Name = "Attendance";
+            this.Attendance.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Attendance.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Attendance.Width = 216;
+            // 
+            // AttendTime
+            // 
+            this.AttendTime.DataPropertyName = "AttendanceTime";
+            this.AttendTime.HeaderText = "وقت الحضور";
+            this.AttendTime.Name = "AttendTime";
+            // 
+            // Homework
+            // 
+            this.Homework.DataPropertyName = "HomeWork";
+            this.Homework.HeaderText = "الواجب";
+            this.Homework.Name = "Homework";
+            this.Homework.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Homework.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // sheet
+            // 
+            this.sheet.DataPropertyName = "Sheet";
+            this.sheet.HeaderText = "الشيت";
+            this.sheet.Name = "sheet";
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "StudentID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // Details
+            // 
+            this.Details.HeaderText = "تفاصيل";
+            this.Details.Name = "Details";
+            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Details.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Details.Text = "التفاصيل";
+            this.Details.UseColumnTextForLinkValue = true;
             // 
             // lblGroupID
             // 
@@ -285,7 +345,6 @@ namespace CourseCenterMS
             this.lblGroupID.Size = new System.Drawing.Size(30, 35);
             this.lblGroupID.TabIndex = 18;
             this.lblGroupID.Text = "...";
-            this.lblGroupID.Visible = false;
             // 
             // lblGroupName
             // 
@@ -515,66 +574,6 @@ namespace CourseCenterMS
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // Student
-            // 
-            this.Student.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Student.DataPropertyName = "StudentName";
-            this.Student.FillWeight = 116.4129F;
-            this.Student.Frozen = true;
-            this.Student.HeaderText = "اسم الطالب";
-            this.Student.MinimumWidth = 6;
-            this.Student.Name = "Student";
-            this.Student.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Student.Width = 251;
-            // 
-            // Attendance
-            // 
-            this.Attendance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Attendance.DataPropertyName = "Attend";
-            this.Attendance.HeaderText = "الحضور";
-            this.Attendance.MinimumWidth = 6;
-            this.Attendance.Name = "Attendance";
-            this.Attendance.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Attendance.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Attendance.Width = 216;
-            // 
-            // AttendTime
-            // 
-            this.AttendTime.DataPropertyName = "AttendanceTime";
-            this.AttendTime.HeaderText = "وقت الحضور";
-            this.AttendTime.Name = "AttendTime";
-            // 
-            // Homework
-            // 
-            this.Homework.DataPropertyName = "HomeWork";
-            this.Homework.HeaderText = "الواجب";
-            this.Homework.Name = "Homework";
-            this.Homework.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Homework.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // sheet
-            // 
-            this.sheet.DataPropertyName = "Sheet";
-            this.sheet.HeaderText = "الشيت";
-            this.sheet.Name = "sheet";
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "StudentID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
-            // 
-            // Details
-            // 
-            this.Details.HeaderText = "تفاصيل";
-            this.Details.Name = "Details";
-            this.Details.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Details.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Details.Text = "التفاصيل";
-            this.Details.UseColumnTextForLinkValue = true;
             // 
             // frmTodayStudentAttendance
             // 

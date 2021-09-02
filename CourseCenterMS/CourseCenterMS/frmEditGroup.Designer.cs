@@ -1,7 +1,7 @@
 ﻿
 namespace CourseCenterMS
 {
-    partial class frmNewGroup
+    partial class frmEditGroup
     {
         /// <summary>
         /// Required designer variable.
@@ -69,12 +69,12 @@ namespace CourseCenterMS
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.chkFriday = new Bunifu.Framework.UI.BunifuCheckbox();
             this.lblID = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.btnSave = new System.Windows.Forms.Button();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.pnlNewGroup.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
@@ -702,6 +702,24 @@ namespace CourseCenterMS
             this.lblID.TabIndex = 160;
             this.lblID.Text = "اسم الجموعة :";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Silver;
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancel.Image = global::CourseCenterMS.Properties.Resources.icons8_cancel_32;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.Location = new System.Drawing.Point(47, 399);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(95, 36);
+            this.btnCancel.TabIndex = 91;
+            this.btnCancel.Text = "الغــــــاء";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            // 
             // bunifuSeparator2
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
@@ -715,6 +733,25 @@ namespace CourseCenterMS
             this.bunifuSeparator2.TabIndex = 90;
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(191)))), ((int)(((byte)(107)))));
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.Navy;
+            this.btnSave.Image = global::CourseCenterMS.Properties.Resources.icons8_save_32;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.Location = new System.Drawing.Point(946, 399);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(95, 36);
+            this.btnSave.TabIndex = 91;
+            this.btnSave.Text = "حفـــــظ";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // bunifuCustomLabel11
             // 
@@ -738,43 +775,6 @@ namespace CourseCenterMS
             this.lblGridHeader.TabIndex = 18;
             this.lblGridHeader.Text = "اضافـــة مجموعة جديده";
             // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Silver;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancel.Image = global::CourseCenterMS.Properties.Resources.icons8_cancel_32;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.Location = new System.Drawing.Point(47, 399);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(95, 36);
-            this.btnCancel.TabIndex = 91;
-            this.btnCancel.Text = "الغــــــاء";
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(191)))), ((int)(((byte)(107)))));
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
-            this.btnSave.ForeColor = System.Drawing.Color.Navy;
-            this.btnSave.Image = global::CourseCenterMS.Properties.Resources.icons8_save_32;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Location = new System.Drawing.Point(946, 399);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(95, 36);
-            this.btnSave.TabIndex = 91;
-            this.btnSave.Text = "حفـــــظ";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // btnRemove
             // 
             this.btnRemove.BackColor = System.Drawing.Color.Red;
@@ -785,7 +785,7 @@ namespace CourseCenterMS
             this.btnRemove.ForeColor = System.Drawing.Color.Yellow;
             this.btnRemove.Image = global::CourseCenterMS.Properties.Resources.icons8_remove_32;
             this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemove.Location = new System.Drawing.Point(825, 399);
+            this.btnRemove.Location = new System.Drawing.Point(828, 399);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(95, 36);
             this.btnRemove.TabIndex = 181;
@@ -793,14 +793,14 @@ namespace CourseCenterMS
             this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemove.UseVisualStyleBackColor = false;
             // 
-            // frmNewGroup
+            // frmEditGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 749);
             this.Controls.Add(this.pnlNewGroup);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "frmNewGroup";
+            this.Name = "frmEditGroup";
             this.Text = "frmNewGroup1";
             this.pnlNewGroup.ResumeLayout(false);
             this.pnlNewGroup.PerformLayout();
@@ -839,7 +839,6 @@ namespace CourseCenterMS
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCheckbox chkMonday;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuDatepicker dtpkrStartYear;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCheckbox chkFriday;
@@ -850,7 +849,6 @@ namespace CourseCenterMS
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
         private Bunifu.Framework.UI.BunifuCustomLabel lblGridHeader;
         private Bunifu.Framework.UI.BunifuCheckbox chkWednesday;
-        private System.Windows.Forms.ComboBox cmboTimeTo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -858,13 +856,15 @@ namespace CourseCenterMS
         private System.Windows.Forms.RadioButton RadAmFrom;
         private System.Windows.Forms.RadioButton RadPmTo;
         private System.Windows.Forms.RadioButton RadAmTo;
-        private System.Windows.Forms.ComboBox cmboTimeFrom;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtClassroom;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtGroupName;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
-        private Bunifu.Framework.UI.BunifuCheckbox chkIsActive;
-        private Bunifu.Framework.UI.BunifuDatepicker dtPkrEndDate;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtGroupName;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox txtClassroom;
+        public Bunifu.Framework.UI.BunifuDatepicker dtpkrStartYear;
+        public Bunifu.Framework.UI.BunifuDatepicker dtPkrEndDate;
+        public Bunifu.Framework.UI.BunifuCheckbox chkIsActive;
+        public System.Windows.Forms.ComboBox cmboTimeTo;
+        public System.Windows.Forms.ComboBox cmboTimeFrom;
         public System.Windows.Forms.Button btnRemove;
     }
 }
