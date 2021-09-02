@@ -110,14 +110,20 @@ namespace CourseCenterMS
                 }
                 if (count > 0)
                 {
-                    MessageBox.Show("تم اضافة المجموعه بنجاح");
-
+                   
+                    Program.SuccessMessage.lblMessage.Text = "تم اضافة المجموعه بنجاح";
+                    Program.SuccessMessage.ShowDialog();
+                    Program.DashbordRunningForm.btnAllGroups.PerformClick();
+                   
                 }
                 else
                 {
-                    MessageBox.Show("لم يتم حفظ المجموعه بنجاح يجب تحدبد يوم ووقت المجموعة");
                     context.Groups.Remove(group);
                     context.SaveChanges();
+
+                    Program.Message.lblMessage.Text = "لم يتم حفظ المجموعه بنجاح يجب تحدبد يوم ووقت المجموعة";
+                    Program.Message.ShowDialog();
+                  
 
                 }
 
@@ -128,7 +134,7 @@ namespace CourseCenterMS
               
               
 
-                Program.Message.lblMessage.Text = "حدث خطأ اثناء تسجيل المجموعه تأكد من وجود جميع البيانات ";
+                Program.Message.lblMessage.Text = ex.Message;
                 Program.Message.ShowDialog();
                 if (context.Groups.Find(group.ID) != null)
                 {

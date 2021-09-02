@@ -25,8 +25,8 @@ namespace CourseCenterMS
             DashbordRunningForm = new Dashbord();
             Message = new frmTest();
             SuccessMessage = new frmSuccessMsg();
-             Application.Run(new frmLogin());
-            // Application.Run(DashbordRunningForm);
+             //Application.Run(new frmLogin());
+            Application.Run(DashbordRunningForm);
         }
     }
 }

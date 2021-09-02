@@ -77,3 +77,13 @@ D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csprojAssemblyReference.cache
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\Database.mdf
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\Database_log.ldf
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\AForge.dll
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\AForge.Video.DirectShow.dll
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\AForge.Video.dll
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\zxing.dll
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\zxing.presentation.dll
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\AForge.xml
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\AForge.Video.xml
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\AForge.Video.DirectShow.xml
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\zxing.xml
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\zxing.presentation.xml

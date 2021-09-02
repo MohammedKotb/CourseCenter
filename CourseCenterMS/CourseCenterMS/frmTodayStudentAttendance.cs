@@ -2,35 +2,62 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AForge.Video;
+using AForge.Video.DirectShow;
 using CourseCenterMS.Models;
+using ZXing;
+
 namespace CourseCenterMS
 {
     public partial class frmTodayStudentAttendance : Form
     {
         List<StudentAttendance> TodayAttendance;
         CourseCenterEntities context = new CourseCenterEntities();
+        FilterInfoCollection filterinfocollection;
+        VideoCaptureDevice captureDevice;
         public frmTodayStudentAttendance()
         {
             InitializeComponent();
+           
             TodayAttendance = new List<StudentAttendance>();
+            filterinfocollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filterInfo in filterinfocollection)
+            {
+                cmbDevice.Items.Add(filterInfo.Name);
+            }
+            cmbDevice.SelectedIndex = 0;
+            captureDevice = new VideoCaptureDevice(filterinfocollection[cmbDevice.SelectedIndex].MonikerString);
+            captureDevice.NewFrame += captureDevice_Newframe;
         }
-
+    
+        SoundPlayer player = new SoundPlayer(@"D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\Resources\Scanner.wav");
         private void frmAllStudents_Load(object sender, EventArgs e)
         {
-
+           
 
         }
 
         private void pnlAllStudents_Paint(object sender, PaintEventArgs e)
         {
+            
+        }
+        private void captureDevice_Newframe(object sender, NewFrameEventArgs eventArgs)
+        {
+            pictureBox1.Image = (Bitmap)eventArgs.Frame.Clone();
 
         }
-
+        private void cmbDevice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            captureDevice = new VideoCaptureDevice(filterinfocollection[cmbDevice.SelectedIndex].MonikerString);
+            captureDevice.NewFrame += captureDevice_Newframe;
+        }
         private void grdTodayStudentsAttendance_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             long stdID=0;
@@ -103,5 +130,111 @@ namespace CourseCenterMS
             newSTdAttendace.ClassDate = Convert.ToDateTime(txtClassDate.Text);
             newSTdAttendace.ClassName = txtClassName.Text;
         }
+
+        private void btnUsingQR_Click(object sender, EventArgs e)
+        {
+            Attendence att = new Attendence();
+            if (txtClassName.Text!=""&&txtClassDate.Text!="")
+            {
+                
+                att.ClassDate = Convert.ToDateTime(txtClassDate.Text);
+                att.ClassName = txtClassName.Text;
+                att.GroupID = 42;
+                context.Attendences.Add(att);
+                context.SaveChanges();
+                btnSave.Visible = false;
+                startQR();
+              
+            }
+            else
+            {
+                Program.Message.lblMessage.Text = "يجب تسجيل اسم ووقت الحصه قبل استخدام QR";
+            txtClassDate.Enabled = true;
+                txtClassName.Enabled = true;
+                Program.Message.ShowDialog();
+            }
+            frmTodayStudentAttendance f = new frmTodayStudentAttendance();
+            //  = context.StudentAttendances.Where(x => x.AttendanceID == AttendanceID).ToList();
+            List<StdAttendanceToGrd> attenacesToGrd = new List<StdAttendanceToGrd>();
+
+            List<StudentAttendance> studentsAtted = context.StudentAttendances.Where(x => x.AttendanceID == att.ID ).Include(x=>x.Student).ToList();
+         
+         
+            foreach (var item in studentsAtted)
+            {
+                StdAttendanceToGrd newObj = new StdAttendanceToGrd();
+                newObj.ID = item.ID;
+                newObj.StudentName = item.Student.Name;
+                newObj.Sheet = item.Sheet;
+                newObj.HomeWork = item.HomeWork;
+                newObj.Attend = item.Attend??true;
+                newObj.AttendanceTime = item.AttendanceTime.ToShortTimeString();
+
+                attenacesToGrd.Add(newObj);
+            }
+
+            // Program.DashbordRunningForm.ContainerPnl.Controls.Clear();
+            // f.lblGroupID.Text = GroupID.ToString();
+         
+            f.grdTodayStudentsAttendance.DataSource = attenacesToGrd;
+            Program.DashbordRunningForm.ContainerPnl.Controls.Clear();
+            Program.DashbordRunningForm.ContainerPnl.Controls.Add(f.pnlTodayStudentAttendance);
+           
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                //BarcodeResult Result = BarcodeReader.QuicklyReadOneBarcode((Bitmap)pictureBox1.Image);
+
+                BarcodeReader barcodeReader = new BarcodeReader();
+                Result result = barcodeReader.Decode((Bitmap)pictureBox1.Image);
+                long GropID = 42;
+               
+
+
+                if (result != null)
+                {
+                   
+                    timer1.Stop();
+                    if (captureDevice.IsRunning)
+                        captureDevice.Stop();
+                    player.Play();
+                    string r = result.Text;
+                    startQR();
+                    Student student = context.Students.Where(x => x.GroupID == GropID && x.QR == r).FirstOrDefault();
+
+                    if (student!=null)
+                    {
+                        DataGridViewRow row = new DataGridViewRow();
+                        row.Cells["Student"].Value = student.Name;
+                        row.Cells["ID"].Value = student.ID;
+                        grdTodayStudentsAttendance.Rows.Add(row);
+                        Program.DashbordRunningForm.ContainerPnl.Controls.Clear();
+                        Program.DashbordRunningForm.ContainerPnl.Controls.Add(pnlTodayStudentAttendance);
+                    }
+
+                }
+            }
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+             captureDevice.Start();
+            timer1.Start();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (captureDevice.IsRunning)
+                captureDevice.Stop();
+            timer1.Stop();
+        }
+       public void startQR()
+        {
+            captureDevice.Start();
+            timer1.Start();
+        }
+       
     }
 }

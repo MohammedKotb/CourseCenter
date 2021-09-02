@@ -55,12 +55,13 @@ namespace CourseCenterMS
                     {
                         STdNameAndID newObj = new STdNameAndID();
                         newObj.ID = item.ID;
-                        newObj.Name = item.Name;
+                        newObj.StudentName = item.Name;
                         Names.Add(newObj);
                     }
 
-                    Program.DashbordRunningForm.ContainerPnl.Controls.Clear();
                     f.lblGroupID.Text = GroupID.ToString();
+                    Program.DashbordRunningForm.ContainerPnl.Controls.Clear();
+
                     f.grdTodayStudentsAttendance.DataSource = Names;
                    // f.txtClassName.Text = context.Attendences.Where(x => x.ID == AttendanceID).Select(x => x.ClassName).FirstOrDefault();
                     DateTime d =DateTime.Now;
@@ -76,7 +77,7 @@ namespace CourseCenterMS
     public class STdNameAndID
     {
         public long ID { get; set; }
-        public string Name { get; set; }
+        public string StudentName { get; set; }
 
     }
 

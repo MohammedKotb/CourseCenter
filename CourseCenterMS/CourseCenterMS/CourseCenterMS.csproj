@@ -60,6 +60,15 @@
     <ManifestKeyFile>CourseCenterMS_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\MY WEBSITES\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
@@ -83,6 +92,12 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseDataSet.Designer.cs">
@@ -414,11 +429,13 @@
     <None Include="Resources\icons8_remove_32.png" />
     <None Include="Resources\icons8_ok_32.png" />
     <None Include="Resources\icons8_ok_321.png" />
+    <None Include="Resources\icons8_classroom.ico" />
     <Content Include="Resources\lock2.png" />
     <None Include="Resources\Sed-18-512.png" />
     <None Include="Resources\Sed-18-5121.png" />
     <None Include="Resources\splash-screen.png" />
     <None Include="Resources\Untitled-1.png" />
+    <Content Include="Resources\Scanner.wav" />
     <Content Include="Resources\white-purple-abstract-background-design-white-purple-abstract-background-design-white-modern-background-138453758.jpg" />
     <None Include="Resources\icons8_cancel_32.png" />
     <None Include="Resources\icons8_cancel_16.png" />
