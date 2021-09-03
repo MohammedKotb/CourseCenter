@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace CourseCenterMS
 {
@@ -18,6 +19,7 @@ namespace CourseCenterMS
         List<Department> departments;
         List<Group> groups;
         CourseCenterEntities context;
+        private int _ticks;
         public Dashbord()
         {
             InitializeComponent();
@@ -39,14 +41,15 @@ namespace CourseCenterMS
             Helper.Minimaize(this);
         }
 
+        frmLoader fl = new frmLoader();
+
         private void btnAllStudents_Click(object sender, EventArgs e)
         {
-
-            frmAllStudents f = new frmAllStudents();
-            ContainerPnl.Controls.Clear();
-            f.grdAllStudents.DataSource = context.Students.Where(x=>x.IsDeleted==false).Select(x => new { x.Name, x.GroupName, x.Classroom, x.Phone, x.ID }).ToList(); ;
-            ContainerPnl.Controls.Add(f.pnlAllStudents);
+             fl.Show();
+             timer2.Start();
+             
         }
+       
 
         private void btnMenuAddStudent_Click(object sender, EventArgs e)
         {
@@ -127,32 +130,8 @@ namespace CourseCenterMS
 
         private void btnAllGroups_Click(object sender, EventArgs e)
         {
-            frmAllGroup f = new frmAllGroup();
-
-            List<Group> groups = context.Groups.Where(x => x.IsDeleted == false).Include(x => x.GroupDays).ToList();
-
-            List<GroupToGrid> groupsToGrid = new List<GroupToGrid>();
-            foreach (var item in groups)
-            {
-                GroupToGrid groupGrid = new GroupToGrid();
-                groupGrid.ID = item.ID;
-                groupGrid.Name = item.Name;
-                groupGrid.StartTime = item.GroupDays.FirstOrDefault().TimeFrom.ToShortTimeString();
-                groupGrid.EndTime = item.GroupDays.FirstOrDefault().TimeTo.ToShortTimeString();
-                string Days = item.GroupDays.FirstOrDefault().Day;
-
-                foreach (var day in item.GroupDays)
-                {
-                    if (day != item.GroupDays.FirstOrDefault())
-                        Days += "  -   " + day.Day;
-                }
-                groupGrid.GroupDays = Days;
-                groupGrid.StudentsCount = context.Students.Where(x => x.IsActive == true && x.IsDeleted == false && x.GroupID == item.ID).Count();
-                groupsToGrid.Add(groupGrid);
-            }
-            f.grdAllGroups.DataSource = groupsToGrid;
-            ContainerPnl.Controls.Clear();
-            ContainerPnl.Controls.Add(f.pnlAllGroups);
+            fl.Show();
+            timergroup.Start();
 
         }
 
@@ -179,11 +158,8 @@ namespace CourseCenterMS
 
         private void btnMenuAttendanceTable_Click(object sender, EventArgs e)
         {
-            frmAllAtendance f = new frmAllAtendance();
-            f.grdAllAttendanceGroup.DataSource = context.Groups.Where(x => x.IsDeleted == false && x.IsActive == true)
-                .Select(x => new { x.Name, x.Classroom, x.StartDate, x.EndDate, x.IsActive, x.ID }).ToList();
-            ContainerPnl.Controls.Clear();
-            ContainerPnl.Controls.Add(f.pnlAllAttendance);
+            fl.Show();
+            timeratt.Start();
         }
 
         private void btnMenuAttendanceRecord_Click(object sender, EventArgs e)
@@ -255,6 +231,63 @@ namespace CourseCenterMS
         {
             Show(pnlStudent);
 
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+       
+                frmAllStudents f = new frmAllStudents();
+                ContainerPnl.Controls.Clear();
+                f.grdAllStudents.DataSource = context.Students.Where(x => x.IsDeleted == false).Select(x => new { x.Name, x.GroupName, x.Classroom, x.Phone, x.ID }).ToList(); ;
+                ContainerPnl.Controls.Add(f.pnlAllStudents);
+                fl.Hide();
+                timer2.Stop();
+            
+        
+
+        }
+
+        private void timergroup_Tick(object sender, EventArgs e)
+        {
+            frmAllGroup f = new frmAllGroup();
+
+            List<Group> groups = context.Groups.Where(x => x.IsDeleted == false).Include(x => x.GroupDays).ToList();
+
+            List<GroupToGrid> groupsToGrid = new List<GroupToGrid>();
+            foreach (var item in groups)
+            {
+                GroupToGrid groupGrid = new GroupToGrid();
+                groupGrid.ID = item.ID;
+                groupGrid.Name = item.Name;
+                groupGrid.StartTime = item.GroupDays.FirstOrDefault().TimeFrom.ToShortTimeString();
+                groupGrid.EndTime = item.GroupDays.FirstOrDefault().TimeTo.ToShortTimeString();
+                string Days = item.GroupDays.FirstOrDefault().Day;
+
+                foreach (var day in item.GroupDays)
+                {
+                    if (day != item.GroupDays.FirstOrDefault())
+                        Days += "  -   " + day.Day;
+                }
+                groupGrid.GroupDays = Days;
+                groupGrid.StudentsCount = context.Students.Where(x => x.IsActive == true && x.IsDeleted == false && x.GroupID == item.ID).Count();
+                groupsToGrid.Add(groupGrid);
+            }
+            f.grdAllGroups.DataSource = groupsToGrid;
+            ContainerPnl.Controls.Clear();
+            ContainerPnl.Controls.Add(f.pnlAllGroups);
+            fl.Hide();
+            timergroup.Stop();
+        }
+
+        private void timeratt_Tick(object sender, EventArgs e)
+        {
+            frmAllAtendance f = new frmAllAtendance();
+            f.grdAllAttendanceGroup.DataSource = context.Groups.Where(x => x.IsDeleted == false && x.IsActive == true)
+                .Select(x => new { x.Name, x.Classroom, x.StartDate, x.EndDate, x.IsActive, x.ID }).ToList();
+            ContainerPnl.Controls.Clear();
+            ContainerPnl.Controls.Add(f.pnlAllAttendance);
+            fl.Hide();
+            timeratt.Stop();
         }
     }
 

@@ -51,9 +51,19 @@ namespace CourseCenterMS
         {
             bool result = SaveStudent();
             if (result)
-                MessageBox.Show("تم حفظ بيانات الطالب بنجاح");
+            {
+                Program.SuccessMessage.lblMessage.Text ="تم حفظ بيانات الطالب بنجاح";
+                Program.SuccessMessage.ShowDialog();
+                Program.DashbordRunningForm.btnAllStudents.PerformClick();
+
+            }
+
             else
-                MessageBox.Show("حدث خطا اثناء تسجيل بيانات الطالب ");
+            {
+                Program.Message.lblMessage.Text = "حدث خطا اثناء تسجيل بيانات الطالب ";
+                Program.Message.ShowDialog();
+            }
+         
 
         }
 
@@ -87,17 +97,17 @@ namespace CourseCenterMS
             try
             {
                 Student student = new Student();
-                student.Name = txtName.Text;
-                student.Address = txtAddress.Text;
-                student.School = txtSchool.Text;
-                student.DepartmentID = cmboDepartment.SelectedIndex >= 0 ? int.Parse(cmboDepartment.SelectedValue.ToString()) : 0;
-                student.QR = txtQR.Text;
+                student.Name = txtName.Text!=""?txtName.Text:throw new Exception();
+                student.Address = txtAddress.Text!=""? txtAddress.Text:throw new Exception();
+                student.School = txtSchool.Text!=""? txtSchool.Text : throw new Exception();
+                student.DepartmentID = cmboDepartment.SelectedIndex >= 0 ? int.Parse(cmboDepartment.SelectedValue.ToString()) :throw new Exception();
+                student.QR = txtQR.Text!=""? txtQR.Text : throw new Exception();
                 student.FatherJob = txtFatherPhone.Text;
-                student.Credit = txtCredit.Text != "" ? Convert.ToDecimal(txtCredit.Text) : 0.0m;
-                student.Debit = txtDibt.Text != "" ? Convert.ToDecimal(txtDibt.Text) : 0.0m;
+                student.Credit = txtCredit.Text != "" ? Convert.ToDecimal(txtCredit.Text) :0.0m;
+                student.Debit = txtDibt.Text != "" ? Convert.ToDecimal(txtDibt.Text) :0.0m;
                 student.MotherPhone = txtMatherPhone.Text;
                 student.FatherPhone = txtFatherPhone.Text;
-                student.GroupID = cmboGroup.SelectedIndex >= 0 ? int.Parse(cmboGroup.SelectedValue.ToString()) : 0;
+                student.GroupID = cmboGroup.SelectedIndex >= 0 ? int.Parse(cmboGroup.SelectedValue.ToString()) :throw new Exception();
                 student.GroupName = cmboGroup.SelectedIndex >=0?cmboGroup.GetItemText( cmboGroup.SelectedItem) : null;
                 student.Classroom = txtClassroom.Text;
                 student.Phone = txtPhone.Text;
@@ -135,12 +145,19 @@ namespace CourseCenterMS
             bool result = SaveStudent();
             if (result)
             {
-                MessageBox.Show("تم حفظ بيانات الطالب بنجاح");
-                pnlNewStudent.Controls.Clear();
+                Program.SuccessMessage.lblMessage.Text = "تم حفظ بيانات الطالب بنجاح";
+                Program.SuccessMessage.ShowDialog();
+                txtAddress.Text = txtClassroom.Text = txtCredit.Text = txtDibt.Text = txtFatherPhone.Text
+          = txtMatherPhone.Text = txtName.Text = txtPhone.Text = txtQR.Text = txtSchool.Text = txtAddress.Text = txtFatherJob.Text = "";
+                cmboDepartment.SelectedIndex = cmboGroup.SelectedIndex = 0;
             }
 
             else
-                MessageBox.Show("حدث خطا اثناء تسجيل بيانات الطالب ");
+            {
+                Program.Message.lblMessage.Text = "حدث خطا اثناء تسجيل بيانات الطالب ";
+                Program.Message.ShowDialog();
+            }
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

@@ -63,9 +63,39 @@ namespace CourseCenterMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Double_Ring_1_4s_118px {
+            get {
+                object obj = ResourceManager.GetObject("Double Ring-1.4s-118px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Double_Ring_1_4s_200px {
+            get {
+                object obj = ResourceManager.GetObject("Double Ring-1.4s-200px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap egypt {
             get {
                 object obj = ResourceManager.GetObject("egypt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ellipsis_1s_151px {
+            get {
+                object obj = ResourceManager.GetObject("Ellipsis-1s-151px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

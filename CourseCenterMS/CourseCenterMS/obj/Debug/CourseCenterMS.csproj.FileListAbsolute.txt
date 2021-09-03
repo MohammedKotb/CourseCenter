@@ -74,7 +74,6 @@ D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmSuccessMsg.resources
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\Data\CourseCenter_log.ldf
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\Data\CourseCenter.mdf
-D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csprojAssemblyReference.cache
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\Database.mdf
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\Database_log.ldf
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\AForge.dll
@@ -88,3 +87,5 @@ D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\zxing.xml
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\bin\Debug\zxing.presentation.xml
 D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmEditGroup.resources
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.csprojAssemblyReference.cache
+D:\Work\CourseCenter Cloud\CourseCenter\CourseCenterMS\CourseCenterMS\obj\Debug\CourseCenterMS.frmLoader.resources

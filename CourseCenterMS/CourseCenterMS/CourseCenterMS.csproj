@@ -111,6 +111,12 @@
     <Compile Include="frmEditGroup.Designer.cs">
       <DependentUpon>frmEditGroup.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLoader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoader.Designer.cs">
+      <DependentUpon>frmLoader.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmsheet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </Compile>
     <EmbeddedResource Include="frmEditGroup.resx">
       <DependentUpon>frmEditGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoader.resx">
+      <DependentUpon>frmLoader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmsheet.resx">
       <DependentUpon>frmsheet.cs</DependentUpon>
@@ -439,6 +448,9 @@
     <None Include="Resources\icons8_ok_32.png" />
     <None Include="Resources\icons8_ok_321.png" />
     <None Include="Resources\icons8_classroom.ico" />
+    <None Include="Resources\Double Ring-1.4s-200px.gif" />
+    <None Include="Resources\Double Ring-1.4s-118px.gif" />
+    <None Include="Resources\Ellipsis-1s-151px.gif" />
     <Content Include="Resources\lock2.png" />
     <None Include="Resources\Sed-18-512.png" />
     <None Include="Resources\Sed-18-5121.png" />
