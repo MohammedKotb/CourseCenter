@@ -131,9 +131,7 @@ namespace CourseCenterMS
             }
             catch (Exception ex)
             {
-              
-              
-
+               
                 Program.Message.lblMessage.Text = ex.Message;
                 Program.Message.ShowDialog();
                 if (context.Groups.Find(group.ID) != null)
