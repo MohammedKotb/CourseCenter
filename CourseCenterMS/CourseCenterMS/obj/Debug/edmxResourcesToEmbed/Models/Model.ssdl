@@ -8,6 +8,7 @@
     <Property Name="GroupID" Type="bigint" />
     <Property Name="ClassName" Type="nvarchar(max)" />
     <Property Name="ClassDate" Type="datetime" Nullable="false" />
+    <Property Name="MonthClassCounter" Type="int" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Departments">
@@ -84,6 +85,7 @@
     <Property Name="SheetMarks" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="SheetNotes" Type="nvarchar(max)" />
     <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="ClassCounter" Type="int" />
   </EntityType>
   <EntityType Name="SysNotification">
     <Key>
@@ -127,18 +129,6 @@
       </Principal>
       <Dependent Role="StudentAttendance">
         <PropertyRef Name="StudentID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Attendence_Attendence">
-    <End Role="Attendence" Type="Self.Attendence" Multiplicity="1" />
-    <End Role="Attendence1" Type="Self.Attendence" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Attendence">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="Attendence1">
-        <PropertyRef Name="ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -235,10 +225,6 @@
     <AssociationSet Name="FK_Attendance_Student" Association="Self.FK_Attendance_Student">
       <End Role="Student" EntitySet="Student" />
       <End Role="StudentAttendance" EntitySet="StudentAttendance" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Attendence_Attendence" Association="Self.FK_Attendence_Attendence">
-      <End Role="Attendence" EntitySet="Attendence" />
-      <End Role="Attendence1" EntitySet="Attendence" />
     </AssociationSet>
     <AssociationSet Name="FK_GroupDay_Group" Association="Self.FK_GroupDay_Group">
       <End Role="Group" EntitySet="Group" />

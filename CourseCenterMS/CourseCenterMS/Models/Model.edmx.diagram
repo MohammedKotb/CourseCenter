@@ -20,7 +20,6 @@
         <EntityTypeShape EntityType="CourseCenterModel.StudentAttendance" Width="1.5" PointX="10.625" PointY="6" />
         <AssociationConnector Association="CourseCenterModel.FK_Attendance_Student" />
         <EntityTypeShape EntityType="CourseCenterModel.Attendence" Width="1.5" PointX="3.375" PointY="1" />
-        <AssociationConnector Association="CourseCenterModel.FK_Attendence_Attendence" />
         <AssociationConnector Association="CourseCenterModel.FK_StudentAttendance_Attendence" />
         </Diagram>
     </edmx:Diagrams>

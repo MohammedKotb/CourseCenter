@@ -103,47 +103,23 @@ namespace CourseCenterMS
         Attendence att = new Attendence();
         private void btnSave_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
                 att.ClassDate = Convert.ToDateTime(txtClassDate.Text);
-              //  att.ClassName = txtClassName.Text;
+                //  att.ClassName = txtClassName.Text;
                 att.GroupID = Convert.ToInt64(lblGroupID.Text);
                 GropIDVal = lblGroupID.Text;
-            Attendence checkAttendanceFound = context.Attendences.Where(x=>x.GroupID==att.GroupID&&x.ClassDate==att.ClassDate).FirstOrDefault();
-            if (checkAttendanceFound==null)
-            {
-                context.Attendences.Add(att);
-                context.SaveChanges();
-            }
-
-            
-            foreach (DataGridViewRow item in grdTodayStudentsAttendance.Rows)
-            {
+                Attendence checkAttendanceFound = context.Attendences.Where(x => x.GroupID == att.GroupID && x.ClassDate == att.ClassDate).FirstOrDefault();
                 if (checkAttendanceFound == null)
                 {
-                    StudentAttendance newattende = new StudentAttendance();
-                    //AttendTime Homework sheet id Attendance
-                    newattende.ID = 0;
-                    newattende.HomeWork = Convert.ToBoolean(item.Cells["Homework"].Value);
-                    newattende.Sheet = Convert.ToBoolean(item.Cells["sheet"].Value);
-                    newattende.Attend = Convert.ToBoolean(item.Cells["Attendance"].Value);
-                    newattende.StudentID = Convert.ToInt64(item.Cells["ID"].Value);
-                    newattende.AttendanceTime = Convert.ToDateTime(item.Cells["AttendTime"].Value);
-                    newattende.AttendanceTime = DateTime.Now;
-                    if (checkAttendanceFound == null)
-                        newattende.AttendanceID = att.ID;
-                    else
-                        newattende.AttendanceID = checkAttendanceFound.ID;
-
-                    newattende.AdditionalHomeWork = false;
-                    newattende.SheetMarks = 0;
-                    context.StudentAttendances.Add(newattende);
+                    context.Attendences.Add(att);
                     context.SaveChanges();
                 }
-                else
+
+
+                foreach (DataGridViewRow item in grdTodayStudentsAttendance.Rows)
                 {
-                  long STDID=  Convert.ToInt64(item.Cells["ID"].Value);
-                   StudentAttendance StdAttendance=context.StudentAttendances.Where(x => x.AttendanceID == checkAttendanceFound.ID && x.StudentID == STDID).FirstOrDefault();
-                    if (StdAttendance == null)
+                    if (checkAttendanceFound == null)
                     {
                         StudentAttendance newattende = new StudentAttendance();
                         //AttendTime Homework sheet id Attendance
@@ -166,16 +142,56 @@ namespace CourseCenterMS
                     }
                     else
                     {
+                        long STDID = Convert.ToInt64(item.Cells["ID"].Value);
+                        StudentAttendance StdAttendance = context.StudentAttendances.Where(x => x.AttendanceID == checkAttendanceFound.ID && x.StudentID == STDID).FirstOrDefault();
+                        if (StdAttendance == null)
+                        {
+                            StudentAttendance newattende = new StudentAttendance();
+                            //AttendTime Homework sheet id Attendance
+                            newattende.ID = 0;
+                            newattende.HomeWork = Convert.ToBoolean(item.Cells["Homework"].Value);
+                            newattende.Sheet = Convert.ToBoolean(item.Cells["sheet"].Value);
+                            newattende.Attend = Convert.ToBoolean(item.Cells["Attendance"].Value);
+                            newattende.StudentID = Convert.ToInt64(item.Cells["ID"].Value);
+                            newattende.AttendanceTime = Convert.ToDateTime(item.Cells["AttendTime"].Value);
+                            newattende.AttendanceTime = DateTime.Now;
+                            if (checkAttendanceFound == null)
+                                newattende.AttendanceID = att.ID;
+                            else
+                                newattende.AttendanceID = checkAttendanceFound.ID;
 
-                        StdAttendance.HomeWork = Convert.ToBoolean(item.Cells["Homework"].Value);
-                        StdAttendance.Sheet = Convert.ToBoolean(item.Cells["sheet"].Value);
-                        context.SaveChanges();
+                            newattende.AdditionalHomeWork = false;
+                            newattende.SheetMarks = 0;
+                            context.StudentAttendances.Add(newattende);
+                            context.SaveChanges();
+                        }
+                        else
+                        {
+
+                            StdAttendance.HomeWork = Convert.ToBoolean(item.Cells["Homework"].Value);
+                            StdAttendance.Sheet = Convert.ToBoolean(item.Cells["sheet"].Value);
+                            context.SaveChanges();
+
+                        }
 
                     }
 
                 }
+                Program.SuccessMessage.lblMessage.Text = "تم حفظ بيانات الحضور بنجاح";
+                Program.SuccessMessage.ShowDialog();
                
+                Program.DashbordRunningForm.btnMenuAttendanceRecord.PerformClick();
+                
             }
+            catch
+            {
+                Program.Message.lblMessage.Text = "حدث خطا اثناء حفظ بيانات الحضور";
+                txtClassDate.Enabled = true;
+
+                Program.Message.ShowDialog();
+            }
+
+            
   
         }
         Attendence atta = new Attendence();
@@ -205,7 +221,7 @@ namespace CourseCenterMS
             else
             {
                 Program.Message.lblMessage.Text = "يجب تسجيل وقت الحصه قبل استخدام QR";
-            txtClassDate.Enabled = true;
+                txtClassDate.Enabled = true;
         
                 Program.Message.ShowDialog();
             }
@@ -270,6 +286,8 @@ namespace CourseCenterMS
                     rowIndex = row.Index;
                     
                     grdTodayStudentsAttendance.Rows[rowIndex].Selected = true;
+                    grdTodayStudentsAttendance.FirstDisplayedScrollingRowIndex = rowIndex;
+
                     break;
                 }
             }

@@ -25,6 +25,7 @@ namespace CourseCenterMS.Models
         public decimal SheetMarks { get; set; }
         public string SheetNotes { get; set; }
         public string Note { get; set; }
+        public Nullable<int> ClassCounter { get; set; }
     
         public virtual Student Student { get; set; }
         public virtual Attendence Attendence { get; set; }

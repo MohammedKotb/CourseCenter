@@ -23,10 +23,9 @@ namespace CourseCenterMS.Models
         public Nullable<long> GroupID { get; set; }
         public string ClassName { get; set; }
         public System.DateTime ClassDate { get; set; }
+        public Nullable<int> MonthClassCounter { get; set; }
         public bool IsDeleted { get; set; }
     
-        public virtual Attendence Attendence1 { get; set; }
-        public virtual Attendence Attendence2 { get; set; }
         public virtual ICollection<StudentAttendance> StudentAttendances { get; set; }
     }
 }

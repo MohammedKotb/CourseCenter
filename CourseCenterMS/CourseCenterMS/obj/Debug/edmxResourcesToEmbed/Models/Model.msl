@@ -101,6 +101,7 @@
     <EntitySetMapping Name="StudentAttendances">
       <EntityTypeMapping TypeName="CourseCenterModel.StudentAttendance">
         <MappingFragment StoreEntitySet="StudentAttendance">
+          <ScalarProperty Name="ClassCounter" ColumnName="ClassCounter" />
           <ScalarProperty Name="Note" ColumnName="Note" />
           <ScalarProperty Name="SheetNotes" ColumnName="SheetNotes" />
           <ScalarProperty Name="SheetMarks" ColumnName="SheetMarks" />
@@ -119,6 +120,7 @@
       <EntityTypeMapping TypeName="CourseCenterModel.Attendence">
         <MappingFragment StoreEntitySet="Attendence">
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="MonthClassCounter" ColumnName="MonthClassCounter" />
           <ScalarProperty Name="ClassDate" ColumnName="ClassDate" />
           <ScalarProperty Name="ClassName" ColumnName="ClassName" />
           <ScalarProperty Name="GroupID" ColumnName="GroupID" />

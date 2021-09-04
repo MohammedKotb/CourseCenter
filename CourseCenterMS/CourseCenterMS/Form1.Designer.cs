@@ -30,35 +30,38 @@ namespace CourseCenterMS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashbord));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashbord));
             this.SidePnl = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.pnlAttendance = new System.Windows.Forms.Panel();
+            this.btnMenuAttendanceRecord = new System.Windows.Forms.Button();
+            this.btnMenuAttendanceTable = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.pnlGroup = new System.Windows.Forms.Panel();
+            this.btnMenuAddGroup = new System.Windows.Forms.Button();
+            this.btnAllGroups = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlStudent = new System.Windows.Forms.Panel();
+            this.btnMenuAddStudent = new System.Windows.Forms.Button();
+            this.btnAllStudents = new System.Windows.Forms.Button();
+            this.btnStudent = new System.Windows.Forms.Button();
+            this.DashboardBtn = new System.Windows.Forms.Button();
             this.ImgPnl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblAdmin = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TopPnl = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.PictureBox();
             this.ContainerPnl = new System.Windows.Forms.Panel();
             this.pnlhome = new System.Windows.Forms.Panel();
-            this.pnlFooter = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.bunifuGradientPanel5 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.label14 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -76,22 +79,19 @@ namespace CourseCenterMS
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnMenuAttendanceRecord = new System.Windows.Forms.Button();
-            this.btnMenuAttendanceTable = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnMenuAddGroup = new System.Windows.Forms.Button();
-            this.btnAllGroups = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnMenuAddStudent = new System.Windows.Forms.Button();
-            this.btnAllStudents = new System.Windows.Forms.Button();
-            this.btnStudent = new System.Windows.Forms.Button();
-            this.DashboardBtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlFooter = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timergroup = new System.Windows.Forms.Timer(this.components);
             this.timeratt = new System.Windows.Forms.Timer(this.components);
             this.SidePnl.SuspendLayout();
@@ -99,19 +99,19 @@ namespace CourseCenterMS
             this.pnlGroup.SuspendLayout();
             this.pnlStudent.SuspendLayout();
             this.ImgPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TopPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.ContainerPnl.SuspendLayout();
             this.pnlhome.SuspendLayout();
-            this.pnlFooter.SuspendLayout();
             this.bunifuGradientPanel5.SuspendLayout();
             this.bunifuGradientPanel4.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTodayStudentsAttendance)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidePnl
@@ -135,6 +135,50 @@ namespace CourseCenterMS
             this.SidePnl.Size = new System.Drawing.Size(202, 851);
             this.SidePnl.TabIndex = 0;
             // 
+            // button10
+            // 
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button10.ForeColor = System.Drawing.Color.Silver;
+            this.button10.Image = global::CourseCenterMS.Properties.Resources.icons8_graph_report_32;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(0, 719);
+            this.button10.Margin = new System.Windows.Forms.Padding(0);
+            this.button10.Name = "button10";
+            this.button10.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.button10.Size = new System.Drawing.Size(202, 55);
+            this.button10.TabIndex = 14;
+            this.button10.Text = "التقارير";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button5.ForeColor = System.Drawing.Color.Silver;
+            this.button5.Image = global::CourseCenterMS.Properties.Resources.icons8_Bank_Card_Dollar_32;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(0, 664);
+            this.button5.Margin = new System.Windows.Forms.Padding(0);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.button5.Size = new System.Drawing.Size(202, 55);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "الحسابات";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // pnlAttendance
             // 
             this.pnlAttendance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -149,6 +193,75 @@ namespace CourseCenterMS
             this.pnlAttendance.TabIndex = 12;
             this.pnlAttendance.Visible = false;
             // 
+            // btnMenuAttendanceRecord
+            // 
+            this.btnMenuAttendanceRecord.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuAttendanceRecord.FlatAppearance.BorderSize = 0;
+            this.btnMenuAttendanceRecord.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAttendanceRecord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAttendanceRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuAttendanceRecord.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnMenuAttendanceRecord.ForeColor = System.Drawing.Color.Silver;
+            this.btnMenuAttendanceRecord.Image = global::CourseCenterMS.Properties.Resources.icons8_add_new_32;
+            this.btnMenuAttendanceRecord.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAttendanceRecord.Location = new System.Drawing.Point(0, 44);
+            this.btnMenuAttendanceRecord.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMenuAttendanceRecord.Name = "btnMenuAttendanceRecord";
+            this.btnMenuAttendanceRecord.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnMenuAttendanceRecord.Size = new System.Drawing.Size(202, 41);
+            this.btnMenuAttendanceRecord.TabIndex = 1;
+            this.btnMenuAttendanceRecord.Text = "تسجيل حضور";
+            this.btnMenuAttendanceRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAttendanceRecord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuAttendanceRecord.UseVisualStyleBackColor = true;
+            this.btnMenuAttendanceRecord.Click += new System.EventHandler(this.btnMenuAttendanceRecord_Click);
+            // 
+            // btnMenuAttendanceTable
+            // 
+            this.btnMenuAttendanceTable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuAttendanceTable.FlatAppearance.BorderSize = 0;
+            this.btnMenuAttendanceTable.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAttendanceTable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAttendanceTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuAttendanceTable.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnMenuAttendanceTable.ForeColor = System.Drawing.Color.Silver;
+            this.btnMenuAttendanceTable.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuAttendanceTable.Image")));
+            this.btnMenuAttendanceTable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAttendanceTable.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuAttendanceTable.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMenuAttendanceTable.Name = "btnMenuAttendanceTable";
+            this.btnMenuAttendanceTable.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnMenuAttendanceTable.Size = new System.Drawing.Size(202, 44);
+            this.btnMenuAttendanceTable.TabIndex = 0;
+            this.btnMenuAttendanceTable.Text = "جدول الحضور";
+            this.btnMenuAttendanceTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAttendanceTable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuAttendanceTable.UseVisualStyleBackColor = true;
+            this.btnMenuAttendanceTable.Click += new System.EventHandler(this.btnMenuAttendanceTable_Click);
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.Color.Silver;
+            this.button4.Image = global::CourseCenterMS.Properties.Resources.icons8_thursday_32;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 511);
+            this.button4.Margin = new System.Windows.Forms.Padding(0);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.button4.Size = new System.Drawing.Size(202, 55);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "الحضور";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
             // pnlGroup
             // 
             this.pnlGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -162,6 +275,75 @@ namespace CourseCenterMS
             this.pnlGroup.TabIndex = 9;
             this.pnlGroup.Visible = false;
             // 
+            // btnMenuAddGroup
+            // 
+            this.btnMenuAddGroup.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuAddGroup.FlatAppearance.BorderSize = 0;
+            this.btnMenuAddGroup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAddGroup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAddGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuAddGroup.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnMenuAddGroup.ForeColor = System.Drawing.Color.Silver;
+            this.btnMenuAddGroup.Image = global::CourseCenterMS.Properties.Resources.icons8_add_new_32;
+            this.btnMenuAddGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAddGroup.Location = new System.Drawing.Point(0, 44);
+            this.btnMenuAddGroup.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMenuAddGroup.Name = "btnMenuAddGroup";
+            this.btnMenuAddGroup.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnMenuAddGroup.Size = new System.Drawing.Size(202, 41);
+            this.btnMenuAddGroup.TabIndex = 1;
+            this.btnMenuAddGroup.Text = "اضافة مجموعة";
+            this.btnMenuAddGroup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAddGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuAddGroup.UseVisualStyleBackColor = true;
+            this.btnMenuAddGroup.Click += new System.EventHandler(this.btnMenuAddGroup_Click);
+            // 
+            // btnAllGroups
+            // 
+            this.btnAllGroups.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAllGroups.FlatAppearance.BorderSize = 0;
+            this.btnAllGroups.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnAllGroups.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnAllGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAllGroups.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAllGroups.ForeColor = System.Drawing.Color.Silver;
+            this.btnAllGroups.Image = ((System.Drawing.Image)(resources.GetObject("btnAllGroups.Image")));
+            this.btnAllGroups.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAllGroups.Location = new System.Drawing.Point(0, 0);
+            this.btnAllGroups.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAllGroups.Name = "btnAllGroups";
+            this.btnAllGroups.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnAllGroups.Size = new System.Drawing.Size(202, 44);
+            this.btnAllGroups.TabIndex = 0;
+            this.btnAllGroups.Text = "كل المجموعات";
+            this.btnAllGroups.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAllGroups.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAllGroups.UseVisualStyleBackColor = true;
+            this.btnAllGroups.Click += new System.EventHandler(this.btnAllGroups_Click);
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Silver;
+            this.button1.Image = global::CourseCenterMS.Properties.Resources.icons8_people_32;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 358);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.button1.Size = new System.Drawing.Size(202, 55);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "المجموعات";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // pnlStudent
             // 
             this.pnlStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -174,6 +356,97 @@ namespace CourseCenterMS
             this.pnlStudent.Size = new System.Drawing.Size(202, 101);
             this.pnlStudent.TabIndex = 7;
             this.pnlStudent.Visible = false;
+            // 
+            // btnMenuAddStudent
+            // 
+            this.btnMenuAddStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuAddStudent.FlatAppearance.BorderSize = 0;
+            this.btnMenuAddStudent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAddStudent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnMenuAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuAddStudent.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnMenuAddStudent.ForeColor = System.Drawing.Color.Silver;
+            this.btnMenuAddStudent.Image = global::CourseCenterMS.Properties.Resources.icons8_student_registration_32;
+            this.btnMenuAddStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAddStudent.Location = new System.Drawing.Point(0, 44);
+            this.btnMenuAddStudent.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMenuAddStudent.Name = "btnMenuAddStudent";
+            this.btnMenuAddStudent.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnMenuAddStudent.Size = new System.Drawing.Size(202, 46);
+            this.btnMenuAddStudent.TabIndex = 1;
+            this.btnMenuAddStudent.Text = "اضافة طالب";
+            this.btnMenuAddStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuAddStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenuAddStudent.UseVisualStyleBackColor = true;
+            this.btnMenuAddStudent.Click += new System.EventHandler(this.btnMenuAddStudent_Click);
+            // 
+            // btnAllStudents
+            // 
+            this.btnAllStudents.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAllStudents.FlatAppearance.BorderSize = 0;
+            this.btnAllStudents.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnAllStudents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
+            this.btnAllStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAllStudents.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAllStudents.ForeColor = System.Drawing.Color.Silver;
+            this.btnAllStudents.Image = global::CourseCenterMS.Properties.Resources.icons8_students_32;
+            this.btnAllStudents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAllStudents.Location = new System.Drawing.Point(0, 0);
+            this.btnAllStudents.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAllStudents.Name = "btnAllStudents";
+            this.btnAllStudents.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnAllStudents.Size = new System.Drawing.Size(202, 44);
+            this.btnAllStudents.TabIndex = 0;
+            this.btnAllStudents.Text = "جميع الطلاب";
+            this.btnAllStudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAllStudents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAllStudents.UseVisualStyleBackColor = true;
+            this.btnAllStudents.Click += new System.EventHandler(this.btnAllStudents_Click);
+            // 
+            // btnStudent
+            // 
+            this.btnStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStudent.FlatAppearance.BorderSize = 0;
+            this.btnStudent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.btnStudent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudent.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnStudent.ForeColor = System.Drawing.Color.Silver;
+            this.btnStudent.Image = global::CourseCenterMS.Properties.Resources.icons8_student_male_32;
+            this.btnStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStudent.Location = new System.Drawing.Point(0, 202);
+            this.btnStudent.Margin = new System.Windows.Forms.Padding(0);
+            this.btnStudent.Name = "btnStudent";
+            this.btnStudent.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnStudent.Size = new System.Drawing.Size(202, 55);
+            this.btnStudent.TabIndex = 4;
+            this.btnStudent.Text = "الطلاب";
+            this.btnStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStudent.UseVisualStyleBackColor = true;
+            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click_1);
+            // 
+            // DashboardBtn
+            // 
+            this.DashboardBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DashboardBtn.FlatAppearance.BorderSize = 0;
+            this.DashboardBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.DashboardBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.DashboardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DashboardBtn.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashboardBtn.ForeColor = System.Drawing.Color.Silver;
+            this.DashboardBtn.Image = global::CourseCenterMS.Properties.Resources.icons8_home_32;
+            this.DashboardBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DashboardBtn.Location = new System.Drawing.Point(0, 147);
+            this.DashboardBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.DashboardBtn.Name = "DashboardBtn";
+            this.DashboardBtn.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.DashboardBtn.Size = new System.Drawing.Size(202, 55);
+            this.DashboardBtn.TabIndex = 3;
+            this.DashboardBtn.Text = "الرئيسية";
+            this.DashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DashboardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DashboardBtn.Click += new System.EventHandler(this.DashboardBtn_Click);
             // 
             // ImgPnl
             // 
@@ -207,6 +480,17 @@ namespace CourseCenterMS
             this.lblAdmin.TabIndex = 1;
             this.lblAdmin.Text = "ادمن";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CourseCenterMS.Properties.Resources.profile;
+            this.pictureBox1.InitialImage = global::CourseCenterMS.Properties.Resources.profile;
+            this.pictureBox1.Location = new System.Drawing.Point(68, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 66);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // TopPnl
             // 
             this.TopPnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(53)))), ((int)(((byte)(66)))));
@@ -221,6 +505,29 @@ namespace CourseCenterMS
             this.TopPnl.Size = new System.Drawing.Size(1098, 43);
             this.TopPnl.TabIndex = 1;
             // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::CourseCenterMS.Properties.Resources.icons8_classroom;
+            this.button2.Location = new System.Drawing.Point(628, -1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(47, 44);
+            this.button2.TabIndex = 9;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Image = global::CourseCenterMS.Properties.Resources.icons8_minus_16;
+            this.btnMinimize.Location = new System.Drawing.Point(39, 11);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(24, 22);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -232,6 +539,18 @@ namespace CourseCenterMS
             this.label10.Size = new System.Drawing.Size(77, 37);
             this.label10.TabIndex = 0;
             this.label10.Text = "CCMS";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Image = global::CourseCenterMS.Properties.Resources.icons8_delete_16;
+            this.btnExit.Location = new System.Drawing.Point(11, 11);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(24, 22);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExit.TabIndex = 2;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // ContainerPnl
             // 
@@ -259,114 +578,6 @@ namespace CourseCenterMS
             this.pnlhome.Name = "pnlhome";
             this.pnlhome.Size = new System.Drawing.Size(1058, 715);
             this.pnlhome.TabIndex = 0;
-            // 
-            // pnlFooter
-            // 
-            this.pnlFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(60)))), ((int)(((byte)(87)))));
-            this.pnlFooter.Controls.Add(this.label3);
-            this.pnlFooter.Controls.Add(this.label15);
-            this.pnlFooter.Controls.Add(this.label4);
-            this.pnlFooter.Controls.Add(this.label5);
-            this.pnlFooter.Controls.Add(this.label2);
-            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlFooter.Location = new System.Drawing.Point(202, 819);
-            this.pnlFooter.Name = "pnlFooter";
-            this.pnlFooter.Size = new System.Drawing.Size(1098, 32);
-            this.pnlFooter.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(540, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(246, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Techno Gate for software devlopment";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(360, 8);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 16);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Copyrights";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(449, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 32);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "reserved for \r\n\r\n";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(532, 7);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(12, 16);
-            this.label5.TabIndex = 0;
-            this.label5.Text = ":";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(434, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "©";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 30;
-            this.bunifuElipse1.TargetControl = this.bunifuGradientPanel1;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 30;
-            this.bunifuElipse2.TargetControl = this.bunifuGradientPanel2;
-            // 
-            // bunifuElipse4
-            // 
-            this.bunifuElipse4.ElipseRadius = 30;
-            this.bunifuElipse4.TargetControl = this.bunifuGradientPanel4;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 30;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // bunifuElipse5
-            // 
-            this.bunifuElipse5.ElipseRadius = 30;
-            this.bunifuElipse5.TargetControl = this.bunifuGradientPanel5;
-            // 
-            // bunifuElipse3
-            // 
-            this.bunifuElipse3.ElipseRadius = 25;
-            this.bunifuElipse3.TargetControl = this.bunifuGradientPanel3;
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // bunifuGradientPanel5
             // 
@@ -628,324 +839,113 @@ namespace CourseCenterMS
             this.label11.TabIndex = 0;
             this.label11.Text = "مجموعات اليوم";
             // 
-            // button2
+            // pnlFooter
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::CourseCenterMS.Properties.Resources.icons8_classroom;
-            this.button2.Location = new System.Drawing.Point(628, -1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 44);
-            this.button2.TabIndex = 9;
-            this.button2.UseVisualStyleBackColor = true;
+            this.pnlFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(60)))), ((int)(((byte)(87)))));
+            this.pnlFooter.Controls.Add(this.label3);
+            this.pnlFooter.Controls.Add(this.label15);
+            this.pnlFooter.Controls.Add(this.label4);
+            this.pnlFooter.Controls.Add(this.label5);
+            this.pnlFooter.Controls.Add(this.label2);
+            this.pnlFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlFooter.Location = new System.Drawing.Point(202, 819);
+            this.pnlFooter.Name = "pnlFooter";
+            this.pnlFooter.Size = new System.Drawing.Size(1098, 32);
+            this.pnlFooter.TabIndex = 3;
             // 
-            // btnMinimize
+            // label3
             // 
-            this.btnMinimize.Image = global::CourseCenterMS.Properties.Resources.icons8_minus_16;
-            this.btnMinimize.Location = new System.Drawing.Point(39, 11);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(24, 22);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label3.Location = new System.Drawing.Point(540, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(246, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Techno Gate for software devlopment";
             // 
-            // btnExit
+            // label15
             // 
-            this.btnExit.Image = global::CourseCenterMS.Properties.Resources.icons8_delete_16;
-            this.btnExit.Location = new System.Drawing.Point(11, 11);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(24, 22);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExit.TabIndex = 2;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(360, 8);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 16);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Copyrights";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button10
+            // label4
             // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button10.ForeColor = System.Drawing.Color.Silver;
-            this.button10.Image = global::CourseCenterMS.Properties.Resources.icons8_graph_report_32;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(0, 719);
-            this.button10.Margin = new System.Windows.Forms.Padding(0);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.button10.Size = new System.Drawing.Size(202, 55);
-            this.button10.TabIndex = 14;
-            this.button10.Text = "التقارير";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button10.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(449, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 32);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "reserved for \r\n\r\n";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button5
+            // label5
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button5.ForeColor = System.Drawing.Color.Silver;
-            this.button5.Image = global::CourseCenterMS.Properties.Resources.icons8_Bank_Card_Dollar_32;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 664);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.button5.Size = new System.Drawing.Size(202, 55);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "الحسابات";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(532, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(12, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = ":";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnMenuAttendanceRecord
+            // label2
             // 
-            this.btnMenuAttendanceRecord.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenuAttendanceRecord.FlatAppearance.BorderSize = 0;
-            this.btnMenuAttendanceRecord.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnMenuAttendanceRecord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnMenuAttendanceRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuAttendanceRecord.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnMenuAttendanceRecord.ForeColor = System.Drawing.Color.Silver;
-            this.btnMenuAttendanceRecord.Image = global::CourseCenterMS.Properties.Resources.icons8_add_new_32;
-            this.btnMenuAttendanceRecord.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuAttendanceRecord.Location = new System.Drawing.Point(0, 44);
-            this.btnMenuAttendanceRecord.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMenuAttendanceRecord.Name = "btnMenuAttendanceRecord";
-            this.btnMenuAttendanceRecord.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.btnMenuAttendanceRecord.Size = new System.Drawing.Size(202, 41);
-            this.btnMenuAttendanceRecord.TabIndex = 1;
-            this.btnMenuAttendanceRecord.Text = "تسجيل حضور";
-            this.btnMenuAttendanceRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuAttendanceRecord.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMenuAttendanceRecord.UseVisualStyleBackColor = true;
-            this.btnMenuAttendanceRecord.Click += new System.EventHandler(this.btnMenuAttendanceRecord_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(434, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "©";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnMenuAttendanceTable
+            // bunifuElipse1
             // 
-            this.btnMenuAttendanceTable.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenuAttendanceTable.FlatAppearance.BorderSize = 0;
-            this.btnMenuAttendanceTable.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnMenuAttendanceTable.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnMenuAttendanceTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuAttendanceTable.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnMenuAttendanceTable.ForeColor = System.Drawing.Color.Silver;
-            this.btnMenuAttendanceTable.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuAttendanceTable.Image")));
-            this.btnMenuAttendanceTable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuAttendanceTable.Location = new System.Drawing.Point(0, 0);
-            this.btnMenuAttendanceTable.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMenuAttendanceTable.Name = "btnMenuAttendanceTable";
-            this.btnMenuAttendanceTable.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.btnMenuAttendanceTable.Size = new System.Drawing.Size(202, 44);
-            this.btnMenuAttendanceTable.TabIndex = 0;
-            this.btnMenuAttendanceTable.Text = "جدول الحضور";
-            this.btnMenuAttendanceTable.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuAttendanceTable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMenuAttendanceTable.UseVisualStyleBackColor = true;
-            this.btnMenuAttendanceTable.Click += new System.EventHandler(this.btnMenuAttendanceTable_Click);
+            this.bunifuElipse1.ElipseRadius = 30;
+            this.bunifuElipse1.TargetControl = this.bunifuGradientPanel1;
             // 
-            // button4
+            // bunifuElipse2
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.Silver;
-            this.button4.Image = global::CourseCenterMS.Properties.Resources.icons8_thursday_32;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 511);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.button4.Size = new System.Drawing.Size(202, 55);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "الحضور";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.bunifuElipse2.ElipseRadius = 30;
+            this.bunifuElipse2.TargetControl = this.bunifuGradientPanel2;
             // 
-            // btnMenuAddGroup
+            // bunifuElipse4
             // 
-            this.btnMenuAddGroup.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenuAddGroup.FlatAppearance.BorderSize = 0;
-            this.btnMenuAddGroup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnMenuAddGroup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnMenuAddGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuAddGroup.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnMenuAddGroup.ForeColor = System.Drawing.Color.Silver;
-            this.btnMenuAddGroup.Image = global::CourseCenterMS.Properties.Resources.icons8_add_new_32;
-            this.btnMenuAddGroup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuAddGroup.Location = new System.Drawing.Point(0, 44);
-            this.btnMenuAddGroup.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMenuAddGroup.Name = "btnMenuAddGroup";
-            this.btnMenuAddGroup.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.btnMenuAddGroup.Size = new System.Drawing.Size(202, 41);
-            this.btnMenuAddGroup.TabIndex = 1;
-            this.btnMenuAddGroup.Text = "اضافة مجموعة";
-            this.btnMenuAddGroup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuAddGroup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMenuAddGroup.UseVisualStyleBackColor = true;
-            this.btnMenuAddGroup.Click += new System.EventHandler(this.btnMenuAddGroup_Click);
+            this.bunifuElipse4.ElipseRadius = 30;
+            this.bunifuElipse4.TargetControl = this.bunifuGradientPanel4;
             // 
-            // btnAllGroups
+            // timer1
             // 
-            this.btnAllGroups.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAllGroups.FlatAppearance.BorderSize = 0;
-            this.btnAllGroups.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnAllGroups.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnAllGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAllGroups.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnAllGroups.ForeColor = System.Drawing.Color.Silver;
-            this.btnAllGroups.Image = ((System.Drawing.Image)(resources.GetObject("btnAllGroups.Image")));
-            this.btnAllGroups.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllGroups.Location = new System.Drawing.Point(0, 0);
-            this.btnAllGroups.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAllGroups.Name = "btnAllGroups";
-            this.btnAllGroups.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.btnAllGroups.Size = new System.Drawing.Size(202, 44);
-            this.btnAllGroups.TabIndex = 0;
-            this.btnAllGroups.Text = "كل المجموعات";
-            this.btnAllGroups.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllGroups.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAllGroups.UseVisualStyleBackColor = true;
-            this.btnAllGroups.Click += new System.EventHandler(this.btnAllGroups_Click);
+            this.timer1.Interval = 30;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button1
+            // bunifuElipse5
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Silver;
-            this.button1.Image = global::CourseCenterMS.Properties.Resources.icons8_people_32;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 358);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.button1.Size = new System.Drawing.Size(202, 55);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "المجموعات";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.bunifuElipse5.ElipseRadius = 30;
+            this.bunifuElipse5.TargetControl = this.bunifuGradientPanel5;
             // 
-            // btnMenuAddStudent
+            // bunifuElipse3
             // 
-            this.btnMenuAddStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenuAddStudent.FlatAppearance.BorderSize = 0;
-            this.btnMenuAddStudent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnMenuAddStudent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnMenuAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuAddStudent.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnMenuAddStudent.ForeColor = System.Drawing.Color.Silver;
-            this.btnMenuAddStudent.Image = global::CourseCenterMS.Properties.Resources.icons8_student_registration_32;
-            this.btnMenuAddStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuAddStudent.Location = new System.Drawing.Point(0, 44);
-            this.btnMenuAddStudent.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMenuAddStudent.Name = "btnMenuAddStudent";
-            this.btnMenuAddStudent.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.btnMenuAddStudent.Size = new System.Drawing.Size(202, 46);
-            this.btnMenuAddStudent.TabIndex = 1;
-            this.btnMenuAddStudent.Text = "اضافة طالب";
-            this.btnMenuAddStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuAddStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMenuAddStudent.UseVisualStyleBackColor = true;
-            this.btnMenuAddStudent.Click += new System.EventHandler(this.btnMenuAddStudent_Click);
+            this.bunifuElipse3.ElipseRadius = 25;
+            this.bunifuElipse3.TargetControl = this.bunifuGradientPanel3;
             // 
-            // btnAllStudents
+            // timer2
             // 
-            this.btnAllStudents.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAllStudents.FlatAppearance.BorderSize = 0;
-            this.btnAllStudents.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnAllStudents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(38)))), ((int)(((byte)(46)))));
-            this.btnAllStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAllStudents.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnAllStudents.ForeColor = System.Drawing.Color.Silver;
-            this.btnAllStudents.Image = global::CourseCenterMS.Properties.Resources.icons8_students_32;
-            this.btnAllStudents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllStudents.Location = new System.Drawing.Point(0, 0);
-            this.btnAllStudents.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAllStudents.Name = "btnAllStudents";
-            this.btnAllStudents.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.btnAllStudents.Size = new System.Drawing.Size(202, 44);
-            this.btnAllStudents.TabIndex = 0;
-            this.btnAllStudents.Text = "جميع الطلاب";
-            this.btnAllStudents.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAllStudents.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAllStudents.UseVisualStyleBackColor = true;
-            this.btnAllStudents.Click += new System.EventHandler(this.btnAllStudents_Click);
-            // 
-            // btnStudent
-            // 
-            this.btnStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStudent.FlatAppearance.BorderSize = 0;
-            this.btnStudent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.btnStudent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudent.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnStudent.ForeColor = System.Drawing.Color.Silver;
-            this.btnStudent.Image = global::CourseCenterMS.Properties.Resources.icons8_student_male_32;
-            this.btnStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStudent.Location = new System.Drawing.Point(0, 202);
-            this.btnStudent.Margin = new System.Windows.Forms.Padding(0);
-            this.btnStudent.Name = "btnStudent";
-            this.btnStudent.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.btnStudent.Size = new System.Drawing.Size(202, 55);
-            this.btnStudent.TabIndex = 4;
-            this.btnStudent.Text = "الطلاب";
-            this.btnStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStudent.UseVisualStyleBackColor = true;
-            this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click_1);
-            // 
-            // DashboardBtn
-            // 
-            this.DashboardBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DashboardBtn.FlatAppearance.BorderSize = 0;
-            this.DashboardBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.DashboardBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
-            this.DashboardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DashboardBtn.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashboardBtn.ForeColor = System.Drawing.Color.Silver;
-            this.DashboardBtn.Image = global::CourseCenterMS.Properties.Resources.icons8_home_32;
-            this.DashboardBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DashboardBtn.Location = new System.Drawing.Point(0, 147);
-            this.DashboardBtn.Margin = new System.Windows.Forms.Padding(0);
-            this.DashboardBtn.Name = "DashboardBtn";
-            this.DashboardBtn.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.DashboardBtn.Size = new System.Drawing.Size(202, 55);
-            this.DashboardBtn.TabIndex = 3;
-            this.DashboardBtn.Text = "الرئيسية";
-            this.DashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DashboardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.DashboardBtn.Click += new System.EventHandler(this.DashboardBtn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CourseCenterMS.Properties.Resources.profile;
-            this.pictureBox1.InitialImage = global::CourseCenterMS.Properties.Resources.profile;
-            this.pictureBox1.Location = new System.Drawing.Point(68, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timergroup
             // 
@@ -979,13 +979,14 @@ namespace CourseCenterMS
             this.pnlStudent.ResumeLayout(false);
             this.ImgPnl.ResumeLayout(false);
             this.ImgPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TopPnl.ResumeLayout(false);
             this.TopPnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ContainerPnl.ResumeLayout(false);
             this.ContainerPnl.PerformLayout();
             this.pnlhome.ResumeLayout(false);
-            this.pnlFooter.ResumeLayout(false);
-            this.pnlFooter.PerformLayout();
             this.bunifuGradientPanel5.ResumeLayout(false);
             this.bunifuGradientPanel5.PerformLayout();
             this.bunifuGradientPanel4.ResumeLayout(false);
@@ -997,9 +998,8 @@ namespace CourseCenterMS
             this.bunifuGradientPanel3.ResumeLayout(false);
             this.bunifuGradientPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdTodayStudentsAttendance)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlFooter.ResumeLayout(false);
+            this.pnlFooter.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1022,7 +1022,6 @@ namespace CourseCenterMS
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel pnlAttendance;
-        private System.Windows.Forms.Button btnMenuAttendanceRecord;
         private System.Windows.Forms.Button btnMenuAttendanceTable;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label1;
@@ -1066,6 +1065,7 @@ namespace CourseCenterMS
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timergroup;
         private System.Windows.Forms.Timer timeratt;
+        public System.Windows.Forms.Button btnMenuAttendanceRecord;
     }
 }
 
