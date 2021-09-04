@@ -97,5 +97,35 @@ namespace CourseCenterMS
         {
 
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            grdAllStudents.ClearSelection();
+            SearchOnGrd(txtSearch.Text);
+        }
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            grdAllStudents.ClearSelection();
+            SearchOnGrd(txtSearch.Text);
+        }
+        //function for Grid Searching
+        public void SearchOnGrd(string searchTxt)
+        {
+            int rowIndex = -1;
+            foreach (DataGridViewRow row in grdAllStudents.Rows)
+            {
+                if (row.Cells["StudentName"].Value.ToString().Contains(searchTxt) || row.Cells["QR"].Value.ToString().Equals(searchTxt))
+                {
+                    rowIndex = row.Index;
+
+                    grdAllStudents.Rows[rowIndex].Selected = true;
+                    grdAllStudents.FirstDisplayedScrollingRowIndex = rowIndex;
+
+                    break;
+                }
+            }
+        }
+
+       
     }
 }

@@ -29,12 +29,12 @@ namespace CourseCenterMS
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlAllAttendance = new System.Windows.Forms.Panel();
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
             this.pnlGridContainer = new System.Windows.Forms.Panel();
@@ -50,7 +50,7 @@ namespace CourseCenterMS
             this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
             this.btnFiter = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.textSearch = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.pnlAllAttendance.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
@@ -100,9 +100,9 @@ namespace CourseCenterMS
             this.grdAllAttendanceGroup.AllowUserToAddRows = false;
             this.grdAllAttendanceGroup.AllowUserToDeleteRows = false;
             this.grdAllAttendanceGroup.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.grdAllAttendanceGroup.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
+            this.grdAllAttendanceGroup.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdAllAttendanceGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -111,14 +111,14 @@ namespace CourseCenterMS
             this.grdAllAttendanceGroup.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.grdAllAttendanceGroup.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdAllAttendanceGroup.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdAllAttendanceGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdAllAttendanceGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdAllAttendanceGroup.ColumnHeadersHeight = 25;
             this.grdAllAttendanceGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grdAllAttendanceGroup.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -129,14 +129,14 @@ namespace CourseCenterMS
             this.StudentsNumber,
             this.ID,
             this.GroupDetails});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdAllAttendanceGroup.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdAllAttendanceGroup.DefaultCellStyle = dataGridViewCellStyle5;
             this.grdAllAttendanceGroup.DoubleBuffered = true;
             this.grdAllAttendanceGroup.EnableHeadersVisualStyles = false;
             this.grdAllAttendanceGroup.GridColor = System.Drawing.SystemColors.ButtonFace;
@@ -147,14 +147,14 @@ namespace CourseCenterMS
             this.grdAllAttendanceGroup.ReadOnly = true;
             this.grdAllAttendanceGroup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.grdAllAttendanceGroup.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Sakkal Majalla", 12F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdAllAttendanceGroup.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Sakkal Majalla", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdAllAttendanceGroup.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.grdAllAttendanceGroup.RowHeadersWidth = 50;
             this.grdAllAttendanceGroup.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.grdAllAttendanceGroup.Size = new System.Drawing.Size(1056, 428);
@@ -181,9 +181,9 @@ namespace CourseCenterMS
             // GroupTime
             // 
             this.GroupTime.DataPropertyName = "StartDate";
-            dataGridViewCellStyle9.Format = "yyyy/MM/dd";
-            dataGridViewCellStyle9.NullValue = null;
-            this.GroupTime.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle3.NullValue = null;
+            this.GroupTime.DefaultCellStyle = dataGridViewCellStyle3;
             this.GroupTime.HeaderText = "تاريخ بدء المجموعة";
             this.GroupTime.MinimumWidth = 6;
             this.GroupTime.Name = "GroupTime";
@@ -192,9 +192,9 @@ namespace CourseCenterMS
             // GroupEndTime
             // 
             this.GroupEndTime.DataPropertyName = "EndDate";
-            dataGridViewCellStyle10.Format = "yyyy/MM/dd";
-            dataGridViewCellStyle10.NullValue = null;
-            this.GroupEndTime.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Format = "yyyy/MM/dd";
+            dataGridViewCellStyle4.NullValue = null;
+            this.GroupEndTime.DefaultCellStyle = dataGridViewCellStyle4;
             this.GroupEndTime.HeaderText = "تاريخ انتهاء المجموعة";
             this.GroupEndTime.Name = "GroupEndTime";
             this.GroupEndTime.ReadOnly = true;
@@ -251,7 +251,7 @@ namespace CourseCenterMS
             this.crdSearch.color = System.Drawing.Color.Green;
             this.crdSearch.Controls.Add(this.btnFiter);
             this.crdSearch.Controls.Add(this.btnSearch);
-            this.crdSearch.Controls.Add(this.textSearch);
+            this.crdSearch.Controls.Add(this.txtSearch);
             this.crdSearch.LeftSahddow = false;
             this.crdSearch.Location = new System.Drawing.Point(23, 33);
             this.crdSearch.Name = "crdSearch";
@@ -296,16 +296,17 @@ namespace CourseCenterMS
             this.btnSearch.TabIndex = 25;
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // textSearch
+            // txtSearch
             // 
-            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSearch.Location = new System.Drawing.Point(781, 21);
-            this.textSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.textSearch.MinimumSize = new System.Drawing.Size(290, 33);
-            this.textSearch.Multiline = true;
-            this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(324, 33);
-            this.textSearch.TabIndex = 24;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(781, 21);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.MinimumSize = new System.Drawing.Size(290, 33);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(324, 33);
+            this.txtSearch.TabIndex = 24;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // frmAllAtendance
             // 
@@ -334,7 +335,7 @@ namespace CourseCenterMS
         private Bunifu.Framework.UI.BunifuCards crdSearchResult;
         private System.Windows.Forms.Button btnFiter;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textSearch;
+        private System.Windows.Forms.TextBox txtSearch;
         public System.Windows.Forms.Panel pnlAllAttendance;
         private Bunifu.Framework.UI.BunifuCustomLabel lblGridHeader;
         private System.Windows.Forms.Panel pnlGridContainer;

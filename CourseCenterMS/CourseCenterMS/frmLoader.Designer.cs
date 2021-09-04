@@ -54,6 +54,8 @@ namespace CourseCenterMS
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLoader";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLoader";
             ((System.ComponentModel.ISupportInitialize)(this.piclloader)).EndInit();

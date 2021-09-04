@@ -37,11 +37,6 @@ namespace CourseCenterMS
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
             this.pnlGridContainer = new System.Windows.Forms.Panel();
             this.grdAllGroups = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
-            this.btnFiter = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.textSearch = new System.Windows.Forms.TextBox();
             this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupDays = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +44,11 @@ namespace CourseCenterMS
             this.StudentsNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupDetails = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
+            this.btnFiter = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.pnlAllGroups.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
@@ -142,6 +142,7 @@ namespace CourseCenterMS
             this.grdAllGroups.HeaderBgColor = System.Drawing.Color.LightBlue;
             this.grdAllGroups.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.grdAllGroups.Location = new System.Drawing.Point(30, 3);
+            this.grdAllGroups.MultiSelect = false;
             this.grdAllGroups.Name = "grdAllGroups";
             this.grdAllGroups.ReadOnly = true;
             this.grdAllGroups.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -159,83 +160,6 @@ namespace CourseCenterMS
             this.grdAllGroups.Size = new System.Drawing.Size(1056, 428);
             this.grdAllGroups.TabIndex = 21;
             this.grdAllGroups.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdAllStudents_CellClick);
-            // 
-            // lblGridHeader
-            // 
-            this.lblGridHeader.AutoSize = true;
-            this.lblGridHeader.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGridHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblGridHeader.Location = new System.Drawing.Point(956, 24);
-            this.lblGridHeader.Name = "lblGridHeader";
-            this.lblGridHeader.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblGridHeader.Size = new System.Drawing.Size(160, 35);
-            this.lblGridHeader.TabIndex = 18;
-            this.lblGridHeader.Text = "بيــــانات المجموعات";
-            // 
-            // crdSearch
-            // 
-            this.crdSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.crdSearch.BackColor = System.Drawing.Color.White;
-            this.crdSearch.BorderRadius = 5;
-            this.crdSearch.BottomSahddow = true;
-            this.crdSearch.color = System.Drawing.Color.Green;
-            this.crdSearch.Controls.Add(this.btnFiter);
-            this.crdSearch.Controls.Add(this.btnSearch);
-            this.crdSearch.Controls.Add(this.textSearch);
-            this.crdSearch.LeftSahddow = false;
-            this.crdSearch.Location = new System.Drawing.Point(23, 33);
-            this.crdSearch.Name = "crdSearch";
-            this.crdSearch.RightSahddow = true;
-            this.crdSearch.ShadowDepth = 20;
-            this.crdSearch.Size = new System.Drawing.Size(1117, 70);
-            this.crdSearch.TabIndex = 0;
-            // 
-            // btnFiter
-            // 
-            this.btnFiter.BackColor = System.Drawing.Color.Transparent;
-            this.btnFiter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFiter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFiter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(176)))), ((int)(((byte)(190)))));
-            this.btnFiter.FlatAppearance.BorderSize = 0;
-            this.btnFiter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnFiter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
-            this.btnFiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiter.Image = global::CourseCenterMS.Properties.Resources.icons8_slider_321;
-            this.btnFiter.Location = new System.Drawing.Point(672, 21);
-            this.btnFiter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnFiter.Name = "btnFiter";
-            this.btnFiter.Size = new System.Drawing.Size(30, 32);
-            this.btnFiter.TabIndex = 26;
-            this.btnFiter.UseVisualStyleBackColor = false;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(176)))), ((int)(((byte)(190)))));
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(150)))), ((int)(((byte)(170)))));
-            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Image = global::CourseCenterMS.Properties.Resources.icons8_search32_32;
-            this.btnSearch.Location = new System.Drawing.Point(730, 21);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(30, 32);
-            this.btnSearch.TabIndex = 25;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // textSearch
-            // 
-            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSearch.Location = new System.Drawing.Point(781, 21);
-            this.textSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textSearch.MinimumSize = new System.Drawing.Size(290, 33);
-            this.textSearch.Multiline = true;
-            this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(324, 33);
-            this.textSearch.TabIndex = 24;
             // 
             // GroupName
             // 
@@ -300,6 +224,84 @@ namespace CourseCenterMS
             this.GroupDetails.ToolTipText = "اضغط لمزيد من المعلومات";
             this.GroupDetails.UseColumnTextForLinkValue = true;
             // 
+            // lblGridHeader
+            // 
+            this.lblGridHeader.AutoSize = true;
+            this.lblGridHeader.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGridHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblGridHeader.Location = new System.Drawing.Point(956, 24);
+            this.lblGridHeader.Name = "lblGridHeader";
+            this.lblGridHeader.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGridHeader.Size = new System.Drawing.Size(160, 35);
+            this.lblGridHeader.TabIndex = 18;
+            this.lblGridHeader.Text = "بيــــانات المجموعات";
+            // 
+            // crdSearch
+            // 
+            this.crdSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.crdSearch.BackColor = System.Drawing.Color.White;
+            this.crdSearch.BorderRadius = 5;
+            this.crdSearch.BottomSahddow = true;
+            this.crdSearch.color = System.Drawing.Color.Green;
+            this.crdSearch.Controls.Add(this.btnFiter);
+            this.crdSearch.Controls.Add(this.btnSearch);
+            this.crdSearch.Controls.Add(this.txtSearch);
+            this.crdSearch.LeftSahddow = false;
+            this.crdSearch.Location = new System.Drawing.Point(23, 33);
+            this.crdSearch.Name = "crdSearch";
+            this.crdSearch.RightSahddow = true;
+            this.crdSearch.ShadowDepth = 20;
+            this.crdSearch.Size = new System.Drawing.Size(1117, 70);
+            this.crdSearch.TabIndex = 0;
+            // 
+            // btnFiter
+            // 
+            this.btnFiter.BackColor = System.Drawing.Color.Transparent;
+            this.btnFiter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFiter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFiter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(176)))), ((int)(((byte)(190)))));
+            this.btnFiter.FlatAppearance.BorderSize = 0;
+            this.btnFiter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFiter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
+            this.btnFiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiter.Image = global::CourseCenterMS.Properties.Resources.icons8_slider_321;
+            this.btnFiter.Location = new System.Drawing.Point(672, 21);
+            this.btnFiter.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFiter.Name = "btnFiter";
+            this.btnFiter.Size = new System.Drawing.Size(30, 32);
+            this.btnFiter.TabIndex = 26;
+            this.btnFiter.UseVisualStyleBackColor = false;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(176)))), ((int)(((byte)(190)))));
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(150)))), ((int)(((byte)(170)))));
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(210)))), ((int)(((byte)(230)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Image = global::CourseCenterMS.Properties.Resources.icons8_search32_32;
+            this.btnSearch.Location = new System.Drawing.Point(730, 21);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(30, 32);
+            this.btnSearch.TabIndex = 25;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(781, 21);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.MinimumSize = new System.Drawing.Size(290, 33);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(324, 33);
+            this.txtSearch.TabIndex = 24;
+            this.txtSearch.TextChanged += new System.EventHandler(this.textSearch_TextChanged);
+            // 
             // frmAllGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,7 +329,7 @@ namespace CourseCenterMS
         private Bunifu.Framework.UI.BunifuCards crdSearchResult;
         private System.Windows.Forms.Button btnFiter;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox textSearch;
+        private System.Windows.Forms.TextBox txtSearch;
         public System.Windows.Forms.Panel pnlAllGroups;
         private Bunifu.Framework.UI.BunifuCustomLabel lblGridHeader;
         private System.Windows.Forms.Panel pnlGridContainer;

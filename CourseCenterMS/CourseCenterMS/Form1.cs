@@ -238,7 +238,7 @@ namespace CourseCenterMS
        
                 frmAllStudents f = new frmAllStudents();
                 ContainerPnl.Controls.Clear();
-                f.grdAllStudents.DataSource = context.Students.Where(x => x.IsDeleted == false).Select(x => new { x.Name, x.GroupName, x.Classroom, x.Phone, x.ID }).ToList(); ;
+                f.grdAllStudents.DataSource = context.Students.Where(x => x.IsDeleted == false).Select(x => new { x.Name, x.GroupName, x.Classroom, x.Phone, x.ID,x.QR }).ToList(); ;
                 ContainerPnl.Controls.Add(f.pnlAllStudents);
                 fl.Hide();
                 timer2.Stop();

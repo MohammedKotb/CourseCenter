@@ -362,7 +362,7 @@ namespace CourseCenterMS
             this.cmboTimeFrom.BackColor = System.Drawing.Color.LightGray;
             this.cmboTimeFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmboTimeFrom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmboTimeFrom.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
+            this.cmboTimeFrom.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmboTimeFrom.FormattingEnabled = true;
             this.cmboTimeFrom.Items.AddRange(new object[] {
             "1",
@@ -380,7 +380,7 @@ namespace CourseCenterMS
             this.cmboTimeFrom.Location = new System.Drawing.Point(293, 188);
             this.cmboTimeFrom.Margin = new System.Windows.Forms.Padding(2);
             this.cmboTimeFrom.Name = "cmboTimeFrom";
-            this.cmboTimeFrom.Size = new System.Drawing.Size(87, 30);
+            this.cmboTimeFrom.Size = new System.Drawing.Size(87, 33);
             this.cmboTimeFrom.TabIndex = 173;
             // 
             // cmboTimeTo
@@ -388,7 +388,7 @@ namespace CourseCenterMS
             this.cmboTimeTo.BackColor = System.Drawing.Color.LightGray;
             this.cmboTimeTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmboTimeTo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmboTimeTo.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
+            this.cmboTimeTo.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmboTimeTo.FormattingEnabled = true;
             this.cmboTimeTo.Items.AddRange(new object[] {
             "1",
@@ -406,7 +406,7 @@ namespace CourseCenterMS
             this.cmboTimeTo.Location = new System.Drawing.Point(293, 247);
             this.cmboTimeTo.Margin = new System.Windows.Forms.Padding(2);
             this.cmboTimeTo.Name = "cmboTimeTo";
-            this.cmboTimeTo.Size = new System.Drawing.Size(87, 30);
+            this.cmboTimeTo.Size = new System.Drawing.Size(87, 33);
             this.cmboTimeTo.TabIndex = 173;
             // 
             // bunifuCustomLabel10

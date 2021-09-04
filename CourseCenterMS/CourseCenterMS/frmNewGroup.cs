@@ -142,7 +142,7 @@ namespace CourseCenterMS
                 }
 
             }
-        }
+        } 
 
         public void SaveGroupDayAndTime(long groupID, string day)
         {

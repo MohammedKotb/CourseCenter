@@ -53,9 +53,31 @@ namespace CourseCenterMS
                 }
             }
         }
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            grdAllAttendanceGroup.ClearSelection();
+            SearchOnGrd(txtSearch.Text);
+        }
+
+        public void SearchOnGrd(string searchTxt)
+        {
+            int rowIndex = -1;
+            foreach (DataGridViewRow row in grdAllAttendanceGroup.Rows)
+            {
+                if (row.Cells["GroupName"].Value.ToString().Equals(searchTxt))
+                {
+                    rowIndex = row.Index;
+
+                    grdAllAttendanceGroup.Rows[rowIndex].Selected = true;
+                    grdAllAttendanceGroup.FirstDisplayedScrollingRowIndex = rowIndex;
+                    break;
+                }
+            }
+        }
+
        
     }
-       public class AttenaceToGrd
+    public class AttenaceToGrd
     {
         public long ID { get; set; }
        // public string ClassName { get; set; }

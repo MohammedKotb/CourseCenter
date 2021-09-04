@@ -18,7 +18,7 @@ namespace CourseCenterMS
         {
             InitializeComponent();
             context = new CourseCenterEntities();
-
+             
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
