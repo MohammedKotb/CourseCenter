@@ -618,6 +618,8 @@ namespace CourseCenterMS {
             
             private global::System.Data.DataColumn columnIsDeleted;
             
+            private global::System.Data.DataColumn columnMonthClassCounter;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public AttendenceDataTable() {
@@ -693,6 +695,14 @@ namespace CourseCenterMS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MonthClassCounterColumn {
+                get {
+                    return this.columnMonthClassCounter;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -728,14 +738,15 @@ namespace CourseCenterMS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AttendenceRow AddAttendenceRow(long GroupID, string ClassName, System.DateTime ClassDate, bool IsDeleted) {
+            public AttendenceRow AddAttendenceRow(long GroupID, string ClassName, System.DateTime ClassDate, bool IsDeleted, int MonthClassCounter) {
                 AttendenceRow rowAttendenceRow = ((AttendenceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         GroupID,
                         ClassName,
                         ClassDate,
-                        IsDeleted};
+                        IsDeleted,
+                        MonthClassCounter};
                 rowAttendenceRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAttendenceRow);
                 return rowAttendenceRow;
@@ -770,6 +781,7 @@ namespace CourseCenterMS {
                 this.columnClassName = base.Columns["ClassName"];
                 this.columnClassDate = base.Columns["ClassDate"];
                 this.columnIsDeleted = base.Columns["IsDeleted"];
+                this.columnMonthClassCounter = base.Columns["MonthClassCounter"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -785,6 +797,8 @@ namespace CourseCenterMS {
                 base.Columns.Add(this.columnClassDate);
                 this.columnIsDeleted = new global::System.Data.DataColumn("IsDeleted", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIsDeleted);
+                this.columnMonthClassCounter = new global::System.Data.DataColumn("MonthClassCounter", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMonthClassCounter);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -2549,6 +2563,8 @@ namespace CourseCenterMS {
             
             private global::System.Data.DataColumn columnNote;
             
+            private global::System.Data.DataColumn columnClassCounter;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public StudentAttendanceDataTable() {
@@ -2672,6 +2688,14 @@ namespace CourseCenterMS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ClassCounterColumn {
+                get {
+                    return this.columnClassCounter;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2707,7 +2731,7 @@ namespace CourseCenterMS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StudentAttendanceRow AddStudentAttendanceRow(StudentRow parentStudentRowByFK_Attendance_Student, AttendenceRow parentAttendenceRowByFK_StudentAttendance_Attendence, bool Attend, System.DateTime AttendanceTime, bool HomeWork, bool Sheet, bool AdditionalHomeWork, decimal SheetMarks, string SheetNotes, string Note) {
+            public StudentAttendanceRow AddStudentAttendanceRow(StudentRow parentStudentRowByFK_Attendance_Student, AttendenceRow parentAttendenceRowByFK_StudentAttendance_Attendence, bool Attend, System.DateTime AttendanceTime, bool HomeWork, bool Sheet, bool AdditionalHomeWork, decimal SheetMarks, string SheetNotes, string Note, int ClassCounter) {
                 StudentAttendanceRow rowStudentAttendanceRow = ((StudentAttendanceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2720,7 +2744,8 @@ namespace CourseCenterMS {
                         AdditionalHomeWork,
                         SheetMarks,
                         SheetNotes,
-                        Note};
+                        Note,
+                        ClassCounter};
                 if ((parentStudentRowByFK_Attendance_Student != null)) {
                     columnValuesArray[1] = parentStudentRowByFK_Attendance_Student[0];
                 }
@@ -2767,6 +2792,7 @@ namespace CourseCenterMS {
                 this.columnSheetMarks = base.Columns["SheetMarks"];
                 this.columnSheetNotes = base.Columns["SheetNotes"];
                 this.columnNote = base.Columns["Note"];
+                this.columnClassCounter = base.Columns["ClassCounter"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2794,6 +2820,8 @@ namespace CourseCenterMS {
                 base.Columns.Add(this.columnSheetNotes);
                 this.columnNote = new global::System.Data.DataColumn("Note", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNote);
+                this.columnClassCounter = new global::System.Data.DataColumn("ClassCounter", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClassCounter);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -4005,6 +4033,22 @@ namespace CourseCenterMS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int MonthClassCounter {
+                get {
+                    try {
+                        return ((int)(this[this.tableAttendence.MonthClassCounterColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MonthClassCounter\' in table \'Attendence\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAttendence.MonthClassCounterColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsGroupIDNull() {
                 return this.IsNull(this.tableAttendence.GroupIDColumn);
             }
@@ -4025,6 +4069,18 @@ namespace CourseCenterMS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetClassNameNull() {
                 this[this.tableAttendence.ClassNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMonthClassCounterNull() {
+                return this.IsNull(this.tableAttendence.MonthClassCounterColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMonthClassCounterNull() {
+                this[this.tableAttendence.MonthClassCounterColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5159,6 +5215,22 @@ namespace CourseCenterMS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int ClassCounter {
+                get {
+                    try {
+                        return ((int)(this[this.tableStudentAttendance.ClassCounterColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ClassCounter\' in table \'StudentAttendance\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableStudentAttendance.ClassCounterColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public StudentRow StudentRow {
                 get {
                     return ((StudentRow)(this.GetParentRow(this.Table.ParentRelations["FK_Attendance_Student"])));
@@ -5213,6 +5285,18 @@ namespace CourseCenterMS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNoteNull() {
                 this[this.tableStudentAttendance.NoteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsClassCounterNull() {
+                return this.IsNull(this.tableStudentAttendance.ClassCounterColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetClassCounterNull() {
+                this[this.tableStudentAttendance.ClassCounterColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5991,42 +6075,46 @@ namespace CourseCenterMS.DatabaseDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ClassName", "ClassName");
             tableMapping.ColumnMappings.Add("ClassDate", "ClassDate");
             tableMapping.ColumnMappings.Add("IsDeleted", "IsDeleted");
+            tableMapping.ColumnMappings.Add("MonthClassCounter", "MonthClassCounter");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Attendence] WHERE (([ID] = @Original_ID) AND ((@IsNull_GroupID" +
-                " = 1 AND [GroupID] IS NULL) OR ([GroupID] = @Original_GroupID)) AND ([ClassDate]" +
-                " = @Original_ClassDate) AND ([IsDeleted] = @Original_IsDeleted))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Attendence] WHERE (([ID] = @Original_ID) AND ((@IsNull_GroupID = 1 AND [GroupID] IS NULL) OR ([GroupID] = @Original_GroupID)) AND ([ClassDate] = @Original_ClassDate) AND ([IsDeleted] = @Original_IsDeleted) AND ((@IsNull_MonthClassCounter = 1 AND [MonthClassCounter] IS NULL) OR ([MonthClassCounter] = @Original_MonthClassCounter)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GroupID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GroupID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClassDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsDeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsDeleted", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MonthClassCounter", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthClassCounter", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MonthClassCounter", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthClassCounter", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Attendence] ([GroupID], [ClassName], [ClassDate], [IsDeleted])" +
-                " VALUES (@GroupID, @ClassName, @ClassDate, @IsDeleted);\r\nSELECT ID, GroupID, Cla" +
-                "ssName, ClassDate, IsDeleted FROM Attendence WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Attendence] ([GroupID], [ClassName], [ClassDate], [IsDeleted], [MonthClassCounter]) VALUES (@GroupID, @ClassName, @ClassDate, @IsDeleted, @MonthClassCounter);
+SELECT ID, GroupID, ClassName, ClassDate, IsDeleted, MonthClassCounter FROM Attendence WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GroupID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClassName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClassDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsDeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsDeleted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MonthClassCounter", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthClassCounter", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Attendence] SET [GroupID] = @GroupID, [ClassName] = @ClassName, [ClassDate] = @ClassDate, [IsDeleted] = @IsDeleted WHERE (([ID] = @Original_ID) AND ((@IsNull_GroupID = 1 AND [GroupID] IS NULL) OR ([GroupID] = @Original_GroupID)) AND ([ClassDate] = @Original_ClassDate) AND ([IsDeleted] = @Original_IsDeleted));
-SELECT ID, GroupID, ClassName, ClassDate, IsDeleted FROM Attendence WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Attendence] SET [GroupID] = @GroupID, [ClassName] = @ClassName, [ClassDate] = @ClassDate, [IsDeleted] = @IsDeleted, [MonthClassCounter] = @MonthClassCounter WHERE (([ID] = @Original_ID) AND ((@IsNull_GroupID = 1 AND [GroupID] IS NULL) OR ([GroupID] = @Original_GroupID)) AND ([ClassDate] = @Original_ClassDate) AND ([IsDeleted] = @Original_IsDeleted) AND ((@IsNull_MonthClassCounter = 1 AND [MonthClassCounter] IS NULL) OR ([MonthClassCounter] = @Original_MonthClassCounter)));
+SELECT ID, GroupID, ClassName, ClassDate, IsDeleted, MonthClassCounter FROM Attendence WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GroupID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClassName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClassDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsDeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsDeleted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MonthClassCounter", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthClassCounter", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GroupID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GroupID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GroupID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClassDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsDeleted", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsDeleted", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MonthClassCounter", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthClassCounter", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MonthClassCounter", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MonthClassCounter", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -6043,7 +6131,8 @@ SELECT ID, GroupID, ClassName, ClassDate, IsDeleted FROM Attendence WHERE (ID = 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, GroupID, ClassName, ClassDate, IsDeleted FROM dbo.Attendence";
+            this._commandCollection[0].CommandText = "SELECT ID, GroupID, ClassName, ClassDate, IsDeleted, MonthClassCounter FROM dbo.A" +
+                "ttendence";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6104,7 +6193,7 @@ SELECT ID, GroupID, ClassName, ClassDate, IsDeleted FROM Attendence WHERE (ID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(long Original_ID, global::System.Nullable<long> Original_GroupID, System.DateTime Original_ClassDate, bool Original_IsDeleted) {
+        public virtual int Delete(long Original_ID, global::System.Nullable<long> Original_GroupID, System.DateTime Original_ClassDate, bool Original_IsDeleted, global::System.Nullable<int> Original_MonthClassCounter) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_ID));
             if ((Original_GroupID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -6116,6 +6205,14 @@ SELECT ID, GroupID, ClassName, ClassDate, IsDeleted FROM Attendence WHERE (ID = 
             }
             this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_ClassDate));
             this.Adapter.DeleteCommand.Parameters[4].Value = ((bool)(Original_IsDeleted));
+            if ((Original_MonthClassCounter.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_MonthClassCounter.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6136,7 +6233,7 @@ SELECT ID, GroupID, ClassName, ClassDate, IsDeleted FROM Attendence WHERE (ID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<long> GroupID, string ClassName, System.DateTime ClassDate, bool IsDeleted) {
+        public virtual int Insert(global::System.Nullable<long> GroupID, string ClassName, System.DateTime ClassDate, bool IsDeleted, global::System.Nullable<int> MonthClassCounter) {
             if ((GroupID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((long)(GroupID.Value));
             }
@@ -6151,6 +6248,12 @@ SELECT ID, GroupID, ClassName, ClassDate, IsDeleted FROM Attendence WHERE (ID = 
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(ClassDate));
             this.Adapter.InsertCommand.Parameters[3].Value = ((bool)(IsDeleted));
+            if ((MonthClassCounter.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(MonthClassCounter.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6171,7 +6274,7 @@ SELECT ID, GroupID, ClassName, ClassDate, IsDeleted FROM Attendence WHERE (ID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<long> GroupID, string ClassName, System.DateTime ClassDate, bool IsDeleted, long Original_ID, global::System.Nullable<long> Original_GroupID, System.DateTime Original_ClassDate, bool Original_IsDeleted, long ID) {
+        public virtual int Update(global::System.Nullable<long> GroupID, string ClassName, System.DateTime ClassDate, bool IsDeleted, global::System.Nullable<int> MonthClassCounter, long Original_ID, global::System.Nullable<long> Original_GroupID, System.DateTime Original_ClassDate, bool Original_IsDeleted, global::System.Nullable<int> Original_MonthClassCounter, long ID) {
             if ((GroupID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((long)(GroupID.Value));
             }
@@ -6186,18 +6289,32 @@ SELECT ID, GroupID, ClassName, ClassDate, IsDeleted FROM Attendence WHERE (ID = 
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(ClassDate));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((bool)(IsDeleted));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((long)(Original_ID));
-            if ((Original_GroupID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((long)(Original_GroupID.Value));
+            if ((MonthClassCounter.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(MonthClassCounter.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_ClassDate));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(Original_IsDeleted));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((long)(ID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((long)(Original_ID));
+            if ((Original_GroupID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((long)(Original_GroupID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_ClassDate));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(Original_IsDeleted));
+            if ((Original_MonthClassCounter.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_MonthClassCounter.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((long)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6218,8 +6335,8 @@ SELECT ID, GroupID, ClassName, ClassDate, IsDeleted FROM Attendence WHERE (ID = 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<long> GroupID, string ClassName, System.DateTime ClassDate, bool IsDeleted, long Original_ID, global::System.Nullable<long> Original_GroupID, System.DateTime Original_ClassDate, bool Original_IsDeleted) {
-            return this.Update(GroupID, ClassName, ClassDate, IsDeleted, Original_ID, Original_GroupID, Original_ClassDate, Original_IsDeleted, Original_ID);
+        public virtual int Update(global::System.Nullable<long> GroupID, string ClassName, System.DateTime ClassDate, bool IsDeleted, global::System.Nullable<int> MonthClassCounter, long Original_ID, global::System.Nullable<long> Original_GroupID, System.DateTime Original_ClassDate, bool Original_IsDeleted, global::System.Nullable<int> Original_MonthClassCounter) {
+            return this.Update(GroupID, ClassName, ClassDate, IsDeleted, MonthClassCounter, Original_ID, Original_GroupID, Original_ClassDate, Original_IsDeleted, Original_MonthClassCounter, Original_ID);
         }
     }
     
@@ -8222,10 +8339,11 @@ SELECT ID, Name, Phone, Gender, FatherPhone, MotherPhone, IsFatherPrimary, Fathe
             tableMapping.ColumnMappings.Add("SheetMarks", "SheetMarks");
             tableMapping.ColumnMappings.Add("SheetNotes", "SheetNotes");
             tableMapping.ColumnMappings.Add("Note", "Note");
+            tableMapping.ColumnMappings.Add("ClassCounter", "ClassCounter");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[StudentAttendance] WHERE (([ID] = @Original_ID) AND ([StudentID] = @Original_StudentID) AND ([AttendanceID] = @Original_AttendanceID) AND ((@IsNull_Attend = 1 AND [Attend] IS NULL) OR ([Attend] = @Original_Attend)) AND ([AttendanceTime] = @Original_AttendanceTime) AND ([HomeWork] = @Original_HomeWork) AND ([Sheet] = @Original_Sheet) AND ([AdditionalHomeWork] = @Original_AdditionalHomeWork) AND ([SheetMarks] = @Original_SheetMarks))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[StudentAttendance] WHERE (([ID] = @Original_ID) AND ([StudentID] = @Original_StudentID) AND ([AttendanceID] = @Original_AttendanceID) AND ((@IsNull_Attend = 1 AND [Attend] IS NULL) OR ([Attend] = @Original_Attend)) AND ([AttendanceTime] = @Original_AttendanceTime) AND ([HomeWork] = @Original_HomeWork) AND ([Sheet] = @Original_Sheet) AND ([AdditionalHomeWork] = @Original_AdditionalHomeWork) AND ([SheetMarks] = @Original_SheetMarks) AND ((@IsNull_ClassCounter = 1 AND [ClassCounter] IS NULL) OR ([ClassCounter] = @Original_ClassCounter)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StudentID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -8237,10 +8355,12 @@ SELECT ID, Name, Phone, Gender, FatherPhone, MotherPhone, IsFatherPrimary, Fathe
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sheet", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sheet", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdditionalHomeWork", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdditionalHomeWork", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SheetMarks", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "SheetMarks", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ClassCounter", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassCounter", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClassCounter", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassCounter", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[StudentAttendance] ([StudentID], [AttendanceID], [Attend], [AttendanceTime], [HomeWork], [Sheet], [AdditionalHomeWork], [SheetMarks], [SheetNotes], [Note]) VALUES (@StudentID, @AttendanceID, @Attend, @AttendanceTime, @HomeWork, @Sheet, @AdditionalHomeWork, @SheetMarks, @SheetNotes, @Note);
-SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, AdditionalHomeWork, SheetMarks, SheetNotes, Note FROM StudentAttendance WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[StudentAttendance] ([StudentID], [AttendanceID], [Attend], [AttendanceTime], [HomeWork], [Sheet], [AdditionalHomeWork], [SheetMarks], [SheetNotes], [Note], [ClassCounter]) VALUES (@StudentID, @AttendanceID, @Attend, @AttendanceTime, @HomeWork, @Sheet, @AdditionalHomeWork, @SheetMarks, @SheetNotes, @Note, @ClassCounter);
+SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, AdditionalHomeWork, SheetMarks, SheetNotes, Note, ClassCounter FROM StudentAttendance WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StudentID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AttendanceID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AttendanceID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8252,10 +8372,11 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SheetMarks", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "SheetMarks", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SheetNotes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SheetNotes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Note", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClassCounter", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassCounter", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[StudentAttendance] SET [StudentID] = @StudentID, [AttendanceID] = @AttendanceID, [Attend] = @Attend, [AttendanceTime] = @AttendanceTime, [HomeWork] = @HomeWork, [Sheet] = @Sheet, [AdditionalHomeWork] = @AdditionalHomeWork, [SheetMarks] = @SheetMarks, [SheetNotes] = @SheetNotes, [Note] = @Note WHERE (([ID] = @Original_ID) AND ([StudentID] = @Original_StudentID) AND ([AttendanceID] = @Original_AttendanceID) AND ((@IsNull_Attend = 1 AND [Attend] IS NULL) OR ([Attend] = @Original_Attend)) AND ([AttendanceTime] = @Original_AttendanceTime) AND ([HomeWork] = @Original_HomeWork) AND ([Sheet] = @Original_Sheet) AND ([AdditionalHomeWork] = @Original_AdditionalHomeWork) AND ([SheetMarks] = @Original_SheetMarks));
-SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, AdditionalHomeWork, SheetMarks, SheetNotes, Note FROM StudentAttendance WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[StudentAttendance] SET [StudentID] = @StudentID, [AttendanceID] = @AttendanceID, [Attend] = @Attend, [AttendanceTime] = @AttendanceTime, [HomeWork] = @HomeWork, [Sheet] = @Sheet, [AdditionalHomeWork] = @AdditionalHomeWork, [SheetMarks] = @SheetMarks, [SheetNotes] = @SheetNotes, [Note] = @Note, [ClassCounter] = @ClassCounter WHERE (([ID] = @Original_ID) AND ([StudentID] = @Original_StudentID) AND ([AttendanceID] = @Original_AttendanceID) AND ((@IsNull_Attend = 1 AND [Attend] IS NULL) OR ([Attend] = @Original_Attend)) AND ([AttendanceTime] = @Original_AttendanceTime) AND ([HomeWork] = @Original_HomeWork) AND ([Sheet] = @Original_Sheet) AND ([AdditionalHomeWork] = @Original_AdditionalHomeWork) AND ([SheetMarks] = @Original_SheetMarks) AND ((@IsNull_ClassCounter = 1 AND [ClassCounter] IS NULL) OR ([ClassCounter] = @Original_ClassCounter)));
+SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, AdditionalHomeWork, SheetMarks, SheetNotes, Note, ClassCounter FROM StudentAttendance WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StudentID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudentID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AttendanceID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AttendanceID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8267,6 +8388,7 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SheetMarks", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "SheetMarks", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SheetNotes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SheetNotes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Note", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClassCounter", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassCounter", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StudentID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StudentID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AttendanceID", global::System.Data.SqlDbType.BigInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AttendanceID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -8277,6 +8399,8 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sheet", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sheet", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AdditionalHomeWork", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AdditionalHomeWork", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SheetMarks", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "SheetMarks", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ClassCounter", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassCounter", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClassCounter", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClassCounter", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -8294,7 +8418,8 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Addi" +
-                "tionalHomeWork, SheetMarks, SheetNotes, Note FROM dbo.StudentAttendance";
+                "tionalHomeWork, SheetMarks, SheetNotes, Note, ClassCounter FROM dbo.StudentAtten" +
+                "dance";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8355,7 +8480,7 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(long Original_ID, long Original_StudentID, long Original_AttendanceID, global::System.Nullable<bool> Original_Attend, System.DateTime Original_AttendanceTime, bool Original_HomeWork, bool Original_Sheet, bool Original_AdditionalHomeWork, decimal Original_SheetMarks) {
+        public virtual int Delete(long Original_ID, long Original_StudentID, long Original_AttendanceID, global::System.Nullable<bool> Original_Attend, System.DateTime Original_AttendanceTime, bool Original_HomeWork, bool Original_Sheet, bool Original_AdditionalHomeWork, decimal Original_SheetMarks, global::System.Nullable<int> Original_ClassCounter) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_ID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((long)(Original_StudentID));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((long)(Original_AttendanceID));
@@ -8372,6 +8497,14 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
             this.Adapter.DeleteCommand.Parameters[7].Value = ((bool)(Original_Sheet));
             this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_AdditionalHomeWork));
             this.Adapter.DeleteCommand.Parameters[9].Value = ((decimal)(Original_SheetMarks));
+            if ((Original_ClassCounter.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_ClassCounter.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8392,7 +8525,7 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(long StudentID, long AttendanceID, global::System.Nullable<bool> Attend, System.DateTime AttendanceTime, bool HomeWork, bool Sheet, bool AdditionalHomeWork, decimal SheetMarks, string SheetNotes, string Note) {
+        public virtual int Insert(long StudentID, long AttendanceID, global::System.Nullable<bool> Attend, System.DateTime AttendanceTime, bool HomeWork, bool Sheet, bool AdditionalHomeWork, decimal SheetMarks, string SheetNotes, string Note, global::System.Nullable<int> ClassCounter) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((long)(StudentID));
             this.Adapter.InsertCommand.Parameters[1].Value = ((long)(AttendanceID));
             if ((Attend.HasValue == true)) {
@@ -8417,6 +8550,12 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
             }
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Note));
+            }
+            if ((ClassCounter.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(ClassCounter.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8449,6 +8588,7 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
                     decimal SheetMarks, 
                     string SheetNotes, 
                     string Note, 
+                    global::System.Nullable<int> ClassCounter, 
                     long Original_ID, 
                     long Original_StudentID, 
                     long Original_AttendanceID, 
@@ -8458,6 +8598,7 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
                     bool Original_Sheet, 
                     bool Original_AdditionalHomeWork, 
                     decimal Original_SheetMarks, 
+                    global::System.Nullable<int> Original_ClassCounter, 
                     long ID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((long)(StudentID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((long)(AttendanceID));
@@ -8484,23 +8625,37 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Note));
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((long)(Original_ID));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((long)(Original_StudentID));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((long)(Original_AttendanceID));
-            if ((Original_Attend.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(Original_Attend.Value));
+            if ((ClassCounter.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(ClassCounter.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_AttendanceTime));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(Original_HomeWork));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((bool)(Original_Sheet));
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(Original_AdditionalHomeWork));
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((decimal)(Original_SheetMarks));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((long)(ID));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((long)(Original_ID));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((long)(Original_StudentID));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((long)(Original_AttendanceID));
+            if ((Original_Attend.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(Original_Attend.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_AttendanceTime));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((bool)(Original_HomeWork));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(Original_Sheet));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((bool)(Original_AdditionalHomeWork));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(Original_SheetMarks));
+            if ((Original_ClassCounter.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_ClassCounter.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((long)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8532,6 +8687,7 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
                     decimal SheetMarks, 
                     string SheetNotes, 
                     string Note, 
+                    global::System.Nullable<int> ClassCounter, 
                     long Original_ID, 
                     long Original_StudentID, 
                     long Original_AttendanceID, 
@@ -8540,8 +8696,9 @@ SELECT ID, StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, Add
                     bool Original_HomeWork, 
                     bool Original_Sheet, 
                     bool Original_AdditionalHomeWork, 
-                    decimal Original_SheetMarks) {
-            return this.Update(StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, AdditionalHomeWork, SheetMarks, SheetNotes, Note, Original_ID, Original_StudentID, Original_AttendanceID, Original_Attend, Original_AttendanceTime, Original_HomeWork, Original_Sheet, Original_AdditionalHomeWork, Original_SheetMarks, Original_ID);
+                    decimal Original_SheetMarks, 
+                    global::System.Nullable<int> Original_ClassCounter) {
+            return this.Update(StudentID, AttendanceID, Attend, AttendanceTime, HomeWork, Sheet, AdditionalHomeWork, SheetMarks, SheetNotes, Note, ClassCounter, Original_ID, Original_StudentID, Original_AttendanceID, Original_Attend, Original_AttendanceTime, Original_HomeWork, Original_Sheet, Original_AdditionalHomeWork, Original_SheetMarks, Original_ClassCounter, Original_ID);
         }
     }
     

@@ -13,6 +13,7 @@
           <Property Name="GroupID" Type="bigint" />
           <Property Name="ClassName" Type="nvarchar(max)" />
           <Property Name="ClassDate" Type="datetime" Nullable="false" />
+          <Property Name="MonthClassCounter" Type="int" />
           <Property Name="IsDeleted" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Departments">
@@ -89,6 +90,7 @@
           <Property Name="SheetMarks" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="SheetNotes" Type="nvarchar(max)" />
           <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="ClassCounter" Type="int" />
         </EntityType>
         <EntityType Name="SysNotification">
           <Key>
@@ -132,18 +134,6 @@
             </Principal>
             <Dependent Role="StudentAttendance">
               <PropertyRef Name="StudentID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Attendence_Attendence">
-          <End Role="Attendence" Type="Self.Attendence" Multiplicity="1" />
-          <End Role="Attendence1" Type="Self.Attendence" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Attendence">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Attendence1">
-              <PropertyRef Name="ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -240,10 +230,6 @@
           <AssociationSet Name="FK_Attendance_Student" Association="Self.FK_Attendance_Student">
             <End Role="Student" EntitySet="Student" />
             <End Role="StudentAttendance" EntitySet="StudentAttendance" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Attendence_Attendence" Association="Self.FK_Attendence_Attendence">
-            <End Role="Attendence" EntitySet="Attendence" />
-            <End Role="Attendence1" EntitySet="Attendence" />
           </AssociationSet>
           <AssociationSet Name="FK_GroupDay_Group" Association="Self.FK_GroupDay_Group">
             <End Role="Group" EntitySet="Group" />
@@ -399,10 +385,6 @@
             <End Role="StudentAttendance" EntitySet="StudentAttendances" />
           </AssociationSet>
           <EntitySet Name="Attendences" EntityType="CourseCenterModel.Attendence" />
-          <AssociationSet Name="FK_Attendence_Attendence" Association="CourseCenterModel.FK_Attendence_Attendence">
-            <End Role="Attendence" EntitySet="Attendences" />
-            <End Role="Attendence1" EntitySet="Attendences" />
-          </AssociationSet>
           <AssociationSet Name="FK_StudentAttendance_Attendence" Association="CourseCenterModel.FK_StudentAttendance_Attendence">
             <End Role="Attendence" EntitySet="Attendences" />
             <End Role="StudentAttendance" EntitySet="StudentAttendances" />
@@ -500,6 +482,7 @@
           <Property Name="SheetNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Student" Relationship="CourseCenterModel.FK_Attendance_Student" FromRole="StudentAttendance" ToRole="Student" />
+          <Property Name="ClassCounter" Type="Int32" />
           <NavigationProperty Name="Attendence" Relationship="CourseCenterModel.FK_StudentAttendance_Attendence" FromRole="StudentAttendance" ToRole="Attendence" />
         </EntityType>
         <Association Name="FK_Attendance_Student">
@@ -524,23 +507,10 @@
           <Property Name="GroupID" Type="Int64" />
           <Property Name="ClassName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ClassDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MonthClassCounter" Type="Int32" />
           <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Attendence1" Relationship="CourseCenterModel.FK_Attendence_Attendence" FromRole="Attendence" ToRole="Attendence1" />
-          <NavigationProperty Name="Attendence2" Relationship="CourseCenterModel.FK_Attendence_Attendence" FromRole="Attendence1" ToRole="Attendence" />
           <NavigationProperty Name="StudentAttendances" Relationship="CourseCenterModel.FK_StudentAttendance_Attendence" FromRole="Attendence" ToRole="StudentAttendance" />
         </EntityType>
-        <Association Name="FK_Attendence_Attendence">
-          <End Type="CourseCenterModel.Attendence" Role="Attendence" Multiplicity="1" />
-          <End Type="CourseCenterModel.Attendence" Role="Attendence1" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Attendence">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Attendence1">
-              <PropertyRef Name="ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_StudentAttendance_Attendence">
           <End Type="CourseCenterModel.Attendence" Role="Attendence" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -661,6 +631,7 @@
           <EntitySetMapping Name="StudentAttendances">
             <EntityTypeMapping TypeName="CourseCenterModel.StudentAttendance">
               <MappingFragment StoreEntitySet="StudentAttendance">
+                <ScalarProperty Name="ClassCounter" ColumnName="ClassCounter" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
                 <ScalarProperty Name="SheetNotes" ColumnName="SheetNotes" />
                 <ScalarProperty Name="SheetMarks" ColumnName="SheetMarks" />
@@ -679,6 +650,7 @@
             <EntityTypeMapping TypeName="CourseCenterModel.Attendence">
               <MappingFragment StoreEntitySet="Attendence">
                 <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="MonthClassCounter" ColumnName="MonthClassCounter" />
                 <ScalarProperty Name="ClassDate" ColumnName="ClassDate" />
                 <ScalarProperty Name="ClassName" ColumnName="ClassName" />
                 <ScalarProperty Name="GroupID" ColumnName="GroupID" />
