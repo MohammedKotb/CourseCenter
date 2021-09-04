@@ -40,8 +40,8 @@ namespace CourseCenterMS
                     {
                         AttenaceToGrd attenToGrd = new AttenaceToGrd();
                        
-                        attenToGrd.ClassName = item.ClassName;
-                        attenToGrd.ClassDate = item.ClassDate;
+                        //attenToGrd.ClassName = item.ClassName;
+                       attenToGrd.ClassDate = item.ClassDate;
                         attenToGrd.AttendanceNumber = context.StudentAttendances.Where(x=>x.AttendanceID==item.ID&&x.Attend==true).Count();
                         attenToGrd.AbsenceNumber = context.StudentAttendances.Where(x=>x.AttendanceID==item.ID && x.Attend == false).Count();
                         attenToGrd.ID = item.ID;
@@ -58,7 +58,7 @@ namespace CourseCenterMS
        public class AttenaceToGrd
     {
         public long ID { get; set; }
-        public string ClassName { get; set; }
+       // public string ClassName { get; set; }
         public DateTime ClassDate { get; set; }
         public int AttendanceNumber { get; set; }
         public int AbsenceNumber { get; set; }

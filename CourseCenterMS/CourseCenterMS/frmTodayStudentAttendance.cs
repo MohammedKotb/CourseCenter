@@ -105,7 +105,7 @@ namespace CourseCenterMS
         {
            
                 att.ClassDate = Convert.ToDateTime(txtClassDate.Text);
-                att.ClassName = txtClassName.Text;
+              //  att.ClassName = txtClassName.Text;
                 att.GroupID = Convert.ToInt64(lblGroupID.Text);
                 GropIDVal = lblGroupID.Text;
             Attendence checkAttendanceFound = context.Attendences.Where(x=>x.GroupID==att.GroupID&&x.ClassDate==att.ClassDate).FirstOrDefault();
@@ -176,19 +176,17 @@ namespace CourseCenterMS
                 }
                
             }
-            //Attendence newSTdAttendace = new Attendence();
-            //newSTdAttendace.ClassDate = Convert.ToDateTime(txtClassDate.Text);
-            //newSTdAttendace.ClassName = txtClassName.Text;
+  
         }
         Attendence atta = new Attendence();
         private void btnUsingQR_Click(object sender, EventArgs e)
         {
           
-            if (txtClassName.Text!=""&&txtClassDate.Text!="")
+            if (txtClassDate.Text!="")
             {
 
                 atta.ClassDate = Convert.ToDateTime(txtClassDate.Text);
-                atta.ClassName = txtClassName.Text;
+
                 atta.GroupID = long.Parse(lblGroupID.Text);
                 Attendence checkAttendanceFound = context.Attendences.Where(x => x.GroupID == atta.GroupID && x.ClassDate == atta.ClassDate).FirstOrDefault();
                 if (checkAttendanceFound == null)
@@ -200,10 +198,7 @@ namespace CourseCenterMS
                 {
                     atta = checkAttendanceFound;
                 }
-                //context.Attendences.Add(att);
-                //context.SaveChanges();
-                //btnSave.Visible = false;
-                // grdTodayStudentsAttendance.Columns.Clear();
+               
                 startQR();
               
             }
@@ -211,44 +206,17 @@ namespace CourseCenterMS
             {
                 Program.Message.lblMessage.Text = "يجب تسجيل وقت الحصه قبل استخدام QR";
             txtClassDate.Enabled = true;
-                txtClassName.Enabled = true;
+        
                 Program.Message.ShowDialog();
             }
-            //frmTodayStudentAttendance f = new frmTodayStudentAttendance();
-            ////  = context.StudentAttendances.Where(x => x.AttendanceID == AttendanceID).ToList();
-            //List<StdAttendanceToGrd> attenacesToGrd = new List<StdAttendanceToGrd>();
-
-            //List<StudentAttendance> studentsAtted = context.StudentAttendances.Where(x => x.AttendanceID == atta.ID).Include(x=>x.Student).ToList();
-         
-         
-            //foreach (var item in studentsAtted)
-            //{
-            //    StdAttendanceToGrd newObj = new StdAttendanceToGrd();
-            //    newObj.ID = item.ID;
-            //    newObj.StudentName = item.Student.Name;
-            //    newObj.Sheet = item.Sheet;
-            //    newObj.HomeWork = item.HomeWork;
-            //    newObj.Attend = item.Attend??true;
-            //    newObj.AttendanceTime = item.AttendanceTime.ToShortTimeString();
-
-            //  //  attenacesToGrd.Add(newObj);
-            //}
-
-            // Program.DashbordRunningForm.ContainerPnl.Controls.Clear();
-            // f.lblGroupID.Text = GroupID.ToString();
-           
-          //  f.grdTodayStudentsAttendance.DataSource = attenacesToGrd;
-           
-            //pnlTodayStudentAttendance.Controls.Remove(grdTodayStudentsAttendance);
-           // Program.DashbordRunningForm.ContainerPnl.Controls.Add(f.pnlTodayStudentAttendance);
-                //grdTodayStudentsAttendance.DataSource = attenacesToGrd;
+       
 
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (pictureBox1.Image != null)
             {
-                //BarcodeResult Result = BarcodeReader.QuicklyReadOneBarcode((Bitmap)pictureBox1.Image);
+          
 
                 BarcodeReader barcodeReader = new BarcodeReader();
                 Result result = barcodeReader.Decode((Bitmap)pictureBox1.Image);
@@ -268,49 +236,7 @@ namespace CourseCenterMS
                     Student student = context.Students.Where(x=>x.GroupID==GropID&&x.QR==r).FirstOrDefault();
                     txtSearch.Text = r;
                   
-                        //frmTodayStudentAttendance f = new frmTodayStudentAttendance();
-                        //  = context.StudentAttendances.Where(x => x.AttendanceID == AttendanceID).ToList();
-                        //List<StdAttendanceToGrd> attenacesToGrd = new List<StdAttendanceToGrd>();
-                        //long GroupID = long.Parse(lblGroupID.Text);
-                        //DateTime classDate = Convert.ToDateTime(txtClassDate.Text);
-                        //List<StudentAttendance> studentsAtted = context.StudentAttendances.Include(x => x.Student).Include(x=>x.Attendence).Where(x=>x.Attendence.GroupID==GroupID).ToList();
-
-                       
-                        //    studentsAtted.Add(new StudentAttendance { AttendanceID = 42, StudentID = 878 });
-                        
-                        //foreach (var item in studentsAtted)
-                        //{
-                        //    StdAttendanceToGrd newObj = new StdAttendanceToGrd();
-                        //    newObj.ID = item.ID;
-                        //    newObj.StudentName = item.Student.Name;
-                        //    newObj.Sheet = item.Sheet;
-                        //    newObj.HomeWork = item.HomeWork;
-                        //    newObj.Attend = item.Attend ?? true;
-                        //    newObj.AttendanceTime = item.AttendanceTime.ToShortTimeString();
-
-                        //    attenacesToGrd.Add(newObj);
-                        //}
-                    //if (student != null)
-                    //{
-                    //    StudentAttendance s = context.StudentAttendances.Where(x=>x.StudentID==student.ID&&x.AttendanceID==atta.ID).FirstOrDefault();
-                    //    if (s==null)
-                    //    {
-                    //        attenacesToGrd.Add(new StdAttendanceToGrd { StudentName = student.Name, Attend = true, AttendanceTime = DateTime.Now.ToShortTimeString(), });
-                    //        context.StudentAttendances.Add(new StudentAttendance { StudentID = student.ID, Attend = true, AttendanceTime = DateTime.Now, AttendanceID = atta.ID, Sheet = false, HomeWork = false, AdditionalHomeWork = false, SheetMarks = 0 });
-                    //        context.SaveChanges();
-                    //    }
-                    //    else
-                    //    {
-                    //        Program.Message.lblMessage.Text="هذا الطالب تم تسجيل حضوره اليوم بالفعل";
-                            
-                    //            Program.Message.Show();
-
-                           
-                    //    }
-                       
-                    //}
-                       
-                    //    grdTodayStudentsAttendance.DataSource = attenacesToGrd;
+                    
 
                     }
 

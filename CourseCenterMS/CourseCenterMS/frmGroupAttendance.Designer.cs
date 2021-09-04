@@ -35,21 +35,20 @@ namespace CourseCenterMS
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlGroupAttendance = new System.Windows.Forms.Panel();
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
+            this.lblGroupID = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlGridContainer = new System.Windows.Forms.Panel();
             this.grdGroupAttendance = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.GroupTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GroupEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentsNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GroupDetails = new System.Windows.Forms.DataGridViewLinkColumn();
             this.lblGroupName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.crdSearch = new Bunifu.Framework.UI.BunifuCards();
             this.btnFiter = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textSearch = new System.Windows.Forms.TextBox();
-            this.lblGroupID = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.GroupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentsNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupDetails = new System.Windows.Forms.DataGridViewLinkColumn();
             this.pnlGroupAttendance.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
@@ -87,6 +86,19 @@ namespace CourseCenterMS
             this.crdSearchResult.Size = new System.Drawing.Size(1117, 547);
             this.crdSearchResult.TabIndex = 1;
             // 
+            // lblGroupID
+            // 
+            this.lblGroupID.AutoSize = true;
+            this.lblGroupID.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGroupID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblGroupID.Location = new System.Drawing.Point(781, 20);
+            this.lblGroupID.Name = "lblGroupID";
+            this.lblGroupID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblGroupID.Size = new System.Drawing.Size(30, 35);
+            this.lblGroupID.TabIndex = 22;
+            this.lblGroupID.Text = "...";
+            this.lblGroupID.Visible = false;
+            // 
             // pnlGridContainer
             // 
             this.pnlGridContainer.Controls.Add(this.grdGroupAttendance);
@@ -123,7 +135,6 @@ namespace CourseCenterMS
             this.grdGroupAttendance.ColumnHeadersHeight = 25;
             this.grdGroupAttendance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grdGroupAttendance.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.GroupTime,
             this.GroupName,
             this.GroupEndTime,
             this.StudentsNumber,
@@ -160,61 +171,6 @@ namespace CourseCenterMS
             this.grdGroupAttendance.Size = new System.Drawing.Size(1056, 428);
             this.grdGroupAttendance.TabIndex = 21;
             this.grdGroupAttendance.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdGroupAttendance_CellClick);
-            // 
-            // GroupTime
-            // 
-            this.GroupTime.DataPropertyName = "ClassName";
-            this.GroupTime.HeaderText = "عنوان الحصة";
-            this.GroupTime.MinimumWidth = 6;
-            this.GroupTime.Name = "GroupTime";
-            this.GroupTime.ReadOnly = true;
-            // 
-            // GroupName
-            // 
-            this.GroupName.DataPropertyName = "ClassDate";
-            this.GroupName.FillWeight = 116.4129F;
-            this.GroupName.HeaderText = "تاريخ الحصة";
-            this.GroupName.MinimumWidth = 6;
-            this.GroupName.Name = "GroupName";
-            this.GroupName.ReadOnly = true;
-            this.GroupName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // GroupEndTime
-            // 
-            this.GroupEndTime.DataPropertyName = "AttendanceNumber";
-            this.GroupEndTime.HeaderText = "عدد الحضور";
-            this.GroupEndTime.Name = "GroupEndTime";
-            this.GroupEndTime.ReadOnly = true;
-            // 
-            // StudentsNumber
-            // 
-            this.StudentsNumber.DataPropertyName = "AbsenceNumber";
-            this.StudentsNumber.HeaderText = "عدد الغياب";
-            this.StudentsNumber.Name = "StudentsNumber";
-            this.StudentsNumber.ReadOnly = true;
-            this.StudentsNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "GroupID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // GroupDetails
-            // 
-            this.GroupDetails.DataPropertyName = "Details";
-            this.GroupDetails.FillWeight = 50.76142F;
-            this.GroupDetails.HeaderText = "تفاصيل";
-            this.GroupDetails.MinimumWidth = 6;
-            this.GroupDetails.Name = "GroupDetails";
-            this.GroupDetails.ReadOnly = true;
-            this.GroupDetails.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.GroupDetails.Text = "التفاصيل";
-            this.GroupDetails.ToolTipText = "اضغط لمزيد من المعلومات";
-            this.GroupDetails.UseColumnTextForLinkValue = true;
             // 
             // lblGroupName
             // 
@@ -305,18 +261,52 @@ namespace CourseCenterMS
             this.textSearch.Size = new System.Drawing.Size(324, 33);
             this.textSearch.TabIndex = 24;
             // 
-            // lblGroupID
+            // GroupName
             // 
-            this.lblGroupID.AutoSize = true;
-            this.lblGroupID.Font = new System.Drawing.Font("Sakkal Majalla", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGroupID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblGroupID.Location = new System.Drawing.Point(781, 20);
-            this.lblGroupID.Name = "lblGroupID";
-            this.lblGroupID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblGroupID.Size = new System.Drawing.Size(30, 35);
-            this.lblGroupID.TabIndex = 22;
-            this.lblGroupID.Text = "...";
-            this.lblGroupID.Visible = false;
+            this.GroupName.DataPropertyName = "ClassDate";
+            this.GroupName.FillWeight = 116.4129F;
+            this.GroupName.HeaderText = "تاريخ الحصة";
+            this.GroupName.MinimumWidth = 6;
+            this.GroupName.Name = "GroupName";
+            this.GroupName.ReadOnly = true;
+            this.GroupName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // GroupEndTime
+            // 
+            this.GroupEndTime.DataPropertyName = "AttendanceNumber";
+            this.GroupEndTime.HeaderText = "عدد الحضور";
+            this.GroupEndTime.Name = "GroupEndTime";
+            this.GroupEndTime.ReadOnly = true;
+            // 
+            // StudentsNumber
+            // 
+            this.StudentsNumber.DataPropertyName = "AbsenceNumber";
+            this.StudentsNumber.HeaderText = "عدد الغياب";
+            this.StudentsNumber.Name = "StudentsNumber";
+            this.StudentsNumber.ReadOnly = true;
+            this.StudentsNumber.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "GroupID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // GroupDetails
+            // 
+            this.GroupDetails.DataPropertyName = "Details";
+            this.GroupDetails.FillWeight = 50.76142F;
+            this.GroupDetails.HeaderText = "تفاصيل";
+            this.GroupDetails.MinimumWidth = 6;
+            this.GroupDetails.Name = "GroupDetails";
+            this.GroupDetails.ReadOnly = true;
+            this.GroupDetails.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.GroupDetails.Text = "التفاصيل";
+            this.GroupDetails.ToolTipText = "اضغط لمزيد من المعلومات";
+            this.GroupDetails.UseColumnTextForLinkValue = true;
             // 
             // frmGroupAttendance
             // 
@@ -351,12 +341,11 @@ namespace CourseCenterMS
         private System.Windows.Forms.Panel pnlGridContainer;
         public Bunifu.Framework.UI.BunifuCustomDataGrid grdGroupAttendance;
         private Bunifu.Framework.UI.BunifuCustomLabel lblGroupName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GroupTime;
+        public Bunifu.Framework.UI.BunifuCustomLabel lblGroupID;
         private System.Windows.Forms.DataGridViewTextBoxColumn GroupName;
         private System.Windows.Forms.DataGridViewTextBoxColumn GroupEndTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentsNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewLinkColumn GroupDetails;
-        public Bunifu.Framework.UI.BunifuCustomLabel lblGroupID;
     }
 }
