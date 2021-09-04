@@ -143,6 +143,7 @@ namespace CourseCenterMS
             this.grdTodayAttendanceGroup.HeaderBgColor = System.Drawing.Color.LightBlue;
             this.grdTodayAttendanceGroup.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.grdTodayAttendanceGroup.Location = new System.Drawing.Point(30, 3);
+            this.grdTodayAttendanceGroup.MultiSelect = false;
             this.grdTodayAttendanceGroup.Name = "grdTodayAttendanceGroup";
             this.grdTodayAttendanceGroup.ReadOnly = true;
             this.grdTodayAttendanceGroup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

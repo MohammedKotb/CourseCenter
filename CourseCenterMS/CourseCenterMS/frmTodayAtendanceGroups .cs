@@ -56,6 +56,7 @@ namespace CourseCenterMS
                         STdNameAndID newObj = new STdNameAndID();
                         newObj.ID = item.ID;
                         newObj.StudentName = item.Name;
+                        newObj.QR = item.QR;
                         Names.Add(newObj);
                     }
 
@@ -78,6 +79,7 @@ namespace CourseCenterMS
     {
         public long ID { get; set; }
         public string StudentName { get; set; }
+        public string QR { get; set; }
 
     }
 
