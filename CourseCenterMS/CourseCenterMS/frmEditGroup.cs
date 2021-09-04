@@ -44,10 +44,13 @@ namespace CourseCenterMS
         {
             SaveNewGroupe();
         }
+        long grpid;
 
         public void SaveNewGroupe()
         {
-            Group group = new Group();
+            grpid = Convert.ToInt64(lblgroupid.Text);
+            Group group = context.Groups.Where(x => x.ID == grpid).FirstOrDefault();
+
             try
             {
                 int count = 0;
@@ -56,7 +59,7 @@ namespace CourseCenterMS
                 group.StartDate = dtpkrStartYear.Value != null ? dtpkrStartYear.Value.Date : throw new Exception("يجب ادخال تاريخ بدء المجموعه لاتمام التسجيل");
                 group.EndDate = dtPkrEndDate.Value != null ? dtPkrEndDate.Value.Date : throw new Exception("يجب ادخال تاريخ انتهاء المجموعه لاتمام التسجيل");
                 group.CreationDate = DateTime.Now;
-                
+
                 if (chkIsActive.Checked)
                 {
                     group.IsActive = true;
@@ -64,81 +67,75 @@ namespace CourseCenterMS
                 else
                     group.IsActive = false;
 
-                context.Groups.Add(group);
+
                 context.SaveChanges();
 
                 if (chkSaturay.Checked)
                 {
-                    SaveGroupDayAndTime(group.ID, "السبت");
+                    SaveGroupDayAndTime(grpid, "السبت");
                     count++;
                 }
                 if (chkSunday.Checked)
                 {
-                    SaveGroupDayAndTime(group.ID, "الاحد");
+                    SaveGroupDayAndTime(grpid, "الاحد");
                     count++;
 
                 }
                 if (chkMonday.Checked)
                 {
-                    SaveGroupDayAndTime(group.ID, "الاثنين");
+                    SaveGroupDayAndTime(grpid, "الاثنين");
                     count++;
 
                 }
                 if (chkTuesday.Checked)
                 {
-                    SaveGroupDayAndTime(group.ID, "الثلاثاء");
+                    SaveGroupDayAndTime(grpid, "الثلاثاء");
                     count++;
 
                 }
                 if (chkWednesday.Checked)
                 {
-                    SaveGroupDayAndTime(group.ID, "الاربعاء");
+                    SaveGroupDayAndTime(grpid, "الاربعاء");
                     count++;
 
                 }
                 if (chkThursday.Checked)
                 {
-                    SaveGroupDayAndTime(group.ID, "الخميس");
+                    SaveGroupDayAndTime(grpid, "الخميس");
                     count++;
 
                 }
                 if (chkFriday.Checked)
                 {
-                    SaveGroupDayAndTime(group.ID, "الجمعه");
+                    SaveGroupDayAndTime(grpid, "الجمعه");
                     count++;
 
                 }
                 if (count > 0)
                 {
-                   
+
                     Program.SuccessMessage.lblMessage.Text = "تم اضافة المجموعه بنجاح";
                     Program.SuccessMessage.ShowDialog();
                     Program.DashbordRunningForm.btnAllGroups.PerformClick();
-                   
+
                 }
                 else
                 {
                     context.Groups.Remove(group);
                     context.SaveChanges();
 
-                    Program.Message.lblMessage.Text = "لم يتم حفظ المجموعه بنجاح يجب تحدبد يوم ووقت المجموعة";
-                    Program.Message.ShowDialog();
-                  
-
                 }
-
-
             }
             catch (Exception ex)
             {
-              
-              
+
+
 
                 Program.Message.lblMessage.Text = ex.Message;
                 Program.Message.ShowDialog();
                 if (context.Groups.Find(group.ID) != null)
                 {
-                    context.Groups.Remove(group);
+                    // context.Groups.Remove(group);
                     context.SaveChanges();
 
                 }
@@ -166,11 +163,11 @@ namespace CourseCenterMS
             }
             DateTime dTo = new DateTime(2000, 1, 1, hourTo, 0, 0);
             groupDay.TimeTo = dTo;
-            context.GroupDays.Add(groupDay);
+           
             context.SaveChanges();
+
+
         }
-
-       
     }
-}
 
+}

@@ -152,80 +152,85 @@
   </data>
   <data name="bunifuGradientPanel5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABNSURBVChTjcNNCkBQAIXRuwZloJSBUsrAPv091vhChKzg
-        swT31FG7vDjVzA9O1eHGqSpcOFVOJ04V44FT+bjjVDZsOJX2K04lXeR/5ANLRgPUSux+JQAAAABJRU5E
-        rkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAE1JREFUKFONw00KQFAAhdG7BmWglIFSysA+/T3W+EKErOCzBPfUUbu8ONXMD07V
+        4capKlw4VU4nThXjgVP5uONUNmw4lfYrTiVd5H/kA0tGA9RK7H4lAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuGradientPanel4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACoSURBVChTfdBZDoJAFETRt0VnUZlnRUTdPD1R0mBDxxD/
-        Tyo3RaJwIUsf8hZAViHUPYaqE6gmRffM0b0KdO8SJPILNBal9xeTyM4wWF7HZVVFI34k6JpswMRTBxMu
-        Zzws1yPWy8TjI3jigGeneXmhmXh0gMFmWRZ97xebDGLhDhO2M6xmvUws2EJjFu371R9sNVPrrcF8Cy80
-        6+uodVdg3mbCS82icPEBmjcTApHfRi8AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAKhJREFUKFN90FkOgkAURNG3RWdRmWdFRN08PVHSYEPHEP9PKjdFonAhSx/yFkBW
+        IdQ9hqoTqCZF98zRvQp07xIk8gs0FqX3F5PIzjBYXsdlVUUjfiTommzAxFMHEy5nPCzXI9bLxOMjeOKA
+        Z6d5eaGZeHSAwWZZFn3vF5sMYuEOE7YzrGa9TCzYQmMW7fvVH2w1U+utwXwLLzTr66h1V2DeZsJLzaJw
+        8QGaNxMCkd9GLwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="bunifuGradientPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA6SURBVChTY/A7Xfjf61Tef/eT2f+dT2T8dzie9t/mWPJ/
-        y6MJ/02PxP43Ohz1X+9QxP9RhXRVGPEfAKVd8IOHybDpAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAADpJREFUKFNj8Dtd+N/rVN5/95PZ/51PZPx3OJ723+ZY8n/Lown/TY/E/jc6HPVf
+        71DE/1GFdFUY8R8ApV3wg4fJsOkAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="bunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAXSURBVChTY4hQP/6fGDyqEC+mtsLj/wFIf+L1xMiRpAAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABdJREFUKFNjiFA//p8YPKoQL6a2wuP/AUh/4vXEyJGkAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuGradientPanel3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABQSURBVChTY2BgaPhPFOblbftPDGaQlOz5TwxmUFOb/J8Y
-        zGBsPPM/MZjBwWHBf2Iwg4/Psv/EYIbIyDX/icEMaWmb/xODGYqLd/4njHf+BwCWZ8156HkJyQAAAABJ
-        RU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAFBJREFUKFNjYGBo+E8U5uVt+08MZpCU7PlPDGZQU5v8nxjMYGw88z8xmMHBYcF/
+        YjCDj8+y/8RghsjINf+JwQxpaZv/E4MZiot3/ieMd/4HAJZnzXnoeQnJAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="StudentName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="StudentName.UserAddedColumn" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="Attendance.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="Attendance.UserAddedColumn" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="Column1.UserAddedColumn" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="ID.UserAddedColumn" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="bunifuElipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="bunifuElipse2.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>141, 17</value>
-  </metadata>
-  <metadata name="bunifuElipse4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="bunifuElipse4.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>389, 17</value>
-  </metadata>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>637, 17</value>
-  </metadata>
-  <metadata name="bunifuElipse5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="bunifuElipse5.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>513, 17</value>
-  </metadata>
-  <metadata name="bunifuElipse3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="bunifuElipse3.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>265, 17</value>
-  </metadata>
-  <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>724, 17</value>
-  </metadata>
-  <metadata name="timergroup.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="timergroup.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>811, 17</value>
-  </metadata>
-  <metadata name="timeratt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="timeratt.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>924, 17</value>
-  </metadata>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="majalla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\majalla.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="majallab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\majallab.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

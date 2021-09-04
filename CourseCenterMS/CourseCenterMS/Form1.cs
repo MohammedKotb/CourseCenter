@@ -19,7 +19,7 @@ namespace CourseCenterMS
         List<Department> departments;
         List<Group> groups;
         CourseCenterEntities context;
-        private int _ticks;
+       
         public Dashbord()
         {
             InitializeComponent();

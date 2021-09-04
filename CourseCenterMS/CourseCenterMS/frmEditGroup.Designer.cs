@@ -29,10 +29,11 @@ namespace CourseCenterMS
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlNewGroup = new System.Windows.Forms.Panel();
+            this.pnlEditgroup = new System.Windows.Forms.Panel();
             this.crdSearchResult = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.pnlGridContainer = new System.Windows.Forms.Panel();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.chkIsActive = new Bunifu.Framework.UI.BunifuCheckbox();
             this.txtClassroom = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -75,27 +76,27 @@ namespace CourseCenterMS
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblGridHeader = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.pnlNewGroup.SuspendLayout();
+            this.lblgroupid = new System.Windows.Forms.Label();
+            this.pnlEditgroup.SuspendLayout();
             this.crdSearchResult.SuspendLayout();
             this.pnlGridContainer.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlNewGroup
+            // pnlEditgroup
             // 
-            this.pnlNewGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnlEditgroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlNewGroup.AutoScroll = true;
-            this.pnlNewGroup.AutoSize = true;
-            this.pnlNewGroup.Controls.Add(this.crdSearchResult);
-            this.pnlNewGroup.Location = new System.Drawing.Point(0, 0);
-            this.pnlNewGroup.Name = "pnlNewGroup";
-            this.pnlNewGroup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.pnlNewGroup.Size = new System.Drawing.Size(1174, 800);
-            this.pnlNewGroup.TabIndex = 0;
+            this.pnlEditgroup.AutoScroll = true;
+            this.pnlEditgroup.AutoSize = true;
+            this.pnlEditgroup.Controls.Add(this.crdSearchResult);
+            this.pnlEditgroup.Location = new System.Drawing.Point(0, 0);
+            this.pnlEditgroup.Name = "pnlEditgroup";
+            this.pnlEditgroup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.pnlEditgroup.Size = new System.Drawing.Size(1174, 800);
+            this.pnlEditgroup.TabIndex = 0;
             // 
             // crdSearchResult
             // 
@@ -109,6 +110,7 @@ namespace CourseCenterMS
             this.crdSearchResult.BorderRadius = 5;
             this.crdSearchResult.BottomSahddow = true;
             this.crdSearchResult.color = System.Drawing.Color.Green;
+            this.crdSearchResult.Controls.Add(this.lblgroupid);
             this.crdSearchResult.Controls.Add(this.bunifuSeparator1);
             this.crdSearchResult.Controls.Add(this.pnlGridContainer);
             this.crdSearchResult.Controls.Add(this.lblGridHeader);
@@ -179,6 +181,24 @@ namespace CourseCenterMS
             this.pnlGridContainer.TabIndex = 20;
             this.pnlGridContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlGridContainer_Paint);
             // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.Red;
+            this.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
+            this.btnRemove.ForeColor = System.Drawing.Color.Yellow;
+            this.btnRemove.Image = global::CourseCenterMS.Properties.Resources.icons8_remove_32;
+            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemove.Location = new System.Drawing.Point(828, 399);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(95, 36);
+            this.btnRemove.TabIndex = 181;
+            this.btnRemove.Text = "حـــــــــذف";
+            this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemove.UseVisualStyleBackColor = false;
+            // 
             // bunifuCustomLabel12
             // 
             this.bunifuCustomLabel12.AutoSize = true;
@@ -188,7 +208,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel12.Location = new System.Drawing.Point(62, 303);
             this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
             this.bunifuCustomLabel12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel12.Size = new System.Drawing.Size(106, 25);
+            this.bunifuCustomLabel12.Size = new System.Drawing.Size(119, 25);
             this.bunifuCustomLabel12.TabIndex = 179;
             this.bunifuCustomLabel12.Text = "مجموعـــه نشطــــه";
             // 
@@ -257,7 +277,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel7.Location = new System.Drawing.Point(402, 49);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(57, 25);
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(62, 25);
             this.bunifuCustomLabel7.TabIndex = 175;
             this.bunifuCustomLabel7.Text = "الصف :";
             // 
@@ -343,7 +363,8 @@ namespace CourseCenterMS
             // 
             this.cmboTimeFrom.BackColor = System.Drawing.Color.LightGray;
             this.cmboTimeFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmboTimeFrom.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
+            this.cmboTimeFrom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmboTimeFrom.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmboTimeFrom.FormattingEnabled = true;
             this.cmboTimeFrom.Items.AddRange(new object[] {
             "1",
@@ -361,14 +382,15 @@ namespace CourseCenterMS
             this.cmboTimeFrom.Location = new System.Drawing.Point(293, 188);
             this.cmboTimeFrom.Margin = new System.Windows.Forms.Padding(2);
             this.cmboTimeFrom.Name = "cmboTimeFrom";
-            this.cmboTimeFrom.Size = new System.Drawing.Size(87, 30);
+            this.cmboTimeFrom.Size = new System.Drawing.Size(87, 33);
             this.cmboTimeFrom.TabIndex = 173;
             // 
             // cmboTimeTo
             // 
             this.cmboTimeTo.BackColor = System.Drawing.Color.LightGray;
             this.cmboTimeTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmboTimeTo.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
+            this.cmboTimeTo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmboTimeTo.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmboTimeTo.FormattingEnabled = true;
             this.cmboTimeTo.Items.AddRange(new object[] {
             "1",
@@ -386,7 +408,7 @@ namespace CourseCenterMS
             this.cmboTimeTo.Location = new System.Drawing.Point(293, 247);
             this.cmboTimeTo.Margin = new System.Windows.Forms.Padding(2);
             this.cmboTimeTo.Name = "cmboTimeTo";
-            this.cmboTimeTo.Size = new System.Drawing.Size(87, 30);
+            this.cmboTimeTo.Size = new System.Drawing.Size(87, 33);
             this.cmboTimeTo.TabIndex = 173;
             // 
             // bunifuCustomLabel10
@@ -398,7 +420,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel10.Location = new System.Drawing.Point(402, 193);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
             this.bunifuCustomLabel10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(82, 25);
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(89, 25);
             this.bunifuCustomLabel10.TabIndex = 150;
             this.bunifuCustomLabel10.Text = "من الساعه :";
             // 
@@ -411,7 +433,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel8.Location = new System.Drawing.Point(707, 240);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(51, 25);
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(56, 25);
             this.bunifuCustomLabel8.TabIndex = 148;
             this.bunifuCustomLabel8.Text = "الثلاثاء";
             // 
@@ -424,7 +446,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel9.Location = new System.Drawing.Point(825, 240);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
             this.bunifuCustomLabel9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(48, 25);
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(53, 25);
             this.bunifuCustomLabel9.TabIndex = 149;
             this.bunifuCustomLabel9.Text = "الاثنين";
             // 
@@ -479,7 +501,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel16.Location = new System.Drawing.Point(700, 288);
             this.bunifuCustomLabel16.Name = "bunifuCustomLabel16";
             this.bunifuCustomLabel16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel16.Size = new System.Drawing.Size(58, 25);
+            this.bunifuCustomLabel16.Size = new System.Drawing.Size(63, 25);
             this.bunifuCustomLabel16.TabIndex = 159;
             this.bunifuCustomLabel16.Text = "الخميس";
             // 
@@ -492,7 +514,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel17.Location = new System.Drawing.Point(825, 340);
             this.bunifuCustomLabel17.Name = "bunifuCustomLabel17";
             this.bunifuCustomLabel17.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel17.Size = new System.Drawing.Size(54, 25);
+            this.bunifuCustomLabel17.Size = new System.Drawing.Size(57, 25);
             this.bunifuCustomLabel17.TabIndex = 158;
             this.bunifuCustomLabel17.Text = "الجمعة";
             // 
@@ -533,7 +555,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel3.Location = new System.Drawing.Point(825, 189);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(51, 25);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(53, 25);
             this.bunifuCustomLabel3.TabIndex = 156;
             this.bunifuCustomLabel3.Text = "السبت";
             // 
@@ -546,7 +568,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel6.Location = new System.Drawing.Point(718, 189);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(40, 25);
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(44, 25);
             this.bunifuCustomLabel6.TabIndex = 155;
             this.bunifuCustomLabel6.Text = "الاحد";
             // 
@@ -573,7 +595,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel13.Location = new System.Drawing.Point(825, 288);
             this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
             this.bunifuCustomLabel13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel13.Size = new System.Drawing.Size(51, 25);
+            this.bunifuCustomLabel13.Size = new System.Drawing.Size(55, 25);
             this.bunifuCustomLabel13.TabIndex = 157;
             this.bunifuCustomLabel13.Text = "الاربعاء";
             // 
@@ -586,7 +608,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(402, 252);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(79, 25);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(86, 25);
             this.bunifuCustomLabel1.TabIndex = 154;
             this.bunifuCustomLabel1.Text = "الى الساعه :";
             // 
@@ -613,7 +635,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(923, 186);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(57, 25);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(72, 25);
             this.bunifuCustomLabel2.TabIndex = 153;
             this.bunifuCustomLabel2.Text = "الايـــــــــام :";
             // 
@@ -658,7 +680,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel4.Location = new System.Drawing.Point(923, 116);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(137, 25);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(154, 25);
             this.bunifuCustomLabel4.TabIndex = 152;
             this.bunifuCustomLabel4.Text = "بداية السنه الدراسيه :";
             // 
@@ -671,7 +693,7 @@ namespace CourseCenterMS
             this.bunifuCustomLabel5.Location = new System.Drawing.Point(402, 116);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(135, 25);
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(151, 25);
             this.bunifuCustomLabel5.TabIndex = 151;
             this.bunifuCustomLabel5.Text = "نهايه السنه الدراسيه :";
             // 
@@ -698,7 +720,7 @@ namespace CourseCenterMS
             this.lblID.Location = new System.Drawing.Point(923, 49);
             this.lblID.Name = "lblID";
             this.lblID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblID.Size = new System.Drawing.Size(96, 25);
+            this.lblID.Size = new System.Drawing.Size(107, 25);
             this.lblID.TabIndex = 160;
             this.lblID.Text = "اسم الجموعة :";
             // 
@@ -756,11 +778,11 @@ namespace CourseCenterMS
             // bunifuCustomLabel11
             // 
             this.bunifuCustomLabel11.AutoSize = true;
-            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Microsoft Uighur", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.Black;
             this.bunifuCustomLabel11.Location = new System.Drawing.Point(206, 570);
             this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(112, 34);
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(165, 31);
             this.bunifuCustomLabel11.TabIndex = 37;
             this.bunifuCustomLabel11.Text = " صورة شخصية";
             // 
@@ -775,35 +797,27 @@ namespace CourseCenterMS
             this.lblGridHeader.TabIndex = 18;
             this.lblGridHeader.Text = "اضافـــة مجموعة جديده";
             // 
-            // btnRemove
+            // lblgroupid
             // 
-            this.btnRemove.BackColor = System.Drawing.Color.Red;
-            this.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnRemove.FlatAppearance.BorderSize = 0;
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Font = new System.Drawing.Font("Sakkal Majalla", 16F, System.Drawing.FontStyle.Bold);
-            this.btnRemove.ForeColor = System.Drawing.Color.Yellow;
-            this.btnRemove.Image = global::CourseCenterMS.Properties.Resources.icons8_remove_32;
-            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemove.Location = new System.Drawing.Point(828, 399);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(95, 36);
-            this.btnRemove.TabIndex = 181;
-            this.btnRemove.Text = "حـــــــــذف";
-            this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemove.UseVisualStyleBackColor = false;
+            this.lblgroupid.AutoSize = true;
+            this.lblgroupid.Location = new System.Drawing.Point(841, 33);
+            this.lblgroupid.Name = "lblgroupid";
+            this.lblgroupid.Size = new System.Drawing.Size(16, 13);
+            this.lblgroupid.TabIndex = 22;
+            this.lblgroupid.Text = "...";
+            this.lblgroupid.Visible = false;
             // 
             // frmEditGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 749);
-            this.Controls.Add(this.pnlNewGroup);
+            this.ClientSize = new System.Drawing.Size(1222, 741);
+            this.Controls.Add(this.pnlEditgroup);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEditGroup";
             this.Text = "frmNewGroup1";
-            this.pnlNewGroup.ResumeLayout(false);
-            this.pnlNewGroup.PerformLayout();
+            this.pnlEditgroup.ResumeLayout(false);
+            this.pnlEditgroup.PerformLayout();
             this.crdSearchResult.ResumeLayout(false);
             this.crdSearchResult.PerformLayout();
             this.pnlGridContainer.ResumeLayout(false);
@@ -819,43 +833,31 @@ namespace CourseCenterMS
 
         #endregion
 
-        public System.Windows.Forms.Panel pnlNewGroup;
+        public System.Windows.Forms.Panel pnlEditgroup;
         private Bunifu.Framework.UI.BunifuCards crdSearchResult;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private System.Windows.Forms.Panel pnlGridContainer;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
-        private Bunifu.Framework.UI.BunifuCheckbox chkThursday;
-        private Bunifu.Framework.UI.BunifuCheckbox chkSunday;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel16;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel17;
-        private Bunifu.Framework.UI.BunifuCheckbox chkTuesday;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        private Bunifu.Framework.UI.BunifuCheckbox chkSaturay;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel13;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuCheckbox chkMonday;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private Bunifu.Framework.UI.BunifuCheckbox chkFriday;
         private Bunifu.Framework.UI.BunifuCustomLabel lblID;
         private System.Windows.Forms.Button btnCancel;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private System.Windows.Forms.Button btnSave;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
         private Bunifu.Framework.UI.BunifuCustomLabel lblGridHeader;
-        private Bunifu.Framework.UI.BunifuCheckbox chkWednesday;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton RadPmFrom;
-        private System.Windows.Forms.RadioButton RadAmFrom;
-        private System.Windows.Forms.RadioButton RadPmTo;
-        private System.Windows.Forms.RadioButton RadAmTo;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
         public Bunifu.Framework.UI.BunifuMaterialTextbox txtGroupName;
@@ -866,5 +868,18 @@ namespace CourseCenterMS
         public System.Windows.Forms.ComboBox cmboTimeTo;
         public System.Windows.Forms.ComboBox cmboTimeFrom;
         public System.Windows.Forms.Button btnRemove;
+        public Bunifu.Framework.UI.BunifuCheckbox chkThursday;
+        public Bunifu.Framework.UI.BunifuCheckbox chkSunday;
+        public Bunifu.Framework.UI.BunifuCheckbox chkTuesday;
+        public Bunifu.Framework.UI.BunifuCheckbox chkSaturay;
+        public Bunifu.Framework.UI.BunifuCheckbox chkMonday;
+        public Bunifu.Framework.UI.BunifuCheckbox chkFriday;
+        public Bunifu.Framework.UI.BunifuCheckbox chkWednesday;
+        public System.Windows.Forms.Panel pnlGridContainer;
+        public System.Windows.Forms.RadioButton RadPmFrom;
+        public System.Windows.Forms.RadioButton RadAmFrom;
+        public System.Windows.Forms.RadioButton RadPmTo;
+        public System.Windows.Forms.RadioButton RadAmTo;
+        public System.Windows.Forms.Label lblgroupid;
     }
 }
