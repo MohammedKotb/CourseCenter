@@ -63,26 +63,6 @@ namespace CourseCenterMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Double_Ring_1_4s_118px {
-            get {
-                object obj = ResourceManager.GetObject("Double Ring-1.4s-118px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Double_Ring_1_4s_200px {
-            get {
-                object obj = ResourceManager.GetObject("Double Ring-1.4s-200px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap egypt {
             get {
                 object obj = ResourceManager.GetObject("egypt", resourceCulture);
@@ -416,6 +396,16 @@ namespace CourseCenterMS.Properties {
         internal static System.Drawing.Bitmap icons8_view_schedule_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_view_schedule_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap input_onlinegiftools {
+            get {
+                object obj = ResourceManager.GetObject("input-onlinegiftools", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
