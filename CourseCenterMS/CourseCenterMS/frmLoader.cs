@@ -15,8 +15,8 @@ namespace CourseCenterMS
         public frmLoader()
         {
             InitializeComponent();
-            
-    
+
+
 
         }
         protected override void OnPaintBackground(PaintEventArgs e) {   }

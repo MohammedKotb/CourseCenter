@@ -36,7 +36,7 @@ namespace CourseCenterMS
             // piclloader
             // 
             this.piclloader.BackColor = System.Drawing.SystemColors.Control;
-            this.piclloader.Image = global::CourseCenterMS.Properties.Resources.Double_Ring_1_4s_118px;
+            this.piclloader.Image = global::CourseCenterMS.Properties.Resources.input_onlinegiftools;
             this.piclloader.Location = new System.Drawing.Point(21, 7);
             this.piclloader.Name = "piclloader";
             this.piclloader.Size = new System.Drawing.Size(93, 90);
